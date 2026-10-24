@@ -30,10 +30,8 @@ Los manifiestos `source.sha256.json` de esas carpetas describen los archivos de 
 
 ## Trazabilidad de los originales
 
-Los originales corresponden a `800bed2550af27fc56ca143d1bf9bc97069db7cf` y continúan disponibles en el historial público. Por ejemplo:
+El primer saneamiento se realizó a partir de `800bed2550af27fc56ca143d1bf9bc97069db7cf`. El manifiesto registra ese momento: por eso conserva `gitHistoryRewritten=false`, los hashes originales y aquella referencia, sin modificarlos retrospectivamente.
 
-```powershell
-git show '800bed2550af27fc56ca143d1bf9bc97069db7cf:docs/evidence/quality/final/surefire-reports/TEST-devsu.devops.demo.service.UserServiceTest.xml'
-```
+Posteriormente se saneó también la historia de `main`, mediante una operación separada documentada en el [registro de reescritura](../history-metadata-sanitization/README.md). Las referencias antiguas de este manifiesto son datos históricos; los originales sin sanear ya no forman parte de las versiones recorridas desde el nuevo `main`. Un respaldo privado mantiene la posibilidad de recuperación, y GitHub u otras copias pueden conservar objetos antiguos.
 
-Se añade un commit nuevo de saneamiento documental; no se reescriben commits anteriores ni se afirma que las rutas hayan desaparecido del historial. La versión actual de los XML se identifica como copia con metadatos saneados, no como archivo original byte a byte. El [pipeline real de referencia](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809) sigue siendo la ejecución sobre `81beb47ba4b03f98e407860d94d143a22f2d2771`.
+La versión actual y las versiones históricas saneadas se identifican como copias con metadatos redactados, no como archivos originales byte a byte. El [pipeline real de referencia](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809) sigue siendo la ejecución sobre `81beb47ba4b03f98e407860d94d143a22f2d2771`; no se presenta como una ejecución sobre los SHA reescritos.

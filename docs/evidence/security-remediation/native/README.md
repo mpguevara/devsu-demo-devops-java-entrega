@@ -2,7 +2,7 @@
 
 Validación ejecutada el **23 de octubre de 2026**, hora de El Salvador, con Temurin 17.0.20.1+1 y Maven 3.8.7. Se mantuvieron los heaps máximos de 384 MiB para Maven y el proceso de pruebas. Durante las dos suites completas y el smoke HTTP, el clúster propio estaba detenido para evitar competir por memoria; no se ejecutó Docker como parte de esas comprobaciones. La generación aislada posterior del SBOM se realizó con Docker y el nodo activos, sin compilar ni lanzar pruebas.
 
-Las copias XML de Surefire tienen saneado únicamente el valor de `java.library.path`. El [manifiesto de saneamiento](../../report-metadata-sanitization/README.md) verifica resultados y contenido restantes idénticos, con hashes antes/después y referencia Git de los originales. Esta operación no repite ni modifica la ejecución de pruebas.
+Las copias XML de Surefire tienen saneado únicamente el valor de `java.library.path`. El [manifiesto de saneamiento](../../report-metadata-sanitization/README.md) verifica resultados y contenido restantes idénticos, con hashes antes/después y la referencia Git original de aquella operación. La [reescritura posterior de `main`](../../history-metadata-sanitization/README.md) conserva su correspondencia de revisiones. Estas operaciones no repiten ni modifican la ejecución de pruebas.
 
 ## Resultados
 

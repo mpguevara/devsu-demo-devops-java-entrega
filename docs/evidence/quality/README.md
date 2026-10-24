@@ -2,7 +2,7 @@
 
 Estas ejecuciones corresponden al **23 de octubre de 2026**, en Windows, con Temurin 17.0.20.1+1, Maven Wrapper 3.3.4 y Maven 3.8.7. Los comandos usan heap máximo de 384 MiB para Maven y para la JVM de pruebas. No se ejecutaron pruebas runtime Docker o Kubernetes como parte de esta medición.
 
-Las copias XML de Surefire tienen redactado el valor de `java.library.path`, que contenía rutas del entorno local. El [registro de saneamiento](../report-metadata-sanitization/README.md) acredita que todos los demás bytes y los resultados permanecen idénticos; los originales están conservados en el historial Git. Los logs, resúmenes, JaCoCo y PMD no se modificaron.
+Las copias XML de Surefire tienen redactado el valor de `java.library.path`, que contenía rutas del entorno local. El [registro de saneamiento](../report-metadata-sanitization/README.md) acredita que todos los demás bytes y los resultados permanecen idénticos. El [registro posterior de reescritura de `main`](../history-metadata-sanitization/README.md) documenta el mismo saneamiento en las versiones históricas. Los logs, resúmenes, JaCoCo y PMD no se modificaron.
 
 ## Resultados antes y después
 

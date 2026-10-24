@@ -1,6 +1,6 @@
 # Evidencia de corrección de vulnerabilidades
 
-Esta etapa conserva resultados reales del 23 de octubre de 2026, hora de El Salvador. Las fechas UTC de GitHub y Trivy pueden mostrar el 24 de octubre. Los resultados históricos permanecen conservados; el [saneamiento de rutas locales](../report-metadata-sanitization/README.md) afecta únicamente al valor de `java.library.path` de las copias XML de Surefire. Los originales permanecen en el historial Git.
+Esta etapa conserva resultados reales del 23 de octubre de 2026, hora de El Salvador. Las fechas UTC de GitHub y Trivy pueden mostrar el 24 de octubre. Los resultados históricos permanecen conservados; el [saneamiento de rutas locales](../report-metadata-sanitization/README.md) afecta únicamente al valor de `java.library.path` de las copias XML de Surefire. La [reescritura posterior de `main`](../history-metadata-sanitization/README.md) sanea también ese metadato histórico, sin modificar los SHA originales que identifican el pipeline, la imagen ni sus reportes reales.
 
 ## Secuencia comprobada
 
