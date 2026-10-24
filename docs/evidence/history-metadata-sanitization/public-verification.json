@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-23T21:31:13.4608212-06:00",
+  "passed": true,
+  "publicHead": "82e42b9a55afeed9455e495bf3aa70355ac1052e",
+  "publicMainCommits": 9,
+  "historyToolReferences": 0,
+  "freshCloneTreeMatchesLocal": true,
+  "previousHeadReachableFromMain": false,
+  "runtimeDifferences": [],
+  "pipelineURL": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
+  "pipelineStatus": "success",
+  "pipelineOriginalSource": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "oldUnreachableBlobApiStatus": 200,
+  "oldObjectStillExposesPathsByDirectSha": true,
+  "limitation": "Cleaned main history does not guarantee purge of old GitHub objects, clones, caches or run references",
+  "checkedOldBlob": "3578bd32200ac0914d48f871a266cf45dfbbbeed",
+  "scope": "Fresh public clone and direct API observation captured before the documentation commit that incorporates this record"
+}
