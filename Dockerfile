@@ -16,6 +16,7 @@ WORKDIR /app
 RUN groupadd --gid 10001 app \
     && useradd --uid 10001 --gid 10001 --no-create-home --shell /usr/sbin/nologin app
 COPY --from=build /workspace/target/demo-0.0.1.jar /app/app.jar
+COPY --from=build /workspace/target/bom.json /app/sbom.json
 
 ENV PORT=8000
 ENV JAVA_TOOL_OPTIONS="-XX:MaxRAMPercentage=60.0 -XX:InitialRAMPercentage=20.0"

@@ -8,7 +8,7 @@ param(
     [Nullable[int]]$ScannerExitCode,
     [string]$OperationalFailure,
     [DateTimeOffset]$StartedAt = [DateTimeOffset]::UtcNow,
-    [ValidateSet('trivy-real-scan', 'unit-test-fixture')][string]$EvidenceSource = 'trivy-real-scan'
+    [ValidateSet('trivy-real-scan', 'trivy-real-sbom-scan', 'unit-test-fixture')][string]$EvidenceSource = 'trivy-real-scan'
 )
 
 $ErrorActionPreference = 'Stop'

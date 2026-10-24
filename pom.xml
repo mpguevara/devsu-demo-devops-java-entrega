@@ -18,6 +18,7 @@
 		<project.build.outputTimestamp>2026-10-21T00:00:00Z</project.build.outputTimestamp>
 		<jacoco.version>0.8.15</jacoco.version>
 		<maven-pmd-plugin.version>3.28.0</maven-pmd-plugin.version>
+		<cyclonedx-maven-plugin.version>2.9.3</cyclonedx-maven-plugin.version>
 		<argLine>-Xmx384m</argLine>
 		<jacocoArgLine></jacocoArgLine>
 	</properties>
@@ -95,6 +96,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<includeTools>false</includeTools>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -140,6 +144,33 @@
 								</rule>
 							</rules>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.cyclonedx</groupId>
+				<artifactId>cyclonedx-maven-plugin</artifactId>
+				<version>${cyclonedx-maven-plugin.version}</version>
+				<configuration>
+					<projectType>application</projectType>
+					<schemaVersion>1.6</schemaVersion>
+					<includeCompileScope>true</includeCompileScope>
+					<includeRuntimeScope>true</includeRuntimeScope>
+					<includeProvidedScope>true</includeProvidedScope>
+					<includeSystemScope>false</includeSystemScope>
+					<includeTestScope>false</includeTestScope>
+					<includeBomSerialNumber>false</includeBomSerialNumber>
+					<includeLicenseText>false</includeLicenseText>
+					<outputFormat>json</outputFormat>
+					<outputName>bom</outputName>
+					<outputTimestamp>${project.build.outputTimestamp}</outputTimestamp>
+					<skipAttach>true</skipAttach>
+				</configuration>
+				<executions>
+					<execution>
+						<id>dependency-sbom</id>
+						<phase>verify</phase>
+						<goals><goal>makeBom</goal></goals>
 					</execution>
 				</executions>
 			</plugin>

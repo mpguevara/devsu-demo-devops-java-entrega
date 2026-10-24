@@ -35,6 +35,8 @@ jobs:
           cache: maven
       - name: Test vulnerability gate with offline fixtures
         run: ./scripts/ci/Test-ImageScanPolicy.ps1
+      - name: Test complete SBOM inventory with offline fixtures
+        run: ./scripts/ci/Test-SbomInventory.ps1
       - name: Maven verify (compile, unit tests, package, PMD, JaCoCo gates)
         run: ./scripts/ci/Invoke-Quality.ps1
       - name: Preserve real quality results
@@ -47,6 +49,7 @@ jobs:
           path: |
             .devsu-local/quality-evidence/
             .devsu-local/scan-policy-tests/
+            .devsu-local/sbom-inventory-tests/
             target/surefire-reports/
             target/site/jacoco/
             target/pmd.xml
@@ -66,6 +69,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Build the non-root image
+        id: build_image
         run: |
           New-Item -ItemType Directory -Path target/image-evidence -Force | Out-Null
           docker build --progress plain --tag $env:IMAGE --label "org.opencontainers.image.source=$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY" --label "org.opencontainers.image.revision=$env:GITHUB_SHA" . 2>&1 | Tee-Object target/image-evidence/docker-build.log
@@ -77,6 +81,9 @@ jobs:
           @{ image = $env:IMAGE; imageId = $imageId; user = $user } | ConvertTo-Json | Set-Content target/image-evidence/image.json
       - name: Vulnerability gate (block any CRITICAL or HIGH; preserve all findings)
         run: ./scripts/ci/Invoke-ImageScan.ps1 -Image $env:IMAGE
+      - name: Verify every packaged JAR and scan the image SBOM
+        if: ${{ !cancelled() && steps.build_image.outcome == 'success' }}
+        run: ./scripts/ci/Invoke-SbomScan.ps1 -Image $env:IMAGE
       - name: Export the exact image for subsequent jobs
         run: |
           docker save --output target/image.tar $env:IMAGE
@@ -91,6 +98,7 @@ jobs:
           path: |
             target/image-evidence/
             target/security-evidence/
+            target/sbom-security-evidence/
           if-no-files-found: warn
       - name: Transfer image
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

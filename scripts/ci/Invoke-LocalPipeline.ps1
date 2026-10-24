@@ -68,6 +68,9 @@ try {
         Invoke-Stage 'vulnerability-report' {
             & (Join-Path $PSScriptRoot 'Invoke-ImageScan.ps1') -Image $Image -EvidenceDirectory (Join-Path $evidence 'security')
         }
+        Invoke-Stage 'sbom-inventory-and-vulnerability-gate' {
+            & (Join-Path $PSScriptRoot 'Invoke-SbomScan.ps1') -Image $Image -EvidenceDirectory (Join-Path $evidence 'sbom-security')
+        }
         if ($PublishImage) {
             Invoke-Stage 'publish-ghcr' {
                 # DOCKER_CONFIG temporal evita cambiar la sesion del usuario y no se entrega como evidencia.
