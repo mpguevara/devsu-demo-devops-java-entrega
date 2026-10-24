@@ -1,0 +1,526 @@
+[
+  {
+    "path": "artifact-copy-verification.json",
+    "sha256": "3e07600b03efb77b7245f2964b4f1885315d9506707c7cb0b2d26583e8d94a08"
+  },
+  {
+    "path": "artifacts-metadata.json",
+    "sha256": "56d7dc1f138b5cc93f60e6c89204647382b9d5cf8e9a75586f4def81cb5c2413"
+  },
+  {
+    "path": "docker-build.log",
+    "sha256": "bf56dc08c37d91fccc1903d36f029d2990e2bb062f9ee8a074586a4e74c51930"
+  },
+  {
+    "path": "evidence-secret-check.json",
+    "sha256": "8916d44b57ff699ff07a7d2162b1ecd871057eb5f232bf6fa4e2deccba76b4a9"
+  },
+  {
+    "path": "ghcr-anonymous-check.json",
+    "sha256": "d559a9b593e8dcffc1b8d2cea54cdce4bbd7460a6689a9658c9d1dcd30d18c53"
+  },
+  {
+    "path": "ghcr-push.log",
+    "sha256": "58262360b632f805934a4b17ac4d4d637075d05de19317968e47d928feb97a05"
+  },
+  {
+    "path": "image-identity-check.json",
+    "sha256": "313c31a6757b6dbf987b135d7611d6548c1560df1f24c3964134a510c6fce28b"
+  },
+  {
+    "path": "image.json",
+    "sha256": "ff6c4d8c04d55cb4fddfd9944ca26568a0f4c4c192125b9cef3f0bf7b14d19ca"
+  },
+  {
+    "path": "jacoco.csv",
+    "sha256": "cce1e21e29bfb2463e6a119437db7a27e1f98ad56ae8eef928554b5c893581dd"
+  },
+  {
+    "path": "jacoco.xml",
+    "sha256": "8ef039b9dd24162830e1753f74d4df8e675a5ffc483c0e821e356b624c2b9c6b"
+  },
+  {
+    "path": "jobs.json",
+    "sha256": "fd9872fdf2cc3d141f63dde8c452c7494dbcf32ac2f2f26509d6456c1c68e92c"
+  },
+  {
+    "path": "kubernetes/kind-install-evidence/kind-install.json",
+    "sha256": "cd8bfc19c864b9a663fa7c86ddd5955e34d70a97a472239d2f874fe2d64011bc"
+  },
+  {
+    "path": "kubernetes/kubectl-install-evidence/kubectl-install.json",
+    "sha256": "28eec4393b8cb84aab217dbd6d0c7e8413c9a9388954b86eebc1d06a43290556"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/app-rollout.log",
+    "sha256": "27d358e7eaac13133cf39a2f903bcdd84a502b6badc2b51015ea96c4615fd836"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/application-image-id.log",
+    "sha256": "1acbdb00a0abe0c3866694102584f3a9e78aed07021406219dacb95a29295dbe"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/deploy-results.json",
+    "sha256": "e7e373e8809aa6d59f49a0cf86c71ad00e33119612d575719b7b4d1e7e34ce67"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/kind-create.log",
+    "sha256": "8799f912ecebcf8bf6b1c45a6706b9f4cf8d698f917ba56b09c963595a984295"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/kind-load-image.log",
+    "sha256": "357ed38f3ea3a3d8bc2167c6ec1f11931f4b2d7036b59b0498ae668b56197b6e"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/kubernetes-version.json",
+    "sha256": "5ece6992e965a1b4f8ed758d53d0c4707c0b401328626e2f878bec98fb0dd159"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/memory-preflight.json",
+    "sha256": "9824fb4301e5138aca0e02de92213dd106534e2181abee5055f74f30517da4e7"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/metrics-rollout.log",
+    "sha256": "da307494f461e3b669dddd63834be14bae8be35cd49e6e98827e6d1857605433"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/node-resource-limits.log",
+    "sha256": "37d41400d6144c6c1476a009ca7331bd0cf4e0a1b27bad7ebee04b83a2ff37bf"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/postgres-rollout.log",
+    "sha256": "ed5b84bcca146527296068824610b6e880fa6b3496574c64be5774e5f939e141"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/resources.log",
+    "sha256": "64f3814d070ad6e9e4fe24dd4c2a2b84524767f6ebbbac6eab965f5de30a9e3e"
+  },
+  {
+    "path": "kubernetes/kubernetes-deploy-evidence/traefik-rollout.log",
+    "sha256": "62dd786dc9e8c98fc5cd7717f2383b37b28b347ca7f8d8a8235bbddc94f5b683"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/app-deployment.json",
+    "sha256": "1b45b8e5b0e6b2352cb3a37ce6a3cb64aa2c232ebb4c592b297177c881c5c5da"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/app-pod-delete.log",
+    "sha256": "161d8979466ed86fc186f710c3e26a3f7c836359847dcde9393d6e4738a2853d"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/events.log",
+    "sha256": "a820c0bdffdf6c248b0e06a33c3923ff65cf8e583ce1eb6892c8ad1f8381382d"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/hpa-describe.log",
+    "sha256": "5f28706c33da36d338a783b05afcd7cf7da71cc4acd394a1ea3de7f423806939"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/hpa-history.json",
+    "sha256": "386d9483ee15c4f338b92c1913dc6c0f77269d4e873f818c017394368f42a327"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/http-load.log",
+    "sha256": "2cdc4e1370167fc421ab099afcc23bb9b1f5c7dfe8e5316484d4d6b64a99b9cd"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/ingress-forward.stderr.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/ingress-forward.stdout.log",
+    "sha256": "821dcc0a23500598ff81db4f7933729b61c0d90e11913574e75f9e4567ded6aa"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/kubernetes-results.json",
+    "sha256": "0ae5ea699b9dfc7a1ea1ae6a7a471f04276415c3384f1f9b19905e62c48603c5"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/load-job-cleanup.log",
+    "sha256": "e2cbe0b691b15402f9d0c284d1297da61b181714b47ca5f4c3c5f13bcca88be4"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/nodes.log",
+    "sha256": "23abbd376ba77eeb23982dbc588ff9f203cc0292b18882f1baf6b32cd843570c"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/pod-a-forward.stderr.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/pod-a-forward.stdout.log",
+    "sha256": "5801b528b5c2205a7e6f350d4431b199501f2e6d84c9fd7829c201503bb40232"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/pod-b-forward.stderr.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/pod-b-forward.stdout.log",
+    "sha256": "cadb5ef2d17e91b678adbe434d7f83049887a6050056797fe834a0ec11d007ae"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/pod-metrics.log",
+    "sha256": "3e21777c02635158727e861ffe8597117da62b23464b2545d73225f60caade62"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/postgres-pod-delete.log",
+    "sha256": "dd9bdc116272a0ab99d275d72e8043bd6d5224310bd381f86b866478a6bf0972"
+  },
+  {
+    "path": "kubernetes/kubernetes-evidence/resources-final.log",
+    "sha256": "d8554186d3a56f9308b2a443dff1d34874ec549804c7f1ecc3e6af17e41e3181"
+  },
+  {
+    "path": "maven-verify.log",
+    "sha256": "e9616dbd186d062652241ef7dd71c6864264c6c0c2dfb144f878cc016b95ce4e"
+  },
+  {
+    "path": "pmd.xml",
+    "sha256": "013349c55c841213de03fc05f5fc223b1ded917e36df30c2aff11ce8bcad204b"
+  },
+  {
+    "path": "policy-unit-tests/critical-unfixed/fixture-input.json",
+    "sha256": "277cf54b4755beb4c9d4e495a9a8b6583560dbfe52c9a08efb083eac4a020275"
+  },
+  {
+    "path": "policy-unit-tests/critical-unfixed/scan-policy.log",
+    "sha256": "a4f591d3d1f0f17c9b58eabdc739cb87d129748c2c80a8bec0530d9fff205c89"
+  },
+  {
+    "path": "policy-unit-tests/critical-unfixed/scan-summary.json",
+    "sha256": "c1cae7766f4ae5f60dab1495c842162d7272bc88a09152df45042d473c3461c8"
+  },
+  {
+    "path": "policy-unit-tests/critical-unfixed/trivy-summary.md",
+    "sha256": "a3bda340e17549326cc002db81106cb307d8b32547a86188d0c4970bada26e6a"
+  },
+  {
+    "path": "policy-unit-tests/empty-valid-report-pass/fixture-input.json",
+    "sha256": "feec24cf96efedc05ff221fcdefdf3e9f36f8bb507442b2c57742c82e3438906"
+  },
+  {
+    "path": "policy-unit-tests/empty-valid-report-pass/scan-policy.log",
+    "sha256": "6995737902988f1828bc48f62ee281d887525fc5a0ff518d154fdd2113051d88"
+  },
+  {
+    "path": "policy-unit-tests/empty-valid-report-pass/scan-summary.json",
+    "sha256": "a2d8574b63e74b8a7a86fbb915b17ca7a2cea69f795e903a18c0a4198856915a"
+  },
+  {
+    "path": "policy-unit-tests/empty-valid-report-pass/trivy-summary.md",
+    "sha256": "1877b447951728ddc6a251b4423a7e7250c5a25dff8be036e0f9b1313c49f471"
+  },
+  {
+    "path": "policy-unit-tests/high-in-second-result-unfixed/fixture-input.json",
+    "sha256": "f7149dc62c060ba4c583cbc675b1ec257a9b2cdcf464106181595641b1b6f92b"
+  },
+  {
+    "path": "policy-unit-tests/high-in-second-result-unfixed/scan-policy.log",
+    "sha256": "a4f591d3d1f0f17c9b58eabdc739cb87d129748c2c80a8bec0530d9fff205c89"
+  },
+  {
+    "path": "policy-unit-tests/high-in-second-result-unfixed/scan-summary.json",
+    "sha256": "9a93466d5ac0b6e0a9a11079a0bcb8b87a0c4c5049799f4d5be926cce147a1e2"
+  },
+  {
+    "path": "policy-unit-tests/high-in-second-result-unfixed/trivy-summary.md",
+    "sha256": "825061364b99db1049bfe92e37f06f361b954bc4513e3c4d0624f9d3fb3efc2b"
+  },
+  {
+    "path": "policy-unit-tests/invalid-json/fixture-input.json",
+    "sha256": "331a9322882c4fc2be7a312f494b156c5769c5f55f0fde2fa920a024343562d8"
+  },
+  {
+    "path": "policy-unit-tests/invalid-json/scan-policy.log",
+    "sha256": "0c2df6be6df8898f46f456c8a1f60bd7d8fbc5083db4920227d15e63dcd796ec"
+  },
+  {
+    "path": "policy-unit-tests/invalid-json/scan-summary.json",
+    "sha256": "737c92bd233a7dc6986dd8605d3985090e007a522f4d0b3c553a7cd0d9f57bd9"
+  },
+  {
+    "path": "policy-unit-tests/invalid-json/trivy-summary.md",
+    "sha256": "b564b99e3c9999d222e65bf5b3eb7af7bd03bd5057ac624a76ed952a523c7a92"
+  },
+  {
+    "path": "policy-unit-tests/medium-low-unknown-pass/fixture-input.json",
+    "sha256": "dd0bfc54846ba0ce9e8f2813d9ee44c6199d6f7a38ced181928cfb28dc8e1a83"
+  },
+  {
+    "path": "policy-unit-tests/medium-low-unknown-pass/scan-policy.log",
+    "sha256": "6995737902988f1828bc48f62ee281d887525fc5a0ff518d154fdd2113051d88"
+  },
+  {
+    "path": "policy-unit-tests/medium-low-unknown-pass/scan-summary.json",
+    "sha256": "bf9c1c022589970ed0fe1392c1424102fd8f534f0d12c30e865ea7829e6684e8"
+  },
+  {
+    "path": "policy-unit-tests/medium-low-unknown-pass/trivy-summary.md",
+    "sha256": "6f6e665a0de81b3ed894825ec183fe082f7a87feff5a2ee97579f6b892a73f35"
+  },
+  {
+    "path": "policy-unit-tests/missing-report/scan-policy.log",
+    "sha256": "0c2df6be6df8898f46f456c8a1f60bd7d8fbc5083db4920227d15e63dcd796ec"
+  },
+  {
+    "path": "policy-unit-tests/missing-report/scan-summary.json",
+    "sha256": "4814015748dd16d944d700a1b6e18446248b8647ee30fd569f21bc0d16c905b9"
+  },
+  {
+    "path": "policy-unit-tests/missing-report/trivy-summary.md",
+    "sha256": "17ce9fff0a0af84009a5a0c375f1092b600bd3ffee76b29027d2ceeb798b761e"
+  },
+  {
+    "path": "policy-unit-tests/policy-test-results.json",
+    "sha256": "ccc4bb65c3681b4576f33f4b707467f1b331e577c09d7c7381a48c07ba7e6f72"
+  },
+  {
+    "path": "policy-unit-tests/scanner-process-failed/fixture-input.json",
+    "sha256": "feec24cf96efedc05ff221fcdefdf3e9f36f8bb507442b2c57742c82e3438906"
+  },
+  {
+    "path": "policy-unit-tests/scanner-process-failed/scan-policy.log",
+    "sha256": "9969e62fbd44964d134e2107e0d0cd5701a5da9f62e984c696ac88b518499f33"
+  },
+  {
+    "path": "policy-unit-tests/scanner-process-failed/scan-summary.json",
+    "sha256": "ac9f22d894c7086d1cd650d79c9a51750f82472bb138cc8c12491fc38661bb71"
+  },
+  {
+    "path": "policy-unit-tests/scanner-process-failed/trivy-summary.md",
+    "sha256": "0629c4755f4b51a60153104ae8b65d06e10705e8b1155d0f806289595380d501"
+  },
+  {
+    "path": "policy-unit-tests/unsupported-severity-fails-closed/fixture-input.json",
+    "sha256": "8624bec6ec8794af25b76d86ff31d2652f2dc02bf594ff92a34f7de4ba5dd431"
+  },
+  {
+    "path": "policy-unit-tests/unsupported-severity-fails-closed/scan-policy.log",
+    "sha256": "0c2df6be6df8898f46f456c8a1f60bd7d8fbc5083db4920227d15e63dcd796ec"
+  },
+  {
+    "path": "policy-unit-tests/unsupported-severity-fails-closed/scan-summary.json",
+    "sha256": "9834ac0b9cc4dd4bb1c93b011ebb990818df1c26af5021f26b6d03d74bed81ba"
+  },
+  {
+    "path": "policy-unit-tests/unsupported-severity-fails-closed/trivy-summary.md",
+    "sha256": "75685e4654b172d5f37b9682ff451c7d32338f8f21ded73bed2f8acd694829f4"
+  },
+  {
+    "path": "publication.json",
+    "sha256": "d3f5940328f989a81467f2fd9364a307c7371f189040a697e834d2240dbf3e62"
+  },
+  {
+    "path": "quality-summary.json",
+    "sha256": "c1e8d2c6d1ba60726fd5dcee67610d14e39d79927707b71e9e539b58ed4cb4a8"
+  },
+  {
+    "path": "README.md",
+    "sha256": "339b2aae7cd1c5649a66685bae5c9ac3a5c0f371a7193fe1d92c6ab0f3ed8ad0"
+  },
+  {
+    "path": "registry-image-metadata.json",
+    "sha256": "0076516d8e2dc8c4328ddda9e35cd57fb4de4d8337f146fd2107b2bb38076707"
+  },
+  {
+    "path": "registry-manifest.json",
+    "sha256": "0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397"
+  },
+  {
+    "path": "run-metadata.json",
+    "sha256": "88737368f9a41d78cf45f6a2b3e7d14f8897fbe3b749a1828a66a3458f83e0c2"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/complete/bom.json",
+    "sha256": "3afad8fca9925bf2a80952f417c2734527fdd82798e7859b8528598acad64b8e"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/complete/fixture.zip",
+    "sha256": "23cfd8ca412a558e56b21f63dfbf207da1b85b2976745e21856f180c6f96c61a"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/complete/sbom-inventory.json",
+    "sha256": "66cb5a79d8e46e89e6b43e00b255d73fba7b476eb6a7a65b443ab0417f85b965"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/complete/trivy-fixture.json",
+    "sha256": "69b22dbcb89e244006867b03457a30f9531c895ea9e09589d24feade8ada4ab3"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/incorrect-hash/bom.json",
+    "sha256": "fc68feef4538681db6019231050063a098446a36eb9993d65ebf60826c9edf0c"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/incorrect-hash/fixture.zip",
+    "sha256": "23cfd8ca412a558e56b21f63dfbf207da1b85b2976745e21856f180c6f96c61a"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/incorrect-hash/sbom-inventory.json",
+    "sha256": "baf99634d3e26a2b42827020a675730ca00a829e0abebb85a30836ba6f4951a3"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/incorrect-hash/trivy-fixture.json",
+    "sha256": "69b22dbcb89e244006867b03457a30f9531c895ea9e09589d24feade8ada4ab3"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-component/bom.json",
+    "sha256": "7cf413c556fd5aeb67e18c863f379a2e2e1ce238ed03502a788c937aec0a5992"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-component/fixture.zip",
+    "sha256": "23cfd8ca412a558e56b21f63dfbf207da1b85b2976745e21856f180c6f96c61a"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-component/sbom-inventory.json",
+    "sha256": "dcc18e3980bdd6ac76766ae6bb3b0d93269b64ee6215b3e30f12419b361ce325"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-component/trivy-fixture.json",
+    "sha256": "69b22dbcb89e244006867b03457a30f9531c895ea9e09589d24feade8ada4ab3"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-scanned-purl/bom.json",
+    "sha256": "3afad8fca9925bf2a80952f417c2734527fdd82798e7859b8528598acad64b8e"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-scanned-purl/fixture.zip",
+    "sha256": "23cfd8ca412a558e56b21f63dfbf207da1b85b2976745e21856f180c6f96c61a"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-scanned-purl/sbom-inventory.json",
+    "sha256": "04b7fd3baa8fd089b6f8349bb5f7299a9f5a7666de6fd8a377f3c035608c2075"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/missing-scanned-purl/trivy-fixture.json",
+    "sha256": "c13b65563cc94c1b01cb667d28f52f3005b084b5e5e8eb8f70be9dad9a77f31c"
+  },
+  {
+    "path": "sbom-inventory-unit-tests/test-results.json",
+    "sha256": "dccd4d739bca6074bb2405e27c548b8583b638007f6d0ae0e6db65cd21f1b50b"
+  },
+  {
+    "path": "sbom-security/all-components-inventory-check.json",
+    "sha256": "9e5ad9f4aea4fe0b26de49c4b1c32a52647ab8ce10f4def95a6d399df9ebe1fc"
+  },
+  {
+    "path": "sbom-security/bom.json",
+    "sha256": "9ccb23d17165959e25888b1a76ed0a49637618c5f554ef826e724761ca573fab"
+  },
+  {
+    "path": "sbom-security/inventory-after-scan.json",
+    "sha256": "55eb849b3f1f335cf14feef07af7d4b511af32b1edd59ecf449747b4aaad165b"
+  },
+  {
+    "path": "sbom-security/inventory-before-scan.json",
+    "sha256": "332507ec8a3866f4289d095fe3049bab82c0ea4915ee2588237e241511875668"
+  },
+  {
+    "path": "sbom-security/sbom-check-results.json",
+    "sha256": "eb4bb8cffc7129527ea30573922e2a7df344a177e73bf68fd890e66f9029023c"
+  },
+  {
+    "path": "sbom-security/scan-policy.log",
+    "sha256": "6995737902988f1828bc48f62ee281d887525fc5a0ff518d154fdd2113051d88"
+  },
+  {
+    "path": "sbom-security/scan-summary.json",
+    "sha256": "50ddf678034fe4f63ea64eb891e345d38cda4bdf8b7c705eb01026f6129f219d"
+  },
+  {
+    "path": "sbom-security/trivy-sbom.json",
+    "sha256": "07cce1c0d122d0391d5f36ed6e660a8d94733f8a116d2fb86cb50446749e3aa1"
+  },
+  {
+    "path": "sbom-security/trivy-summary.md",
+    "sha256": "d134c11a9ba921df0cda5f54b81113c5c923387a99f74b969c07086c4c1a2488"
+  },
+  {
+    "path": "sbom-security/trivy-version.json",
+    "sha256": "0a412091c328bd652046ff102736ad1a46e0bab930bfb97a3af466a827900b68"
+  },
+  {
+    "path": "sbom-security/trivy-version.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "sbom-security/trivy.log",
+    "sha256": "4bea83d89cb49052e11c18c082715b4ac40406e7897eef9f17d0491572fa5a68"
+  },
+  {
+    "path": "security/findings-all.csv",
+    "sha256": "99f38a97e9b60bbd360a57594987ec7af204436040cb6f605f635210b86da7b9"
+  },
+  {
+    "path": "security/PRIORIDADES.md",
+    "sha256": "046fdca31c8a652413672f2c964cc38f157208ed5438407c22b831682a336d5f"
+  },
+  {
+    "path": "security/scan-policy.log",
+    "sha256": "6995737902988f1828bc48f62ee281d887525fc5a0ff518d154fdd2113051d88"
+  },
+  {
+    "path": "security/scan-summary.json",
+    "sha256": "90f3ee264f4182863cc97c27b7c1512fa07474eb53628427538d5e299de6b0b1"
+  },
+  {
+    "path": "security/trivy-image.json",
+    "sha256": "c914406d052a8ac70c7cdf7cf8ec1930c55a6aa2af8393d74cd90f62ae5c07a6"
+  },
+  {
+    "path": "security/trivy-summary.md",
+    "sha256": "fe11d09e64105c95e3a062408aa98890937e07616c8c8b54df7160bb4a94b73a"
+  },
+  {
+    "path": "security/trivy-version.json",
+    "sha256": "0a412091c328bd652046ff102736ad1a46e0bab930bfb97a3af466a827900b68"
+  },
+  {
+    "path": "security/trivy-version.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "security/trivy.log",
+    "sha256": "5fa567c3802fd4ddac263c802860955756afeda9c1afa37833a8b8fbc2f6eb09"
+  },
+  {
+    "path": "surefire/devsu.devops.demo.controller.UserControllerTest.txt",
+    "sha256": "923beaa43c0821f6fc12ed6781d519a4b8816f88b7dd3c4fcdc0d10ef201e4dc"
+  },
+  {
+    "path": "surefire/devsu.devops.demo.DemoJavaApplicationTests.txt",
+    "sha256": "5f05955f3d210e0d4cd986c85cfe18ea014f4205366de2e5900abb62a87c5492"
+  },
+  {
+    "path": "surefire/devsu.devops.demo.health.HealthEndpointTest.txt",
+    "sha256": "9e46923eb1a98228e638f5ebcf1c7a5c14094440dbe3d92db21be0cfc186d36c"
+  },
+  {
+    "path": "surefire/devsu.devops.demo.repository.UserRepositoryTest.txt",
+    "sha256": "3719c5a12d9ec48a39632d2792c20b0f00e98b3d7d2cc0140200cb1aed88a800"
+  },
+  {
+    "path": "surefire/devsu.devops.demo.service.UserServiceTest.txt",
+    "sha256": "1c31e791b4675fadd197ec8587db2ac3164814c3edfb19f90742addbec96db57"
+  },
+  {
+    "path": "surefire/TEST-devsu.devops.demo.controller.UserControllerTest.xml",
+    "sha256": "8169d3eac5d20b101472ba86a9a451fa3b01330ad9cfb9ff0edce58663b0ac01"
+  },
+  {
+    "path": "surefire/TEST-devsu.devops.demo.DemoJavaApplicationTests.xml",
+    "sha256": "da4c6c0a9f325d3a4e9deaa8c6bb225f034e81fa9b880cd0acadf7f7db342298"
+  },
+  {
+    "path": "surefire/TEST-devsu.devops.demo.health.HealthEndpointTest.xml",
+    "sha256": "d230b698667a3661acf91d697d9e4d571faa6f62bb3d36f72db60b91d8c36a50"
+  },
+  {
+    "path": "surefire/TEST-devsu.devops.demo.repository.UserRepositoryTest.xml",
+    "sha256": "f1d550c3510ffea8942c8b9a26a6256ac8a6b2b60c0ca68c7d80f72ac4ce0fdc"
+  },
+  {
+    "path": "surefire/TEST-devsu.devops.demo.service.UserServiceTest.xml",
+    "sha256": "3967ed1afe7f8ec1363f915bb8f64c2db1b8aad9eb12d7a8b6c66fe539834c56"
+  }
+]

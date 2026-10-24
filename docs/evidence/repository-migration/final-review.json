@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-23T22:21:15.1641875-06:00",
+  "purpose": "Final review before documentation-only commit and delivery ZIP generation",
+  "passed": true,
+  "publicRepository": "https://github.com/mpguevara/devsu-demo-devops-java-entrega",
+  "pipelineURL": "https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467",
+  "validatedSourceCommit": "d3af234b09be0241e0ba339e974572da0b506e3a",
+  "markdownFiles": 83,
+  "localTargetsChecked": 579,
+  "missingTargets": [],
+  "credentialPatternCandidateFiles": 0,
+  "credentialPatternScope": "High-confidence GitHub/AWS/private-key/long-Bearer markers; not exhaustive secret detection",
+  "localToolPathMatchingFiles": 0,
+  "runtimeDifferences": [],
+  "runEvidenceHashes": 131,
+  "previousRepositoryHead": "b28d8c4acf9cb2479e992454c7d70c03a90d3067",
+  "previousRepositoryPreserved": true,
+  "newApplicationTestsExecutedDuringFinalReview": false,
+  "applicationTestsSource": "Real run40060607467 artifacts"
+}

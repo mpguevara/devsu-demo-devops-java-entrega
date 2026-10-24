@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-23T22:10:20.3889350-06:00",
+  "scope": "Anonymous GHCR manifest GET, raw response byte SHA256 and config digest link; not a full layer pull",
+  "repository": "mpguevara/devsu-demo-devops-java-entrega",
+  "tag": "d3af234b09be0241e0ba339e974572da0b506e3a",
+  "manifestStatus": 200,
+  "responseBodyType": "System.Byte[]",
+  "digest": "sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397",
+  "expectedDigest": "sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397",
+  "manifestBodySHA256": "sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397",
+  "configDigest": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+  "containerJobImageId": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+  "anonymousManifestAccessible": true,
+  "digestMatches": true,
+  "rawManifestHashMatchesDigest": true,
+  "configMatchesImageJob": true,
+  "passed": true
+}

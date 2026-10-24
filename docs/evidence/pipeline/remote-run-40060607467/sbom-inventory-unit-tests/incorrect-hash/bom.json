@@ -1,0 +1,188 @@
+{
+  "components": [
+    {
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-classic",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@0.0.0-fixture",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "ch.qos.logback",
+      "name": "logback-core",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/ch.qos.logback/logback-core@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "0487efc3f66d598db005362b38c515ef4925298bf78801340ab0b143ced19651",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-core",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "e0b7b86d65c6e73dd975405b85045b345916b28c74ed0f280f1c58374f9b2ad0",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-databind",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "f7fefa21a3b0839127c2b8928c0c5006b4acb8f4d436c3ea4ae0594ff3a48e52",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "com.h2database",
+      "name": "h2",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/com.h2database/h2@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "78a11cf845438dfc4944c128558f564cce74602af86cadbe38c1e485d0f2ffaf",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "io.micrometer",
+      "name": "micrometer-core",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/io.micrometer/micrometer-core@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "d1295c40cc5a717ee64d5e0a10acf5408c4a8992cfe31e6f866f29c5842d103f",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.apache.tomcat.embed",
+      "name": "tomcat-embed-core",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "1ab6af24f4eb12f5dd1365329e63e6280f8d058f56afb14590fb4e6d357e592d",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-actuator-autoconfigure",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "8a95c568eca8f6675aaee75fb3d2fffefeb50a8721d040111128536cd8a225f1",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-autoconfigure",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "11b70af0ba643fb34ceae4e15ddb25b1783daa862e722923a2fec974c9c4ee0e",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-core",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.springframework/spring-core@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "32d399cf50c32e75251b53b7a77ffbb77066ae3005ce96a92509a811972d87c9",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-expression",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.springframework/spring-expression@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "0bf35f9e5d95f9c314f40a080bc7e35aa6984718d725964a55778e00962fb2bc",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-web",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.springframework/spring-web@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "599a7d7328cda04e6f054e100b4027a89ab2a74c181835c1dc5ea00c570ab390",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-webmvc",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.springframework/spring-webmvc@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "d0837f05cdd5c38196948c6ce3ebd6989f371e6aa9b8bb7fdca6d7693b4a67f0",
+          "alg": "SHA-256"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "group": "org.yaml",
+      "name": "snakeyaml",
+      "version": "0.0.0-fixture",
+      "purl": "pkg:maven/org.yaml/snakeyaml@0.0.0-fixture",
+      "hashes": [
+        {
+          "content": "a575eea1f0b1c240655d53aa774ac28e0bff76c86a4615f909404be0da9295c5",
+          "alg": "SHA-256"
+        }
+      ]
+    }
+  ],
+  "specVersion": "1.6",
+  "bomFormat": "CycloneDX"
+}

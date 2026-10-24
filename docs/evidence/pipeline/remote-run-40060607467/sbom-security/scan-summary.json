@@ -1,0 +1,29 @@
+{
+  "startedAt": "2026-10-24T04:04:22.2470694+00:00",
+  "finishedAt": "2026-10-24T04:04:28.9915995+00:00",
+  "source": "trivy-real-sbom-scan",
+  "scanner": "Trivy 0.76.1",
+  "image": "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a",
+  "exitCode": 0,
+  "completed": true,
+  "reportAvailable": true,
+  "assessmentSucceeded": true,
+  "gatePassed": true,
+  "status": "passed",
+  "failureKind": null,
+  "policy": "block-any-critical-or-high; retain-all-severities; fail-closed-on-scan-or-report-error",
+  "blockedSeverities": [
+    "CRITICAL",
+    "HIGH"
+  ],
+  "findings": 0,
+  "blockingFindings": 0,
+  "bySeverity": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "failure": null
+}

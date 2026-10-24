@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-10-24T04:04:22.2470694+00:00",
+  "finishedAt": "2026-10-24T04:04:29.2363777+00:00",
+  "source": "image-extracted-artifacts-and-real-trivy-sbom",
+  "image": "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a",
+  "imageId": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+  "extracted": true,
+  "preScanInventoryPassed": true,
+  "scannerExecuted": true,
+  "scannerExitCode": 0,
+  "vulnerabilityGatePassed": true,
+  "scannedInventoryPassed": true,
+  "temporaryJarRemoved": true,
+  "passed": true,
+  "failure": null
+}

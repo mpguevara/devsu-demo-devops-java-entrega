@@ -1,0 +1,105 @@
+{
+  "total_count": 5,
+  "artifacts": [
+    {
+      "id": 12547276831,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU0NzI3NjgzMQ==",
+      "name": "image-evidence-40060607467",
+      "size_in_bytes": 159342,
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12547276831",
+      "archive_download_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12547276831/zip",
+      "expired": false,
+      "digest": "sha256:84beee478745408f5ff59820e6ce68c6946d252106faf13d499b9dc086262f48",
+      "created_at": "2026-10-24T04:04:31Z",
+      "updated_at": "2026-10-24T04:04:31Z",
+      "expires_at": "2026-11-07T04:04:30Z",
+      "workflow_run": {
+        "id": 40060607467,
+        "repository_id": 1431791920,
+        "head_repository_id": 1431791920,
+        "head_branch": "main",
+        "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a"
+      }
+    },
+    {
+      "id": 12547183475,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU0NzE4MzQ3NQ==",
+      "name": "publication-40060607467",
+      "size_in_bytes": 782,
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12547183475",
+      "archive_download_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12547183475/zip",
+      "expired": false,
+      "digest": "sha256:a1a9ac4a48a6deab13a6ecc04a869d3eaeae093dc9e3f8cf7143114f689c73da",
+      "created_at": "2026-10-24T04:05:21Z",
+      "updated_at": "2026-10-24T04:05:21Z",
+      "expires_at": "2026-11-07T04:05:20Z",
+      "workflow_run": {
+        "id": 40060607467,
+        "repository_id": 1431791920,
+        "head_repository_id": 1431791920,
+        "head_branch": "main",
+        "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a"
+      }
+    },
+    {
+      "id": 12547089462,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU0NzA4OTQ2Mg==",
+      "name": "kubernetes-40060607467",
+      "size_in_bytes": 63047,
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12547089462",
+      "archive_download_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12547089462/zip",
+      "expired": false,
+      "digest": "sha256:3d94d13cf37c5e6e4c78f3b4bb698ba3b545dfa8b4a4e534178dfa81c84167f5",
+      "created_at": "2026-10-24T04:09:49Z",
+      "updated_at": "2026-10-24T04:09:49Z",
+      "expires_at": "2026-11-07T04:09:47Z",
+      "workflow_run": {
+        "id": 40060607467,
+        "repository_id": 1431791920,
+        "head_repository_id": 1431791920,
+        "head_branch": "main",
+        "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a"
+      }
+    },
+    {
+      "id": 12546848084,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU0Njg0ODA4NA==",
+      "name": "container-40060607467",
+      "size_in_bytes": 339231553,
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12546848084",
+      "archive_download_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12546848084/zip",
+      "expired": false,
+      "digest": "sha256:d2dc28eea0d949730d51da87ba8f4d678c02fbb05dd04f4383cd073d4ead0c17",
+      "created_at": "2026-10-24T04:04:35Z",
+      "updated_at": "2026-10-24T04:04:35Z",
+      "expires_at": "2026-10-27T04:04:32Z",
+      "workflow_run": {
+        "id": 40060607467,
+        "repository_id": 1431791920,
+        "head_repository_id": 1431791920,
+        "head_branch": "main",
+        "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a"
+      }
+    },
+    {
+      "id": 12546829276,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU0NjgyOTI3Ng==",
+      "name": "quality-40060607467",
+      "size_in_bytes": 313134,
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12546829276",
+      "archive_download_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/artifacts/12546829276/zip",
+      "expired": false,
+      "digest": "sha256:ab12897b0285b4225d6aa639a55ac77d3a19ffee829cb9546352c931d1c759ce",
+      "created_at": "2026-10-24T04:02:07Z",
+      "updated_at": "2026-10-24T04:02:07Z",
+      "expires_at": "2026-11-07T04:02:05Z",
+      "workflow_run": {
+        "id": 40060607467,
+        "repository_id": 1431791920,
+        "head_repository_id": 1431791920,
+        "head_branch": "main",
+        "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a"
+      }
+    }
+  ]
+}

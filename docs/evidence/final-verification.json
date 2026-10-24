@@ -1,14 +1,15 @@
 {
-  "verifiedAt": "2026-10-23T19:26:12.2479239-06:00",
-  "purpose": "Final consolidation after dependency remediation, two real scans and local existing-database upgrade",
+  "verifiedAt": "2026-10-23T22:13:50.1483762-06:00",
+  "purpose": "New delivery repository revalidated by a real complete pipeline; prior repository and historical local evidence preserved",
   "implementationVerified": true,
-  "publicRepository": "https://github.com/mpguevara/devsu-demo-devops-java",
-  "pipelineURL": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
+  "publicRepository": "https://github.com/mpguevara/devsu-demo-devops-java-entrega",
+  "pipelineURL": "https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467",
   "pipelineStatus": "success",
-  "validatedImplementationCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "pipelineEvent": "push",
+  "validatedImplementationCommit": "d3af234b09be0241e0ba339e974572da0b506e3a",
+  "successfulJobs": 4,
   "currentImplementationMatchesValidatedCommit": true,
   "implementationDifferences": [],
-  "untrackedRuntimeFiles": [],
   "mavenTests": {
     "total": 22,
     "failures": 0,
@@ -30,20 +31,11 @@
   "pmdViolations": 0,
   "offlinePolicyTests": 8,
   "offlineInventoryTests": 4,
-  "nativeJarHttpChecks": 9,
   "vulnerabilityVerification": {
-    "capturedAt": "2026-10-23T19:14:24.2019532-06:00",
-    "source": "Real final image scan, real extracted SBOM scan and byte-level nested-JAR inventory",
-    "beforeRun": 40044688944,
-    "afterRun": 40048321809,
-    "validatedSourceCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
-    "beforeSeverities": {
-      "CRITICAL": 9,
-      "HIGH": 40,
-      "MEDIUM": 58,
-      "LOW": 14,
-      "UNKNOWN": 0
-    },
+    "source": "Real image and image-extracted SBOM scans from the new delivery repository workflow",
+    "repository": "mpguevara/devsu-demo-devops-java-entrega",
+    "runId": 40060607467,
+    "validatedSourceCommit": "d3af234b09be0241e0ba339e974572da0b506e3a",
     "imageSeverities": {
       "CRITICAL": 0,
       "HIGH": 0,
@@ -69,56 +61,92 @@
     "noCveExceptions": true,
     "ignoreUnfixed": false,
     "publication": {
+      "runUrl": "https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467",
+      "digest": "ghcr.io/mpguevara/devsu-demo-devops-java-entrega@sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397",
+      "image": "ghcr.io/mpguevara/devsu-demo-devops-java-entrega:d3af234b09be0241e0ba339e974572da0b506e3a"
+    },
+    "scope": "Detected vulnerabilities in the application image and verified Maven SBOM; not exhaustive security"
+  },
+  "registryIdentity": {
+    "manifestDigest": "sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397",
+    "configDigest": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+    "manifestBodySHA256": "sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397",
+    "sourceLabel": "https://github.com/mpguevara/devsu-demo-devops-java-entrega",
+    "revisionLabel": "d3af234b09be0241e0ba339e974572da0b506e3a",
+    "user": "10001:10001",
+    "imageBuildAndDeploymentIdIdentical": true,
+    "anonymousManifestAccess": true,
+    "anonymousConfigMetadataAccess": true,
+    "fullAnonymousLayerPullVerified": false
+  },
+  "remoteKubernetes": {
+    "scope": "New delivery repository ephemeral kind cluster",
+    "passed": true,
+    "checks": 30,
+    "failedChecks": 0,
+    "load": {
+      "failedRequests": 0,
+      "successfulRequests": 16736
+    },
+    "scaledUnderRealHttpLoad": true,
+    "initialReady": 2,
+    "finalReady": 4,
+    "cleanupErrors": [],
+    "publicEndpoint": false
+  },
+  "historicalLocalVerification": {
+    "scope": "Previous local verification; not rerun by this repository migration",
+    "verifiedAt": "2026-10-23T19:26:12.2479239-06:00",
+    "repository": "https://github.com/mpguevara/devsu-demo-devops-java",
+    "sourceCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+    "publication": {
       "runUrl": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
       "image": "ghcr.io/mpguevara/devsu-demo-devops-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
       "digest": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
     },
-    "scope": "Reported vulnerabilities in application image and complete Maven SBOM; no claim of exhaustive security"
-  },
-  "localKubernetes": {
-    "passed": true,
-    "load": {
-      "successfulRequests": 7104,
-      "failedRequests": 0
+    "localKubernetes": {
+      "passed": true,
+      "load": {
+        "successfulRequests": 7104,
+        "failedRequests": 0
+      },
+      "scaledUnderRealHttpLoad": true,
+      "cleanupErrors": [],
+      "checks": 30
     },
-    "scaledUnderRealHttpLoad": true,
-    "cleanupErrors": [],
-    "checks": 30
-  },
-  "remoteKubernetes": {
-    "passed": true,
-    "load": {
-      "successfulRequests": 21354,
-      "failedRequests": 0
+    "existingDatabaseUpgrade": {
+      "previousUserCount": 2,
+      "pvcUID": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+      "passed": true,
+      "afterUserCount": 2,
+      "flywayV1Checksum": -1665856150,
+      "checks": 19,
+      "beforeAndAfterRecorded": true
     },
-    "scaledUnderRealHttpLoad": true,
-    "cleanupErrors": [],
-    "checks": 30
+    "deploymentSnapshotAtThatTime": {
+      "observedReady": 2,
+      "desired": 2,
+      "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771"
+    },
+    "nativeJarHttpChecks": 9,
+    "rerunDuringMigration": false
   },
-  "existingDatabaseUpgrade": {
-    "previousUserCount": 2,
-    "pvcUID": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
-    "passed": true,
-    "afterUserCount": 2,
-    "flywayV1Checksum": -1665856150,
-    "checks": 19,
-    "beforeAndAfterRecorded": true
-  },
-  "liveLocalDeployment": {
-    "observedReady": 2,
-    "desired": 2,
-    "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771"
+  "previousRepository": {
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java",
+    "expectedHead": "b28d8c4acf9cb2479e992454c7d70c03a90d3067",
+    "observedHead": "b28d8c4acf9cb2479e992454c7d70c03a90d3067",
+    "preserved": true
   },
   "criticalHighRemediationPending": false,
   "publicApiEndpoint": false,
-  "archiveProcedure": "scripts/New-Delivery.ps1: clean Git HEAD, git archive and SHA256 manifest outside repository",
+  "archiveProcedure": "scripts/New-Delivery.ps1 after a documentation-only commit; ZIP manifest outside the repository records its actual final HEAD and file hashes",
   "limitations": [
-    "28 MEDIUM and 4 LOW Ubuntu findings retained, including one with known fixed version.",
-    "Pinned published Temurin image predates upstream17.0.21; Docker tag availability observed and documented.",
-    "Scans do not prove absence of unknown vulnerabilities or cover every infrastructure image.",
-    "Single PostgreSQL instance and one-node cluster; no HA or tested backup/disk-loss recovery.",
-    "Initial requests/limits and bounded HTTP load do not establish SLA or production sizing.",
-    "Local Docker-to-kind import failed; exact registry digest was pulled directly to node, preserving data.",
-    "Final archive is generated after a documentation-only commit; runtime source matches validated implementation commit."
+    "28 MEDIUM and 4 LOW base-image findings remain visible; scanner snapshots are preserved.",
+    "CI publishes and deploys the same built image using a checksummed archive; anonymous manifest/config access is verified, not a full layer pull.",
+    "Kubernetes is ephemeral and the API has no public endpoint.",
+    "Single-node kind and single PostgreSQL instance are not high availability or a tested backup strategy.",
+    "Historical local database and deployment checks were not repeated for the new image; their original results and image are retained separately.",
+    "The previous repository remains public and unchanged; creating this repository does not purge external copies of its old objects.",
+    "The final documentation commit is newer than the actual tested commit; application, dependencies, Dockerfile, workflow, scripts and Kubernetes configuration match the validated source."
   ]
 }

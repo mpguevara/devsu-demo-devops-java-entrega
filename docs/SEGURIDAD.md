@@ -16,7 +16,7 @@ Referencias de selección: [requisitos oficiales de Spring Boot](https://docs.sp
 
 Las bases Docker conservan Temurin 17.0.20.1+1 por digest. En la consulta del 23 de octubre a las 18:43 de El Salvador, Adoptium ya publicaba 17.0.21+9, pero sus imágenes Docker todavía no estaban disponibles: los tags consultados devolvieron 404 y los tags publicados resolvían a los pins existentes. Se conserva esa [comprobación de la base](evidence/security-remediation/container-base/README.md). Es un desfase pendiente de revisar cuando se publiquen imágenes; no se inventa un digest ni se sustituye la JVM con una descarga diferente durante el build.
 
-## Resultado del nuevo escaneo
+## Resultado histórico de la remediación en el repositorio original
 
 El [run 40048321809](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809) reconstruyó la revisión `81beb47ba4b03f98e407860d94d143a22f2d2771` y ejecutó Trivy 0.76.1 sobre la imagen y sobre el SBOM extraído de ella. El [reporte completo de imagen](evidence/pipeline/remote-run-40048321809/security/trivy-image.json), el [reporte SBOM](evidence/pipeline/remote-run-40048321809/sbom-security/trivy-sbom.json) y sus resúmenes confirman que ambos escaneos y gates terminaron correctamente.
 
@@ -39,6 +39,25 @@ El control final vinculó **97/97 JAR por SHA-256** al SBOM extraído de la mism
 La [metadata final de Trivy](evidence/pipeline/remote-run-40048321809/security/trivy-version.json) registra la base de vulnerabilidades actualizada el 23 de octubre a las 19:15:43 UTC y descargada el 24 de octubre a las 01:10:37 UTC; esta última hora equivale al 23 de octubre a las 19:10 en El Salvador. La base Java de identificación conserva sus propias fechas. Se registra la evidencia disponible, sin afirmar cobertura exhaustiva de avisos de seguridad.
 
 La suite nativa y el job de calidad aprobaron **22 pruebas, PMD sin infracciones y gates JaCoCo intactos**. Ocho pruebas unitarias de política y cuatro de inventario comprueban rechazos y errores; están identificadas como fixtures y separadas de los escaneos reales. La [publicación](evidence/pipeline/remote-run-40048321809/publication.json) registra el digest `sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e`. CI aprobó 30 comprobaciones Kubernetes, 21.354 GET exitosos/0 fallidos y HPA de dos a cuatro Ready. El [After del clúster local existente](evidence/security-remediation/postgres-upgrade/after.json) conservó los dos usuarios anteriores, el PVC y el historial Flyway/V1 al actualizar a esa misma imagen.
+
+## Revalidación en el repositorio de entrega
+
+El [run 40060607467](https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467) reconstruyó la revisión `d3af234b09be0241e0ba339e974572da0b506e3a` en el nuevo repositorio `mpguevara/devsu-demo-devops-java-entrega`. La [metadata](evidence/pipeline/remote-run-40060607467/run-metadata.json) y los [cuatro jobs](evidence/pipeline/remote-run-40060607467/jobs.json) confirman **success** global: calidad, construcción/escaneo, publicación y Kubernetes. Los siguientes resultados corresponden a esa imagen nueva; las verificaciones históricas anteriores conservan su URL, revisión, digest y datos locales originales.
+
+| Escaneo real con Trivy 0.76.1 | CRITICAL | HIGH | MEDIUM | LOW | UNKNOWN |
+|---|---:|---:|---:|---:|---:|
+| Imagen | 0 | 0 | 28 | 4 | 0 |
+| SBOM extraído de esa imagen | 0 | 0 | 0 | 0 | 0 |
+
+Se conservan los JSON completos de [imagen](evidence/pipeline/remote-run-40060607467/security/trivy-image.json) y [SBOM](evidence/pipeline/remote-run-40060607467/sbom-security/trivy-sbom.json), además de sus resúmenes y logs. Ambos gates aprobaron, sin exclusiones de CVE y sin omitir vulnerabilidades sin corrección. Los 28 hallazgos medios y 4 bajos permanecen visibles y no equivalen a una imagen libre de riesgo.
+
+El [inventario posterior al escaneo](evidence/pipeline/remote-run-40060607467/sbom-security/inventory-after-scan.json) verificó **97/97 JAR por SHA-256**, los PURL de todas las dependencias empaquetadas y las 14 coordenadas históricas. La [comprobación adicional del BOM completo](evidence/pipeline/remote-run-40060607467/sbom-security/all-components-inventory-check.json) confirmó **110/110 componentes** en 111 registros del escáner. El [resultado de extracción y limpieza](evidence/pipeline/remote-run-40060607467/sbom-security/sbom-check-results.json) vincula estas comprobaciones al ID de imagen `sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f`.
+
+La [metadata de Trivy de este nuevo run](evidence/pipeline/remote-run-40060607467/security/trivy-version.json) registra una base de vulnerabilidades actualizada el 24 de octubre de 2026 a las 01:18:19 UTC y descargada a las 04:03:57 UTC; la base Java disponible se actualizó a las 01:07:32 UTC y se descargó a las 04:04:20 UTC. Son fechas de este escaneo, distintas de las conservadas para el repositorio original.
+
+La [publicación real](evidence/pipeline/remote-run-40060607467/publication.json) corresponde a `ghcr.io/mpguevara/devsu-demo-devops-java-entrega:d3af234b09be0241e0ba339e974572da0b506e3a`, con digest `sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397`. La [consulta anónima del manifiesto](evidence/pipeline/remote-run-40060607467/ghcr-anonymous-check.json) confirmó HTTP 200 y ese digest; no representa un pull completo de capas ni una nueva verificación del clúster local existente.
+
+La [identidad de imagen](evidence/pipeline/remote-run-40060607467/image-identity-check.json) coincide entre construcción y despliegue. La [validación Kubernetes del nuevo run](evidence/pipeline/remote-run-40060607467/kubernetes/kubernetes-evidence/kubernetes-results.json) aprobó **30/30 comprobaciones**, con **16.736 GET exitosos y cero fallidos**, HPA de dos a cuatro Ready, persistencia y recuperación, sin errores de limpieza. Es un clúster efímero nuevo de CI. El ensayo local de `81beb47`, sus 7.104 GET y la conservación del PVC y los usuarios siguen siendo evidencia histórica de aquella imagen. El [registro de migración](evidence/repository-migration/README.md) conserva las incidencias y resoluciones de la entrega al nuevo repositorio.
 
 ## Alcance y límites
 

@@ -1,0 +1,8 @@
+NAME                             CPU(cores)   MEMORY(bytes)   
+devsu-app-5dccd5b98d-2dmfn       500m         213Mi           
+devsu-app-5dccd5b98d-qzn6j       372m         292Mi           
+devsu-app-5dccd5b98d-ssn5t       500m         215Mi           
+devsu-app-5dccd5b98d-tvqzg       345m         292Mi           
+devsu-http-load-a14ff8ca-qnsfn   294m         5Mi             
+postgres-0                       82m          39Mi            
+traefik-7c8fc4d65d-77lfz         1m           20Mi            

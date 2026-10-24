@@ -1,0 +1,11 @@
+{
+  "recordedAt": "2026-10-23T22:10:20.4530980-06:00",
+  "scope": "Post-run metadata checks, not application or workflow failures",
+  "observedResponseBodyType": "System.Byte[]",
+  "initialCheckFailed": true,
+  "initialComparisonMessage": "La identidad de la publicación no coincide con el manifiesto real.",
+  "followUpParsingError": "Conversion from JSON failed: Additional text encountered after finished reading JSON content",
+  "causeObserved": "Invoke-WebRequest returned manifest Content as byte[]; string coercion produced numeric byte text instead of the JSON body",
+  "resolution": "Decode the raw byte array as UTF8 for parsing and hash the original byte array",
+  "resolved": true
+}

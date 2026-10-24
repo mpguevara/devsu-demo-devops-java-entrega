@@ -1,0 +1,36 @@
+Name:                                                  devsu-app
+Namespace:                                             devsu
+Labels:                                                <none>
+Annotations:                                           <none>
+CreationTimestamp:                                     Sat, 24 Oct 2026 04:07:03 +0000
+Reference:                                             Deployment/devsu-app
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  487% (487m) / 60%
+Min replicas:                                          2
+Max replicas:                                          4
+Behavior:
+  Scale Up:
+    Stabilization Window: 15 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods  Value: 2  Period: 30 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods  Value: 1  Period: 30 seconds
+Deployment pods:    4 current / 4 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooManyReplicas   the desired replica count is more than the maximum replica count
+Events:
+  Type     Reason                        Age                   From                       Message
+  ----     ------                        ----                  ----                       -------
+  Warning  FailedGetResourceMetric       2m29s                 horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+  Warning  FailedComputeMetricsReplicas  2m29s                 horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+  Warning  FailedGetResourceMetric       104s (x3 over 2m14s)  horizontal-pod-autoscaler  failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+  Warning  FailedComputeMetricsReplicas  104s (x3 over 2m14s)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+  Normal   SuccessfulRescale             44s                   horizontal-pod-autoscaler  New size: 4; reason: cpu resource utilization (percentage of request) above target

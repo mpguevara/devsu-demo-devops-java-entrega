@@ -26,6 +26,14 @@ La diferencia de contadores tiene una causa verificable: el BOM actualiza Lombok
 
 El caso existente de alta y consulta ahora envía también `id=2147483647` y comprueba que el servidor asigna un ID positivo diferente. Así verifica el contrato `READ_ONLY` al migrar de Jackson 2 a Jackson 3, sin aumentar el número de casos ni modificar la API. El JAR superó nueve comprobaciones HTTP reales, incluyendo Swagger y OpenAPI.
 
+## Revalidación del job de calidad en el repositorio de entrega
+
+El job **Compile, test, PMD and coverage** del [run 40060607467](https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467), en `mpguevara/devsu-demo-devops-java-entrega`, terminó correctamente sobre la revisión `d3af234b09be0241e0ba339e974572da0b506e3a`. Ejecutó realmente `./mvnw -B -ntp clean verify -DargLine=-Xmx384m` con Temurin 17.0.20.1+1, entre las 04:00:49 y las 04:02:05 UTC del 24 de octubre de 2026; Maven devolvió código 0.
+
+El [resumen descargado](evidence/pipeline/remote-run-40060607467/quality-summary.json) registra **22 pruebas Java, 0 fallos, 0 errores y 0 omitidas**, **PMD sin infracciones**, **51/58 líneas: 87,93 %** y **2/2 ramas: 100 %**. Los cinco [reportes Surefire](evidence/pipeline/remote-run-40060607467/surefire/) confirman esos resultados. El [XML de JaCoCo](evidence/pipeline/remote-run-40060607467/jacoco.xml) confirma además 14/14 líneas y 2/2 ramas del servicio; permanecen aprobados los umbrales global y del servicio. Se conservan también el [reporte PMD](evidence/pipeline/remote-run-40060607467/pmd.xml) y el [log Maven](evidence/pipeline/remote-run-40060607467/maven-verify.log).
+
+El mismo job aprobó [ocho pruebas offline de política](evidence/pipeline/remote-run-40060607467/policy-unit-tests/policy-test-results.json) y [cuatro de inventario SBOM](evidence/pipeline/remote-run-40060607467/sbom-inventory-unit-tests/test-results.json). Son fixtures sin ejecución de Trivy y se contabilizan por separado de las 22 pruebas Java. Este resultado acredita el job de calidad; la conclusión global del pipeline y los resultados de imagen, escaneos, publicación y Kubernetes se documentan con su evidencia correspondiente. Las mediciones y ejecuciones anteriores conservan su procedencia histórica.
+
 ## Pruebas de comportamiento
 
 | Grupo | Casos | Alcance |

@@ -1,0 +1,421 @@
+{
+  "total_count": 4,
+  "jobs": [
+    {
+      "id": 120773071175,
+      "run_id": 40060607467,
+      "workflow_name": "Java quality, image and Kubernetes",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVdpMM8AAAAcHqLRRw",
+      "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a",
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/jobs/120773071175",
+      "html_url": "https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467/job/120773071175",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-24T04:00:28Z",
+      "started_at": "2026-10-24T04:00:30Z",
+      "completed_at": "2026-10-24T04:02:14Z",
+      "name": "Compile, test, PMD and coverage",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-24T04:00:31Z",
+          "completed_at": "2026-10-24T04:00:34Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-24T04:00:34Z",
+          "completed_at": "2026-10-24T04:00:35Z"
+        },
+        {
+          "name": "Java 17 and Maven cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-24T04:00:35Z",
+          "completed_at": "2026-10-24T04:00:39Z"
+        },
+        {
+          "name": "Test vulnerability gate with offline fixtures",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-24T04:00:39Z",
+          "completed_at": "2026-10-24T04:00:48Z"
+        },
+        {
+          "name": "Test complete SBOM inventory with offline fixtures",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-24T04:00:48Z",
+          "completed_at": "2026-10-24T04:00:49Z"
+        },
+        {
+          "name": "Maven verify (compile, unit tests, package, PMD, JaCoCo gates)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-24T04:00:49Z",
+          "completed_at": "2026-10-24T04:02:05Z"
+        },
+        {
+          "name": "Preserve real quality results",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-24T04:02:05Z",
+          "completed_at": "2026-10-24T04:02:07Z"
+        },
+        {
+          "name": "Post Java 17 and Maven cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-24T04:02:07Z",
+          "completed_at": "2026-10-24T04:02:12Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-24T04:02:12Z",
+          "completed_at": "2026-10-24T04:02:12Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-24T04:02:12Z",
+          "completed_at": "2026-10-24T04:02:12Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/check-runs/120773071175",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000016,
+      "runner_name": "GitHub Actions 1000000016",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 120773457331,
+      "run_id": 40060607467,
+      "workflow_name": "Java quality, image and Kubernetes",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVdpMM8AAAAcHqi1sw",
+      "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a",
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/jobs/120773457331",
+      "html_url": "https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467/job/120773457331",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-24T04:02:14Z",
+      "started_at": "2026-10-24T04:02:16Z",
+      "completed_at": "2026-10-24T04:04:37Z",
+      "name": "Build and inspect the image",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-24T04:02:16Z",
+          "completed_at": "2026-10-24T04:02:17Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-24T04:02:17Z",
+          "completed_at": "2026-10-24T04:02:18Z"
+        },
+        {
+          "name": "Build the non-root image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-24T04:02:18Z",
+          "completed_at": "2026-10-24T04:03:51Z"
+        },
+        {
+          "name": "Vulnerability gate (block any CRITICAL or HIGH; preserve all findings)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-24T04:03:51Z",
+          "completed_at": "2026-10-24T04:04:22Z"
+        },
+        {
+          "name": "Verify every packaged JAR and scan the image SBOM",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-24T04:04:22Z",
+          "completed_at": "2026-10-24T04:04:29Z"
+        },
+        {
+          "name": "Export the exact image for subsequent jobs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-24T04:04:29Z",
+          "completed_at": "2026-10-24T04:04:30Z"
+        },
+        {
+          "name": "Preserve image and scan evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-24T04:04:30Z",
+          "completed_at": "2026-10-24T04:04:32Z"
+        },
+        {
+          "name": "Transfer image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-24T04:04:32Z",
+          "completed_at": "2026-10-24T04:04:36Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-24T04:04:36Z",
+          "completed_at": "2026-10-24T04:04:36Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-24T04:04:36Z",
+          "completed_at": "2026-10-24T04:04:36Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/check-runs/120773457331",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000017,
+      "runner_name": "GitHub Actions 1000000017",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 120773959454,
+      "run_id": 40060607467,
+      "workflow_name": "Java quality, image and Kubernetes",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVdpMM8AAAAcHrBfHg",
+      "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a",
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/jobs/120773959454",
+      "html_url": "https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467/job/120773959454",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-24T04:04:38Z",
+      "started_at": "2026-10-24T04:04:40Z",
+      "completed_at": "2026-10-24T04:05:22Z",
+      "name": "Publish the verified image to GHCR",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-24T04:04:40Z",
+          "completed_at": "2026-10-24T04:04:42Z"
+        },
+        {
+          "name": "Download the built image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-24T04:04:42Z",
+          "completed_at": "2026-10-24T04:04:56Z"
+        },
+        {
+          "name": "Load and tag the exact image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-24T04:04:56Z",
+          "completed_at": "2026-10-24T04:05:07Z"
+        },
+        {
+          "name": "Authenticate and push",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-24T04:05:07Z",
+          "completed_at": "2026-10-24T04:05:19Z"
+        },
+        {
+          "name": "Remove registry session",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-24T04:05:19Z",
+          "completed_at": "2026-10-24T04:05:20Z"
+        },
+        {
+          "name": "Preserve publication evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-24T04:05:20Z",
+          "completed_at": "2026-10-24T04:05:21Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-24T04:05:21Z",
+          "completed_at": "2026-10-24T04:05:21Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/check-runs/120773959454",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000018,
+      "runner_name": "GitHub Actions 1000000018",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 120774120615,
+      "run_id": 40060607467,
+      "workflow_name": "Java quality, image and Kubernetes",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVdpMM8AAAAcHrLUpw",
+      "head_sha": "d3af234b09be0241e0ba339e974572da0b506e3a",
+      "url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/actions/jobs/120774120615",
+      "html_url": "https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467/job/120774120615",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-24T04:05:22Z",
+      "started_at": "2026-10-24T04:05:24Z",
+      "completed_at": "2026-10-24T04:09:50Z",
+      "name": "Deploy and validate private Kubernetes",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-24T04:05:25Z",
+          "completed_at": "2026-10-24T04:05:26Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-24T04:05:26Z",
+          "completed_at": "2026-10-24T04:05:26Z"
+        },
+        {
+          "name": "Download the built image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-24T04:05:26Z",
+          "completed_at": "2026-10-24T04:05:30Z"
+        },
+        {
+          "name": "Load the exact image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-24T04:05:30Z",
+          "completed_at": "2026-10-24T04:05:37Z"
+        },
+        {
+          "name": "Install pinned kubectl matching Kubernetes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-24T04:05:37Z",
+          "completed_at": "2026-10-24T04:05:38Z"
+        },
+        {
+          "name": "Install pinned kind",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-24T04:05:38Z",
+          "completed_at": "2026-10-24T04:05:39Z"
+        },
+        {
+          "name": "Deploy PostgreSQL, application replicas, HPA and ingress",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-24T04:05:39Z",
+          "completed_at": "2026-10-24T04:07:39Z"
+        },
+        {
+          "name": "Validate HTTP, probes, replicas, persistence and autoscaling",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-24T04:07:39Z",
+          "completed_at": "2026-10-24T04:09:47Z"
+        },
+        {
+          "name": "Preserve safe Kubernetes evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-24T04:09:47Z",
+          "completed_at": "2026-10-24T04:09:49Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-24T04:09:49Z",
+          "completed_at": "2026-10-24T04:09:49Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-24T04:09:49Z",
+          "completed_at": "2026-10-24T04:09:49Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/mpguevara/devsu-demo-devops-java-entrega/check-runs/120774120615",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000019,
+      "runner_name": "GitHub Actions 1000000019",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-23T22:13:07.7361744-06:00",
+  "scope": "Anonymous registry OCI config blob GET; bytes hashed in memory; only nonsecret identity metadata retained, not full config or environment",
+  "httpStatus": 200,
+  "configBodySHA256": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+  "expectedConfigDigest": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+  "sourceLabel": "https://github.com/mpguevara/devsu-demo-devops-java-entrega",
+  "revisionLabel": "d3af234b09be0241e0ba339e974572da0b506e3a",
+  "user": "10001:10001",
+  "diffIds": 9,
+  "passed": true
+}

@@ -12,9 +12,9 @@ This is a simple application to be used in the technical test of DevOps.
 
 **Calidad verificada tras actualizar dependencias, el 23 de octubre de 2026:** 22 pruebas aprobadas, PMD sin infracciones y cobertura JaCoCo de **87,93 % de líneas**, con 100 % de líneas y ramas del servicio. La nueva versión de Lombok marca código generado que JaCoCo filtra automáticamente; por eso los contadores difieren del resultado histórico de 90,28 %. Se mantienen los gates de 85 % global y 100 % del servicio, sin exclusiones añadidas. Véase [la explicación de la medición](docs/CALIDAD.md).
 
-**Kubernetes local actualizado y verificado:** 30 comprobaciones aprobadas sobre la imagen final, con lectura entre pods, Ingress y persistencia al reemplazar Java y PostgreSQL. El HPA aumentó su objetivo de dos a cuatro réplicas con carga HTTP real: tres Ready durante la carga y cuatro en la observación posterior. Los 16 trabajadores registraron **7.104 GET exitosos y cero fallidos** en ese ensayo acotado. Antes del ensayo, otras 19 comprobaciones conservaron los dos usuarios anteriores, el PVC y el historial Flyway/V1 al actualizar. Véase [evidencia local](docs/evidence/security-remediation/local-kubernetes/README.md). Estos resultados no representan un SLA ni un dimensionamiento de producción.
+**Ensayo local histórico de la imagen anterior:** 30 comprobaciones aprobadas sobre la imagen de la revisión `81beb47`, con lectura entre pods, Ingress y persistencia al reemplazar Java y PostgreSQL. El HPA aumentó su objetivo de dos a cuatro réplicas con carga HTTP real: tres Ready durante la carga y cuatro en la observación posterior. Los 16 trabajadores registraron **7.104 GET exitosos y cero fallidos** en ese ensayo acotado. Antes del ensayo, otras 19 comprobaciones conservaron los dos usuarios anteriores, el PVC y el historial Flyway/V1 al actualizar. Véase [evidencia local](docs/evidence/security-remediation/local-kubernetes/README.md). No se repitió ese ensayo sobre la imagen del repositorio nuevo; estos resultados no representan un SLA ni un dimensionamiento de producción.
 
-El [repositorio público de entrega](https://github.com/mpguevara/devsu-demo-devops-java-entrega) contiene el historial saneado y el workflow completo. Su primera ejecución se validará en este repositorio; el [registro de migración](docs/evidence/repository-migration/README.md) conserva el estado y los problemas reales del proceso. El [repositorio anterior](https://github.com/mpguevara/devsu-demo-devops-java) se mantiene sin cambios.
+El [repositorio público de entrega](https://github.com/mpguevara/devsu-demo-devops-java-entrega) y su [pipeline aprobado 40060607467](https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467) están verificados. Los cuatro jobs aprobaron sobre `d3af234b09be0241e0ba339e974572da0b506e3a`: 22 pruebas Java, PMD sin infracciones, 87,93 % de líneas, construcción, escaneos de imagen y SBOM, publicación GHCR y despliegue Kubernetes. La nueva validación Kubernetes aprobó **30/30 comprobaciones**, con **dos a cuatro pods Ready**, **16.736 GET exitosos y cero fallidos**. La [evidencia del nuevo run](docs/evidence/pipeline/remote-run-40060607467/README.md) conserva los reportes, inventarios y metadatos reales. El [registro de migración](docs/evidence/repository-migration/README.md) documenta también los problemas encontrados. El [repositorio anterior](https://github.com/mpguevara/devsu-demo-devops-java) se mantiene sin cambios.
 
 La [última ejecución aprobada del repositorio anterior](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809) validó la revisión `81beb47ba4b03f98e407860d94d143a22f2d2771`: calidad, construcción, escaneos de imagen y SBOM, publicación GHCR y Kubernetes. Aprobó 30 comprobaciones, con HPA de dos a cuatro Ready y 21.354 GET exitosos y cero fallidos durante su carga acotada. Es evidencia histórica, no una ejecución del repositorio nuevo. **No existe ni se requiere un endpoint público**; el acceso de la API queda en localhost.
 
@@ -34,7 +34,8 @@ Las copias de 25 reportes XML locales tienen saneado únicamente el valor de `ja
 - [Pipeline como código y ejecución local](docs/PIPELINE.md).
 - [Corrección de vulnerabilidades, compatibilidad y límites del escaneo](docs/SEGURIDAD.md).
 - [Kubernetes privado, acceso local y verificación](docs/KUBERNETES.md).
-- [Evidencia del pipeline final aprobado](docs/evidence/pipeline/remote-run-40048321809/README.md).
+- [Evidencia del pipeline de entrega aprobado](docs/evidence/pipeline/remote-run-40060607467/README.md).
+- [Evidencia histórica del último pipeline del repositorio anterior](docs/evidence/pipeline/remote-run-40048321809/README.md).
 - [Evidencia de corrección y problemas reales encontrados](docs/evidence/security-remediation/README.md).
 - [Consolidación final de implementación y evidencias](docs/evidence/final-verification.json).
 - [README original sin modificaciones](docs/evidence/baseline/README-original.md).
@@ -52,7 +53,7 @@ Las copias de 25 reportes XML locales tienen saneado únicamente el valor de `ja
 | Docker | Cliente y motor Linux 29.6.1; Docker Desktop 4.80.0 y Compose 5.1.4 comprobados en la etapa 2 |
 | Kubernetes | kubectl 1.36.1 inicial; kind 0.33.0 y Kubernetes 1.36.4 instalados el 23 de octubre; kubeconfig dedicado fuera del repositorio |
 | Otros | Git 2.54.0; WSL2 docker-desktop; CLI GitHub 2.103.2 portable; instaladores fijados para kind, kubectl y Trivy |
-| GitHub | Repositorio público `mpguevara/devsu-demo-devops-java`; Actions, GHCR y validación Kubernetes aprobados |
+| GitHub | Repositorio público de entrega `mpguevara/devsu-demo-devops-java-entrega`; Actions, GHCR y Kubernetes aprobados; repositorio anterior conservado |
 
 La copia inicial procede de un ZIP. El 23 de octubre se inicializó Git para registrar el trabajo real. Docker volvió a presentar sockets obsoletos; se recuperó conservando esos directorios como respaldo, sin restablecerlo ni borrar volúmenes. La memoria disponible del diagnóstico es una captura histórica; las validaciones actuales se ejecutan por separado y el nodo kind se limita a 4 GiB y cuatro CPU.
 
@@ -142,7 +143,7 @@ Este flujo conserva el volumen de datos; reutilizarlo requiere la contraseña co
 
 En la etapa Docker del 21 de octubre, dos construcciones limpias Linux generaron el mismo SHA-256 del JAR. El JAR Windows difería por los finales de línea de `pom.properties` generado por Maven. No se afirma identidad entre sistemas operativos ni de la imagen OCI completa. La [evidencia histórica](docs/evidence/docker-health/README.md) conserva hashes, logs e intentos fallidos. El pipeline publica una imagen identificada por commit, registra su digest y despliega los mismos bytes construidos, transferidos por archivo con checksum.
 
-La [publicación final](docs/evidence/pipeline/remote-run-40048321809/publication.json) corresponde a `ghcr.io/mpguevara/devsu-demo-devops-java:81beb47ba4b03f98e407860d94d143a22f2d2771`, con digest `sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e`. El workflow publica mediante su `GITHUB_TOKEN` temporal, limitado a `packages: write` en ese job. Las instrucciones para publicar desde terminal con una credencial propia están en la guía de pipeline.
+La [publicación de entrega](docs/evidence/pipeline/remote-run-40060607467/publication.json) corresponde a `ghcr.io/mpguevara/devsu-demo-devops-java-entrega:d3af234b09be0241e0ba339e974572da0b506e3a`, con digest `sha256:0eaf1b44fe7dd51fb95df7ba938b398a2f09a902c79a1c541463fe0d5ffe9397`. La [consulta anónima del manifiesto](docs/evidence/pipeline/remote-run-40060607467/ghcr-anonymous-check.json) respondió 200, con hash de sus bytes y configuración OCI coincidentes; no se presenta como un pull completo de capas. El workflow publica mediante su `GITHUB_TOKEN` temporal, limitado a `packages: write` en ese job. La [publicación anterior](docs/evidence/pipeline/remote-run-40048321809/publication.json) conserva su imagen y digest originales como evidencia histórica. Las instrucciones para publicar desde terminal con una credencial propia están en la guía de pipeline.
 
 Los [manifiestos Kubernetes](k8s/) definen dos réplicas Java como mínimo, Service, requests/limits, probes, ConfigMap y HPA de dos a cuatro réplicas. PostgreSQL usa StatefulSet, PVC y credenciales inyectadas desde un Secret generado fuera del repositorio. Traefik implementa Ingress con el host local `devsu.local`; un port-forward limitado a loopback permite probarlo sin DNS ni servidor público. metrics-server proporciona CPU al HPA. Su configuración se distingue de la observación real del escalamiento, que debe quedar en los resultados de verificación.
 
@@ -164,7 +165,7 @@ docker build -t devsu-demo-java:local .
 
 El despliegue utiliza el contexto dedicado `kind-devsu` y un kubeconfig fuera del repositorio. No modifica el contexto predeterminado del usuario. En Windows el preflight solicita 3 GiB de memoria libre; en la ejecución de esta máquina se utilizó `-AllowLowMemory` conscientemente, con el nodo limitado a 4 GiB y cuatro CPU. La [guía Kubernetes](docs/KUBERNETES.md) explica ese recurso y sus límites.
 
-Al descargar la imagen final del registro en este Docker Desktop, `kind load docker-image` falló durante su importación. La [secuencia alternativa verificada](docs/evidence/security-remediation/local-image/README.md) descarga el mismo digest directamente en el nodo y despliega sin `-LoadImage`. Este problema y su resolución están documentados para reproducir ese caso.
+En el ensayo local histórico con la imagen anterior descargada del registro, `kind load docker-image` falló durante su importación en este Docker Desktop. La [secuencia alternativa verificada entonces](docs/evidence/security-remediation/local-image/README.md) descarga aquel digest directamente en el nodo y despliega sin `-LoadImage`. La nueva imagen de entrega se verificó en el kind efímero de CI; no se afirma haber repetido ese ensayo en el clúster local.
 
 El verificador crea datos sintéticos, reemplaza pods y genera carga HTTP en ese clúster aislado. Conserva el PVC y los usuarios, y retira sus Jobs y port-forwards al terminar. Para acceder manualmente, deja este comando en una terminal:
 
@@ -247,11 +248,11 @@ La [matriz de cumplimiento](docs/VALIDACION-ENTREGA.md) contrasta las instruccio
 | --- | --- |
 | Diagnóstico, logs locales, guía y plan | Disponibles en este proyecto |
 | PostgreSQL compartido y Flyway | Verificados con JVM, Docker y Kubernetes; datos conservados al reemplazar pods |
-| Docker y Actuator | Implementados y verificados localmente con PostgreSQL |
+| Docker y Actuator | Construidos y verificados en el nuevo CI; ensayos locales anteriores con PostgreSQL conservados |
 | Análisis estático y cobertura | Implementados y verificados; 22 pruebas, PMD y gates JaCoCo aprobados |
-| Kubernetes | 30 comprobaciones locales aprobadas; Ingress, dos réplicas mínimas y escalamiento observado |
+| Kubernetes | 30 comprobaciones del nuevo CI aprobadas; Ingress y escalamiento de dos a cuatro Ready; ensayos locales históricos conservados |
 | Repositorio público GitHub y publicación GHCR | Publicados; URL del repositorio al inicio y metadatos en las evidencias |
-| URL y artefactos de un pipeline real | [Run final 40048321809 aprobado](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809); cuatro jobs aprobados, reportes y logs versionados; los intentos anteriores se conservan como evidencia histórica |
+| URL y artefactos de un pipeline real | [Run de entrega 40060607467 aprobado](https://github.com/mpguevara/devsu-demo-devops-java-entrega/actions/runs/40060607467); cuatro jobs aprobados, reportes y logs versionados; los resultados anteriores conservan su procedencia histórica |
 | ZIP del proyecto versionado | Generación y verificación mediante `scripts/New-Delivery.ps1`; instrucciones a continuación |
 | Endpoint público | No existe; es opcional en el ejercicio |
 

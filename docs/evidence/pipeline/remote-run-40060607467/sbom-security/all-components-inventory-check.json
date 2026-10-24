@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-23T22:08:37.1141567-06:00",
+  "source": "Real image-extracted SBOM and real Trivy SBOM report from run40060607467",
+  "sbomSHA256": "9ccb23d17165959e25888b1a76ed0a49637618c5f554ef826e724761ca573fab",
+  "sbomComponents": 110,
+  "scannedPackageRecords": 111,
+  "allComponentPurlsScanned": true,
+  "missingPurls": []
+}

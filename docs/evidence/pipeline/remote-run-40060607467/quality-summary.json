@@ -1,0 +1,54 @@
+{
+  "startedAt": "2026-10-24T04:00:49.8333251+00:00",
+  "finishedAt": "2026-10-24T04:02:05.7420793+00:00",
+  "command": "./mvnw -B -ntp clean verify -DargLine=-Xmx384m",
+  "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)",
+  "exitCode": 0,
+  "passed": true,
+  "failure": null,
+  "tests": {
+    "total": 22,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "coverage": [
+    {
+      "type": "INSTRUCTION",
+      "covered": 235,
+      "missed": 24,
+      "percent": 90.73
+    },
+    {
+      "type": "BRANCH",
+      "covered": 2,
+      "missed": 0,
+      "percent": 100.0
+    },
+    {
+      "type": "LINE",
+      "covered": 51,
+      "missed": 7,
+      "percent": 87.93
+    },
+    {
+      "type": "COMPLEXITY",
+      "covered": 27,
+      "missed": 4,
+      "percent": 87.1
+    },
+    {
+      "type": "METHOD",
+      "covered": 26,
+      "missed": 4,
+      "percent": 86.67
+    },
+    {
+      "type": "CLASS",
+      "covered": 8,
+      "missed": 0,
+      "percent": 100.0
+    }
+  ],
+  "pmdViolations": 0
+}

@@ -1,0 +1,72 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                  MESSAGE
+3m28s       Normal    Scheduled                      pod/traefik-7c8fc4d65d-77lfz            Successfully assigned devsu/traefik-7c8fc4d65d-77lfz to devsu-control-plane
+3m28s       Normal    Pulling                        pod/traefik-7c8fc4d65d-77lfz            Pulling image "traefik:v3.7.16@sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2"
+3m28s       Normal    ScalingReplicaSet              deployment/traefik                      Scaled up replica set traefik-7c8fc4d65d from 0 to 1
+3m28s       Normal    SuccessfulCreate               replicaset/traefik-7c8fc4d65d           Created pod: traefik-7c8fc4d65d-77lfz
+3m26s       Normal    Started                        pod/traefik-7c8fc4d65d-77lfz            Container started
+3m26s       Normal    Pulled                         pod/traefik-7c8fc4d65d-77lfz            Successfully pulled image "traefik:v3.7.16@sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2" in 1.427s (2.076s including waiting). Image size: 55401468 bytes.
+3m26s       Normal    Created                        pod/traefik-7c8fc4d65d-77lfz            Container created
+3m26s       Warning   Unhealthy                      pod/traefik-7c8fc4d65d-77lfz            Readiness probe failed: Get "http://10.244.0.6:9000/ping": dial tcp 10.244.0.6:9000: connect: connection refused
+3m25s       Warning   Unhealthy                      pod/traefik-7c8fc4d65d-77lfz            Readiness probe failed: HTTP probe failed with statuscode: 404
+2m59s       Normal    WaitForFirstConsumer           persistentvolumeclaim/data-postgres-0   waiting for first consumer to be created before binding
+2m59s       Normal    Provisioning                   persistentvolumeclaim/data-postgres-0   External provisioner is provisioning volume for claim "devsu/data-postgres-0"
+2m59s       Normal    ExternalProvisioning           persistentvolumeclaim/data-postgres-0   Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.
+2m59s       Normal    SuccessfulCreate               statefulset/postgres                    Create Claim data-postgres-0 Pod postgres-0 in StatefulSet postgres success
+2m56s       Normal    ProvisioningSucceeded          persistentvolumeclaim/data-postgres-0   Successfully provisioned volume pvc-fe69a311-30c7-4f5c-a63f-be1e38e9d8b5
+2m55s       Normal    Pulling                        pod/postgres-0                          Pulling image "postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982"
+2m55s       Normal    Scheduled                      pod/postgres-0                          Successfully assigned devsu/postgres-0 to devsu-control-plane
+2m51s       Normal    Started                        pod/postgres-0                          Container started
+2m51s       Normal    Created                        pod/postgres-0                          Container created
+2m51s       Normal    Pulled                         pod/postgres-0                          Successfully pulled image "postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982" in 3.416s (3.416s including waiting). Image size: 153053862 bytes.
+2m50s       Warning   Unhealthy                      pod/postgres-0                          Startup probe failed: /var/run/postgresql:5432 - no response
+2m45s       Normal    Scheduled                      pod/devsu-app-5dccd5b98d-9qkdw          Successfully assigned devsu/devsu-app-5dccd5b98d-9qkdw to devsu-control-plane
+2m45s       Normal    Scheduled                      pod/devsu-app-5dccd5b98d-qzn6j          Successfully assigned devsu/devsu-app-5dccd5b98d-qzn6j to devsu-control-plane
+2m45s       Normal    SuccessfulCreate               replicaset/devsu-app-5dccd5b98d         Created pod: devsu-app-5dccd5b98d-9qkdw
+2m45s       Normal    ScalingReplicaSet              deployment/devsu-app                    Scaled up replica set devsu-app-5dccd5b98d from 0 to 2
+2m45s       Normal    SuccessfulCreate               replicaset/devsu-app-5dccd5b98d         Created pod: devsu-app-5dccd5b98d-qzn6j
+2m44s       Normal    Created                        pod/devsu-app-5dccd5b98d-qzn6j          Container created
+2m44s       Normal    Pulled                         pod/devsu-app-5dccd5b98d-9qkdw          Container image "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a" already present on machine and can be accessed by the pod
+2m44s       Normal    Started                        pod/devsu-app-5dccd5b98d-qzn6j          Container started
+2m44s       Normal    Pulled                         pod/devsu-app-5dccd5b98d-qzn6j          Container image "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a" already present on machine and can be accessed by the pod
+2m44s       Normal    Started                        pod/devsu-app-5dccd5b98d-9qkdw          Container started
+2m44s       Normal    Created                        pod/devsu-app-5dccd5b98d-9qkdw          Container created
+2m29s       Warning   FailedGetResourceMetric        horizontalpodautoscaler/devsu-app       failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+2m29s       Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/devsu-app       invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+2m19s       Warning   Unhealthy                      pod/devsu-app-5dccd5b98d-qzn6j          Startup probe failed: Get "http://10.244.0.10:8000/api/actuator/health/liveness": dial tcp 10.244.0.10:8000: connect: connection refused
+2m14s       Warning   Unhealthy                      pod/devsu-app-5dccd5b98d-9qkdw          Startup probe failed: Get "http://10.244.0.9:8000/api/actuator/health/liveness": dial tcp 10.244.0.9:8000: connect: connection refused
+2m3s        Normal    Scheduled                      pod/devsu-app-5dccd5b98d-tvqzg          Successfully assigned devsu/devsu-app-5dccd5b98d-tvqzg to devsu-control-plane
+2m3s        Normal    SuccessfulCreate               replicaset/devsu-app-5dccd5b98d         Created pod: devsu-app-5dccd5b98d-tvqzg
+2m3s        Normal    Started                        pod/devsu-app-5dccd5b98d-tvqzg          Container started
+2m3s        Normal    Pulled                         pod/devsu-app-5dccd5b98d-tvqzg          Container image "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a" already present on machine and can be accessed by the pod
+2m3s        Normal    Killing                        pod/devsu-app-5dccd5b98d-9qkdw          Stopping container app
+2m3s        Normal    Created                        pod/devsu-app-5dccd5b98d-tvqzg          Container created
+104s        Warning   FailedGetResourceMetric        horizontalpodautoscaler/devsu-app       failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+104s        Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/devsu-app       invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+93s         Warning   Unhealthy                      pod/devsu-app-5dccd5b98d-tvqzg          Startup probe failed: Get "http://10.244.0.11:8000/api/actuator/health/liveness": dial tcp 10.244.0.11:8000: connect: connection refused
+85s         Normal    Killing                        pod/postgres-0                          Stopping container postgres
+84s         Normal    Scheduled                      pod/postgres-0                          Successfully assigned devsu/postgres-0 to devsu-control-plane
+84s         Normal    SuccessfulCreate               statefulset/postgres                    Create Pod postgres-0 in StatefulSet postgres successful
+83s         Normal    Pulled                         pod/postgres-0                          Container image "postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982" already present on machine and can be accessed by the pod
+83s         Normal    Created                        pod/postgres-0                          Container created
+83s         Normal    Started                        pod/postgres-0                          Container started
+82s         Warning   Unhealthy                      pod/devsu-app-5dccd5b98d-qzn6j          Readiness probe failed: HTTP probe failed with statuscode: 503
+80s         Warning   Unhealthy                      pod/devsu-app-5dccd5b98d-tvqzg          Readiness probe failed: HTTP probe failed with statuscode: 503
+70s         Normal    SuccessfulCreate               job/devsu-http-load-a14ff8ca            Created pod: devsu-http-load-a14ff8ca-qnsfn
+70s         Normal    Scheduled                      pod/devsu-http-load-a14ff8ca-qnsfn      Successfully assigned devsu/devsu-http-load-a14ff8ca-qnsfn to devsu-control-plane
+69s         Normal    Pulled                         pod/devsu-http-load-a14ff8ca-qnsfn      Container image "busybox:1.37.0-musl@sha256:5cec3fc171c87218698e85a52af7087de727372aae264a787b8112901a5b0092" already present on machine and can be accessed by the pod
+69s         Normal    Started                        pod/devsu-http-load-a14ff8ca-qnsfn      Container started
+69s         Normal    Created                        pod/devsu-http-load-a14ff8ca-qnsfn      Container created
+44s         Normal    Created                        pod/devsu-app-5dccd5b98d-ssn5t          Container created
+44s         Normal    Started                        pod/devsu-app-5dccd5b98d-ssn5t          Container started
+44s         Normal    ScalingReplicaSet              deployment/devsu-app                    Scaled up replica set devsu-app-5dccd5b98d from 2 to 4
+44s         Normal    SuccessfulRescale              horizontalpodautoscaler/devsu-app       New size: 4; reason: cpu resource utilization (percentage of request) above target
+44s         Normal    Scheduled                      pod/devsu-app-5dccd5b98d-ssn5t          Successfully assigned devsu/devsu-app-5dccd5b98d-ssn5t to devsu-control-plane
+44s         Normal    SuccessfulCreate               replicaset/devsu-app-5dccd5b98d         Created pod: devsu-app-5dccd5b98d-ssn5t
+44s         Normal    SuccessfulCreate               replicaset/devsu-app-5dccd5b98d         Created pod: devsu-app-5dccd5b98d-2dmfn
+44s         Normal    Pulled                         pod/devsu-app-5dccd5b98d-ssn5t          Container image "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a" already present on machine and can be accessed by the pod
+44s         Normal    Scheduled                      pod/devsu-app-5dccd5b98d-2dmfn          Successfully assigned devsu/devsu-app-5dccd5b98d-2dmfn to devsu-control-plane
+44s         Normal    Pulled                         pod/devsu-app-5dccd5b98d-2dmfn          Container image "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a" already present on machine and can be accessed by the pod
+44s         Normal    Started                        pod/devsu-app-5dccd5b98d-2dmfn          Container started
+44s         Normal    Created                        pod/devsu-app-5dccd5b98d-2dmfn          Container created
+9s          Warning   Unhealthy                      pod/devsu-app-5dccd5b98d-2dmfn          Startup probe failed: Get "http://10.244.0.14:8000/api/actuator/health/liveness": dial tcp 10.244.0.14:8000: connect: connection refused
+9s          Warning   Unhealthy                      pod/devsu-app-5dccd5b98d-ssn5t          Startup probe failed: Get "http://10.244.0.15:8000/api/actuator/health/liveness": dial tcp 10.244.0.15:8000: connect: connection refused

@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-23T22:11:28.8318711-06:00",
+  "scope": "Image IDs recorded by container job and by deploy script before kind load; registry manifest digest is separate",
+  "image": "devsu-demo-java:d3af234b09be0241e0ba339e974572da0b506e3a",
+  "containerJobImageId": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+  "kubernetesJobDockerImageId": "sha256:a6f88288689ac71a5d2892875ad48ac507070aed931c00342faa899aaf83694f",
+  "identical": true
+}

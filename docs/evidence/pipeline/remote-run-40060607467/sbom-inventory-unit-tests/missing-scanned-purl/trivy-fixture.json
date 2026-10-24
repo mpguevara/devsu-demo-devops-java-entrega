@@ -1,0 +1,101 @@
+{
+  "SchemaVersion": 2,
+  "Results": [
+    {
+      "Vulnerabilities": [],
+      "Packages": [
+        {
+          "Name": "ch.qos.logback:logback-core",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-core@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "com.fasterxml.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-core@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "com.fasterxml.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "com.h2database:h2",
+          "Identifier": {
+            "PURL": "pkg:maven/com.h2database/h2@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "io.micrometer:micrometer-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-core@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.springframework:spring-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-core@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.springframework:spring-expression",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-expression@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.springframework:spring-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-web@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.springframework:spring-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-webmvc@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        },
+        {
+          "Name": "org.yaml:snakeyaml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.yaml/snakeyaml@0.0.0-fixture"
+          },
+          "Version": "0.0.0-fixture"
+        }
+      ]
+    }
+  ]
+}
