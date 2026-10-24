@@ -1,0 +1,9 @@
+{
+  "scannedPackageRecords": 111,
+  "missingPurls": [],
+  "allComponentPurlsScanned": true,
+  "imageValidated": false,
+  "checkedAt": "2026-10-24T01:06:25.8408203+00:00",
+  "source": "real-standalone-maven-sbom; not extracted from final image",
+  "sbomComponents": 110
+}

@@ -1,0 +1,67 @@
+{
+  "startedAt": "2026-10-23T19:13:12.7706531-06:00",
+  "runURL": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
+  "reference": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+  "localTag": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "expectedImageID": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+  "expectedRevision": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "expectedSource": "https://github.com/mpguevara/devsu-demo-devops-java",
+  "pullExitCode": 0,
+  "image": {
+    "id": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+    "repoDigests": [
+      "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
+    ],
+    "architecture": "amd64",
+    "os": "linux",
+    "created": "2026-10-24T01:10:29.748227672Z",
+    "sizeBytes": 158739429,
+    "user": "10001:10001",
+    "source": "https://github.com/mpguevara/devsu-demo-devops-java",
+    "revision": "81beb47ba4b03f98e407860d94d143a22f2d2771"
+  },
+  "checks": [
+    {
+      "name": "Config ID exacto del artefacto CI",
+      "actual": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "expected": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "passed": false
+    },
+    {
+      "name": "Digest solicitado registrado",
+      "actual": [
+        "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
+      ],
+      "expected": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "passed": true
+    },
+    {
+      "name": "Revision OCI",
+      "actual": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "expected": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "passed": true
+    },
+    {
+      "name": "Origen OCI",
+      "actual": "https://github.com/mpguevara/devsu-demo-devops-java",
+      "expected": "https://github.com/mpguevara/devsu-demo-devops-java",
+      "passed": true
+    },
+    {
+      "name": "Usuario sin privilegios",
+      "actual": "10001:10001",
+      "expected": "10001:10001",
+      "passed": true
+    },
+    {
+      "name": "Plataforma Linux amd64",
+      "actual": "linux/amd64",
+      "expected": "linux/amd64",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "error": "No coincide la identidad esperada.",
+  "credentialContext": "Normal Docker client configuration; this does not prove an anonymous pull.",
+  "finishedAt": "2026-10-23T19:13:20.2992445-06:00"
+}

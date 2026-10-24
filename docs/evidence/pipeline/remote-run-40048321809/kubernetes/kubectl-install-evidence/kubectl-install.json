@@ -1,0 +1,9 @@
+{
+  "verifiedAt": "2026-10-24T01:12:52.1730138+00:00",
+  "version": "v1.36.4",
+  "platform": "linux/amd64",
+  "source": "https://dl.k8s.io/release/v1.36.4/bin/linux/amd64/kubectl",
+  "checksumSource": "https://dl.k8s.io/release/v1.36.4/bin/linux/amd64/kubectl.sha256",
+  "sha256": "8b8f088da2dab964f853b38464033b1be15ede2839eca751482357c45abdd05a",
+  "passed": true
+}

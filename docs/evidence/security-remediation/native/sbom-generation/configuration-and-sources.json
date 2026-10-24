@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-10-23T19:01:40.4897506-06:00",
+  "version": "2.9.3",
+  "stableSources": [
+    "https://repo.maven.apache.org/maven2/org/cyclonedx/cyclonedx-maven-plugin/maven-metadata.xml",
+    "https://github.com/CycloneDX/cyclonedx-maven-plugin/releases/tag/cyclonedx-maven-plugin-2.9.3"
+  ],
+  "taggedParameters": "https://raw.githubusercontent.com/CycloneDX/cyclonedx-maven-plugin/cyclonedx-maven-plugin-2.9.3/src/main/java/org/cyclonedx/maven/BaseCycloneDxMojo.java",
+  "bootPackaging": "https://docs.spring.io/spring-boot/maven-plugin/packaging.html",
+  "finalPomSHA256": "5976d35bf53b33abc143a1045f7a084462f64b1249f21b751dea1b0e5a2c95fd",
+  "postGenerationChange": "spring-boot-maven-plugin includeTools=false; removes unused jarmode extraction helper on next repackage, without changing Maven runtime dependencies",
+  "oldMeasuredNestedJarCount": 98,
+  "expectedNextBuildNestedJarCount": 97,
+  "nextBuildMeasuredLocally": false,
+  "note": "The BOM was generated before includeTools=false; dependency graph is unchanged. The full remote clean verify and packaged-JAR coverage assertion remain required."
+}

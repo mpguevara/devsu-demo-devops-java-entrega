@@ -1,0 +1,149 @@
+{
+  "capturedAt": "2026-10-23T18:55:50.7215943-06:00",
+  "source": "Real Trivy JSON package inventory, not source POM only",
+  "scannedJavaPackages": 62,
+  "previouslyVulnerableCoordinates": 14,
+  "allTargetCoordinatesDetected": false,
+  "verification": [
+    {
+      "package": "ch.qos.logback:logback-classic",
+      "detectedInNewImage": true,
+      "versions": [
+        "1.5.38"
+      ],
+      "filePaths": [
+        "app/app.jar/BOOT-INF/lib/logback-classic-1.5.38.jar"
+      ]
+    },
+    {
+      "package": "ch.qos.logback:logback-core",
+      "detectedInNewImage": true,
+      "versions": [
+        "1.5.38"
+      ],
+      "filePaths": [
+        "app/app.jar/BOOT-INF/lib/logback-core-1.5.38.jar"
+      ]
+    },
+    {
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "detectedInNewImage": true,
+      "versions": [
+        "2.21.7"
+      ],
+      "filePaths": [
+        "app/app.jar/BOOT-INF/lib/jackson-core-2.21.7.jar"
+      ]
+    },
+    {
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "detectedInNewImage": true,
+      "versions": [
+        "2.21.7"
+      ],
+      "filePaths": [
+        "app/app.jar/BOOT-INF/lib/jackson-databind-2.21.7.jar"
+      ]
+    },
+    {
+      "package": "com.h2database:h2",
+      "detectedInNewImage": true,
+      "versions": [
+        "2.4.240"
+      ],
+      "filePaths": [
+        "app/app.jar/BOOT-INF/lib/h2-2.4.240.jar"
+      ]
+    },
+    {
+      "package": "io.micrometer:micrometer-core",
+      "detectedInNewImage": false,
+      "versions": [
+        null
+      ],
+      "filePaths": [
+        null
+      ]
+    },
+    {
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "detectedInNewImage": true,
+      "versions": [
+        "11.0.27"
+      ],
+      "filePaths": [
+        "app/app.jar/BOOT-INF/lib/tomcat-embed-core-11.0.27.jar"
+      ]
+    },
+    {
+      "package": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+      "detectedInNewImage": false,
+      "versions": [
+        null
+      ],
+      "filePaths": [
+        null
+      ]
+    },
+    {
+      "package": "org.springframework.boot:spring-boot-autoconfigure",
+      "detectedInNewImage": false,
+      "versions": [
+        null
+      ],
+      "filePaths": [
+        null
+      ]
+    },
+    {
+      "package": "org.springframework:spring-core",
+      "detectedInNewImage": false,
+      "versions": [
+        null
+      ],
+      "filePaths": [
+        null
+      ]
+    },
+    {
+      "package": "org.springframework:spring-expression",
+      "detectedInNewImage": false,
+      "versions": [
+        null
+      ],
+      "filePaths": [
+        null
+      ]
+    },
+    {
+      "package": "org.springframework:spring-web",
+      "detectedInNewImage": false,
+      "versions": [
+        null
+      ],
+      "filePaths": [
+        null
+      ]
+    },
+    {
+      "package": "org.springframework:spring-webmvc",
+      "detectedInNewImage": false,
+      "versions": [
+        null
+      ],
+      "filePaths": [
+        null
+      ]
+    },
+    {
+      "package": "org.yaml:snakeyaml",
+      "detectedInNewImage": true,
+      "versions": [
+        "2.6"
+      ],
+      "filePaths": [
+        "app/app.jar/BOOT-INF/lib/snakeyaml-2.6.jar"
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 
 ## Resultado comprobado
 
-La aplicación conserva Java 17, Spring Boot 3.0.5 y sus contratos HTTP. Se añadieron PostgreSQL JDBC **42.7.14**, Flyway **9.5.1**, perfiles separados y la migración `V1__create_users.sql`.
+En esta etapa histórica la aplicación conservaba Java 17, Spring Boot 3.0.5 y sus contratos HTTP. Se añadieron PostgreSQL JDBC **42.7.14**, Flyway **9.5.1**, perfiles separados y la migración `V1__create_users.sql`. La [actualización de seguridad posterior](SEGURIDAD.md) utiliza Boot 4.1.2 y Flyway 12.4.0 con su módulo PostgreSQL, conservando esa misma V1.
 
 En la etapa de persistencia, la construcción pasó las **6 pruebas Maven**, y el JAR pasó **9 comprobaciones HTTP con H2 local** y **36 comprobaciones de integración con PostgreSQL 15.19 real**. Estas últimas combinan HTTP, SQL, disponibilidad y comprobación de resultados. No son 36 pruebas unitarias. La [evidencia](evidence/postgres/README.md) incluye logs y resultados verificables.
 
@@ -12,7 +12,7 @@ Se iniciaron dos JVM simultáneamente en `127.0.0.1:8001` y `:8002`, conectadas 
 
 PostgreSQL y las JVM de esa verificación quedaron detenidos. La prueba usó binarios portables de PostgreSQL en Windows porque el motor Docker no estaba disponible entonces.
 
-**Avance posterior, 21 de octubre de 2026:** se recuperó Docker y se ejecutaron API y PostgreSQL en contenedores. La nueva etapa pasó 11 pruebas Maven y 39 comprobaciones Docker, incluida conservación del usuario tras reiniciar PostgreSQL y recuperación de readiness sin reiniciar Java. Véanse [Docker y salud](DOCKER-Y-SALUD.md) y [su evidencia](evidence/docker-health/README.md). Los resultados históricos de dos JVM se conservan con su alcance original; Kubernetes sigue pendiente.
+**Avance posterior, 21 de octubre de 2026:** se recuperó Docker y se ejecutaron API y PostgreSQL en contenedores. La nueva etapa pasó 11 pruebas Maven y 39 comprobaciones Docker, incluida conservación del usuario tras reiniciar PostgreSQL y recuperación de readiness sin reiniciar Java. Véanse [Docker y salud](DOCKER-Y-SALUD.md) y [su evidencia](evidence/docker-health/README.md). Los resultados históricos de dos JVM se conservan con su alcance original; Kubernetes se completó después, como indica el cierre al inicio.
 
 ## Qué cambió y por qué
 

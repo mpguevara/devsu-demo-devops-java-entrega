@@ -1,0 +1,4 @@
+Image: "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771" with ID "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e" not yet present on node "devsu-control-plane", loading...
+ERROR: failed to load image: command "docker exec --privileged -i devsu-control-plane ctr --namespace=k8s.io images import --all-platforms --digests --snapshotter=overlayfs -" failed with error: exit status 1
+
+Command Output: ctr: content digest sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713: not found

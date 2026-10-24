@@ -1,0 +1,7 @@
+# Hallazgos que permanecen visibles
+
+El escaneo real de imagen reporto **0 CRITICAL, 0 HIGH, 28 MEDIUM y 4 LOW**. Los 32 hallazgos corresponden a paquetes Ubuntu. [findings-all.csv](findings-all.csv) conserva todos los pares paquete/CVE con version instalada, version corregida y estado exactamente reportados por Trivy; [trivy-image.json](trivy-image.json) conserva el JSON completo. No se aplicaron exclusiones ni `ignore-unfixed`.
+
+El escaneo complementario del [SBOM extraido de la misma imagen](../sbom-security/trivy-sbom.json) reporto cero hallazgos. La [validacion del inventario](../sbom-security/inventory-after-scan.json) comprobo 97/97 JAR por SHA256, todos sus PURL en el resultado Trivy y las 14 coordenadas historicas. Ademas, [all-components-inventory-check.json](../sbom-security/all-components-inventory-check.json) confirma que los 110 componentes del BOM aparecen en los 111 registros del escaner, incluida la aplicacion.
+
+Esta evidencia cubre las criticas/altas reportadas con este snapshot y resuelve la limitacion de identificacion observada en la ejecucion anterior. Los MEDIUM/LOW siguen pendientes de evaluacion y mantenimiento de la base; no se declaran inexplotables por un despliegue privado. Las fechas reales de las bases permanecen en [trivy-version.json](trivy-version.json) y en la carpeta SBOM. Aprobar ambos gates no prueba ausencia de todo riesgo ni sustituye la revision de configuracion y autorizacion de la API.

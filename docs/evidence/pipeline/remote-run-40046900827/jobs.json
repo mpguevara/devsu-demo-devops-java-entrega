@@ -1,0 +1,334 @@
+[
+  {
+    "completedAt": "2026-10-24T00:51:20Z",
+    "conclusion": "success",
+    "databaseId": 120730611093,
+    "name": "Compile, test, PMD and coverage",
+    "startedAt": "2026-10-24T00:49:55Z",
+    "status": "completed",
+    "steps": [
+      {
+        "completedAt": "2026-10-24T00:49:58Z",
+        "conclusion": "success",
+        "name": "Set up job",
+        "number": 1,
+        "startedAt": "2026-10-24T00:49:56Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:49:59Z",
+        "conclusion": "success",
+        "name": "Checkout",
+        "number": 2,
+        "startedAt": "2026-10-24T00:49:58Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:50:04Z",
+        "conclusion": "success",
+        "name": "Java 17 and Maven cache",
+        "number": 3,
+        "startedAt": "2026-10-24T00:49:59Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:50:11Z",
+        "conclusion": "success",
+        "name": "Test vulnerability gate with offline fixtures",
+        "number": 4,
+        "startedAt": "2026-10-24T00:50:04Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:51:11Z",
+        "conclusion": "success",
+        "name": "Maven verify (compile, unit tests, package, PMD, JaCoCo gates)",
+        "number": 5,
+        "startedAt": "2026-10-24T00:50:11Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:51:13Z",
+        "conclusion": "success",
+        "name": "Preserve real quality results",
+        "number": 6,
+        "startedAt": "2026-10-24T00:51:11Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:51:17Z",
+        "conclusion": "success",
+        "name": "Post Java 17 and Maven cache",
+        "number": 11,
+        "startedAt": "2026-10-24T00:51:13Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:51:17Z",
+        "conclusion": "success",
+        "name": "Post Checkout",
+        "number": 12,
+        "startedAt": "2026-10-24T00:51:17Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:51:18Z",
+        "conclusion": "success",
+        "name": "Complete job",
+        "number": 13,
+        "startedAt": "2026-10-24T00:51:17Z",
+        "status": "completed"
+      }
+    ],
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40046900827/job/120730611093"
+  },
+  {
+    "completedAt": "2026-10-24T00:53:08Z",
+    "conclusion": "success",
+    "databaseId": 120730992552,
+    "name": "Build and inspect the image",
+    "startedAt": "2026-10-24T00:51:22Z",
+    "status": "completed",
+    "steps": [
+      {
+        "completedAt": "2026-10-24T00:51:23Z",
+        "conclusion": "success",
+        "name": "Set up job",
+        "number": 1,
+        "startedAt": "2026-10-24T00:51:23Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:51:24Z",
+        "conclusion": "success",
+        "name": "Checkout",
+        "number": 2,
+        "startedAt": "2026-10-24T00:51:23Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:52:29Z",
+        "conclusion": "success",
+        "name": "Build the non-root image",
+        "number": 3,
+        "startedAt": "2026-10-24T00:51:24Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:52:57Z",
+        "conclusion": "success",
+        "name": "Vulnerability gate (block any CRITICAL or HIGH; preserve all findings)",
+        "number": 4,
+        "startedAt": "2026-10-24T00:52:29Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:03Z",
+        "conclusion": "success",
+        "name": "Export the exact image for subsequent jobs",
+        "number": 5,
+        "startedAt": "2026-10-24T00:52:57Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:04Z",
+        "conclusion": "success",
+        "name": "Preserve image and scan evidence",
+        "number": 6,
+        "startedAt": "2026-10-24T00:53:03Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:06Z",
+        "conclusion": "success",
+        "name": "Transfer image",
+        "number": 7,
+        "startedAt": "2026-10-24T00:53:04Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:07Z",
+        "conclusion": "success",
+        "name": "Post Checkout",
+        "number": 14,
+        "startedAt": "2026-10-24T00:53:06Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:07Z",
+        "conclusion": "success",
+        "name": "Complete job",
+        "number": 15,
+        "startedAt": "2026-10-24T00:53:07Z",
+        "status": "completed"
+      }
+    ],
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40046900827/job/120730992552"
+  },
+  {
+    "completedAt": "2026-10-24T00:53:58Z",
+    "conclusion": "success",
+    "databaseId": 120731450903,
+    "name": "Publish the verified image to GHCR",
+    "startedAt": "2026-10-24T00:53:10Z",
+    "status": "completed",
+    "steps": [
+      {
+        "completedAt": "2026-10-24T00:53:13Z",
+        "conclusion": "success",
+        "name": "Set up job",
+        "number": 1,
+        "startedAt": "2026-10-24T00:53:11Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:28Z",
+        "conclusion": "success",
+        "name": "Download the built image",
+        "number": 2,
+        "startedAt": "2026-10-24T00:53:13Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:42Z",
+        "conclusion": "success",
+        "name": "Load and tag the exact image",
+        "number": 3,
+        "startedAt": "2026-10-24T00:53:28Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:54Z",
+        "conclusion": "success",
+        "name": "Authenticate and push",
+        "number": 4,
+        "startedAt": "2026-10-24T00:53:42Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:54Z",
+        "conclusion": "success",
+        "name": "Remove registry session",
+        "number": 5,
+        "startedAt": "2026-10-24T00:53:54Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:56Z",
+        "conclusion": "success",
+        "name": "Preserve publication evidence",
+        "number": 6,
+        "startedAt": "2026-10-24T00:53:54Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:53:56Z",
+        "conclusion": "success",
+        "name": "Complete job",
+        "number": 7,
+        "startedAt": "2026-10-24T00:53:56Z",
+        "status": "completed"
+      }
+    ],
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40046900827/job/120731450903"
+  },
+  {
+    "completedAt": "2026-10-24T00:58:07Z",
+    "conclusion": "success",
+    "databaseId": 120731656266,
+    "name": "Deploy and validate private Kubernetes",
+    "startedAt": "2026-10-24T00:54:00Z",
+    "status": "completed",
+    "steps": [
+      {
+        "completedAt": "2026-10-24T00:54:03Z",
+        "conclusion": "success",
+        "name": "Set up job",
+        "number": 1,
+        "startedAt": "2026-10-24T00:54:00Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:54:03Z",
+        "conclusion": "success",
+        "name": "Checkout",
+        "number": 2,
+        "startedAt": "2026-10-24T00:54:03Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:54:13Z",
+        "conclusion": "success",
+        "name": "Download the built image",
+        "number": 3,
+        "startedAt": "2026-10-24T00:54:03Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:54:32Z",
+        "conclusion": "success",
+        "name": "Load the exact image",
+        "number": 4,
+        "startedAt": "2026-10-24T00:54:13Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:54:34Z",
+        "conclusion": "success",
+        "name": "Install pinned kubectl matching Kubernetes",
+        "number": 5,
+        "startedAt": "2026-10-24T00:54:32Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:54:35Z",
+        "conclusion": "success",
+        "name": "Install pinned kind",
+        "number": 6,
+        "startedAt": "2026-10-24T00:54:34Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:56:32Z",
+        "conclusion": "success",
+        "name": "Deploy PostgreSQL, application replicas, HPA and ingress",
+        "number": 7,
+        "startedAt": "2026-10-24T00:54:35Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:58:04Z",
+        "conclusion": "success",
+        "name": "Validate HTTP, probes, replicas, persistence and autoscaling",
+        "number": 8,
+        "startedAt": "2026-10-24T00:56:32Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:58:05Z",
+        "conclusion": "success",
+        "name": "Preserve safe Kubernetes evidence",
+        "number": 9,
+        "startedAt": "2026-10-24T00:58:04Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:58:06Z",
+        "conclusion": "success",
+        "name": "Post Checkout",
+        "number": 18,
+        "startedAt": "2026-10-24T00:58:05Z",
+        "status": "completed"
+      },
+      {
+        "completedAt": "2026-10-24T00:58:06Z",
+        "conclusion": "success",
+        "name": "Complete job",
+        "number": 19,
+        "startedAt": "2026-10-24T00:58:06Z",
+        "status": "completed"
+      }
+    ],
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40046900827/job/120731656266"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "verifiedAt": "2026-10-23T18:34:56.6526832-06:00",
+  "purpose": "Consolidacion final de ejecuciones reales y comprobacion de fuentes; no se repitieron suites.",
+  "implementationVerified": true,
+  "publicRepository": "https://github.com/mpguevara/devsu-demo-devops-java",
+  "pipelineURL": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944",
+  "validatedImplementationCommit": "2506a339cd878b0c17d9da94caebccbcbfa1660c",
+  "currentImplementationMatchesValidatedCommit": true,
+  "implementationDifferences": [],
+  "mavenTests": {
+    "total": 22,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lineCoverage": {
+    "type": "LINE",
+    "covered": 65,
+    "missed": 7,
+    "percent": 90.28
+  },
+  "branchCoverage": {
+    "type": "BRANCH",
+    "covered": 8,
+    "missed": 54,
+    "percent": 12.9
+  },
+  "pmdViolations": 0,
+  "localKubernetes": {
+    "load": {
+      "successfulRequests": 7382,
+      "failedRequests": 0
+    },
+    "scaledUnderRealHttpLoad": true,
+    "passed": true,
+    "checks": 30
+  },
+  "remoteKubernetes": {
+    "cleanupErrors": [],
+    "load": {
+      "failedRequests": 0,
+      "successfulRequests": 18770
+    },
+    "scaledUnderRealHttpLoad": true,
+    "passed": true,
+    "checks": 30
+  },
+  "liveLocalDeployment": {
+    "image": "devsu-demo-java:local",
+    "observedReady": 2,
+    "desired": 2
+  },
+  "publication": {
+    "image": "ghcr.io/mpguevara/devsu-demo-devops-java:2506a339cd878b0c17d9da94caebccbcbfa1660c",
+    "runUrl": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944",
+    "digest": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:866fb924326ec03377b0d190131103ae281c1d31f869b42a185e1a4f9d9b2302"
+  },
+  "vulnerabilityScan": {
+    "findings": 121,
+    "policy": "report-all-findings; fail-on-scanner-error",
+    "bySeverity": {
+      "CRITICAL": 9,
+      "HIGH": 40,
+      "MEDIUM": 58,
+      "LOW": 14,
+      "UNKNOWN": 0
+    },
+    "completed": true,
+    "securityRemediationPending": true
+  },
+  "publicApiEndpoint": false,
+  "archiveProcedure": "scripts/New-Delivery.ps1: Git HEAD limpio, git archive, comprobacion de contenido y manifiesto SHA256 fuera del repositorio.",
+  "limitations": [
+    "Dependencias vulnerables pendientes de actualizacion compatible.",
+    "PostgreSQL y cluster de un nodo sin alta disponibilidad.",
+    "Sin backup/restauracion ni recuperacion de perdida de disco verificados.",
+    "Carga acotada y recursos iniciales, sin SLA ni dimensionamiento de produccion.",
+    "Cluster CI efimero; API exclusivamente local."
+  ]
+}

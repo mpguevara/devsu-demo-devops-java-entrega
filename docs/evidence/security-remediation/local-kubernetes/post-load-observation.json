@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-10-23T19:24:06.3764943-06:00",
+  "context": "kind-devsu",
+  "namespace": "devsu",
+  "readOnlyObservation": true,
+  "currentReplicas": 4,
+  "desiredReplicas": 4,
+  "activePodCount": 4,
+  "readyPodCount": 4,
+  "pods": [
+    {
+      "name": "devsu-app-74dbb94b6b-mvg4h",
+      "phase": "Running",
+      "ready": true,
+      "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "imageID": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "restarts": 0
+    },
+    {
+      "name": "devsu-app-74dbb94b6b-pszgd",
+      "phase": "Running",
+      "ready": true,
+      "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "imageID": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "restarts": 0
+    },
+    {
+      "name": "devsu-app-74dbb94b6b-tvdj5",
+      "phase": "Running",
+      "ready": true,
+      "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "imageID": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "restarts": 0
+    },
+    {
+      "name": "devsu-app-74dbb94b6b-vngmf",
+      "phase": "Running",
+      "ready": true,
+      "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "imageID": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "restarts": 0
+    }
+  ],
+  "pvc": {
+    "name": "data-postgres-0",
+    "uid": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+    "phase": "Bound",
+    "sameAsBefore": true
+  },
+  "remainingJobNames": [],
+  "ownContextPortForwards": [],
+  "checks": [
+    {
+      "name": "Al menos dos replicas Ready",
+      "passed": true,
+      "actual": 4
+    },
+    {
+      "name": "Maximo cuatro pods activos",
+      "passed": true,
+      "actual": 4
+    },
+    {
+      "name": "Sin Jobs temporales restantes en namespace propio",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "Sin port-forwards propios restantes",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "name": "PVC original Bound conservado",
+      "passed": true,
+      "actual": "0052b7a3-772c-49b4-984b-4e437fb8bef9"
+    }
+  ],
+  "passed": true
+}

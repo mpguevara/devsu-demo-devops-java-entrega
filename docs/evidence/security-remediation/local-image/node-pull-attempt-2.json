@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-23T19:17:24.1199278-06:00",
+  "method": "Direct pull into owned node containerd, TLS defaults, no supplied credentials",
+  "node": "devsu-control-plane",
+  "namespace": "k8s.io",
+  "platform": "linux/amd64",
+  "reference": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+  "exitCode": 0,
+  "passed": true,
+  "previousAttempt": "node-pull.json"
+}

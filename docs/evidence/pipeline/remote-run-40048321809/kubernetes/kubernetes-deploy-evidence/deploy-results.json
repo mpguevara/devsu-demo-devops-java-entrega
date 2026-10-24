@@ -1,0 +1,459 @@
+{
+  "startedAt": "2026-10-24T01:12:54.1286444+00:00",
+  "finishedAt": "2026-10-24T01:14:38.7263270+00:00",
+  "passed": true,
+  "cluster": "devsu",
+  "context": "kind-devsu",
+  "nodeImage": "kindest/node:v1.36.4@sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+  "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "infrastructureOnly": false,
+  "createdCluster": true,
+  "publicEndpoint": false,
+  "error": null,
+  "commands": [
+    {
+      "timestamp": "2026-10-24T01:12:54.4809271+00:00",
+      "tool": "docker",
+      "arguments": [
+        "info",
+        "--format",
+        "{{.OSType}}"
+      ],
+      "exitCode": 0,
+      "output": "linux"
+    },
+    {
+      "timestamp": "2026-10-24T01:12:54.5232092+00:00",
+      "tool": "/home/runner/.cache/devsu-demo-tools/kind/v0.33.0/kind",
+      "arguments": [
+        "version"
+      ],
+      "exitCode": 0,
+      "output": "kind v0.33.0 go1.26.7 linux/amd64"
+    },
+    {
+      "timestamp": "2026-10-24T01:12:54.5452308+00:00",
+      "tool": "/home/runner/.cache/devsu-demo-tools/kind/v0.33.0/kind",
+      "arguments": [
+        "get",
+        "clusters"
+      ],
+      "exitCode": 0,
+      "output": "No kind clusters found."
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.4623718+00:00",
+      "tool": "/home/runner/.cache/devsu-demo-tools/kind/v0.33.0/kind",
+      "arguments": [
+        "create",
+        "cluster",
+        "--name",
+        "devsu",
+        "--image",
+        "kindest/node:v1.36.4@sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+        "--config",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/kind.yaml",
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--wait",
+        "180s"
+      ],
+      "exitCode": 0,
+      "output": "Creating cluster \"devsu\" ...\n • Ensuring node image (kindest/node:v1.36.4) 🖼️  ...\n ✓ Ensuring node image (kindest/node:v1.36.4) 🖼️\n • Preparing nodes 📦   ...\n ✓ Preparing nodes 📦 \n • Writing configuration 📜  ...\n ✓ Writing configuration 📜\n • Starting control-plane 🕹️  ...\n ✓ Starting control-plane 🕹️\n • Installing CNI 🔌  ...\n ✓ Installing CNI 🔌\n • Installing StorageClass 💾  ...\n ✓ Installing StorageClass 💾\n • Waiting ≤ 3m0s for control-plane = Ready ⏳  ...\n ✓ Waiting ≤ 3m0s for control-plane = Ready ⏳\n • Ready after 17s 💚\nSet kubectl context to \"kind-devsu\"\nYou can now use your cluster with:\n\nkubectl cluster-info --context kind-devsu --kubeconfig /home/runner/.kube/devsu-kind.config\n\nHave a nice day! 👋"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.4846657+00:00",
+      "tool": "/home/runner/.cache/devsu-demo-tools/kind/v0.33.0/kind",
+      "arguments": [
+        "get",
+        "nodes",
+        "--name",
+        "devsu"
+      ],
+      "exitCode": 0,
+      "output": "devsu-control-plane"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.5021495+00:00",
+      "tool": "docker",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{{index .Config.Labels \"io.x-k8s.kind.cluster\"}}",
+        "devsu-control-plane"
+      ],
+      "exitCode": 0,
+      "output": "devsu"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.5335897+00:00",
+      "tool": "docker",
+      "arguments": [
+        "update",
+        "--memory",
+        "4g",
+        "--memory-swap",
+        "4g",
+        "--cpus",
+        "4",
+        "devsu-control-plane"
+      ],
+      "exitCode": 0,
+      "output": "devsu-control-plane"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.6920502+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "wait",
+        "--for=condition=Ready",
+        "node/devsu-control-plane",
+        "--timeout=180s"
+      ],
+      "exitCode": 0,
+      "output": "node/devsu-control-plane condition met"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.7418398+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "version",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "output": "{\n  \"clientVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"36\",\n    \"gitVersion\": \"v1.36.4\",\n    \"gitCommit\": \"bb826b1d48562f110659e64e8ec444327433db95\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2026-08-20T03:09:25Z\",\n    \"goVersion\": \"go1.26.5\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  },\n  \"kustomizeVersion\": \"v5.8.1\",\n  \"serverVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"36\",\n    \"emulationMajor\": \"1\",\n    \"emulationMinor\": \"36\",\n    \"minCompatibilityMajor\": \"1\",\n    \"minCompatibilityMinor\": \"35\",\n    \"gitVersion\": \"v1.36.4\",\n    \"gitCommit\": \"bb826b1d48562f110659e64e8ec444327433db95\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2026-08-20T03:06:28Z\",\n    \"goVersion\": \"go1.26.5\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  }\n}"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.8127718+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "get",
+        "namespace",
+        "devsu",
+        "--ignore-not-found",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.9179364+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/namespace.yaml"
+      ],
+      "exitCode": 0,
+      "output": "namespace/devsu created"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:30.9827049+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "local-path-storage",
+        "get",
+        "configmap",
+        "local-path-config",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "output": "{\n    \"apiVersion\": \"v1\",\n    \"data\": {\n        \"config.json\": \"{\\n        \\\"nodePathMap\\\":[\\n        {\\n                \\\"node\\\":\\\"DEFAULT_PATH_FOR_NON_LISTED_NODES\\\",\\n                \\\"paths\\\":[\\\"/var/local-path-provisioner\\\"]\\n        }\\n        ]\\n}\",\n        \"helperPod.yaml\": \"apiVersion: v1\\nkind: Pod\\nmetadata:\\n  name: helper-pod\\nspec:\\n  priorityClassName: system-node-critical\\n  tolerations:\\n    - operator: Exists\\n      effect: NoSchedule\\n    - operator: Exists\\n      effect: NoExecute\\n  containers:\\n  - name: helper-pod\\n    image: docker.io/kindest/local-path-helper:v20260131-7181c60a\\n    imagePullPolicy: IfNotPresent\",\n        \"setup\": \"#!/bin/sh\\nset -eu\\nmkdir -m 0777 -p \\\"$VOL_DIR\\\"\",\n        \"teardown\": \"#!/bin/sh\\nset -eu\\nrm -rf \\\"$VOL_DIR\\\"\"\n    },\n    \"kind\": \"ConfigMap\",\n    \"metadata\": {\n        \"annotations\": {\n            \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"v1\\\",\\\"data\\\":{\\\"config.json\\\":\\\"{\\\\n        \\\\\\\"nodePathMap\\\\\\\":[\\\\n        {\\\\n                \\\\\\\"node\\\\\\\":\\\\\\\"DEFAULT_PATH_FOR_NON_LISTED_NODES\\\\\\\",\\\\n                \\\\\\\"paths\\\\\\\":[\\\\\\\"/var/local-path-provisioner\\\\\\\"]\\\\n        }\\\\n        ]\\\\n}\\\",\\\"helperPod.yaml\\\":\\\"apiVersion: v1\\\\nkind: Pod\\\\nmetadata:\\\\n  name: helper-pod\\\\nspec:\\\\n  priorityClassName: system-node-critical\\\\n  tolerations:\\\\n    - operator: Exists\\\\n      effect: NoSchedule\\\\n    - operator: Exists\\\\n      effect: NoExecute\\\\n  containers:\\\\n  - name: helper-pod\\\\n    image: docker.io/kindest/local-path-helper:v20260131-7181c60a\\\\n    imagePullPolicy: IfNotPresent\\\",\\\"setup\\\":\\\"#!/bin/sh\\\\nset -eu\\\\nmkdir -m 0777 -p \\\\\\\"$VOL_DIR\\\\\\\"\\\",\\\"teardown\\\":\\\"#!/bin/sh\\\\nset -eu\\\\nrm -rf \\\\\\\"$VOL_DIR\\\\\\\"\\\"},\\\"kind\\\":\\\"ConfigMap\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"local-path-config\\\",\\\"namespace\\\":\\\"local-path-storage\\\"}}\\n\"\n        },\n        \"creationTimestamp\": \"2026-10-24T01:13:13Z\",\n        \"name\": \"local-path-config\",\n        \"namespace\": \"local-path-storage\",\n        \"resourceVersion\": \"290\",\n        \"uid\": \"9ccb0653-2af2-4f16-ad00-e7f7e68c5502\"\n    }\n}"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:31.1750090+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "-"
+      ],
+      "exitCode": 0,
+      "output": "configmap/local-path-config configured"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:31.5794219+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/metrics-server.yaml"
+      ],
+      "exitCode": 0,
+      "output": "serviceaccount/metrics-server created\nclusterrole.rbac.authorization.k8s.io/system:aggregated-metrics-reader created\nclusterrole.rbac.authorization.k8s.io/system:metrics-server created\nrolebinding.rbac.authorization.k8s.io/metrics-server-auth-reader created\nclusterrolebinding.rbac.authorization.k8s.io/metrics-server:system:auth-delegator created\nclusterrolebinding.rbac.authorization.k8s.io/system:metrics-server created\nservice/metrics-server created\ndeployment.apps/metrics-server created\napiservice.apiregistration.k8s.io/v1beta1.metrics.k8s.io created"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:31.8409482+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/traefik.yaml"
+      ],
+      "exitCode": 0,
+      "output": "serviceaccount/traefik created\nrole.rbac.authorization.k8s.io/traefik created\nrolebinding.rbac.authorization.k8s.io/traefik created\nclusterrole.rbac.authorization.k8s.io/devsu-traefik-ingressclasses created\nclusterrolebinding.rbac.authorization.k8s.io/devsu-traefik-ingressclasses created\ningressclass.networking.k8s.io/traefik-devsu created\nservice/traefik created\ndeployment.apps/traefik created"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:53.2942852+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "kube-system",
+        "rollout",
+        "status",
+        "deployment/metrics-server",
+        "--timeout=180s"
+      ],
+      "exitCode": 0,
+      "output": "Waiting for deployment \"metrics-server\" rollout to finish: 0 of 1 updated replicas are available...\ndeployment \"metrics-server\" successfully rolled out"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:53.3334080+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "devsu",
+        "rollout",
+        "status",
+        "deployment/traefik",
+        "--timeout=180s"
+      ],
+      "exitCode": 0,
+      "output": "deployment \"traefik\" successfully rolled out"
+    },
+    {
+      "timestamp": "2026-10-24T01:13:53.3524315+00:00",
+      "tool": "docker",
+      "arguments": [
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771"
+      ],
+      "exitCode": 0,
+      "output": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:00.5979039+00:00",
+      "tool": "/home/runner/.cache/devsu-demo-tools/kind/v0.33.0/kind",
+      "arguments": [
+        "load",
+        "docker-image",
+        "--name",
+        "devsu",
+        "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771"
+      ],
+      "exitCode": 0,
+      "output": "Image: \"devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771\" with ID \"sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713\" not yet present on node \"devsu-control-plane\", loading..."
+    },
+    {
+      "timestamp": "2026-10-24T01:14:00.6330505+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "devsu",
+        "get",
+        "secret",
+        "devsu-db",
+        "--ignore-not-found",
+        "-o",
+        "name"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "timestamp": "2026-10-24T01:14:00.6947930+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "create",
+        "-f",
+        "-"
+      ],
+      "exitCode": 0,
+      "output": "secret/devsu-db created"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:00.7522237+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/configmap.yaml"
+      ],
+      "exitCode": 0,
+      "output": "configmap/devsu-config created"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:00.8408227+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/postgres.yaml"
+      ],
+      "exitCode": 0,
+      "output": "service/postgres created\nservice/postgres-client created\nstatefulset.apps/postgres created"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:17.6370209+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "devsu",
+        "rollout",
+        "status",
+        "statefulset/postgres",
+        "--timeout=240s"
+      ],
+      "exitCode": 0,
+      "output": "Waiting for 1 pods to be ready...\npartitioned roll out complete: 1 new pods have been updated..."
+    },
+    {
+      "timestamp": "2026-10-24T01:14:17.8230712+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "-"
+      ],
+      "exitCode": 0,
+      "output": "service/devsu-app created\ndeployment.apps/devsu-app created"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:17.9248778+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/hpa.yaml"
+      ],
+      "exitCode": 0,
+      "output": "horizontalpodautoscaler.autoscaling/devsu-app created"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:17.9805010+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/k8s/ingress.yaml"
+      ],
+      "exitCode": 0,
+      "output": "ingress.networking.k8s.io/devsu-app created"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:38.6708196+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "devsu",
+        "rollout",
+        "status",
+        "deployment/devsu-app",
+        "--timeout=360s"
+      ],
+      "exitCode": 0,
+      "output": "Waiting for deployment \"devsu-app\" rollout to finish: 0 of 2 updated replicas are available...\nWaiting for deployment \"devsu-app\" rollout to finish: 1 of 2 updated replicas are available...\ndeployment \"devsu-app\" successfully rolled out"
+    },
+    {
+      "timestamp": "2026-10-24T01:14:38.7256181+00:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "/home/runner/.kube/devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "devsu",
+        "get",
+        "pods,deployments,statefulsets,services,pvc,hpa,ingresses",
+        "-o",
+        "wide"
+      ],
+      "exitCode": 0,
+      "output": "NAME                             READY   STATUS    RESTARTS   AGE   IP            NODE                  NOMINATED NODE   READINESS GATES\npod/devsu-app-74dbb94b6b-6pcl9   1/1     Running   0          21s   10.244.0.9    devsu-control-plane   <none>           <none>\npod/devsu-app-74dbb94b6b-cvwmm   1/1     Running   0          21s   10.244.0.10   devsu-control-plane   <none>           <none>\npod/postgres-0                   1/1     Running   0          38s   10.244.0.8    devsu-control-plane   <none>           <none>\npod/traefik-7c8fc4d65d-6vvbh     1/1     Running   0          67s   10.244.0.6    devsu-control-plane   <none>           <none>\n\nNAME                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                                                                    SELECTOR\ndeployment.apps/devsu-app   2/2     2            2           21s   app          devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771                                  app=devsu-app\ndeployment.apps/traefik     1/1     1            1           67s   traefik      traefik:v3.7.16@sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2   app=traefik\n\nNAME                        READY   AGE   CONTAINERS   IMAGES\nstatefulset.apps/postgres   1/1     38s   postgres     postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982\n\nNAME                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE   SELECTOR\nservice/devsu-app         ClusterIP   10.96.30.80     <none>        8000/TCP   21s   app=devsu-app\nservice/postgres          ClusterIP   None            <none>        5432/TCP   38s   app=postgres\nservice/postgres-client   ClusterIP   10.96.129.240   <none>        5432/TCP   38s   app=postgres\nservice/traefik           ClusterIP   10.96.160.180   <none>        80/TCP     67s   app=traefik\n\nNAME                                    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE   VOLUMEMODE\npersistentvolumeclaim/data-postgres-0   Bound    pvc-ab487202-6532-4b8d-9cae-c5f8a7dc5793   1Gi        RWO            standard       <unset>                 38s   Filesystem\n\nNAME                                            REFERENCE              TARGETS              MINPODS   MAXPODS   REPLICAS   AGE\nhorizontalpodautoscaler.autoscaling/devsu-app   Deployment/devsu-app   cpu: <unknown>/60%   2         4         2          21s\n\nNAME                                  CLASS           HOSTS         ADDRESS   PORTS   AGE\ningress.networking.k8s.io/devsu-app   traefik-devsu   devsu.local             80      21s"
+    }
+  ]
+}

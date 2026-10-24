@@ -1,6 +1,6 @@
 # Evidencia nativa de la remediación Java
 
-Validación ejecutada el **23 de octubre de 2026**, hora de El Salvador, con Temurin 17.0.20.1+1 y Maven 3.8.7. Se mantuvieron los heaps máximos de 384 MiB para Maven y el proceso de pruebas. El clúster propio estaba detenido para evitar competir por memoria; no se ejecutó Docker como parte de esta comprobación.
+Validación ejecutada el **23 de octubre de 2026**, hora de El Salvador, con Temurin 17.0.20.1+1 y Maven 3.8.7. Se mantuvieron los heaps máximos de 384 MiB para Maven y el proceso de pruebas. Durante las dos suites completas y el smoke HTTP, el clúster propio estaba detenido para evitar competir por memoria; no se ejecutó Docker como parte de esas comprobaciones. La generación aislada posterior del SBOM se realizó con Docker y el nodo activos, sin compilar ni lanzar pruebas.
 
 ## Resultados
 
@@ -11,6 +11,7 @@ Validación ejecutada el **23 de octubre de 2026**, hora de El Salvador, con Tem
 | HTTP real sobre el JAR con H2 aislado | Nueve comprobaciones aprobadas; proceso detenido | [resultado HTTP](http-smoke/http-results.json), [stdout](http-smoke/application.stdout.log), [stderr](http-smoke/application.stderr.log) |
 | Identidad del JAR de ambos builds y del smoke test | SHA-256 idéntico | [jar-identity.json](jar-identity.json) |
 | Dependencias que originaron 49 hallazgos CRITICAL/HIGH | Versiones actualizadas presentes; versiones anteriores ausentes en el JAR | [matriz](resolved-dependency-mapping.json), [librerías efectivas](attempt-2/packaged-libraries.json) |
+| Generación aislada de SBOM | Exit code 0; 110 componentes, 14 coordenadas presentes y hashes coincidentes de 97/98 JAR del artefacto anterior | [índice y límite del auxiliar jarmode](sbom-generation/README.md) |
 
 El JAR comprobado tiene SHA-256 `7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c`. La segunda compilación solo añadió una aserción de contrato a una prueba y produjo los mismos bytes de aplicación. Se conservaron los dos resultados, sin presentar la segunda ejecución como una corrección de un fallo inexistente del primer build.
 

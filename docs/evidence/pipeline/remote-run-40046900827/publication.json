@@ -1,0 +1,5 @@
+{
+  "image": "ghcr.io/mpguevara/devsu-demo-devops-java:ccf1adc4afed257e2c7bb7a7a4005c144f742a9c",
+  "digest": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:076d2d01eec70917a72a3a7f9f5f8f1f58ed78e291adde697ea79c38cac7b707",
+  "runUrl": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40046900827"
+}

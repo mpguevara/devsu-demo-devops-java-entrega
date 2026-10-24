@@ -1,0 +1,21 @@
+The push refers to repository [ghcr.io/mpguevara/devsu-demo-devops-java]
+26eeb63414f4: Preparing
+403c71cc0006: Preparing
+f8f463f1da64: Preparing
+ba1e0d24b5d7: Preparing
+ae7b2ed0e494: Preparing
+7f183c2f006e: Preparing
+4faace43fae6: Preparing
+32ab39660fd5: Preparing
+7f183c2f006e: Waiting
+4faace43fae6: Waiting
+32ab39660fd5: Waiting
+ae7b2ed0e494: Pushed
+ba1e0d24b5d7: Pushed
+f8f463f1da64: Pushed
+403c71cc0006: Pushed
+26eeb63414f4: Pushed
+4faace43fae6: Pushed
+32ab39660fd5: Pushed
+7f183c2f006e: Pushed
+ccf1adc4afed257e2c7bb7a7a4005c144f742a9c: digest: sha256:076d2d01eec70917a72a3a7f9f5f8f1f58ed78e291adde697ea79c38cac7b707 size: 1994

@@ -1,0 +1,4132 @@
+{
+  "observedAt": "2026-10-23T19:00:47.2701874-06:00",
+  "scope": "Read-only native executable JAR inspection in memory; no scanner, Docker, Maven build, dependency modification or file extraction.",
+  "jar": "target/demo-0.0.1.jar",
+  "jarSHA256": "7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c",
+  "imageReport": "docs/evidence/pipeline/remote-run-40046900827/security/trivy-image.json",
+  "imageReportSHA256": "78e82ca281dc68149ea447f8a2c1103b3b9c60bd9133d5b85fad5d3a3fd1f831",
+  "imageReportTarget": "devsu-demo-java:ccf1adc4afed257e2c7bb7a7a4005c144f742a9c",
+  "caveat": "Native metadata compared to CI image report by nested path only. Exact equality with the CI image JAR bytes has NOT been established by this diagnostic; CI must bind SBOM hashes to the built image.",
+  "summary": {
+    "nestedJars": 98,
+    "trivyPackageRecords": 62,
+    "nestedPathsWithTrivyRecord": 59,
+    "nestedPathsWithoutTrivyRecord": 39,
+    "nestedJarsWithPomProperties": 48,
+    "nestedJarsWithoutPomProperties": 50,
+    "nestedJarsWithExactLocalMavenCacheHash": 97,
+    "nestedJarsWithExactEmbeddedBuildToolResourceHash": 1
+  },
+  "conclusions": [
+    "Absent package records are observed; a zero vulnerability count for detected packages cannot establish complete JAR inventory coverage.",
+    "Missing pom.properties and noncanonical manifest titles/vendors can require Java DB lookup according to the pinned Trivy parser; Java DB absence for these hashes is a hypothesis, not verified by this diagnostic.",
+    "A Maven CycloneDX JSON SBOM provides explicit GAV/PURL identifiers. Verify Trivy ingests every required GAV and compare component hashes against every runtime nested JAR in the exact CI image.",
+    "Inventory completeness and advisory database coverage are separate. No claim of absence of every vulnerability is made.",
+    "The jarmode-tools JAR is added by Spring Boot repackage and matches the embedded resource in spring-boot-loader-tools byte for byte; a dependency-only Maven SBOM may omit it unless handled explicitly."
+  ],
+  "sources": [
+    "https://raw.githubusercontent.com/aquasecurity/trivy/v0.76.1/docs/guide/coverage/language/java.md",
+    "https://raw.githubusercontent.com/aquasecurity/trivy/v0.76.1/pkg/dependency/parser/java/jar/parse.go",
+    "https://github.com/aquasecurity/trivy-java-db",
+    "https://raw.githubusercontent.com/aquasecurity/trivy/v0.76.1/pkg/sbom/cyclonedx/unmarshal.go",
+    "https://trivy.dev/docs/latest/guide/target/sbom/",
+    "https://cyclonedx.github.io/cyclonedx-maven-plugin/makeBom-mojo.html",
+    "https://docs.spring.io/spring-boot/maven-plugin/packaging.html"
+  ],
+  "nestedJars": [
+    {
+      "path": "BOOT-INF/lib/angus-activation-2.0.3.jar",
+      "bytes": 26729,
+      "sha1": "7f80607ea5014fef0b1779e6c33d63a88a45a563",
+      "sha256": "a6bd35c538cf90fff941ad6258c40c08fca0b5c9c3f536c657114f27ce0527a7",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Angus Activation Registries",
+        "Bundle-SymbolicName": "angus-activation",
+        "Bundle-Version": "2.0.3",
+        "Implementation-Build-Id": "2.0.3-RELEASE-6eff4c5",
+        "Implementation-Title": "Angus Activation Registries",
+        "Implementation-Vendor": "Eclipse Foundation",
+        "Specification-Title": "Jakarta Activation Specification",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "2.1"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.eclipse.angus/angus-activation/pom.properties",
+          "properties": {
+            "artifactId": "angus-activation",
+            "groupId": "org.eclipse.angus",
+            "version": "2.0.3"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.eclipse.angus/",
+        "META-INF/maven/org.eclipse.angus/angus-activation/",
+        "META-INF/maven/org.eclipse.angus/angus-activation/pom.xml",
+        "META-INF/maven/org.eclipse.angus/angus-activation/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.eclipse.angus:angus-activation",
+          "version": "2.0.3",
+          "purl": "pkg:maven/org.eclipse.angus/angus-activation@2.0.3",
+          "filePath": "app/app.jar/BOOT-INF/lib/angus-activation-2.0.3.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar",
+          "group": "org.eclipse.angus",
+          "artifact": "angus-activation",
+          "version": "2.0.3",
+          "purl": "pkg:maven/org.eclipse.angus/angus-activation@2.0.3",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/antlr4-runtime-4.13.2.jar",
+      "bytes": 326307,
+      "sha1": "fc3db6d844df652a3d5db31c87fa12757f13691d",
+      "sha256": "dd3e8a13a2d669bf84fb8d834de35ce4875f27157698d206241ec8488aadcaf7",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "11",
+        "Implementation-Title": "ANTLR 4 Runtime",
+        "Implementation-Version": "4.13.2",
+        "Implementation-Vendor": "ANTLR",
+        "Automatic-Module-Name": "org.antlr.antlr4.runtime",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "ANTLR 4 Runtime",
+        "Bundle-SymbolicName": "org.antlr.antlr4-runtime",
+        "Bundle-Version": "4.13.2"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.antlr/antlr4-runtime/pom.properties",
+          "properties": {
+            "artifactId": "antlr4-runtime",
+            "groupId": "org.antlr",
+            "version": "4.13.2"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.antlr/",
+        "META-INF/maven/org.antlr/antlr4-runtime/",
+        "META-INF/maven/org.antlr/antlr4-runtime/pom.xml",
+        "META-INF/maven/org.antlr/antlr4-runtime/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.antlr:antlr4-runtime",
+          "version": "4.13.2",
+          "purl": "pkg:maven/org.antlr/antlr4-runtime@4.13.2",
+          "filePath": "app/app.jar/BOOT-INF/lib/antlr4-runtime-4.13.2.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/antlr/antlr4-runtime/4.13.2/antlr4-runtime-4.13.2.jar",
+          "group": "org.antlr",
+          "artifact": "antlr4-runtime",
+          "version": "4.13.2",
+          "purl": "pkg:maven/org.antlr/antlr4-runtime@4.13.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/aspectjweaver-1.9.25.1.jar",
+      "bytes": 2190661,
+      "sha1": "a713c790da4d794c7dfb542b550d4e44898d5e23",
+      "sha256": "4fe86fdc18faea571f29129c70eaad5d121363504a06d7907be88f6c60ba3116",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Built-By": "aclement",
+        "Automatic-Module-Name": "org.aspectj.weaver"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.aspectj:aspectjweaver",
+          "version": "1.9.25.1",
+          "purl": "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/aspectjweaver-1.9.25.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/aspectj/aspectjweaver/1.9.25.1/aspectjweaver-1.9.25.1.jar",
+          "group": "org.aspectj",
+          "artifact": "aspectjweaver",
+          "version": "1.9.25.1",
+          "purl": "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/byte-buddy-1.18.15.jar",
+      "bytes": 4663288,
+      "sha1": "ffff83d2b122d612acecd92029df4ed9b0472ffe",
+      "sha256": "e64ed8697df67cbce8158a6e926cbe841f97d01719d719b7b84784826a9b2b27",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-SymbolicName": "net.bytebuddy.byte-buddy",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Byte Buddy (without dependencies)",
+        "Bundle-Version": "1.18.15",
+        "Build-Jdk-Spec": "1.8"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/net.bytebuddy/byte-buddy/pom.properties",
+          "properties": {
+            "artifactId": "byte-buddy",
+            "groupId": "net.bytebuddy",
+            "version": "1.18.15"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/net.bytebuddy/",
+        "META-INF/maven/net.bytebuddy/byte-buddy/",
+        "META-INF/maven/net.bytebuddy/byte-buddy/pom.xml",
+        "META-INF/maven/net.bytebuddy/byte-buddy/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "net.bytebuddy:byte-buddy",
+          "version": "1.18.15",
+          "purl": "pkg:maven/net.bytebuddy/byte-buddy@1.18.15",
+          "filePath": "app/app.jar/BOOT-INF/lib/byte-buddy-1.18.15.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "net/bytebuddy/byte-buddy/1.18.15/byte-buddy-1.18.15.jar",
+          "group": "net.bytebuddy",
+          "artifact": "byte-buddy",
+          "version": "1.18.15",
+          "purl": "pkg:maven/net.bytebuddy/byte-buddy@1.18.15",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/checker-qual-3.55.1.jar",
+      "bytes": 241885,
+      "sha1": "3d40699936a66b2d4c1f759f2f1a0446c8cf64fc",
+      "sha256": "857658c8bdcbff794949a8d9922f88d63ee3751c203c7cd7d21ea97f9e745288",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "checker-qual",
+        "Bundle-SymbolicName": "checker-qual",
+        "Bundle-Version": "3.55.1",
+        "Implementation-URL": "https://checkerframework.org",
+        "Implementation-Version": "3.55.1"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.checkerframework:checker-qual",
+          "version": "3.55.1",
+          "purl": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/checker-qual-3.55.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/checkerframework/checker-qual/3.55.1/checker-qual-3.55.1.jar",
+          "group": "org.checkerframework",
+          "artifact": "checker-qual",
+          "version": "3.55.1",
+          "purl": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/classmate-1.7.3.jar",
+      "bytes": 68249,
+      "sha1": "f61c7e7b81e9249b0f6a05914eff9d54fb09f4a0",
+      "sha256": "75fbda45456f123fb6e2028a6189442d8d0730b357adce4c0a6d7e789f70669b",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "1.8",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "ClassMate",
+        "Bundle-SymbolicName": "com.fasterxml.classmate",
+        "Bundle-Version": "1.7.3",
+        "Implementation-Title": "ClassMate",
+        "Implementation-Vendor": "fasterxml.com",
+        "Implementation-Vendor-Id": "com.fasterxml",
+        "Implementation-Version": "1.7.3",
+        "Specification-Title": "ClassMate",
+        "Specification-Vendor": "fasterxml.com",
+        "Specification-Version": "1.7.3"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.fasterxml/classmate/pom.properties",
+          "properties": {
+            "version": "1.7.3",
+            "groupId": "com.fasterxml",
+            "artifactId": "classmate"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.fasterxml/",
+        "META-INF/maven/com.fasterxml/classmate/",
+        "META-INF/maven/com.fasterxml/classmate/pom.properties",
+        "META-INF/maven/com.fasterxml/classmate/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.fasterxml:classmate",
+          "version": "1.7.3",
+          "purl": "pkg:maven/com.fasterxml/classmate@1.7.3",
+          "filePath": "app/app.jar/BOOT-INF/lib/classmate-1.7.3.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/fasterxml/classmate/1.7.3/classmate-1.7.3.jar",
+          "group": "com.fasterxml",
+          "artifact": "classmate",
+          "version": "1.7.3",
+          "purl": "pkg:maven/com.fasterxml/classmate@1.7.3",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/commons-lang3-3.20.0.jar",
+      "bytes": 713862,
+      "sha1": "65897b3e5731220962e659e001904af3c3cbeba9",
+      "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "25",
+        "Specification-Title": "Apache Commons Lang",
+        "Specification-Version": "3.20",
+        "Specification-Vendor": "The Apache Software Foundation",
+        "Implementation-Title": "Apache Commons Lang",
+        "Implementation-Version": "3.20.0",
+        "Implementation-Vendor": "The Apache Software Foundation",
+        "Automatic-Module-Name": "org.apache.commons.lang3",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Apache Commons Lang",
+        "Bundle-SymbolicName": "org.apache.commons.lang3",
+        "Bundle-Version": "3.20.0"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.apache.commons/commons-lang3/pom.properties",
+          "properties": {
+            "artifactId": "commons-lang3",
+            "groupId": "org.apache.commons",
+            "version": "3.20.0"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.apache.commons/",
+        "META-INF/maven/org.apache.commons/commons-lang3/",
+        "META-INF/maven/org.apache.commons/commons-lang3/pom.xml",
+        "META-INF/maven/org.apache.commons/commons-lang3/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.apache.commons:commons-lang3",
+          "version": "3.20.0",
+          "purl": "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+          "filePath": "app/app.jar/BOOT-INF/lib/commons-lang3-3.20.0.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar",
+          "group": "org.apache.commons",
+          "artifact": "commons-lang3",
+          "version": "3.20.0",
+          "purl": "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/commons-logging-1.3.6.jar",
+      "bytes": 74010,
+      "sha1": "63e78ca6cd446c0ad166d14f03ed99e7efb3896d",
+      "sha256": "f8ead8943401081dea0aa824b5b1ba40a0e4ed297a572a0f02258150a0b62357",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Specification-Title": "Apache Commons Logging",
+        "Specification-Version": "1.3",
+        "Specification-Vendor": "The Apache Software Foundation",
+        "Implementation-Title": "Apache Commons Logging",
+        "Implementation-Version": "1.3.6",
+        "Implementation-Vendor": "The Apache Software Foundation",
+        "Automatic-Module-Name": "org.apache.commons.logging",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Apache Commons Logging",
+        "Bundle-SymbolicName": "org.apache.commons.commons-logging",
+        "Bundle-Version": "1.3.6"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/commons-logging/commons-logging/pom.properties",
+          "properties": {
+            "artifactId": "commons-logging",
+            "groupId": "commons-logging",
+            "version": "1.3.6"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/commons-logging/",
+        "META-INF/maven/commons-logging/commons-logging/",
+        "META-INF/maven/commons-logging/commons-logging/pom.xml",
+        "META-INF/maven/commons-logging/commons-logging/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "commons-logging:commons-logging",
+          "version": "1.3.6",
+          "purl": "pkg:maven/commons-logging/commons-logging@1.3.6",
+          "filePath": "app/app.jar/BOOT-INF/lib/commons-logging-1.3.6.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "commons-logging/commons-logging/1.3.6/commons-logging-1.3.6.jar",
+          "group": "commons-logging",
+          "artifact": "commons-logging",
+          "version": "1.3.6",
+          "purl": "pkg:maven/commons-logging/commons-logging@1.3.6",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/flyway-core-12.4.0.jar",
+      "bytes": 767940,
+      "sha1": "8dfd90404bb9b6fd4727c67ccbe9a7dfa20c0e53",
+      "sha256": "c3f93df1f3e0c9d14652adb5ade97401f2ede503859ac693c2af5c06e2797799",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.flywaydb/flyway-core/pom.properties",
+          "properties": {
+            "artifactId": "flyway-core",
+            "groupId": "org.flywaydb",
+            "version": "12.4.0"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.flywaydb/",
+        "META-INF/maven/org.flywaydb/flyway-core/",
+        "META-INF/maven/org.flywaydb/flyway-core/pom.xml",
+        "META-INF/maven/org.flywaydb/flyway-core/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.flywaydb:flyway-core",
+          "version": "12.4.0",
+          "purl": "pkg:maven/org.flywaydb/flyway-core@12.4.0",
+          "filePath": "app/app.jar/BOOT-INF/lib/flyway-core-12.4.0.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/flywaydb/flyway-core/12.4.0/flyway-core-12.4.0.jar",
+          "group": "org.flywaydb",
+          "artifact": "flyway-core",
+          "version": "12.4.0",
+          "purl": "pkg:maven/org.flywaydb/flyway-core@12.4.0",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/flyway-database-postgresql-12.4.0.jar",
+      "bytes": 48012,
+      "sha1": "90fc8dc92bef70c143c4112ad6658f29eea437fd",
+      "sha256": "abc075a5c3cbf37dc64b28fec7e2398fb14f31109f7ab6271854738797407b85",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.flywaydb/flyway-database-postgresql/pom.properties",
+          "properties": {
+            "artifactId": "flyway-database-postgresql",
+            "groupId": "org.flywaydb",
+            "version": "12.4.0"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.flywaydb/",
+        "META-INF/maven/org.flywaydb/flyway-database-postgresql/",
+        "META-INF/maven/org.flywaydb/flyway-database-postgresql/pom.xml",
+        "META-INF/maven/org.flywaydb/flyway-database-postgresql/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.flywaydb:flyway-database-postgresql",
+          "version": "12.4.0",
+          "purl": "pkg:maven/org.flywaydb/flyway-database-postgresql@12.4.0",
+          "filePath": "app/app.jar/BOOT-INF/lib/flyway-database-postgresql-12.4.0.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/flywaydb/flyway-database-postgresql/12.4.0/flyway-database-postgresql-12.4.0.jar",
+          "group": "org.flywaydb",
+          "artifact": "flyway-database-postgresql",
+          "version": "12.4.0",
+          "purl": "pkg:maven/org.flywaydb/flyway-database-postgresql@12.4.0",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/h2-2.4.240.jar",
+      "bytes": 2685418,
+      "sha1": "686180ad33981ad943fdc0ab381e619b2c2fdfe5",
+      "sha256": "29b70e427cc1c40cdc376283adbb0cc62853073797bb5fe5761f81fe73d57ce0",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "H2 Database Engine",
+        "Implementation-URL": "https://h2database.com",
+        "Implementation-Version": "2.4.240",
+        "Automatic-Module-Name": "com.h2database",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "H2 Database Engine",
+        "Bundle-SymbolicName": "com.h2database",
+        "Bundle-Version": "2.4.240"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.h2database:h2",
+          "version": "2.4.240",
+          "purl": "pkg:maven/com.h2database/h2@2.4.240",
+          "filePath": "app/app.jar/BOOT-INF/lib/h2-2.4.240.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/h2database/h2/2.4.240/h2-2.4.240.jar",
+          "group": "com.h2database",
+          "artifact": "h2",
+          "version": "2.4.240",
+          "purl": "pkg:maven/com.h2database/h2@2.4.240",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/HdrHistogram-2.2.2.jar",
+      "bytes": 177206,
+      "sha1": "7959933ebcc0f05b2eaa5af0a0c8689fa257b15c",
+      "sha256": "22d1d4316c4ec13a68b559e98c8256d69071593731da96136640f864fa14fad8",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "20",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "HdrHistogram",
+        "Bundle-SymbolicName": "org.hdrhistogram.HdrHistogram",
+        "Bundle-Version": "2.2.2"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.hdrhistogram/HdrHistogram/pom.properties",
+          "properties": {
+            "artifactId": "HdrHistogram",
+            "groupId": "org.hdrhistogram",
+            "version": "2.2.2"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.hdrhistogram/",
+        "META-INF/maven/org.hdrhistogram/HdrHistogram/",
+        "META-INF/maven/org.hdrhistogram/HdrHistogram/pom.properties",
+        "META-INF/maven/org.hdrhistogram/HdrHistogram/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.hdrhistogram:HdrHistogram",
+          "version": "2.2.2",
+          "purl": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+          "filePath": "app/app.jar/BOOT-INF/lib/HdrHistogram-2.2.2.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar",
+          "group": "org.hdrhistogram",
+          "artifact": "HdrHistogram",
+          "version": "2.2.2",
+          "purl": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/hibernate-core-7.4.13.Final.jar",
+      "bytes": 15334914,
+      "sha1": "3d10af54a39f4550d57c28498f80009d41de826f",
+      "sha256": "02c8c3789931a009f04175de7a6b9f99c9bf87346936fe56cb934197cf8f0dd3",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "org.hibernate.orm.core",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "hibernate-core",
+        "Bundle-SymbolicName": "org.hibernate.orm.core",
+        "Bundle-Version": "7.4.13.Final",
+        "Implementation-Title": "hibernate-core",
+        "Implementation-Url": "https://hibernate.org/orm",
+        "Implementation-Vendor": "Hibernate.org",
+        "Implementation-Vendor-Id": "org.hibernate",
+        "Implementation-Version": "7.4.13.Final",
+        "Specification-Title": "hibernate-core",
+        "Specification-Vendor": "Hibernate.org",
+        "Specification-Version": "7.4.13.Final"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.hibernate:hibernate-core",
+          "version": "7.4.13.Final",
+          "purl": "pkg:maven/org.hibernate/hibernate-core@7.4.13.Final",
+          "filePath": "app/app.jar/BOOT-INF/lib/hibernate-core-7.4.13.Final.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/hibernate/orm/hibernate-core/7.4.13.Final/hibernate-core-7.4.13.Final.jar",
+          "group": "org.hibernate.orm",
+          "artifact": "hibernate-core",
+          "version": "7.4.13.Final",
+          "purl": "pkg:maven/org.hibernate.orm/hibernate-core@7.4.13.Final",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/hibernate-models-1.1.2.jar",
+      "bytes": 218867,
+      "sha1": "18a67ce600ace529fc1b08cd88bda38667bffeb8",
+      "sha256": "d683d70e2592b23c5f2fbc3510d2e087aa61f2ac399a9090b941a1a42d3f3a98",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "org.hibernate.models"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.hibernate.models:hibernate-models",
+          "version": "1.1.2",
+          "purl": "pkg:maven/org.hibernate.models/hibernate-models@1.1.2",
+          "filePath": "app/app.jar/BOOT-INF/lib/hibernate-models-1.1.2.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/hibernate/models/hibernate-models/1.1.2/hibernate-models-1.1.2.jar",
+          "group": "org.hibernate.models",
+          "artifact": "hibernate-models",
+          "version": "1.1.2",
+          "purl": "pkg:maven/org.hibernate.models/hibernate-models@1.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/hibernate-validator-9.1.5.Final.jar",
+      "bytes": 1408015,
+      "sha1": "9765ed23b29abe5e5156e5222b418035add8d00e",
+      "sha256": "1e2c1f63050a6863613d910555a81e850a6aa313e4e5f526984512cfd2946dea",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "25",
+        "Implementation-Title": "hibernate-validator",
+        "Implementation-URL": "https://hibernate.org/validator/",
+        "Implementation-Vendor": "org.hibernate.validator",
+        "Implementation-Vendor-Id": "org.hibernate.validator",
+        "Implementation-Version": "9.1.5.Final",
+        "Specification-Title": "Jakarta Validation",
+        "Specification-Version": "3.1",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Hibernate Validator Engine",
+        "Bundle-SymbolicName": "org.hibernate.validator",
+        "Bundle-Version": "9.1.5.Final"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.hibernate.validator/hibernate-validator/pom.properties",
+          "properties": {
+            "artifactId": "hibernate-validator",
+            "groupId": "org.hibernate.validator",
+            "version": "9.1.5.Final"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.hibernate.validator/",
+        "META-INF/maven/org.hibernate.validator/hibernate-validator/",
+        "META-INF/maven/org.hibernate.validator/hibernate-validator/pom.xml",
+        "META-INF/maven/org.hibernate.validator/hibernate-validator/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.hibernate.validator:hibernate-validator",
+          "version": "9.1.5.Final",
+          "purl": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.5.Final",
+          "filePath": "app/app.jar/BOOT-INF/lib/hibernate-validator-9.1.5.Final.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/hibernate/validator/hibernate-validator/9.1.5.Final/hibernate-validator-9.1.5.Final.jar",
+          "group": "org.hibernate.validator",
+          "artifact": "hibernate-validator",
+          "version": "9.1.5.Final",
+          "purl": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.5.Final",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/HikariCP-7.0.2.jar",
+      "bytes": 172312,
+      "sha1": "c2b43c946b86a14a96342379e22b004c56c6166d",
+      "sha256": "f1e612fa27345be3107a85431e8a8aeb205c15364ab2f2d411e40a9d7bb08095",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "com.zaxxer.hikari",
+        "Build-Jdk-Spec": "11",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "HikariCP",
+        "Bundle-SymbolicName": "com.zaxxer.HikariCP",
+        "Bundle-Version": "7.0.2"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.zaxxer/HikariCP/pom.properties",
+          "properties": {
+            "groupId": "com.zaxxer",
+            "artifactId": "HikariCP",
+            "version": "7.0.2"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.zaxxer/",
+        "META-INF/maven/com.zaxxer/HikariCP/",
+        "META-INF/maven/com.zaxxer/HikariCP/pom.properties",
+        "META-INF/maven/com.zaxxer/HikariCP/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.zaxxer:HikariCP",
+          "version": "7.0.2",
+          "purl": "pkg:maven/com.zaxxer/HikariCP@7.0.2",
+          "filePath": "app/app.jar/BOOT-INF/lib/HikariCP-7.0.2.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/zaxxer/HikariCP/7.0.2/HikariCP-7.0.2.jar",
+          "group": "com.zaxxer",
+          "artifact": "HikariCP",
+          "version": "7.0.2",
+          "purl": "pkg:maven/com.zaxxer/HikariCP@7.0.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/istack-commons-runtime-4.1.2.jar",
+      "bytes": 25788,
+      "sha1": "18ec117c85f3ba0ac65409136afa8e42bc74e739",
+      "sha256": "7fd6792361f4dd00f8c56af4a20cecc0066deea4a8f3dec38348af23fc2296ee",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "istack common utility code runtime",
+        "Bundle-SymbolicName": "com.sun.istack.commons-runtime",
+        "Bundle-Version": "4.1.2",
+        "Implementation-Build-Id": "4.1.2 - 343a28e",
+        "Implementation-Vendor": "Eclipse Foundation",
+        "Implementation-Vendor-Id": "com.sun.istack"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.sun.istack/istack-commons-runtime/pom.properties",
+          "properties": {
+            "artifactId": "istack-commons-runtime",
+            "groupId": "com.sun.istack",
+            "version": "4.1.2"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.sun.istack/",
+        "META-INF/maven/com.sun.istack/istack-commons-runtime/",
+        "META-INF/maven/com.sun.istack/istack-commons-runtime/pom.xml",
+        "META-INF/maven/com.sun.istack/istack-commons-runtime/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.sun.istack:istack-commons-runtime",
+          "version": "4.1.2",
+          "purl": "pkg:maven/com.sun.istack/istack-commons-runtime@4.1.2",
+          "filePath": "app/app.jar/BOOT-INF/lib/istack-commons-runtime-4.1.2.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar",
+          "group": "com.sun.istack",
+          "artifact": "istack-commons-runtime",
+          "version": "4.1.2",
+          "purl": "pkg:maven/com.sun.istack/istack-commons-runtime@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-annotations-2.21.jar",
+      "bytes": 82104,
+      "sha1": "b1bc1868bf02dc0bd6c7836257a036a331005309",
+      "sha256": "53ca085f4a150f703f49e1aabd935bd03b43e1ea3d55d135438292af22cef56b",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "Jackson-annotations",
+        "Bundle-SymbolicName": "com.fasterxml.jackson.core.jackson-annotations",
+        "Implementation-Version": "2.21",
+        "Bundle-ManifestVersion": "2",
+        "Specification-Vendor": "FasterXML",
+        "Implementation-Vendor-Id": "com.fasterxml.jackson.core",
+        "Specification-Title": "Jackson-annotations",
+        "Implementation-Vendor": "FasterXML",
+        "Bundle-Name": "Jackson-annotations",
+        "Bundle-Version": "2.21.0",
+        "Build-Jdk-Spec": "1.8",
+        "Specification-Version": "2.21"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.properties",
+          "properties": {
+            "artifactId": "jackson-annotations",
+            "groupId": "com.fasterxml.jackson.core",
+            "version": "2.21"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.fasterxml.jackson.core/",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.xml",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.fasterxml.jackson.core:jackson-annotations",
+          "version": "2.21",
+          "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+          "filePath": "app/app.jar/BOOT-INF/lib/jackson-annotations-2.21.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/fasterxml/jackson/core/jackson-annotations/2.21/jackson-annotations-2.21.jar",
+          "group": "com.fasterxml.jackson.core",
+          "artifact": "jackson-annotations",
+          "version": "2.21",
+          "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-core-2.21.7.jar",
+      "bytes": 594782,
+      "sha1": "5abfb904683e642f4a5458f2a78ab9308c7c5a46",
+      "sha256": "8c5623b98f32d5f7e1287ff61ed50e08ab7b11381e991fff89327faabba42261",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-SymbolicName": "com.fasterxml.jackson.core.jackson-core",
+        "Implementation-Vendor-Id": "com.fasterxml.jackson.core",
+        "Specification-Title": "Jackson-core",
+        "Bundle-Name": "Jackson-core",
+        "Build-Jdk-Spec": "1.8",
+        "Implementation-Title": "Jackson-core",
+        "Implementation-Version": "2.21.7",
+        "Bundle-ManifestVersion": "2",
+        "Specification-Vendor": "FasterXML",
+        "Implementation-Vendor": "FasterXML",
+        "Bundle-Version": "2.21.7",
+        "Specification-Version": "2.21.7"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.properties",
+          "properties": {
+            "artifactId": "jackson-core",
+            "groupId": "com.fasterxml.jackson.core",
+            "version": "2.21.7"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.fasterxml.jackson.core/",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-core/",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.xml",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.fasterxml.jackson.core:jackson-core",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.21.7",
+          "filePath": "app/app.jar/BOOT-INF/lib/jackson-core-2.21.7.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/fasterxml/jackson/core/jackson-core/2.21.7/jackson-core-2.21.7.jar",
+          "group": "com.fasterxml.jackson.core",
+          "artifact": "jackson-core",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.21.7",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-core-3.1.7.jar",
+      "bytes": 602666,
+      "sha1": "a2b54921d5528a9df7f014222d2d519a14858801",
+      "sha256": "7608c367fd8a92666d28711519599543c180298259963184ce04d2947a8f71e7",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Jackson-core",
+        "Bundle-SymbolicName": "tools.jackson.core.jackson-core",
+        "Bundle-Version": "3.1.7",
+        "Implementation-Title": "Jackson-core",
+        "Implementation-Vendor": "FasterXML",
+        "Implementation-Vendor-Id": "tools.jackson.core",
+        "Implementation-Version": "3.1.7",
+        "Specification-Title": "Jackson-core",
+        "Specification-Vendor": "FasterXML",
+        "Specification-Version": "3.1.7"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/tools.jackson.core/jackson-core/pom.properties",
+          "properties": {
+            "artifactId": "jackson-core",
+            "groupId": "tools.jackson.core",
+            "version": "3.1.7"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/tools.jackson.core/",
+        "META-INF/maven/tools.jackson.core/jackson-core/",
+        "META-INF/maven/tools.jackson.core/jackson-core/pom.xml",
+        "META-INF/maven/tools.jackson.core/jackson-core/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "tools.jackson.core:jackson-core",
+          "version": "3.1.7",
+          "purl": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+          "filePath": "app/app.jar/BOOT-INF/lib/jackson-core-3.1.7.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "tools/jackson/core/jackson-core/3.1.7/jackson-core-3.1.7.jar",
+          "group": "tools.jackson.core",
+          "artifact": "jackson-core",
+          "version": "3.1.7",
+          "purl": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-databind-2.21.7.jar",
+      "bytes": 1709095,
+      "sha1": "a2ebbc72e3092323f0f3defa786ff3bb0c47218c",
+      "sha256": "1290c2795e93e8a6861a6c4d9ff0d844d32f5ea178362cb2721edf5561e828b1",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-SymbolicName": "com.fasterxml.jackson.core.jackson-databind",
+        "Implementation-Vendor-Id": "com.fasterxml.jackson.core",
+        "Specification-Title": "jackson-databind",
+        "Bundle-Name": "jackson-databind",
+        "Build-Jdk-Spec": "1.8",
+        "Implementation-Title": "jackson-databind",
+        "Implementation-Version": "2.21.7",
+        "Bundle-ManifestVersion": "2",
+        "Specification-Vendor": "FasterXML",
+        "Implementation-Vendor": "FasterXML",
+        "Bundle-Version": "2.21.7",
+        "Specification-Version": "2.21.7"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties",
+          "properties": {
+            "artifactId": "jackson-databind",
+            "groupId": "com.fasterxml.jackson.core",
+            "version": "2.21.7"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.fasterxml.jackson.core/",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-databind/",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.xml",
+        "META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.fasterxml.jackson.core:jackson-databind",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.7",
+          "filePath": "app/app.jar/BOOT-INF/lib/jackson-databind-2.21.7.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/fasterxml/jackson/core/jackson-databind/2.21.7/jackson-databind-2.21.7.jar",
+          "group": "com.fasterxml.jackson.core",
+          "artifact": "jackson-databind",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.7",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-databind-3.1.7.jar",
+      "bytes": 1951590,
+      "sha1": "1f45f7dd68639c962435fae38ca100a70ccc0971",
+      "sha256": "48c781de87e2016e1f0d973748a27130f11643e7ac080173f40e2d9669d84be3",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "17",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "jackson-databind",
+        "Bundle-SymbolicName": "tools.jackson.core.jackson-databind",
+        "Bundle-Version": "3.1.7",
+        "Implementation-Title": "jackson-databind",
+        "Implementation-Vendor": "FasterXML",
+        "Implementation-Vendor-Id": "tools.jackson.core",
+        "Implementation-Version": "3.1.7",
+        "Specification-Title": "jackson-databind",
+        "Specification-Vendor": "FasterXML",
+        "Specification-Version": "3.1.7"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/tools.jackson.core/jackson-databind/pom.properties",
+          "properties": {
+            "artifactId": "jackson-databind",
+            "groupId": "tools.jackson.core",
+            "version": "3.1.7"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/tools.jackson.core/",
+        "META-INF/maven/tools.jackson.core/jackson-databind/",
+        "META-INF/maven/tools.jackson.core/jackson-databind/pom.xml",
+        "META-INF/maven/tools.jackson.core/jackson-databind/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "tools.jackson.core:jackson-databind",
+          "version": "3.1.7",
+          "purl": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+          "filePath": "app/app.jar/BOOT-INF/lib/jackson-databind-3.1.7.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "tools/jackson/core/jackson-databind/3.1.7/jackson-databind-3.1.7.jar",
+          "group": "tools.jackson.core",
+          "artifact": "jackson-databind",
+          "version": "3.1.7",
+          "purl": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-dataformat-yaml-2.21.7.jar",
+      "bytes": 63001,
+      "sha1": "cd755d8f2c860e887301b47140f60ab58b3eb538",
+      "sha256": "df2b3e6a194181dc067b7211d750926b4ae9e4f3c892a0005b8219a9b59be681",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-SymbolicName": "com.fasterxml.jackson.dataformat.jackson-dataformat-yaml",
+        "Implementation-Vendor-Id": "com.fasterxml.jackson.dataformat",
+        "Specification-Title": "Jackson-dataformat-YAML",
+        "Bundle-Name": "Jackson-dataformat-YAML",
+        "Build-Jdk-Spec": "1.8",
+        "Implementation-Title": "Jackson-dataformat-YAML",
+        "Implementation-Version": "2.21.7",
+        "Bundle-ManifestVersion": "2",
+        "Specification-Vendor": "FasterXML",
+        "Implementation-Vendor": "FasterXML",
+        "Bundle-Version": "2.21.7",
+        "Specification-Version": "2.21.7"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/pom.properties",
+          "properties": {
+            "artifactId": "jackson-dataformat-yaml",
+            "groupId": "com.fasterxml.jackson.dataformat",
+            "version": "2.21.7"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.fasterxml.jackson.dataformat/",
+        "META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/",
+        "META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/pom.xml",
+        "META-INF/maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.21.7",
+          "filePath": "app/app.jar/BOOT-INF/lib/jackson-dataformat-yaml-2.21.7.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.21.7/jackson-dataformat-yaml-2.21.7.jar",
+          "group": "com.fasterxml.jackson.dataformat",
+          "artifact": "jackson-dataformat-yaml",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.21.7",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-datatype-jsr310-2.21.7.jar",
+      "bytes": 136878,
+      "sha1": "ed949b76fb4a5530986cf5ab4a74aa0f03ca0cd6",
+      "sha256": "5989b937f0aa5b6407e7a061077c9bfcac0590dc0a32e54b2fac6a3e2d49e812",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-SymbolicName": "com.fasterxml.jackson.datatype.jackson-datatype-jsr310",
+        "Implementation-Vendor-Id": "com.fasterxml.jackson.datatype",
+        "Specification-Title": "Jackson datatype: JSR310",
+        "Bundle-Name": "Jackson datatype: JSR310",
+        "Build-Jdk-Spec": "1.8",
+        "Implementation-Title": "Jackson datatype: JSR310",
+        "Implementation-Version": "2.21.7",
+        "Bundle-ManifestVersion": "2",
+        "Specification-Vendor": "FasterXML",
+        "Implementation-Vendor": "FasterXML",
+        "Bundle-Version": "2.21.7",
+        "Specification-Version": "2.21.7"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/pom.properties",
+          "properties": {
+            "version": "2.21.7",
+            "groupId": "com.fasterxml.jackson.datatype",
+            "artifactId": "jackson-datatype-jsr310"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/com.fasterxml.jackson.datatype/",
+        "META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/",
+        "META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/pom.properties",
+        "META-INF/maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.21.7",
+          "filePath": "app/app.jar/BOOT-INF/lib/jackson-datatype-jsr310-2.21.7.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.21.7/jackson-datatype-jsr310-2.21.7.jar",
+          "group": "com.fasterxml.jackson.datatype",
+          "artifact": "jackson-datatype-jsr310",
+          "version": "2.21.7",
+          "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.21.7",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jakarta.activation-api-2.1.4.jar",
+      "bytes": 67380,
+      "sha1": "9e5c2a0d75dde71a0bedc4dbdbe47b78a5dc50f8",
+      "sha256": "c9db52100ce6c8aac95cc39075f95720d2e561b11f8051b81c121ad4effd7004",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Jakarta Activation API",
+        "Bundle-SymbolicName": "jakarta.activation-api",
+        "Bundle-Version": "2.1.4",
+        "Implementation-Build-Id": "3dad341",
+        "Implementation-Title": "Jakarta Activation API",
+        "Implementation-Vendor": "Eclipse Foundation",
+        "Specification-Title": "Jakarta Activation Specification",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "2.1"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/jakarta.activation/jakarta.activation-api/pom.properties",
+          "properties": {
+            "artifactId": "jakarta.activation-api",
+            "groupId": "jakarta.activation",
+            "version": "2.1.4"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/jakarta.activation/",
+        "META-INF/maven/jakarta.activation/jakarta.activation-api/",
+        "META-INF/maven/jakarta.activation/jakarta.activation-api/pom.xml",
+        "META-INF/maven/jakarta.activation/jakarta.activation-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "jakarta.activation:jakarta.activation-api",
+          "version": "2.1.4",
+          "purl": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+          "filePath": "app/app.jar/BOOT-INF/lib/jakarta.activation-api-2.1.4.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "jakarta/activation/jakarta.activation-api/2.1.4/jakarta.activation-api-2.1.4.jar",
+          "group": "jakarta.activation",
+          "artifact": "jakarta.activation-api",
+          "version": "2.1.4",
+          "purl": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jakarta.annotation-api-3.0.0.jar",
+      "bytes": 26378,
+      "sha1": "54f928fadec906a99d558536756d171917b9d936",
+      "sha256": "b01f55552284cfb149411e64eabca75e942d26d2e1786b32914250e4330afaa2",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "18",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Jakarta Annotations API",
+        "Bundle-SymbolicName": "jakarta.annotation-api",
+        "Bundle-Version": "3.0.0",
+        "Implementation-Vendor": "Eclipse Foundation",
+        "Implementation-Vendor-Id": "org.glassfish",
+        "Implementation-Version": "3.0.0",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "3.0"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/jakarta.annotation/jakarta.annotation-api/pom.properties",
+          "properties": {
+            "artifactId": "jakarta.annotation-api",
+            "groupId": "jakarta.annotation",
+            "version": "3.0.0"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/jakarta.annotation/",
+        "META-INF/maven/jakarta.annotation/jakarta.annotation-api/",
+        "META-INF/maven/jakarta.annotation/jakarta.annotation-api/pom.xml",
+        "META-INF/maven/jakarta.annotation/jakarta.annotation-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "jakarta.annotation:jakarta.annotation-api",
+          "version": "3.0.0",
+          "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+          "filePath": "app/app.jar/BOOT-INF/lib/jakarta.annotation-api-3.0.0.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar",
+          "group": "jakarta.annotation",
+          "artifact": "jakarta.annotation-api",
+          "version": "3.0.0",
+          "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jakarta.inject-api-2.0.1.jar",
+      "bytes": 10681,
+      "sha1": "4c28afe1991a941d7702fe1362c365f0a8641d1e",
+      "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "11",
+        "Built-By": "jenkins",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Jakarta Dependency Injection",
+        "Bundle-SymbolicName": "jakarta.inject.jakarta.inject-api",
+        "Bundle-Version": "2.0.1",
+        "Implementation-Version": "2.0"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/jakarta.inject/jakarta.inject-api/pom.properties",
+          "properties": {
+            "artifactId": "jakarta.inject-api",
+            "groupId": "jakarta.inject",
+            "version": "2.0.1"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/jakarta.inject/",
+        "META-INF/maven/jakarta.inject/jakarta.inject-api/",
+        "META-INF/maven/jakarta.inject/jakarta.inject-api/pom.xml",
+        "META-INF/maven/jakarta.inject/jakarta.inject-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "jakarta.inject:jakarta.inject-api",
+          "version": "2.0.1",
+          "purl": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/jakarta.inject-api-2.0.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar",
+          "group": "jakarta.inject",
+          "artifact": "jakarta.inject-api",
+          "version": "2.0.1",
+          "purl": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jakarta.persistence-api-3.2.0.jar",
+      "bytes": 195939,
+      "sha1": "bb75a113f3fa191c2c7ee7b206d8e674251b3129",
+      "sha256": "be8a26b0e75c84c1b7600f759256fbc68d60333d89ec0ce3f784fc3ffa09aa8c",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Jakarta Persistence API jar",
+        "Bundle-SymbolicName": "jakarta.persistence-api",
+        "Bundle-Version": "3.2.0",
+        "Implementation-Version": "3.2.0",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "3.2"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/jakarta.persistence/jakarta.persistence-api/pom.properties",
+          "properties": {
+            "artifactId": "jakarta.persistence-api",
+            "groupId": "jakarta.persistence",
+            "version": "3.2.0"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/jakarta.persistence/",
+        "META-INF/maven/jakarta.persistence/jakarta.persistence-api/",
+        "META-INF/maven/jakarta.persistence/jakarta.persistence-api/pom.xml",
+        "META-INF/maven/jakarta.persistence/jakarta.persistence-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "jakarta.persistence:jakarta.persistence-api",
+          "version": "3.2.0",
+          "purl": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.2.0",
+          "filePath": "app/app.jar/BOOT-INF/lib/jakarta.persistence-api-3.2.0.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar",
+          "group": "jakarta.persistence",
+          "artifact": "jakarta.persistence-api",
+          "version": "3.2.0",
+          "purl": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.2.0",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jakarta.transaction-api-2.0.1.jar",
+      "bytes": 28607,
+      "sha1": "51a520e3fae406abb84e2e1148e6746ce3f80a1a",
+      "sha256": "50c0a7c760c13ae6c042acf182b28f0047413db95b4636fb8879bcffab5ba875",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Built-By": "jenkins",
+        "Automatic-Module-Name": "jakarta.transaction",
+        "Build-Jdk-Spec": "11",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "jakarta.transaction API",
+        "Bundle-SymbolicName": "jakarta.transaction-api",
+        "Bundle-Version": "2.0.1",
+        "Implementation-Vendor": "EE4J Community",
+        "Implementation-Vendor-Id": "org.glassfish",
+        "Implementation-Version": "2.0.1",
+        "Specification-Vendor": "Oracle Corporation",
+        "Specification-Version": "2.0"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/jakarta.transaction/jakarta.transaction-api/pom.properties",
+          "properties": {
+            "groupId": "jakarta.transaction",
+            "artifactId": "jakarta.transaction-api",
+            "version": "2.0.1"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/jakarta.transaction/",
+        "META-INF/maven/jakarta.transaction/jakarta.transaction-api/",
+        "META-INF/maven/jakarta.transaction/jakarta.transaction-api/pom.xml",
+        "META-INF/maven/jakarta.transaction/jakarta.transaction-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "jakarta.transaction:jakarta.transaction-api",
+          "version": "2.0.1",
+          "purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/jakarta.transaction-api-2.0.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar",
+          "group": "jakarta.transaction",
+          "artifact": "jakarta.transaction-api",
+          "version": "2.0.1",
+          "purl": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jakarta.validation-api-3.1.1.jar",
+      "bytes": 106136,
+      "sha1": "ec8622148afc5564235d17af80ea80288d0e7f92",
+      "sha256": "63ce00156388c365f3ac1be71fcfaf114682fc0c452020b5df6e7ec236e142ab",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "11",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Jakarta Validation API",
+        "Bundle-SymbolicName": "jakarta.validation.jakarta.validation-api",
+        "Bundle-Version": "3.1.1"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/jakarta.validation/jakarta.validation-api/pom.properties",
+          "properties": {
+            "artifactId": "jakarta.validation-api",
+            "groupId": "jakarta.validation",
+            "version": "3.1.1"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/jakarta.validation/",
+        "META-INF/maven/jakarta.validation/jakarta.validation-api/",
+        "META-INF/maven/jakarta.validation/jakarta.validation-api/pom.xml",
+        "META-INF/maven/jakarta.validation/jakarta.validation-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "jakarta.validation:jakarta.validation-api",
+          "version": "3.1.1",
+          "purl": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/jakarta.validation-api-3.1.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "jakarta/validation/jakarta.validation-api/3.1.1/jakarta.validation-api-3.1.1.jar",
+          "group": "jakarta.validation",
+          "artifact": "jakarta.validation-api",
+          "version": "3.1.1",
+          "purl": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jakarta.xml.bind-api-4.0.5.jar",
+      "bytes": 131219,
+      "sha1": "161811f36cad3c65991502e80317f2f6703361df",
+      "sha256": "5e489b6c874c4119e003ff1403db523ee3a8959ec499f3de29e77245efccf216",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Jakarta XML Binding API",
+        "Bundle-SymbolicName": "jakarta.xml.bind-api",
+        "Bundle-Version": "4.0.5",
+        "Implementation-Build-Id": "33af600",
+        "Implementation-Version": "4.0.5",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "4.0"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/jakarta.xml.bind/jakarta.xml.bind-api/pom.properties",
+          "properties": {
+            "artifactId": "jakarta.xml.bind-api",
+            "groupId": "jakarta.xml.bind",
+            "version": "4.0.5"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/jakarta.xml.bind/",
+        "META-INF/maven/jakarta.xml.bind/jakarta.xml.bind-api/",
+        "META-INF/maven/jakarta.xml.bind/jakarta.xml.bind-api/pom.xml",
+        "META-INF/maven/jakarta.xml.bind/jakarta.xml.bind-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "jakarta.xml.bind:jakarta.xml.bind-api",
+          "version": "4.0.5",
+          "purl": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+          "filePath": "app/app.jar/BOOT-INF/lib/jakarta.xml.bind-api-4.0.5.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "jakarta/xml/bind/jakarta.xml.bind-api/4.0.5/jakarta.xml.bind-api-4.0.5.jar",
+          "group": "jakarta.xml.bind",
+          "artifact": "jakarta.xml.bind-api",
+          "version": "4.0.5",
+          "purl": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jaxb-core-4.0.9.jar",
+      "bytes": 139417,
+      "sha1": "3f32ec949d109d666fa30994223d1c25a47b105f",
+      "sha256": "6b014df25d22c8446cc2df0a378c5b2137747f197a731d99eb24c756b26f7e8d",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "Eclipse Implementation of JAXB",
+        "Implementation-Vendor": "Eclipse Foundation",
+        "Implementation-Vendor-Id": "org.glassfish.jaxb",
+        "Implementation-Version": "4.0.9 - e155f35",
+        "Specification-Title": "Jakarta XML Binding",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "4.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "JAXB Core",
+        "Bundle-SymbolicName": "org.glassfish.jaxb.core",
+        "Bundle-Version": "4.0.9",
+        "Implementation-Build-Id": "4.0.9 - e155f35"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.glassfish.jaxb/jaxb-core/pom.properties",
+          "properties": {
+            "artifactId": "jaxb-core",
+            "groupId": "org.glassfish.jaxb",
+            "version": "4.0.9"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.glassfish.jaxb/",
+        "META-INF/maven/org.glassfish.jaxb/jaxb-core/",
+        "META-INF/maven/org.glassfish.jaxb/jaxb-core/pom.xml",
+        "META-INF/maven/org.glassfish.jaxb/jaxb-core/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.glassfish.jaxb:jaxb-core",
+          "version": "4.0.9",
+          "purl": "pkg:maven/org.glassfish.jaxb/jaxb-core@4.0.9",
+          "filePath": "app/app.jar/BOOT-INF/lib/jaxb-core-4.0.9.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/glassfish/jaxb/jaxb-core/4.0.9/jaxb-core-4.0.9.jar",
+          "group": "org.glassfish.jaxb",
+          "artifact": "jaxb-core",
+          "version": "4.0.9",
+          "purl": "pkg:maven/org.glassfish.jaxb/jaxb-core@4.0.9",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jaxb-runtime-4.0.9.jar",
+      "bytes": 922445,
+      "sha1": "500c199572538675d2819c938fbafe34935d8d6b",
+      "sha256": "93e09b7316b6af68d6e2083e4c297daf28e8957f45d725077af812c0b12c39ab",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "Eclipse Implementation of JAXB",
+        "Implementation-Vendor": "Eclipse Foundation",
+        "Implementation-Vendor-Id": "org.glassfish.jaxb",
+        "Implementation-Version": "4.0.9 - e155f35",
+        "Specification-Title": "Jakarta XML Binding",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "4.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "JAXB Runtime",
+        "Bundle-SymbolicName": "org.glassfish.jaxb.runtime",
+        "Bundle-Version": "4.0.9",
+        "Implementation-Build-Id": "4.0.9 - e155f35"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.glassfish.jaxb/jaxb-runtime/pom.properties",
+          "properties": {
+            "artifactId": "jaxb-runtime",
+            "groupId": "org.glassfish.jaxb",
+            "version": "4.0.9"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.glassfish.jaxb/",
+        "META-INF/maven/org.glassfish.jaxb/jaxb-runtime/",
+        "META-INF/maven/org.glassfish.jaxb/jaxb-runtime/pom.xml",
+        "META-INF/maven/org.glassfish.jaxb/jaxb-runtime/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.glassfish.jaxb:jaxb-runtime",
+          "version": "4.0.9",
+          "purl": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.9",
+          "filePath": "app/app.jar/BOOT-INF/lib/jaxb-runtime-4.0.9.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/glassfish/jaxb/jaxb-runtime/4.0.9/jaxb-runtime-4.0.9.jar",
+          "group": "org.glassfish.jaxb",
+          "artifact": "jaxb-runtime",
+          "version": "4.0.9",
+          "purl": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.9",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jboss-logging-3.6.3.Final.jar",
+      "bytes": 62672,
+      "sha1": "1cc9f976725720bb4a66f80af3e3aa6b9890d969",
+      "sha256": "7c12ee575508f81e22b1db9334b969d0ec54ef0fd1dcba24eeab1a44235fc366",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "25",
+        "Specification-Title": "JBoss Logging 3",
+        "Specification-Version": "3.6",
+        "Specification-Vendor": "JBoss by Red Hat",
+        "Implementation-Title": "JBoss Logging 3",
+        "Implementation-Version": "3.6.3.Final",
+        "Implementation-Vendor": "JBoss by Red Hat",
+        "Implementation-URL": "https://www.jboss.org",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "JBoss Logging 3",
+        "Bundle-SymbolicName": "org.jboss.logging.jboss-logging",
+        "Bundle-Version": "3.6.3.Final"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.jboss.logging/jboss-logging/pom.properties",
+          "properties": {
+            "artifactId": "jboss-logging",
+            "groupId": "org.jboss.logging",
+            "version": "3.6.3.Final"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.jboss.logging/",
+        "META-INF/maven/org.jboss.logging/jboss-logging/",
+        "META-INF/maven/org.jboss.logging/jboss-logging/pom.xml",
+        "META-INF/maven/org.jboss.logging/jboss-logging/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.jboss.logging:jboss-logging",
+          "version": "3.6.3.Final",
+          "purl": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final",
+          "filePath": "app/app.jar/BOOT-INF/lib/jboss-logging-3.6.3.Final.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/jboss/logging/jboss-logging/3.6.3.Final/jboss-logging-3.6.3.Final.jar",
+          "group": "org.jboss.logging",
+          "artifact": "jboss-logging",
+          "version": "3.6.3.Final",
+          "purl": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jspecify-1.0.1.jar",
+      "bytes": 3064,
+      "sha1": "3d60fd98eb8ade73004f4195c37b6317e02cf3d7",
+      "sha256": "070d75f261fe4c5b8202508366715f7f2d4660f88c8ef7e6d3575e48c9683b66",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "JSpecify annotations",
+        "Bundle-SymbolicName": "org.jspecify.jspecify",
+        "Bundle-Version": "1.0.1",
+        "Implementation-Version": "1.0.1"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.jspecify:jspecify",
+          "version": "1.0.1",
+          "purl": "pkg:maven/org.jspecify/jspecify@1.0.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/jspecify-1.0.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/jspecify/jspecify/1.0.1/jspecify-1.0.1.jar",
+          "group": "org.jspecify",
+          "artifact": "jspecify",
+          "version": "1.0.1",
+          "purl": "pkg:maven/org.jspecify/jspecify@1.0.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/jul-to-slf4j-2.0.20.jar",
+      "bytes": 6345,
+      "sha1": "f227b76739ea6a0e014478659d72bdc455fd7fd2",
+      "sha256": "062249d0677a0e08039120a2292a8db064c69d04282bf562af2e54c53ff06976",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "JUL to SLF4J bridge",
+        "Bundle-SymbolicName": "jul.to.slf4j",
+        "Bundle-Version": "2.0.20",
+        "Implementation-Title": "jul-to-slf4j",
+        "Implementation-Version": "2.0.20"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.slf4j/jul-to-slf4j/pom.properties",
+          "properties": {
+            "artifactId": "jul-to-slf4j",
+            "groupId": "org.slf4j",
+            "version": "2.0.20"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.slf4j/",
+        "META-INF/maven/org.slf4j/jul-to-slf4j/",
+        "META-INF/maven/org.slf4j/jul-to-slf4j/pom.xml",
+        "META-INF/maven/org.slf4j/jul-to-slf4j/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.slf4j:jul-to-slf4j",
+          "version": "2.0.20",
+          "purl": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20",
+          "filePath": "app/app.jar/BOOT-INF/lib/jul-to-slf4j-2.0.20.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/slf4j/jul-to-slf4j/2.0.20/jul-to-slf4j-2.0.20.jar",
+          "group": "org.slf4j",
+          "artifact": "jul-to-slf4j",
+          "version": "2.0.20",
+          "purl": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/log4j-api-2.25.5.jar",
+      "bytes": 351427,
+      "sha1": "6c80ea65e41f7858f7e15cb390c98c36167c7b3a",
+      "sha256": "64777f73ea0b3104c04eb82befbdccc30a425a19e83ad06cb2f93aa303511863",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "17",
+        "Specification-Title": "Apache Log4j API",
+        "Specification-Version": "2.25",
+        "Specification-Vendor": "The Apache Software Foundation",
+        "Implementation-Title": "Apache Log4j API",
+        "Implementation-Version": "2.25.5",
+        "Implementation-Vendor": "The Apache Software Foundation",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Apache Log4j API",
+        "Bundle-SymbolicName": "org.apache.logging.log4j.api",
+        "Bundle-Version": "2.25.5"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.apache.logging.log4j/log4j-api/pom.properties",
+          "properties": {
+            "artifactId": "log4j-api",
+            "groupId": "org.apache.logging.log4j",
+            "version": "2.25.5"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.apache.logging.log4j/",
+        "META-INF/maven/org.apache.logging.log4j/log4j-api/",
+        "META-INF/maven/org.apache.logging.log4j/log4j-api/pom.xml",
+        "META-INF/maven/org.apache.logging.log4j/log4j-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.apache.logging.log4j:log4j-api",
+          "version": "2.25.5",
+          "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+          "filePath": "app/app.jar/BOOT-INF/lib/log4j-api-2.25.5.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/apache/logging/log4j/log4j-api/2.25.5/log4j-api-2.25.5.jar",
+          "group": "org.apache.logging.log4j",
+          "artifact": "log4j-api",
+          "version": "2.25.5",
+          "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar",
+      "bytes": 24173,
+      "sha1": "bafb12d62913815e040218e34c80d75ad6db09c1",
+      "sha256": "b68e8b47342dbc9b35644a14fe2efc0b7bf18da703910cd05ad5501ffe07bba1",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "17",
+        "Specification-Title": "Log4j API to SLF4J Adapter",
+        "Specification-Version": "2.25",
+        "Specification-Vendor": "The Apache Software Foundation",
+        "Implementation-Title": "Log4j API to SLF4J Adapter",
+        "Implementation-Version": "2.25.5",
+        "Implementation-Vendor": "The Apache Software Foundation",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Log4j API to SLF4J Adapter",
+        "Bundle-SymbolicName": "org.apache.logging.log4j.to.slf4j",
+        "Bundle-Version": "2.25.5"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.apache.logging.log4j/log4j-to-slf4j/pom.properties",
+          "properties": {
+            "artifactId": "log4j-to-slf4j",
+            "groupId": "org.apache.logging.log4j",
+            "version": "2.25.5"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.apache.logging.log4j/",
+        "META-INF/maven/org.apache.logging.log4j/log4j-to-slf4j/",
+        "META-INF/maven/org.apache.logging.log4j/log4j-to-slf4j/pom.xml",
+        "META-INF/maven/org.apache.logging.log4j/log4j-to-slf4j/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "version": "2.25.5",
+          "purl": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+          "filePath": "app/app.jar/BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/apache/logging/log4j/log4j-to-slf4j/2.25.5/log4j-to-slf4j-2.25.5.jar",
+          "group": "org.apache.logging.log4j",
+          "artifact": "log4j-to-slf4j",
+          "version": "2.25.5",
+          "purl": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/logback-classic-1.5.38.jar",
+      "bytes": 287122,
+      "sha1": "bc5873cb4a7f502ce18ce2977d98ad26b9f96444",
+      "sha256": "afb439c61fa287c9e1925523b13baab03617e724406a389d48b61c2c3e46b700",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Specification-Title": "Logback Classic Module",
+        "Specification-Version": "1.5",
+        "Specification-Vendor": "QOS.ch",
+        "Implementation-Title": "Logback Classic Module",
+        "Implementation-Version": "1.5.38",
+        "Implementation-Vendor": "QOS.ch",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Logback Classic Module",
+        "Bundle-SymbolicName": "ch.qos.logback.classic",
+        "Bundle-Version": "1.5.38"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/ch.qos.logback/logback-classic/pom.properties",
+          "properties": {
+            "artifactId": "logback-classic",
+            "groupId": "ch.qos.logback",
+            "version": "1.5.38"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/ch.qos.logback/",
+        "META-INF/maven/ch.qos.logback/logback-classic/",
+        "META-INF/maven/ch.qos.logback/logback-classic/pom.xml",
+        "META-INF/maven/ch.qos.logback/logback-classic/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "ch.qos.logback:logback-classic",
+          "version": "1.5.38",
+          "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+          "filePath": "app/app.jar/BOOT-INF/lib/logback-classic-1.5.38.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "ch/qos/logback/logback-classic/1.5.38/logback-classic-1.5.38.jar",
+          "group": "ch.qos.logback",
+          "artifact": "logback-classic",
+          "version": "1.5.38",
+          "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/logback-core-1.5.38.jar",
+      "bytes": 641090,
+      "sha1": "7b1d133b29bf42ff268cf3f71d1308b80480fb8d",
+      "sha256": "a855a0fc97b1d06f4efb1c3bba5ebd0eb508d8b58e68e89e4bbc23a85135c883",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Specification-Title": "Logback Core Module",
+        "Specification-Version": "1.5",
+        "Specification-Vendor": "QOS.ch",
+        "Implementation-Title": "Logback Core Module",
+        "Implementation-Version": "1.5.38",
+        "Implementation-Vendor": "QOS.ch",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "Logback Core Module",
+        "Bundle-SymbolicName": "ch.qos.logback.core",
+        "Bundle-Version": "1.5.38"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/ch.qos.logback/logback-core/pom.properties",
+          "properties": {
+            "artifactId": "logback-core",
+            "groupId": "ch.qos.logback",
+            "version": "1.5.38"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/ch.qos.logback/",
+        "META-INF/maven/ch.qos.logback/logback-core/",
+        "META-INF/maven/ch.qos.logback/logback-core/pom.xml",
+        "META-INF/maven/ch.qos.logback/logback-core/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "ch.qos.logback:logback-core",
+          "version": "1.5.38",
+          "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+          "filePath": "app/app.jar/BOOT-INF/lib/logback-core-1.5.38.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "ch/qos/logback/logback-core/1.5.38/logback-core-1.5.38.jar",
+          "group": "ch.qos.logback",
+          "artifact": "logback-core",
+          "version": "1.5.38",
+          "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/lombok-1.18.48.jar",
+      "bytes": 2055065,
+      "sha1": "6858f13541bab505384f07053c5a7b539bbfd3e3",
+      "sha256": "85477a4655ebb2c074a9099cfb749be454449fee564d4282610df1b85f7c508b",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "lombok"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.projectlombok:lombok",
+          "version": "1.18.48",
+          "purl": "pkg:maven/org.projectlombok/lombok@1.18.48",
+          "filePath": "app/app.jar/BOOT-INF/lib/lombok-1.18.48.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar",
+          "group": "org.projectlombok",
+          "artifact": "lombok",
+          "version": "1.18.48",
+          "purl": "pkg:maven/org.projectlombok/lombok@1.18.48",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/micrometer-commons-1.17.2.jar",
+      "bytes": 51339,
+      "sha1": "713614728673cc0f57a88ac0a3c7ab7ff5a60824",
+      "sha256": "af8c85e879025ce30c381e6810e14c4f52b4150894e36c815860d14763271348",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "micrometer.commons",
+        "Build-Java-Version": "25",
+        "Build-Jdk-Spec": "25",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "micrometer-commons",
+        "Bundle-SymbolicName": "micrometer-commons",
+        "Bundle-Version": "1.17.2",
+        "Gradle-Version": "9.8.1",
+        "Implementation-Title": "io.micrometer#micrometer-commons;1.17.2",
+        "Implementation-Version": "1.17.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "io/micrometer/micrometer-commons/1.17.2/micrometer-commons-1.17.2.jar",
+          "group": "io.micrometer",
+          "artifact": "micrometer-commons",
+          "version": "1.17.2",
+          "purl": "pkg:maven/io.micrometer/micrometer-commons@1.17.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/micrometer-core-1.17.2.jar",
+      "bytes": 914787,
+      "sha1": "6fdf2e82cae6c7a302abcf68aef82da98b4fd008",
+      "sha256": "e28ddecbd27477cc7020defd1c2061a3d8b6b2e543d90856186711fe7f346532",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "micrometer.core",
+        "Build-Java-Version": "25",
+        "Build-Jdk-Spec": "25",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "micrometer-core",
+        "Bundle-SymbolicName": "micrometer-core",
+        "Bundle-Version": "1.17.2",
+        "Gradle-Version": "9.8.1",
+        "Implementation-Title": "io.micrometer#micrometer-core;1.17.2",
+        "Implementation-Version": "1.17.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "io/micrometer/micrometer-core/1.17.2/micrometer-core-1.17.2.jar",
+          "group": "io.micrometer",
+          "artifact": "micrometer-core",
+          "version": "1.17.2",
+          "purl": "pkg:maven/io.micrometer/micrometer-core@1.17.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/micrometer-jakarta9-1.17.2.jar",
+      "bytes": 54332,
+      "sha1": "c299d4a2591e772d287512ab1c3ad225376a52f3",
+      "sha256": "2d76984cb7c994fd3629722f08ef5830b56a5312c0176c703207ecea9cda01b7",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "micrometer.jakarta9",
+        "Build-Java-Version": "25",
+        "Build-Jdk-Spec": "25",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "micrometer-jakarta9",
+        "Bundle-SymbolicName": "micrometer-jakarta9",
+        "Bundle-Version": "1.17.2",
+        "Gradle-Version": "9.8.1",
+        "Implementation-Title": "io.micrometer#micrometer-jakarta9;1.17.2",
+        "Implementation-Version": "1.17.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "io/micrometer/micrometer-jakarta9/1.17.2/micrometer-jakarta9-1.17.2.jar",
+          "group": "io.micrometer",
+          "artifact": "micrometer-jakarta9",
+          "version": "1.17.2",
+          "purl": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/micrometer-observation-1.17.2.jar",
+      "bytes": 83777,
+      "sha1": "b069be62d5d1a0f2f61fa8de6dede8f8f0ffc49a",
+      "sha256": "d3ff53cfa0532dc1af0de349073f9aeb985e01f4b88c1d904350178805859695",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "micrometer.observation",
+        "Build-Java-Version": "25",
+        "Build-Jdk-Spec": "25",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "micrometer-observation",
+        "Bundle-SymbolicName": "micrometer-observation",
+        "Bundle-Version": "1.17.2",
+        "Gradle-Version": "9.8.1",
+        "Implementation-Title": "io.micrometer#micrometer-observation;1.17.2",
+        "Implementation-Version": "1.17.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "io/micrometer/micrometer-observation/1.17.2/micrometer-observation-1.17.2.jar",
+          "group": "io.micrometer",
+          "artifact": "micrometer-observation",
+          "version": "1.17.2",
+          "purl": "pkg:maven/io.micrometer/micrometer-observation@1.17.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/modelmapper-2.4.5.jar",
+      "bytes": 4321015,
+      "sha1": "96cfaf66303d6d542ea8ece97d5b431f438557a0",
+      "sha256": "efc7c12fa63fb3113dbff233c9aec3eee8a72382f73d1deae6444e7c8f437432",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-SymbolicName": "modelmapper",
+        "Built-By": "edwardhsiao",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "ModelMapper",
+        "Bundle-Version": "2.4.5"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.modelmapper/modelmapper/pom.properties",
+          "properties": {
+            "version": "2.4.5",
+            "groupId": "org.modelmapper",
+            "artifactId": "modelmapper"
+          }
+        },
+        {
+          "path": "META-INF/maven/net.jodah/typetools/pom.properties",
+          "properties": {
+            "version": "0.6.3",
+            "groupId": "net.jodah",
+            "artifactId": "typetools"
+          }
+        },
+        {
+          "path": "META-INF/maven/net.bytebuddy/byte-buddy-dep/pom.properties",
+          "properties": {
+            "version": "1.12.3",
+            "groupId": "net.bytebuddy",
+            "artifactId": "byte-buddy-dep"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.modelmapper/",
+        "META-INF/maven/org.modelmapper/modelmapper/",
+        "META-INF/maven/org.modelmapper/modelmapper/pom.xml",
+        "META-INF/maven/org.modelmapper/modelmapper/pom.properties",
+        "META-INF/maven/net.jodah/",
+        "META-INF/maven/net.jodah/typetools/",
+        "META-INF/maven/net.jodah/typetools/pom.properties",
+        "META-INF/maven/net.jodah/typetools/pom.xml",
+        "META-INF/maven/net.bytebuddy/",
+        "META-INF/maven/net.bytebuddy/byte-buddy-dep/",
+        "META-INF/maven/net.bytebuddy/byte-buddy-dep/pom.properties",
+        "META-INF/maven/net.bytebuddy/byte-buddy-dep/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "net.bytebuddy:byte-buddy-dep",
+          "version": "1.12.3",
+          "purl": "pkg:maven/net.bytebuddy/byte-buddy-dep@1.12.3",
+          "filePath": "app/app.jar/BOOT-INF/lib/modelmapper-2.4.5.jar"
+        },
+        {
+          "name": "net.jodah:typetools",
+          "version": "0.6.3",
+          "purl": "pkg:maven/net.jodah/typetools@0.6.3",
+          "filePath": "app/app.jar/BOOT-INF/lib/modelmapper-2.4.5.jar"
+        },
+        {
+          "name": "org.modelmapper:modelmapper",
+          "version": "2.4.5",
+          "purl": "pkg:maven/org.modelmapper/modelmapper@2.4.5",
+          "filePath": "app/app.jar/BOOT-INF/lib/modelmapper-2.4.5.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/modelmapper/modelmapper/2.4.5/modelmapper-2.4.5.jar",
+          "group": "org.modelmapper",
+          "artifact": "modelmapper",
+          "version": "2.4.5",
+          "purl": "pkg:maven/org.modelmapper/modelmapper@2.4.5",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/postgresql-42.7.14.jar",
+      "bytes": 1221004,
+      "sha1": "0e7c94ce80cb1dd9875ff44ffe6a40a8aaa3eefd",
+      "sha256": "73914527305a40cce504b0d3d90b23caf565136912d607ae8ae7c5895512332c",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "org.postgresql.jdbc",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "PostgreSQL JDBC Driver",
+        "Bundle-SymbolicName": "org.postgresql.jdbc",
+        "Bundle-Version": "42.7.14",
+        "Implementation-Title": "PostgreSQL JDBC Driver",
+        "Implementation-Vendor": "PostgreSQL Global Development Group",
+        "Implementation-Vendor-Id": "org.postgresql",
+        "Implementation-Version": "42.7.14",
+        "Specification-Title": "JDBC",
+        "Specification-Vendor": "Oracle Corporation",
+        "Specification-Version": "4.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.postgresql:postgresql",
+          "version": "42.7.14",
+          "purl": "pkg:maven/org.postgresql/postgresql@42.7.14",
+          "filePath": "app/app.jar/BOOT-INF/lib/postgresql-42.7.14.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/postgresql/postgresql/42.7.14/postgresql-42.7.14.jar",
+          "group": "org.postgresql",
+          "artifact": "postgresql",
+          "version": "42.7.14",
+          "purl": "pkg:maven/org.postgresql/postgresql@42.7.14",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/slf4j-api-2.0.20.jar",
+      "bytes": 70255,
+      "sha1": "7fea9d92ba67e9b3c8f03515fb202b86a1fe44f6",
+      "sha256": "7e1446499b359675d8aabe6af2de86b85e72ae8a2a932c0b40d0e5ba57097439",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "SLF4J API Module",
+        "Bundle-SymbolicName": "slf4j.api",
+        "Bundle-Version": "2.0.20",
+        "Implementation-Title": "slf4j-api",
+        "Implementation-Version": "2.0.20"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.slf4j/slf4j-api/pom.properties",
+          "properties": {
+            "artifactId": "slf4j-api",
+            "groupId": "org.slf4j",
+            "version": "2.0.20"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.slf4j/",
+        "META-INF/maven/org.slf4j/slf4j-api/",
+        "META-INF/maven/org.slf4j/slf4j-api/pom.xml",
+        "META-INF/maven/org.slf4j/slf4j-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.slf4j:slf4j-api",
+          "version": "2.0.20",
+          "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.20",
+          "filePath": "app/app.jar/BOOT-INF/lib/slf4j-api-2.0.20.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/slf4j/slf4j-api/2.0.20/slf4j-api-2.0.20.jar",
+          "group": "org.slf4j",
+          "artifact": "slf4j-api",
+          "version": "2.0.20",
+          "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.20",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/snakeyaml-2.6.jar",
+      "bytes": 340068,
+      "sha1": "2bc14918a2f8d5414749ab12d0c590cd3198b8c1",
+      "sha256": "c8f7a98e7394adda02f6317249710e4d1b4c7a25aa8c7eace0c2eea52eb8bf85",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "11",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "SnakeYAML",
+        "Bundle-SymbolicName": "org.yaml.snakeyaml",
+        "Bundle-Version": "2.6.0"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.yaml/snakeyaml/pom.properties",
+          "properties": {
+            "groupId": "org.yaml",
+            "artifactId": "snakeyaml",
+            "version": "2.6"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.yaml/",
+        "META-INF/maven/org.yaml/snakeyaml/",
+        "META-INF/maven/org.yaml/snakeyaml/pom.properties",
+        "META-INF/maven/org.yaml/snakeyaml/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.yaml:snakeyaml",
+          "version": "2.6",
+          "purl": "pkg:maven/org.yaml/snakeyaml@2.6",
+          "filePath": "app/app.jar/BOOT-INF/lib/snakeyaml-2.6.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/yaml/snakeyaml/2.6/snakeyaml-2.6.jar",
+          "group": "org.yaml",
+          "artifact": "snakeyaml",
+          "version": "2.6",
+          "purl": "pkg:maven/org.yaml/snakeyaml@2.6",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-aop-7.0.10.jar",
+      "bytes": 429341,
+      "sha1": "411df71572415eef4f1223c0d536d15e30c269b1",
+      "sha256": "babf50a645f4f788e1267078cf891e472f657cabf65518055cf5214220574e3f",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-aop",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.aop",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-aop/7.0.10/spring-aop-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-aop",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-aop@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-aspects-7.0.10.jar",
+      "bytes": 50116,
+      "sha1": "e73760046e5d2ca6a6f01cfa4b5565c4eb32c9dc",
+      "sha256": "8c119546615b14dc0f9d12d5cd0e4eae4163f51f00fba205ce83bbecac5ed3de",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-aspects",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.aspects",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-aspects/7.0.10/spring-aspects-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-aspects",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-aspects@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-beans-7.0.10.jar",
+      "bytes": 928122,
+      "sha1": "ce7f7a9662191a18a4ce8abd40c604e98a2ebdc3",
+      "sha256": "bd67c6fc887afa30cbcb489ff4f82bf19f818e79ab1cf1bef98dff8a289108ec",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-beans",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.beans",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-beans/7.0.10/spring-beans-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-beans",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-beans@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-4.1.2.jar",
+      "bytes": 1392971,
+      "sha1": "747ac0cfd18ae2741029d5dc24ccefedbf4b38a7",
+      "sha256": "1fbf6443a301eb9a098bd024149c0edc6578b073f75da8c98bc1af84c43a8f59",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot/4.1.2/spring-boot-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-actuator-4.1.2.jar",
+      "bytes": 357159,
+      "sha1": "6e4e90cc4d46d66223e81ee3963007242eba7f24",
+      "sha256": "82452c9ae022d6ac7fd8270532b655f3c7940b117e4902de25402f648e02de98",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.actuator",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Actuator",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-actuator/4.1.2/spring-boot-actuator-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-actuator",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-actuator-autoconfigure-4.1.2.jar",
+      "bytes": 140959,
+      "sha1": "4339a85544b156e1804a05f9745b4adcdbf5bf4f",
+      "sha256": "97faaf81fe3fb54e224592afdd8af154fd65cc62b303334db35b076b63e03e1e",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.actuator.autoconfigure",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Actuator AutoConfigure",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-actuator-autoconfigure/4.1.2/spring-boot-actuator-autoconfigure-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-actuator-autoconfigure",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-autoconfigure-4.1.2.jar",
+      "bytes": 372565,
+      "sha1": "1f3d78454767e8f2c3056617c10568642c074e45",
+      "sha256": "a3582f417c8194a621776d14ea281e072d84e85bdbabc1e02df5c035835b5096",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.autoconfigure",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot AutoConfigure",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-autoconfigure/4.1.2/spring-boot-autoconfigure-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-autoconfigure",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-data-commons-4.1.2.jar",
+      "bytes": 30273,
+      "sha1": "cccee0c002a44fc4234f18324a2e14455813f020",
+      "sha256": "879afbd7c933cbd8840b831b71c83163d0bc2d65bf5e13d0b9221d7716f2302f",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.data.commons",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Data Commons",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-data-commons/4.1.2/spring-boot-data-commons-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-data-commons",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-data-commons@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-data-jpa-4.1.2.jar",
+      "bytes": 13569,
+      "sha1": "d15efbebcd38aa463bdcdfc38af218c2d96591f3",
+      "sha256": "6909515bee2b23daf6a5fa134f7d5720af54eb61a18507f6e9fe8d2f09335712",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.data.jpa",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Data JPA",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-data-jpa/4.1.2/spring-boot-data-jpa-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-data-jpa",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-data-jpa@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-flyway-4.1.2.jar",
+      "bytes": 76978,
+      "sha1": "0e25e5a247fd154db9f38fa335d8c6e2dca55881",
+      "sha256": "3aa1f3a85cc7f9892a58e303e6f39073626a3c65c00688bf263c5d46355d69d6",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.flyway",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Flyway",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-flyway/4.1.2/spring-boot-flyway-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-flyway",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-flyway@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-health-4.1.2.jar",
+      "bytes": 155229,
+      "sha1": "ccb01535ef99fe300dcbe1bbd3b38be86f2affdc",
+      "sha256": "68f71d7fc65eb7dee534b172efb9687214c38f8920aa78b4685c51babc511bc3",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.health",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Health",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-health/4.1.2/spring-boot-health-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-health",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-hibernate-4.1.2.jar",
+      "bytes": 27976,
+      "sha1": "bd375050df43ec01adda0fe1bdb61c5c99e517ac",
+      "sha256": "b142691e3f8814862ac17782ec5c6ab720bfce03f8e4e55e6bcb748b2e65c4be",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.hibernate",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Hibernate",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-hibernate/4.1.2/spring-boot-hibernate-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-hibernate",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-hibernate@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-http-converter-4.1.2.jar",
+      "bytes": 54317,
+      "sha1": "5289812d78a000ece5b77ecc081c7b0608431a44",
+      "sha256": "d1e655ce47617315c6d87e754597928a31d21478b5c28b0e3300963b0915b551",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.http.converter",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot HTTP Converter",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-http-converter/4.1.2/spring-boot-http-converter-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-http-converter",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-jackson-4.1.2.jar",
+      "bytes": 82511,
+      "sha1": "95cb7be21bf2b6085e978ecd4ebf6b1e0664751d",
+      "sha256": "83a8d3ca9ac434f22e6d148e41ba82aeb52add220484bf7f9551c74323d9cbc7",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.jackson",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Jackson",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-jackson/4.1.2/spring-boot-jackson-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-jackson",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-jarmode-tools-4.1.2.jar",
+      "bytes": 54008,
+      "sha1": "5abf13050d0e53b72ef0e73864b689259f1143ed",
+      "sha256": "a0d9e74c09c81f2c8e096bc856f327605a34df2209e5cf6884351170c6aa3547",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.jarmode.tools",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Jarmode Tools",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [],
+      "exactEmbeddedBuildToolResourceMatch": {
+        "parentRepositoryPath": "org/springframework/boot/spring-boot-loader-tools/4.1.2/spring-boot-loader-tools-4.1.2.jar",
+        "parentSHA256": "8cc3d85b99492c75540fe7cc535f918f1fc3291afcfbb5e024f8689ea6d88619",
+        "resourcePath": "META-INF/jarmode/spring-boot-jarmode-tools.jar",
+        "resourceSHA256": "a0d9e74c09c81f2c8e096bc856f327605a34df2209e5cf6884351170c6aa3547",
+        "basis": "Exact SHA-256 equality with the embedded build-tool resource; not a resolved project dependency or a separately published Maven artifact verification."
+      }
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-jdbc-4.1.2.jar",
+      "bytes": 204697,
+      "sha1": "1b1dc417e00654f265e5a766baadedfd09710cfa",
+      "sha256": "2c4f460e7b965fd9a3d7ee6c3d7c5f3ebbc9b447841c118abed20d7b5a72d184",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.jdbc",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot JDBC",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-jdbc/4.1.2/spring-boot-jdbc-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-jdbc",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-jdbc@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-jpa-4.1.2.jar",
+      "bytes": 30622,
+      "sha1": "84251095bfd543894393bba4a7e2551abde088c0",
+      "sha256": "3afd067fed0732e28b3b45f276d50d90ed1345d7f864857566dcf0ef7923427a",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.jpa",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot JPA",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-jpa/4.1.2/spring-boot-jpa-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-jpa",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-jpa@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-micrometer-metrics-4.1.2.jar",
+      "bytes": 248225,
+      "sha1": "8df660046ad2da22521360aaf9658800b4b5d742",
+      "sha256": "9091ffdfaeb604d4865478ce596277094a5564dc180145bf50cbbc7f9b9d1174",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.micrometer.metrics",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Metrics",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-micrometer-metrics/4.1.2/spring-boot-micrometer-metrics-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-micrometer-metrics",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-micrometer-observation-4.1.2.jar",
+      "bytes": 28837,
+      "sha1": "b3d05286b42aa6882e847ba4c0629b7a05e7bd20",
+      "sha256": "a5e31e91c42e49fedfd95c2e15ec565e51c63741b65d471a49c029db62ac117f",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.micrometer.observation",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Observation",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-micrometer-observation/4.1.2/spring-boot-micrometer-observation-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-micrometer-observation",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-persistence-4.1.2.jar",
+      "bytes": 16029,
+      "sha1": "3c599e22eb06b45a3829f53ed44ae396e1746408",
+      "sha256": "fd1473df17db5d4d444eac14ed262407a971fc0a3a9631e6753343d72e7859af",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.persistence",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Persistence",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-persistence/4.1.2/spring-boot-persistence-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-persistence",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-persistence@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-servlet-4.1.2.jar",
+      "bytes": 47056,
+      "sha1": "b666c7a60dfd657d8c431d34b24388ca6cd1a48a",
+      "sha256": "0ff3618e8b37143843d1a8824e42ffd66b4ff73d6225b2087acce4dfc676d0e8",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.servlet",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Servlet",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-servlet/4.1.2/spring-boot-servlet-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-servlet",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-sql-4.1.2.jar",
+      "bytes": 36058,
+      "sha1": "23a71818b078e4d45e537c986a06a7596eb18900",
+      "sha256": "6055db3a7e6f9b59814aac0a346a604d54a8638beff8a145273415b263936d45",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.sql",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot SQL",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-sql/4.1.2/spring-boot-sql-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-sql",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-sql@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-tomcat-4.1.2.jar",
+      "bytes": 126267,
+      "sha1": "3a88618489924bdd130e39025ce2d3f2ddcd4624",
+      "sha256": "f0b1d8d33b090bc773298005708b4df1576d1c4b1bbf9583afce065580e13002",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.tomcat",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Tomcat",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-tomcat/4.1.2/spring-boot-tomcat-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-tomcat",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-transaction-4.1.2.jar",
+      "bytes": 21017,
+      "sha1": "689d514da8bb3793cb8e81912af7446f3ef35c36",
+      "sha256": "f0430406b83310c65219082ff16a9af5ee74e2c1ee19f9f478f6a0ab8ec1f70f",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.transaction",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Transaction",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-transaction/4.1.2/spring-boot-transaction-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-transaction",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-transaction@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-validation-4.1.2.jar",
+      "bytes": 15218,
+      "sha1": "4b602b44074f30984892cdf4e32b5dac97dd87ed",
+      "sha256": "a5f49131fd54481c26d5a93af4f94a11abd02f11608ea231f42424824bae7702",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.validation",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Validation",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-validation/4.1.2/spring-boot-validation-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-validation",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-validation@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-web-server-4.1.2.jar",
+      "bytes": 171137,
+      "sha1": "2cd935942854e2383f32b74c641c3731f7d84688",
+      "sha256": "e5b2fa7222baf36621566a2d0f7d924aa92a8462680f8e67d972f965ef18356a",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.web.server",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Web Server",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-web-server/4.1.2/spring-boot-web-server-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-web-server",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-webmvc-4.1.2.jar",
+      "bytes": 175392,
+      "sha1": "d03a1bd89669e811b6b5b61aa9d7be12907801c8",
+      "sha256": "3c39a0578d1e66b5b5371641790a66c89b14f8099731987a7dd6502e2fdd32b5",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "spring.boot.webmvc",
+        "Build-Jdk-Spec": "17",
+        "Built-By": "Spring",
+        "Implementation-Title": "Spring Boot Web MVC",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/boot/spring-boot-webmvc/4.1.2/spring-boot-webmvc-4.1.2.jar",
+          "group": "org.springframework.boot",
+          "artifact": "spring-boot-webmvc",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-context-7.0.10.jar",
+      "bytes": 1401158,
+      "sha1": "d2ed91fdb563586a7e4185eeb7cf806d846bc12d",
+      "sha256": "f0065166b6a5101a871ab8702d6c4011cf39faed370a64e7ef14a3ad2bf2a99a",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-context",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.context",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-context/7.0.10/spring-context-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-context",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-context@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-core-7.0.10.jar",
+      "bytes": 2037889,
+      "sha1": "0746da81d290cf89a64b9659596cc851af34f60a",
+      "sha256": "a236f31a7c07e3a1a8e7839ec5c0d47b5cc75709132db50416d5dad320341f12",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-core",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.core",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-core/7.0.10/spring-core-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-core",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-core@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-data-commons-4.1.2.jar",
+      "bytes": 1781830,
+      "sha1": "383b920f98ac25a4425ab56ae5fef7e40bc03e84",
+      "sha256": "b751e9fc2153dc73af94ba3d6b23ff1078231b61e3af14818243e5c37f6c8868",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "25",
+        "Automatic-Module-Name": "spring.data.commons",
+        "Implementation-Title": "Spring Data Core",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.springframework.data/spring-data-commons/pom.properties",
+          "properties": {
+            "artifactId": "spring-data-commons",
+            "groupId": "org.springframework.data",
+            "version": "4.1.2"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.springframework.data/",
+        "META-INF/maven/org.springframework.data/spring-data-commons/",
+        "META-INF/maven/org.springframework.data/spring-data-commons/pom.xml",
+        "META-INF/maven/org.springframework.data/spring-data-commons/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.springframework.data:spring-data-commons",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.data/spring-data-commons@4.1.2",
+          "filePath": "app/app.jar/BOOT-INF/lib/spring-data-commons-4.1.2.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/data/spring-data-commons/4.1.2/spring-data-commons-4.1.2.jar",
+          "group": "org.springframework.data",
+          "artifact": "spring-data-commons",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.data/spring-data-commons@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-data-jpa-4.1.2.jar",
+      "bytes": 2208897,
+      "sha1": "c9489bf3367752fabb7eb20cb93c8e9f128c11a9",
+      "sha256": "5d5bf9f644da7fe300c160533783e4b292a3996c6fd7d2afc931b740a1394439",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "25",
+        "Automatic-Module-Name": "spring.data.jpa",
+        "Implementation-Title": "Spring Data JPA",
+        "Implementation-Version": "4.1.2"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.springframework.data/spring-data-jpa/pom.properties",
+          "properties": {
+            "artifactId": "spring-data-jpa",
+            "groupId": "org.springframework.data",
+            "version": "4.1.2"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.springframework.data/",
+        "META-INF/maven/org.springframework.data/spring-data-jpa/",
+        "META-INF/maven/org.springframework.data/spring-data-jpa/pom.xml",
+        "META-INF/maven/org.springframework.data/spring-data-jpa/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.springframework.data:spring-data-jpa",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.data/spring-data-jpa@4.1.2",
+          "filePath": "app/app.jar/BOOT-INF/lib/spring-data-jpa-4.1.2.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/data/spring-data-jpa/4.1.2/spring-data-jpa-4.1.2.jar",
+          "group": "org.springframework.data",
+          "artifact": "spring-data-jpa",
+          "version": "4.1.2",
+          "purl": "pkg:maven/org.springframework.data/spring-data-jpa@4.1.2",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-expression-7.0.10.jar",
+      "bytes": 328907,
+      "sha1": "0cd3ae7f5f9e6c6a3ea4b1721f5cfa92949af1bb",
+      "sha256": "12067b66548f7613fa8938ca6051a6d1dd8c397bf478e0bb1adb9936358ec81d",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-expression",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.expression",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-expression/7.0.10/spring-expression-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-expression",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-expression@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-jdbc-7.0.10.jar",
+      "bytes": 481482,
+      "sha1": "d90307edeb17fada16c1a68714ea81a98b688f89",
+      "sha256": "bc4ba6bd242f2db2642938960ae27589b53dd6a611d700a260af7b3383cd0c6c",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-jdbc",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.jdbc",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-jdbc/7.0.10/spring-jdbc-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-jdbc",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-jdbc@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-orm-7.0.10.jar",
+      "bytes": 227537,
+      "sha1": "dd4a7a40394e896558e1a31ca283b5f0bf2f9288",
+      "sha256": "a158aabfbd760abd7d50ed352b46421affa46595321e09fe91bec048f2c3b54c",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-orm",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.orm",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-orm/7.0.10/spring-orm-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-orm",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-orm@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-tx-7.0.10.jar",
+      "bytes": 292062,
+      "sha1": "7a8de75d63e1ddce96c68030736ac069d2cded5f",
+      "sha256": "9442610a8ed3d44e70fa97f49896ea810c831da62620101450f0feb522edb4cd",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-tx",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.tx",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-tx/7.0.10/spring-tx-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-tx",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-tx@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-web-7.0.10.jar",
+      "bytes": 2227746,
+      "sha1": "0148e4d1a46b72daabe3e2d227b3e6f1d37e9574",
+      "sha256": "76ddb03d236547f6852def8cb303e1cf2cd2c1954dec5bf2abd87d11b89dfee7",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-web",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.web",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-web/7.0.10/spring-web-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-web",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-web@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/spring-webmvc-7.0.10.jar",
+      "bytes": 1108002,
+      "sha1": "469ee866c3e50af3450ae4f22ca4c8e3cf322167",
+      "sha256": "8ad0e813999d0ef1c65b8d5e55c21e4a6c0d6895cd3df32a33f9cc57bf9d226a",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "spring-webmvc",
+        "Implementation-Version": "7.0.10",
+        "Automatic-Module-Name": "spring.webmvc",
+        "Build-Jdk-Spec": "25"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springframework/spring-webmvc/7.0.10/spring-webmvc-7.0.10.jar",
+          "group": "org.springframework",
+          "artifact": "spring-webmvc",
+          "version": "7.0.10",
+          "purl": "pkg:maven/org.springframework/spring-webmvc@7.0.10",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/springdoc-openapi-starter-common-3.1.1.jar",
+      "bytes": 601048,
+      "sha1": "2c49a5ccecd3190f307f03a5bf20b724da244796",
+      "sha256": "8765460695778bc383f12d9f96d62195ec8ddaef64277854891e9ff0f76e9b97",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Implementation-Title": "springdoc-openapi-starter-common",
+        "Implementation-Version": "3.1.1",
+        "Automatic-Module-Name": "org.springdoc.openapi.common"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.springdoc/springdoc-openapi-starter-common/pom.properties",
+          "properties": {
+            "artifactId": "springdoc-openapi-starter-common",
+            "groupId": "org.springdoc",
+            "version": "3.1.1"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.springdoc/",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-common/",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-common/pom.xml",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-common/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.springdoc:springdoc-openapi-starter-common",
+          "version": "3.1.1",
+          "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-common@3.1.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/springdoc-openapi-starter-common-3.1.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springdoc/springdoc-openapi-starter-common/3.1.1/springdoc-openapi-starter-common-3.1.1.jar",
+          "group": "org.springdoc",
+          "artifact": "springdoc-openapi-starter-common",
+          "version": "3.1.1",
+          "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-common@3.1.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/springdoc-openapi-starter-webmvc-api-3.1.1.jar",
+      "bytes": 47959,
+      "sha1": "bf3d2d80134ef02a3dcbac3af2e0d78873355a61",
+      "sha256": "3b9aa208f93c3e6ff93ae505ea9b8467d00943ca9f6f0041ee0de8008d079a2d",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Implementation-Title": "springdoc-openapi-starter-webmvc-api",
+        "Implementation-Version": "3.1.1",
+        "Automatic-Module-Name": "org.springdoc.openapi.webmvc.core"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-api/pom.properties",
+          "properties": {
+            "artifactId": "springdoc-openapi-starter-webmvc-api",
+            "groupId": "org.springdoc",
+            "version": "3.1.1"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.springdoc/",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-api/",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-api/pom.xml",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-api/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.springdoc:springdoc-openapi-starter-webmvc-api",
+          "version": "3.1.1",
+          "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-api@3.1.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/springdoc-openapi-starter-webmvc-api-3.1.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springdoc/springdoc-openapi-starter-webmvc-api/3.1.1/springdoc-openapi-starter-webmvc-api-3.1.1.jar",
+          "group": "org.springdoc",
+          "artifact": "springdoc-openapi-starter-webmvc-api",
+          "version": "3.1.1",
+          "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-api@3.1.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/springdoc-openapi-starter-webmvc-ui-3.1.1.jar",
+      "bytes": 24727,
+      "sha1": "a6aeef2e3f3b353a9bf5c5898287d407101c9841",
+      "sha256": "aba2b0885cfa2c3c0df6ba4cbafd877101edaa85c7bc10c430b010a7c726836b",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Implementation-Title": "springdoc-openapi-starter-webmvc-ui",
+        "Implementation-Version": "3.1.1",
+        "Automatic-Module-Name": "org.springdoc.openapi.ui"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-ui/pom.properties",
+          "properties": {
+            "artifactId": "springdoc-openapi-starter-webmvc-ui",
+            "groupId": "org.springdoc",
+            "version": "3.1.1"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.springdoc/",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-ui/",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-ui/pom.xml",
+        "META-INF/maven/org.springdoc/springdoc-openapi-starter-webmvc-ui/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.springdoc:springdoc-openapi-starter-webmvc-ui",
+          "version": "3.1.1",
+          "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-ui@3.1.1",
+          "filePath": "app/app.jar/BOOT-INF/lib/springdoc-openapi-starter-webmvc-ui-3.1.1.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/springdoc/springdoc-openapi-starter-webmvc-ui/3.1.1/springdoc-openapi-starter-webmvc-ui-3.1.1.jar",
+          "group": "org.springdoc",
+          "artifact": "springdoc-openapi-starter-webmvc-ui",
+          "version": "3.1.1",
+          "purl": "pkg:maven/org.springdoc/springdoc-openapi-starter-webmvc-ui@3.1.1",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/swagger-annotations-jakarta-2.2.55.jar",
+      "bytes": 51177,
+      "sha1": "a8af2e7fdca945d8871316e84a9b3154694e26ba",
+      "sha256": "d464521aac0e9ae2cfead9d2f56e9e8c110ef4b15ad9c046408a087a4c58952b",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "io.swagger.v3.oas.annotations",
+        "Build-Jdk-Spec": "11",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "swagger-annotations Jakarta",
+        "Bundle-SymbolicName": "io.swagger.core.v3.swagger-annotations.jakarta",
+        "Bundle-Version": "2.2.55",
+        "implementation-version": "2.2.55"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/io.swagger.core.v3/swagger-annotations-jakarta/pom.properties",
+          "properties": {
+            "groupId": "io.swagger.core.v3",
+            "artifactId": "swagger-annotations-jakarta",
+            "version": "2.2.55"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/io.swagger.core.v3/",
+        "META-INF/maven/io.swagger.core.v3/swagger-annotations-jakarta/",
+        "META-INF/maven/io.swagger.core.v3/swagger-annotations-jakarta/pom.properties",
+        "META-INF/maven/io.swagger.core.v3/swagger-annotations-jakarta/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "io.swagger.core.v3:swagger-annotations-jakarta",
+          "version": "2.2.55",
+          "purl": "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.55",
+          "filePath": "app/app.jar/BOOT-INF/lib/swagger-annotations-jakarta-2.2.55.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "io/swagger/core/v3/swagger-annotations-jakarta/2.2.55/swagger-annotations-jakarta-2.2.55.jar",
+          "group": "io.swagger.core.v3",
+          "artifact": "swagger-annotations-jakarta",
+          "version": "2.2.55",
+          "purl": "pkg:maven/io.swagger.core.v3/swagger-annotations-jakarta@2.2.55",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/swagger-core-jakarta-2.2.55.jar",
+      "bytes": 272588,
+      "sha1": "5fab7a2e1df29cfe3ae569f8b96a3534f5ca15a3",
+      "sha256": "3d72786a7133dbf8569dda19549e0ef3e0d68d01d3b4dd221a96eb1b29263d5f",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "io.swagger.v3.core",
+        "Build-Jdk-Spec": "11",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "swagger-core Jakarta",
+        "Bundle-SymbolicName": "io.swagger.core.v3.swagger-core.jakarta",
+        "Bundle-Version": "2.2.55",
+        "implementation-version": "2.2.55"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/io.swagger.core.v3/swagger-core-jakarta/pom.properties",
+          "properties": {
+            "groupId": "io.swagger.core.v3",
+            "artifactId": "swagger-core-jakarta",
+            "version": "2.2.55"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/io.swagger.core.v3/",
+        "META-INF/maven/io.swagger.core.v3/swagger-core-jakarta/",
+        "META-INF/maven/io.swagger.core.v3/swagger-core-jakarta/pom.properties",
+        "META-INF/maven/io.swagger.core.v3/swagger-core-jakarta/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "io.swagger.core.v3:swagger-core-jakarta",
+          "version": "2.2.55",
+          "purl": "pkg:maven/io.swagger.core.v3/swagger-core-jakarta@2.2.55",
+          "filePath": "app/app.jar/BOOT-INF/lib/swagger-core-jakarta-2.2.55.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "io/swagger/core/v3/swagger-core-jakarta/2.2.55/swagger-core-jakarta-2.2.55.jar",
+          "group": "io.swagger.core.v3",
+          "artifact": "swagger-core-jakarta",
+          "version": "2.2.55",
+          "purl": "pkg:maven/io.swagger.core.v3/swagger-core-jakarta@2.2.55",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/swagger-models-jakarta-2.2.55.jar",
+      "bytes": 146930,
+      "sha1": "1c0f2d4ce28c69ad62a5e4de705aa67e1c55e935",
+      "sha256": "f83577d4090301a49342dd73708ace743ea46fe382e922a9e892368c45cc6a8d",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Automatic-Module-Name": "io.swagger.v3.oas.models",
+        "Build-Jdk-Spec": "11",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "swagger-models Jakarta",
+        "Bundle-SymbolicName": "io.swagger.core.v3.swagger-models.jakarta",
+        "Bundle-Version": "2.2.55",
+        "implementation-version": "2.2.55"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/io.swagger.core.v3/swagger-models-jakarta/pom.properties",
+          "properties": {
+            "groupId": "io.swagger.core.v3",
+            "artifactId": "swagger-models-jakarta",
+            "version": "2.2.55"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/io.swagger.core.v3/",
+        "META-INF/maven/io.swagger.core.v3/swagger-models-jakarta/",
+        "META-INF/maven/io.swagger.core.v3/swagger-models-jakarta/pom.properties",
+        "META-INF/maven/io.swagger.core.v3/swagger-models-jakarta/pom.xml"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "io.swagger.core.v3:swagger-models-jakarta",
+          "version": "2.2.55",
+          "purl": "pkg:maven/io.swagger.core.v3/swagger-models-jakarta@2.2.55",
+          "filePath": "app/app.jar/BOOT-INF/lib/swagger-models-jakarta-2.2.55.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "io/swagger/core/v3/swagger-models-jakarta/2.2.55/swagger-models-jakarta-2.2.55.jar",
+          "group": "io.swagger.core.v3",
+          "artifact": "swagger-models-jakarta",
+          "version": "2.2.55",
+          "purl": "pkg:maven/io.swagger.core.v3/swagger-models-jakarta@2.2.55",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/swagger-ui-5.32.14.jar",
+      "bytes": 1175237,
+      "sha1": "edcbecf8e026eefcd401dcc04b71cd9f96ee7600",
+      "sha256": "d17ca6b09c60518574c14d4a40318dc58a11ea92a962e94f30e5a286e1efa4a6",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-SymbolicName": "org.webjars.swagger-ui",
+        "Bundle-Name": "Swagger UI",
+        "Bundle-Version": "5.32.14",
+        "Bundle-ManifestVersion": "2",
+        "Build-Jdk-Spec": "1.8"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.webjars/swagger-ui/pom.properties",
+          "properties": {
+            "version": "5.32.14",
+            "groupId": "org.webjars",
+            "artifactId": "swagger-ui"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/org.webjars/swagger-ui/pom.xml",
+        "META-INF/maven/org.webjars/swagger-ui/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.webjars:swagger-ui",
+          "version": "5.32.14",
+          "purl": "pkg:maven/org.webjars/swagger-ui@5.32.14",
+          "filePath": "app/app.jar/BOOT-INF/lib/swagger-ui-5.32.14.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/webjars/swagger-ui/5.32.14/swagger-ui-5.32.14.jar",
+          "group": "org.webjars",
+          "artifact": "swagger-ui",
+          "version": "5.32.14",
+          "purl": "pkg:maven/org.webjars/swagger-ui@5.32.14",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/tomcat-embed-core-11.0.27.jar",
+      "bytes": 3656521,
+      "sha1": "30cc98777f843d290bbca645f15c54864cc64491",
+      "sha256": "b71785ff101c0df501064b3e3b8c4a02e4f9cc3047a7fa686c41fc4edc2f0cb4",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "tomcat-embed-core",
+        "Bundle-SymbolicName": "org.apache.tomcat-embed-core",
+        "Bundle-Version": "11.0.27",
+        "Implementation-Title": "Apache Tomcat",
+        "Implementation-Vendor": "Apache Software Foundation",
+        "Implementation-Version": "11.0.27",
+        "Specification-Title": "Apache Tomcat",
+        "Specification-Vendor": "Apache Software Foundation",
+        "Specification-Version": "11.0"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "version": "11.0.27",
+          "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27",
+          "filePath": "app/app.jar/BOOT-INF/lib/tomcat-embed-core-11.0.27.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/apache/tomcat/embed/tomcat-embed-core/11.0.27/tomcat-embed-core-11.0.27.jar",
+          "group": "org.apache.tomcat.embed",
+          "artifact": "tomcat-embed-core",
+          "version": "11.0.27",
+          "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/tomcat-embed-el-11.0.27.jar",
+      "bytes": 271410,
+      "sha1": "349ae4673953057dc8d0f51f17e5cf7088cca660",
+      "sha256": "206d6c6b1b6ce67b1c9af9ed0f6f43b4dbbc26164dd47bb49b9aad1583191f33",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "tomcat-embed-jasper-el",
+        "Bundle-SymbolicName": "org.apache.tomcat-embed-jasper-el",
+        "Bundle-Version": "11.0.27",
+        "Implementation-Title": "Apache Tomcat",
+        "Implementation-Vendor": "Apache Software Foundation",
+        "Implementation-Version": "11.0.27",
+        "Specification-Title": "Apache Tomcat",
+        "Specification-Vendor": "Apache Software Foundation",
+        "Specification-Version": "11.0"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.apache.tomcat.embed:tomcat-embed-el",
+          "version": "11.0.27",
+          "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27",
+          "filePath": "app/app.jar/BOOT-INF/lib/tomcat-embed-el-11.0.27.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/apache/tomcat/embed/tomcat-embed-el/11.0.27/tomcat-embed-el-11.0.27.jar",
+          "group": "org.apache.tomcat.embed",
+          "artifact": "tomcat-embed-el",
+          "version": "11.0.27",
+          "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/tomcat-embed-websocket-11.0.27.jar",
+      "bytes": 291822,
+      "sha1": "f94e1b5ad075e0a8d47aa8fe9c9d8d842eb1d67e",
+      "sha256": "cbcd7ed6d7428fa71af6572d541a3ef74ceff42dfc523273950fe586062dc60f",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Bundle-ManifestVersion": "2",
+        "Bundle-Name": "tomcat-embed-websocket",
+        "Bundle-SymbolicName": "org.apache.tomcat-embed-websocket",
+        "Bundle-Version": "11.0.27",
+        "Implementation-Title": "Apache Tomcat",
+        "Implementation-Vendor": "Apache Software Foundation",
+        "Implementation-Version": "11.0.27",
+        "Specification-Title": "Apache Tomcat",
+        "Specification-Vendor": "Apache Software Foundation",
+        "Specification-Version": "11.0"
+      },
+      "pomProperties": [],
+      "mavenMetadataPaths": [],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "version": "11.0.27",
+          "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27",
+          "filePath": "app/app.jar/BOOT-INF/lib/tomcat-embed-websocket-11.0.27.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/apache/tomcat/embed/tomcat-embed-websocket/11.0.27/tomcat-embed-websocket-11.0.27.jar",
+          "group": "org.apache.tomcat.embed",
+          "artifact": "tomcat-embed-websocket",
+          "version": "11.0.27",
+          "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/txw2-4.0.9.jar",
+      "bytes": 73276,
+      "sha1": "70325ebdebca3e7aae1dfa395fd41fc25d8a6f4e",
+      "sha256": "d6343e5945d87266ca4e8974a0a2a876e1bd147a00fb65ed3f2e1a3a00f3a82a",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Implementation-Title": "Eclipse Implementation of JAXB",
+        "Implementation-Vendor": "Eclipse Foundation",
+        "Implementation-Vendor-Id": "org.eclipse",
+        "Implementation-Version": "4.0.9 - e155f35",
+        "Specification-Title": "Jakarta XML Binding",
+        "Specification-Vendor": "Eclipse Foundation",
+        "Specification-Version": "4.0"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.glassfish.jaxb/txw2/pom.properties",
+          "properties": {
+            "artifactId": "txw2",
+            "groupId": "org.glassfish.jaxb",
+            "version": "4.0.9"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.glassfish.jaxb/",
+        "META-INF/maven/org.glassfish.jaxb/txw2/",
+        "META-INF/maven/org.glassfish.jaxb/txw2/pom.xml",
+        "META-INF/maven/org.glassfish.jaxb/txw2/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.glassfish.jaxb:txw2",
+          "version": "4.0.9",
+          "purl": "pkg:maven/org.glassfish.jaxb/txw2@4.0.9",
+          "filePath": "app/app.jar/BOOT-INF/lib/txw2-4.0.9.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/glassfish/jaxb/txw2/4.0.9/txw2-4.0.9.jar",
+          "group": "org.glassfish.jaxb",
+          "artifact": "txw2",
+          "version": "4.0.9",
+          "purl": "pkg:maven/org.glassfish.jaxb/txw2@4.0.9",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    },
+    {
+      "path": "BOOT-INF/lib/webjars-locator-lite-1.1.5.jar",
+      "bytes": 8879,
+      "sha1": "037f261e9aac289caaf953b61e23e0472eae7d66",
+      "sha256": "bc1f179e84dec24525110527a6afaed7e2c1546cb18d5f7966cba9fc3e62f4cf",
+      "manifestMainSection": {
+        "Manifest-Version": "1.0",
+        "Build-Jdk-Spec": "21",
+        "Automatic-Module-Name": "org.webjars.locator_lite"
+      },
+      "pomProperties": [
+        {
+          "path": "META-INF/maven/org.webjars/webjars-locator-lite/pom.properties",
+          "properties": {
+            "artifactId": "webjars-locator-lite",
+            "groupId": "org.webjars",
+            "version": "1.1.5"
+          }
+        }
+      ],
+      "mavenMetadataPaths": [
+        "META-INF/maven/",
+        "META-INF/maven/org.webjars/",
+        "META-INF/maven/org.webjars/webjars-locator-lite/",
+        "META-INF/maven/org.webjars/webjars-locator-lite/pom.xml",
+        "META-INF/maven/org.webjars/webjars-locator-lite/pom.properties"
+      ],
+      "trivyImageReportMatchesByPath": [
+        {
+          "name": "org.webjars:webjars-locator-lite",
+          "version": "1.1.5",
+          "purl": "pkg:maven/org.webjars/webjars-locator-lite@1.1.5",
+          "filePath": "app/app.jar/BOOT-INF/lib/webjars-locator-lite-1.1.5.jar"
+        }
+      ],
+      "exactLocalMavenCacheMatches": [
+        {
+          "repositoryRelativePath": "org/webjars/webjars-locator-lite/1.1.5/webjars-locator-lite-1.1.5.jar",
+          "group": "org.webjars",
+          "artifact": "webjars-locator-lite",
+          "version": "1.1.5",
+          "purl": "pkg:maven/org.webjars/webjars-locator-lite@1.1.5",
+          "basis": "Local Maven repository layout with exact SHA-256 equality; no inference from manifest vendor/title."
+        }
+      ],
+      "exactEmbeddedBuildToolResourceMatch": null
+    }
+  ]
+}

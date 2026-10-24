@@ -1,0 +1,167 @@
+{
+  "checkedAt": "2026-10-23T19:22:50.3194794-06:00",
+  "mode": "Read-only source, documentation and evidence review; this JSON is the only review artifact written",
+  "status": "passed-within-snapshot-scope",
+  "validatedRun": 40048321809,
+  "validatedSourceCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "pipelineConclusion": "success",
+  "jobCount": 4,
+  "successfulJobs": 4,
+  "sourceAndRuntimeFilesDifferingFromValidatedCommit": [],
+  "quality": {
+    "tests": {
+      "total": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pmdViolations": 0,
+    "coverage": [
+      {
+        "type": "INSTRUCTION",
+        "covered": 235,
+        "missed": 24,
+        "percent": 90.73
+      },
+      {
+        "type": "BRANCH",
+        "covered": 2,
+        "missed": 0,
+        "percent": 100.0
+      },
+      {
+        "type": "LINE",
+        "covered": 51,
+        "missed": 7,
+        "percent": 87.93
+      },
+      {
+        "type": "COMPLEXITY",
+        "covered": 27,
+        "missed": 4,
+        "percent": 87.1
+      },
+      {
+        "type": "METHOD",
+        "covered": 26,
+        "missed": 4,
+        "percent": 86.67
+      },
+      {
+        "type": "CLASS",
+        "covered": 8,
+        "missed": 0,
+        "percent": 100.0
+      }
+    ]
+  },
+  "imageSeverities": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 28,
+    "LOW": 4,
+    "UNKNOWN": 0
+  },
+  "sbomSeverities": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "rawScannerReportsRecountMatchedSummaries": true,
+  "sbomInventory": {
+    "packagedJars": 97,
+    "matchedBySHA256": 97,
+    "historicalCoordinates": 14,
+    "missingHistoricalCoordinates": 0,
+    "missingPackagedPurls": 0,
+    "allComponentPurlsScanned": true,
+    "sbomComponents": 110,
+    "scannerPackageRecords": 111
+  },
+  "kubernetes": {
+    "passed": true,
+    "checks": 30,
+    "failedChecks": 0,
+    "successfulHttpRequests": 21354,
+    "failedHttpRequests": 0,
+    "cleanupErrors": 0
+  },
+  "existingPostgresAfter": {
+    "passed": true,
+    "previousUserCount": 2,
+    "userCount": 2,
+    "failedChecks": 0
+  },
+  "evidenceSyntaxSnapshot": {
+    "roots": [
+      "docs/evidence/pipeline/remote-run-40046900827",
+      "docs/evidence/pipeline/remote-run-40048321809",
+      "docs/evidence/security-remediation"
+    ],
+    "jsonFilesParsed": 168,
+    "jsonParseFailures": [],
+    "xmlFilesParsed": 21,
+    "xmlParseFailures": [],
+    "intentionallyInvalidJsonFixturesExcluded": [
+      "docs/evidence/pipeline/remote-run-40046900827/policy-unit-tests/invalid-json/fixture-input.json",
+      "docs/evidence/pipeline/remote-run-40048321809/policy-unit-tests/invalid-json/fixture-input.json",
+      "docs/evidence/security-remediation/scan-gate/policy-unit-tests/invalid-json/fixture-input.json"
+    ],
+    "reason": "These are documented synthetic invalid-JSON inputs, not scanner reports or failed report parsing hidden from validation"
+  },
+  "sourceSyntax": {
+    "powerShellScriptsParsed": 21,
+    "parseFailures": []
+  },
+  "markdownSnapshot": {
+    "filesReviewed": 44,
+    "localLinksChecked": 143,
+    "missingLocalLinks": [],
+    "migrationGuideRecheckedAfterClosure": true,
+    "migrationGuideMissingLocalLinks": [],
+    "externalUrlAvailabilityChecked": false,
+    "mutableRootDocumentsExcluded": [
+      "README.md",
+      "docs/PLAN-DE-TRABAJO.md",
+      "docs/SEGURIDAD.md",
+      "final aggregate and local validation artifacts still being completed"
+    ]
+  },
+  "evidenceHashManifests": [
+    {
+      "run": 40046900827,
+      "entriesChecked": 94,
+      "mismatches": []
+    },
+    {
+      "run": 40048321809,
+      "entriesChecked": 111,
+      "mismatches": []
+    }
+  ],
+  "sensitivePatternReview": {
+    "scope": "Workspace text excluding .git, target, .devsu-local and binary/archive extensions",
+    "checks": "High-confidence GitHub/AWS/GitLab/Google/Slack token forms, private-key headers, signed URL query tokens and long literal Authorization values",
+    "candidateFiles": [],
+    "candidateCount": 0,
+    "secretContentsPrinted": false,
+    "scopeLimit": "Pattern review is not an exhaustive secret audit"
+  },
+  "resolvedObservations": [
+    {
+      "file": "docs/MIGRACION-SEGURIDAD-JAVA.md",
+      "issue": "Future-tense CI closure after final run already existed",
+      "resolution": "Guide now links completed 97/97 SHA and 110/110 PURL evidence and successful existing-PostgreSQL After snapshot",
+      "status": "resolved"
+    }
+  ],
+  "unresolvedBlockingFindings": [],
+  "limitations": [
+    "Snapshot review; no hashes were fixed for root-owned documents still being edited",
+    "No Maven, Docker, Kubernetes operations, tests or new scanner executions were run for this review",
+    "Native standalone SBOM generation remains historical inventory evidence; final image assertions come from real CI artifacts",
+    "Root will perform the final all-written-files link/pattern and aggregate consistency check after remaining local documentation completes"
+  ]
+}

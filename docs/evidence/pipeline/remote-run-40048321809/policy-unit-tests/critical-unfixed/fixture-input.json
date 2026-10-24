@@ -1,0 +1,17 @@
+{
+  "Results": [
+    {
+      "Target": "fixture-os",
+      "Vulnerabilities": [
+        {
+          "Severity": "CRITICAL",
+          "FixedVersion": "",
+          "InstalledVersion": "0.0.0-test",
+          "PkgName": "fixture:library",
+          "VulnerabilityID": "FIXTURE-CRITICAL-001"
+        }
+      ]
+    }
+  ],
+  "SchemaVersion": 2
+}

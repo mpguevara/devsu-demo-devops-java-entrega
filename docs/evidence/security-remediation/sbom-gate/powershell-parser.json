@@ -1,0 +1,37 @@
+{
+  "source": "real-local-static-validation",
+  "checkedAt": "2026-10-24T01:05:21.3632407+00:00",
+  "checks": [
+    {
+      "passed": true,
+      "file": "scripts/ci/Assert-SbomInventory.ps1",
+      "errors": [],
+      "sha256": "8f5822f8310652c9f3e5bd08f0e4b4665be4f4a826af3d84bf1815c123211b00"
+    },
+    {
+      "passed": true,
+      "file": "scripts/ci/Invoke-SbomScan.ps1",
+      "errors": [],
+      "sha256": "ca124e00b71067bcd567ff5008ba4422c1755dc9a7c674312f1e9fea608db3da"
+    },
+    {
+      "passed": true,
+      "file": "scripts/ci/Test-SbomInventory.ps1",
+      "errors": [],
+      "sha256": "fe3c7b5126046354342b4615acf6c2627149877991970e6d7a0b24d812d7d188"
+    },
+    {
+      "passed": true,
+      "file": "scripts/ci/Assert-ImageScanPolicy.ps1",
+      "errors": [],
+      "sha256": "571baf52e07647c176f03e25bc56789a4ab4a46ef7e4f4e702d7c3afc55ff9ca"
+    },
+    {
+      "passed": true,
+      "file": "scripts/ci/Invoke-LocalPipeline.ps1",
+      "errors": [],
+      "sha256": "d50a57636eca11659ed02bb5c743bd88c7267901dd46ac8a0534a79417372920"
+    }
+  ],
+  "powerShell": "7.6.5"
+}

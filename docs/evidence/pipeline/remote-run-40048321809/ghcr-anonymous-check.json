@@ -1,0 +1,12 @@
+{
+  "anonymousTokenEndpointStatus": 200,
+  "anonymousPullMetadataAllowed": true,
+  "anonymousDigest": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+  "checkedAt": "2026-10-24T01:13:11.3027022+00:00",
+  "manifestUri": "https://ghcr.io/v2/mpguevara/devsu-demo-devops-java/manifests/81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "notes": "Used only unauthenticated requests and an anonymous token held in memory. No GitHub credentials or token payloads persisted. Manifest metadata check, not a full layer download.",
+  "tokenEndpoint": "https://ghcr.io/token?service=ghcr.io&scope=repository:mpguevara/devsu-demo-devops-java:pull",
+  "registryVisibilityChanged": false,
+  "anonymousBearerHeadStatus": 200,
+  "initialAnonymousHeadStatus": 401
+}

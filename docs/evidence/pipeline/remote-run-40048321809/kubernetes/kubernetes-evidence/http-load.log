@@ -1,0 +1,17 @@
+Real HTTP load: 16 concurrent GET workers, 300 seconds
+worker=8 success=1359 failure=0
+worker=11 success=1337 failure=0
+worker=9 success=1316 failure=0
+worker=16 success=1351 failure=0
+worker=2 success=1361 failure=0
+worker=7 success=1309 failure=0
+worker=4 success=1296 failure=0
+worker=14 success=1335 failure=0
+worker=6 success=1348 failure=0
+worker=3 success=1329 failure=0
+worker=10 success=1328 failure=0
+worker=1 success=1355 failure=0
+worker=12 success=1355 failure=0
+worker=5 success=1349 failure=0
+worker=13 success=1321 failure=0
+worker=15 success=1305 failure=0

@@ -1,0 +1,23 @@
+{
+  "startedAt": "2026-10-24T01:07:23.6706503+00:00",
+  "finishedAt": "2026-10-24T01:07:23.7214621+00:00",
+  "source": "unit-test-fixture",
+  "scanner": "Trivy 0.76.1",
+  "image": "fixture/not-a-real-image:test",
+  "exitCode": 0,
+  "completed": true,
+  "reportAvailable": true,
+  "assessmentSucceeded": false,
+  "gatePassed": false,
+  "status": "report-error",
+  "failureKind": "report",
+  "policy": "block-any-critical-or-high; retain-all-severities; fail-closed-on-scan-or-report-error",
+  "blockedSeverities": [
+    "CRITICAL",
+    "HIGH"
+  ],
+  "findings": null,
+  "blockingFindings": null,
+  "bySeverity": null,
+  "failure": "Conversion from JSON failed with error: Unexpected end when deserializing object. Path 'SchemaVersion', line 2, position 0."
+}

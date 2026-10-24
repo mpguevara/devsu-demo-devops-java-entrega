@@ -1,0 +1,29 @@
+{
+  "Results": [
+    {
+      "Vulnerabilities": [
+        {
+          "PkgName": "fixture:library",
+          "FixedVersion": "",
+          "VulnerabilityID": "FIXTURE-MEDIUM-001",
+          "Severity": "MEDIUM",
+          "InstalledVersion": "0.0.0-test"
+        }
+      ],
+      "Target": "fixture-os"
+    },
+    {
+      "Vulnerabilities": [
+        {
+          "PkgName": "fixture:library",
+          "FixedVersion": "",
+          "VulnerabilityID": "FIXTURE-HIGH-001",
+          "Severity": "HIGH",
+          "InstalledVersion": "0.0.0-test"
+        }
+      ],
+      "Target": "fixture-java"
+    }
+  ],
+  "SchemaVersion": 2
+}

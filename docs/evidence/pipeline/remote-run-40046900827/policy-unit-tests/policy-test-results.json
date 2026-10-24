@@ -1,0 +1,99 @@
+{
+  "startedAt": "2026-10-24T00:50:09.8347737+00:00",
+  "finishedAt": "2026-10-24T00:50:11.1659765+00:00",
+  "executionType": "offline policy unit tests with synthetic fixtures",
+  "scannerExecuted": false,
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "high-in-second-result-unfixed",
+      "passed": true,
+      "expectedStatus": "blocked-vulnerabilities",
+      "actualStatus": "blocked-vulnerabilities",
+      "expectedThrow": true,
+      "actualThrow": true,
+      "reportsWrittenBeforeReturn": true,
+      "exception": "Control de vulnerabilidades rechazado (blocked-vulnerabilities): La politica bloquea 0 CRITICAL y 1 HIGH. Evidencia: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.devsu-local/scan-policy-tests/high-in-second-result-unfixed",
+      "errors": []
+    },
+    {
+      "name": "critical-unfixed",
+      "passed": true,
+      "expectedStatus": "blocked-vulnerabilities",
+      "actualStatus": "blocked-vulnerabilities",
+      "expectedThrow": true,
+      "actualThrow": true,
+      "reportsWrittenBeforeReturn": true,
+      "exception": "Control de vulnerabilidades rechazado (blocked-vulnerabilities): La politica bloquea 1 CRITICAL y 0 HIGH. Evidencia: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.devsu-local/scan-policy-tests/critical-unfixed",
+      "errors": []
+    },
+    {
+      "name": "medium-low-unknown-pass",
+      "passed": true,
+      "expectedStatus": "passed",
+      "actualStatus": "passed",
+      "expectedThrow": false,
+      "actualThrow": false,
+      "reportsWrittenBeforeReturn": true,
+      "exception": null,
+      "errors": []
+    },
+    {
+      "name": "empty-valid-report-pass",
+      "passed": true,
+      "expectedStatus": "passed",
+      "actualStatus": "passed",
+      "expectedThrow": false,
+      "actualThrow": false,
+      "reportsWrittenBeforeReturn": true,
+      "exception": null,
+      "errors": []
+    },
+    {
+      "name": "scanner-process-failed",
+      "passed": true,
+      "expectedStatus": "operational-error",
+      "actualStatus": "operational-error",
+      "expectedThrow": true,
+      "actualThrow": true,
+      "reportsWrittenBeforeReturn": true,
+      "exception": "Control de vulnerabilidades rechazado (operational-error): Trivy no termino correctamente (exitCode=2). Evidencia: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.devsu-local/scan-policy-tests/scanner-process-failed",
+      "errors": []
+    },
+    {
+      "name": "invalid-json",
+      "passed": true,
+      "expectedStatus": "report-error",
+      "actualStatus": "report-error",
+      "expectedThrow": true,
+      "actualThrow": true,
+      "reportsWrittenBeforeReturn": true,
+      "exception": "Control de vulnerabilidades rechazado (report-error): Conversion from JSON failed with error: Unexpected end when deserializing object. Path 'SchemaVersion', line 2, position 0. Evidencia: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.devsu-local/scan-policy-tests/invalid-json",
+      "errors": []
+    },
+    {
+      "name": "missing-report",
+      "passed": true,
+      "expectedStatus": "report-error",
+      "actualStatus": "report-error",
+      "expectedThrow": true,
+      "actualThrow": true,
+      "reportsWrittenBeforeReturn": true,
+      "exception": "Control de vulnerabilidades rechazado (report-error): Trivy termino con codigo 0 pero no produjo un reporte JSON. Evidencia: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.devsu-local/scan-policy-tests/missing-report",
+      "errors": []
+    },
+    {
+      "name": "unsupported-severity-fails-closed",
+      "passed": true,
+      "expectedStatus": "report-error",
+      "actualStatus": "report-error",
+      "expectedThrow": true,
+      "actualThrow": true,
+      "reportsWrittenBeforeReturn": true,
+      "exception": "Control de vulnerabilidades rechazado (report-error): El reporte contiene una vulnerabilidad incompleta o una severidad desconocida. Evidencia: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.devsu-local/scan-policy-tests/unsupported-severity-fails-closed",
+      "errors": []
+    }
+  ]
+}

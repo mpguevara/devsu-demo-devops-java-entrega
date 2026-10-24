@@ -1,0 +1,650 @@
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 0.7 s	total:   0.0 B	(0.0 B/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 0.7 s	total:   0.0 B	(0.0 B/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	waiting    	|[32m[0m--------------------------------------|	
+   └──config (ad99ff140855)             	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 1.4 s	total:   0.0 B	(0.0 B/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──config (ad99ff140855)             	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 1.6 s	total:  2.2 Ki	(1.3 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (856dbf73dc09)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 1.9 s	total:  2.2 Ki	(1.1 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (856dbf73dc09)              	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (af14db959a1e)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 1.9 s	total:  2.2 Ki	(1.1 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (856dbf73dc09)              	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (af14db959a1e)              	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (a4aa3edb28a2)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 1.9 s	total:  2.2 Ki	(1.1 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (856dbf73dc09)              	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (af14db959a1e)              	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (a4aa3edb28a2)              	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (60a3f3a23340)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 1.9 s	total:  2.2 Ki	(1.1 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (af14db959a1e)              	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (a4aa3edb28a2)              	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (60a3f3a23340)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 2.2 s	total:  10.5 K	(4.7 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	waiting    	|[32m[0m--------------------------------------|	
+   ├──layer (a4aa3edb28a2)              	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (60a3f3a23340)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 2.5 s	total:  65.1 K	(25.7 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (60a3f3a23340)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 2.5 s	total:  66.3 K	(26.2 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	waiting    	|[32m[0m--------------------------------------|	
+   └──layer (60a3f3a23340)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 2.8 s	total:  66.3 K	(23.4 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	waiting    	|[32m[0m--------------------------------------|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 2.8 s	total:  66.4 K	(23.5 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+[0m-------------------------------------|	 2.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 3.1 s	total:  2.1 Mi	(676.0 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+[0m-------------------------------------|	 3.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 3.4 s	total:  3.1 Mi	(915.5 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++[0m------------------------------------|	 4.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 3.7 s	total:  4.1 Mi	(1.1 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++[0m-----------------------------------|	 5.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 4.0 s	total:  5.1 Mi	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++[0m-----------------------------------|	 6.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 4.6 s	total:  6.1 Mi	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++[0m----------------------------------|	 7.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 5.5 s	total:  7.1 Mi	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++[0m---------------------------------|	 8.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 6.7 s	total:  8.1 Mi	(1.2 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++[0m---------------------------------|	 9.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 8.8 s	total:  9.1 Mi	(1.0 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++[0m--------------------------------|	10.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 11.2s	total:  10.1 M	(917.9 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++[0m--------------------------------|	11.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 12.7s	total:  11.1 M	(890.2 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++[0m-------------------------------|	12.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 13.9s	total:  12.1 M	(886.9 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++[0m------------------------------|	13.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 14.8s	total:  13.1 M	(902.2 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++[0m------------------------------|	14.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 15.7s	total:  14.1 M	(915.7 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++[0m-----------------------------|	15.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 16.3s	total:  15.1 M	(944.7 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++[0m----------------------------|	16.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 17.2s	total:  16.1 M	(954.9 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++[0m----------------------------|	17.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 17.8s	total:  17.1 M	(980.2 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++[0m---------------------------|	18.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 18.1s	total:  18.1 M	(1020.4 KiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++[0m---------------------------|	19.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 18.7s	total:  19.1 M	(1.0 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++[0m--------------------------|	20.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 19.3s	total:  20.1 M	(1.0 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++[0m-------------------------|	21.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 19.6s	total:  21.1 M	(1.1 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++[0m-------------------------|	22.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 19.9s	total:  22.1 M	(1.1 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++[0m------------------------|	23.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 20.5s	total:  23.1 M	(1.1 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++[0m-----------------------|	24.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 20.8s	total:  24.1 M	(1.2 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++[0m-----------------------|	25.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 21.1s	total:  25.1 M	(1.2 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++[0m----------------------|	26.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 21.4s	total:  26.1 M	(1.2 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++[0m----------------------|	27.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 21.7s	total:  27.1 M	(1.2 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++[0m---------------------|	28.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 22.0s	total:  28.1 M	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++[0m--------------------|	29.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 22.3s	total:  29.1 M	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++[0m--------------------|	30.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 22.9s	total:  30.1 M	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++[0m-------------------|	31.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 23.2s	total:  31.1 M	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++[0m------------------|	32.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 23.8s	total:  32.1 M	(1.3 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++[0m------------------|	33.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 24.1s	total:  33.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++[0m-----------------|	34.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 24.7s	total:  34.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++[0m-----------------|	35.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 25.0s	total:  35.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++[0m----------------|	36.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 25.9s	total:  36.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++[0m---------------|	37.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 26.5s	total:  37.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++[0m---------------|	38.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 27.1s	total:  38.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++[0m--------------|	39.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 27.7s	total:  39.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++[0m-------------|	40.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 28.3s	total:  40.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++[0m-------------|	41.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 28.9s	total:  41.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++[0m------------|	42.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 29.5s	total:  42.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++[0m------------|	43.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 30.1s	total:  43.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++[0m-----------|	44.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 30.4s	total:  44.1 M	(1.4 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++[0m----------|	45.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 31.0s	total:  45.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++[0m----------|	46.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 31.3s	total:  46.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++++[0m---------|	47.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 31.9s	total:  47.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++++[0m--------|	48.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 32.2s	total:  48.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++++[0m--------|	49.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 32.8s	total:  49.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++++++[0m-------|	50.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 33.1s	total:  50.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++++++[0m-------|	51.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 33.4s	total:  51.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++++++[0m------|	52.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 34.0s	total:  52.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++++++++[0m-----|	53.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 34.3s	total:  53.1 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++++++++[0m-----|	54.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 34.6s	total:  54.1 M	(1.6 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++++++++[0m----|	55.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 34.9s	total:  55.1 M	(1.6 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++++++++++[0m---|	56.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 35.2s	total:  56.1 M	(1.6 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m+++++++++++++++++++++++++++++++++++[0m---|	57.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 35.5s	total:  57.1 M	(1.6 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++++++++++[0m--|	59.0 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 35.8s	total:  59.1 M	(1.6 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	downloading	|[32m++++++++++++++++++++++++++++++++++++++[0m|	60.6 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 36.1s	total:  60.7 M	(1.7 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	fetching image content	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	extracting 	|[32m+++++++++++++++++++++++++++++++++[0m-----|	53.6 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 36.4s	total:  53.7 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	saved	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	extracting 	|[32m+++++++++++++++++++++++++++++++++[0m-----|	53.6 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Pulling from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 36.5s	total:  53.7 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	saved	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	extracting 	|[32m+++++++++++++++++++++++++++++++++[0m-----|	53.6 MiB/60.6 MiB	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Completed pull from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 36.5s	total:  53.7 M	(1.5 MiB/s)	
+ghcr.io/mpguevara/devsu demo devops java	saved	
+└──manifest (518619736598)              	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──config (ad99ff140855)             	complete   	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (856dbf73dc09)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (af14db959a1e)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   ├──layer (a4aa3edb28a2)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+   └──layer (60a3f3a23340)              	extracted  	|[32m++++++++++++++++++++++++++++++++++++++[0m|	
+application/vnd.docker.distribution.manifest.v2+json sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Completed pull from OCI Registry (ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e)	elapsed: 36.5s	total:  60.7 M	(1.7 MiB/s)	

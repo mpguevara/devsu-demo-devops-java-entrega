@@ -10,13 +10,13 @@ This is a simple application to be used in the technical test of DevOps.
 
 **Etapa 2 completada el 21 de octubre de 2026:** imagen Docker multietapa, usuario 10001 y Actuator implementados. Pasaron **11 pruebas Maven** tanto en Windows como dentro de Docker Linux, nueve comprobaciones HTTP H2 del JAR y **39 comprobaciones del contenedor con PostgreSQL**. Se verificaron caída y recuperación de la BD sin reiniciar Java, persistencia tras reiniciar PostgreSQL y apagado ordenado. Dos construcciones limpias Linux produjeron el mismo JAR. El motor Docker ya funciona; los recursos de las pruebas quedaron eliminados y la imagen permanece local.
 
-**Calidad completada el 23 de octubre de 2026:** 22 pruebas aprobadas, PMD sin infracciones y cobertura JaCoCo de **90,28 % de líneas** y **12,90 % de ramas** globales. El servicio tiene 100 % de líneas y ramas. Maven bloquea la construcción si fallan pruebas, PMD o los umbrales documentados. No se excluyeron clases para elevar artificialmente la cobertura.
+**Calidad verificada tras actualizar dependencias, el 23 de octubre de 2026:** 22 pruebas aprobadas, PMD sin infracciones y cobertura JaCoCo de **87,93 % de líneas**, con 100 % de líneas y ramas del servicio. La nueva versión de Lombok marca código generado que JaCoCo filtra automáticamente; por eso los contadores difieren del resultado histórico de 90,28 %. Se mantienen los gates de 85 % global y 100 % del servicio, sin exclusiones añadidas. Véase [la explicación de la medición](docs/CALIDAD.md).
 
-**Kubernetes local verificado:** 30 comprobaciones aprobadas, incluyendo lectura entre pods, Ingress y persistencia al reemplazar Java y PostgreSQL. El HPA aumentó su objetivo de dos a cuatro réplicas con carga HTTP real; se observaron más de dos Ready durante la carga y cuatro Ready en la captura final. Los 16 trabajadores registraron 7.382 GET exitosos y cero fallidos en ese ensayo acotado, que no representa un SLA ni un dimensionamiento de producción.
+**Kubernetes local actualizado y verificado:** 30 comprobaciones aprobadas sobre la imagen final, con lectura entre pods, Ingress y persistencia al reemplazar Java y PostgreSQL. El HPA aumentó su objetivo de dos a cuatro réplicas con carga HTTP real: tres Ready durante la carga y cuatro en la observación posterior. Los 16 trabajadores registraron **7.104 GET exitosos y cero fallidos** en ese ensayo acotado. Antes del ensayo, otras 19 comprobaciones conservaron los dos usuarios anteriores, el PVC y el historial Flyway/V1 al actualizar. Véase [evidencia local](docs/evidence/security-remediation/local-kubernetes/README.md). Estos resultados no representan un SLA ni un dimensionamiento de producción.
 
-El [repositorio público](https://github.com/mpguevara/devsu-demo-devops-java) y el [pipeline completo aprobado](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944) están disponibles. El run validó la revisión `2506a339cd878b0c17d9da94caebccbcbfa1660c`: calidad, construcción/escaneo, publicación GHCR y Kubernetes. La validación remota pasó 30 comprobaciones y registró 18.770 GET exitosos y cero fallidos durante su carga acotada. La primera ejecución fallida y su corrección también se conservan. **No existe ni se requiere un endpoint público**; el acceso de la API queda en localhost.
+El [repositorio público](https://github.com/mpguevara/devsu-demo-devops-java) y el [pipeline final aprobado](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809) están disponibles. El run validó la revisión `81beb47ba4b03f98e407860d94d143a22f2d2771`: calidad, construcción, escaneos de imagen y SBOM, publicación GHCR y Kubernetes. La validación remota aprobó 30 comprobaciones, con HPA de dos a cuatro Ready y 21.354 GET exitosos y cero fallidos durante su carga acotada. Los resultados anteriores, incluidos fallos y correcciones, permanecen como evidencia histórica. **No existe ni se requiere un endpoint público**; el acceso de la API queda en localhost.
 
-**Actualización de seguridad en verificación:** el escaneo anterior registró 121 hallazgos, incluidos **9 críticos y 40 altos** en librerías Java. Se actualiza el stack con Spring Boot 4.1.2 y una política que bloquea publicación y despliegue ante cualquier crítico o alto. Los resultados del nuevo escaneo y pipeline se documentarán después de ejecutarlos. Se conservan los [resultados anteriores](docs/evidence/pipeline/remote-run-40044688944/security/PRIORIDADES.md) y la [explicación de la corrección](docs/SEGURIDAD.md).
+**Vulnerabilidades críticas y altas corregidas y verificadas:** el escaneo final pasó de **9 críticos y 40 altos a 0 críticos y 0 altos**. Se actualizó el stack a Spring Boot 4.1.2 y dependencias compatibles. Además del escaneo de imagen, el pipeline vinculó **97/97 JAR por SHA-256** al SBOM y confirmó sus **110/110 componentes** en el inventario de Trivy. El escaneo SBOM reportó cero hallazgos; quedan **28 medios y 4 bajos en Ubuntu**, sin ocultarlos. La publicación y el despliegue bloquean ante cualquier crítico o alto, errores o inventario incompleto. Véanse la [corrección y sus límites](docs/SEGURIDAD.md) y la [comparación final](docs/evidence/security-remediation/final-scan-comparison.json).
 
 - [Diagnóstico, resultados y problemas encontrados](docs/DIAGNOSTICO.md).
 - [Plan guiado para los siete días y preguntas de defensa](docs/PLAN-DE-TRABAJO.md).
@@ -30,7 +30,8 @@ El [repositorio público](https://github.com/mpguevara/devsu-demo-devops-java) y
 - [Pipeline como código y ejecución local](docs/PIPELINE.md).
 - [Corrección de vulnerabilidades, compatibilidad y límites del escaneo](docs/SEGURIDAD.md).
 - [Kubernetes privado, acceso local y verificación](docs/KUBERNETES.md).
-- [Evidencia del pipeline completo aprobado](docs/evidence/pipeline/remote-run-40044688944/README.md).
+- [Evidencia del pipeline final aprobado](docs/evidence/pipeline/remote-run-40048321809/README.md).
+- [Evidencia de corrección y problemas reales encontrados](docs/evidence/security-remediation/README.md).
 - [Consolidación final de implementación y evidencias](docs/evidence/final-verification.json).
 - [README original sin modificaciones](docs/evidence/baseline/README-original.md).
 
@@ -112,11 +113,11 @@ En Linux/macOS con JDK 17, los comandos equivalentes son `sh ./mvnw clean verify
 
 La ejecución actual `clean verify` terminó con **22 pruebas, 0 fallos, 0 errores y 0 omitidas**, y generó `target/demo-0.0.1.jar`. Hay seis pruebas unitarias de servicio aisladas con Mockito, nueve casos de controlador con Spring/MockMvc/H2, una prueba JPA, una de contexto y cinco casos de salud. Las pruebas Spring activan `test`, sin semillas ni PostgreSQL. No se presentan todos estos casos como pruebas unitarias aisladas.
 
-Las verificaciones anteriores de nueve peticiones H2, 39 comprobaciones Docker y 36 comprobaciones PostgreSQL con dos JVM conservan sus artefactos y alcance históricos; véanse [persistencia](docs/evidence/postgres/README.md) y [contenedor](docs/evidence/docker-health/README.md). La [evidencia de calidad actual](docs/evidence/quality/README.md) registra la suite ampliada y el cambio de 41,89 % a 90,28 % de líneas cubiertas.
+Las verificaciones anteriores de 39 comprobaciones Docker y 36 comprobaciones PostgreSQL con dos JVM conservan sus artefactos y alcance históricos; véanse [persistencia](docs/evidence/postgres/README.md) y [contenedor](docs/evidence/docker-health/README.md). La [evidencia de la actualización](docs/evidence/security-remediation/native/README.md) conserva los dos nuevos `clean verify`, las nueve comprobaciones HTTP del JAR y el test del ID de solo lectura con Jackson 3. La [medición anterior](docs/evidence/quality/README.md) permanece disponible.
 
-JaCoCo **0.8.15** mide cobertura; Maven PMD Plugin **3.28.0**, con PMD **7.17.0**, aplica nueve reglas explícitas. Los controles requieren al menos 85 % de líneas globales y 100 % de líneas/ramas del pequeño servicio. La baja cobertura global de ramas incluye métodos generados por Lombok y permanece visible, sin exclusiones. La [guía de calidad](docs/CALIDAD.md) explica los límites y las decisiones.
+JaCoCo **0.8.15** mide cobertura; Maven PMD Plugin **3.28.0**, con PMD **7.17.0**, aplica nueve reglas explícitas. Los controles requieren al menos 85 % de líneas globales y 100 % de líneas/ramas del pequeño servicio. Tras el filtrado automático de código generado, JaCoCo observa dos ramas del servicio y ambas se ejecutan; esto no significa que estén probadas todas las condiciones posibles de la aplicación. La [guía de calidad](docs/CALIDAD.md) explica los contadores y sus límites.
 
-[GitHub Actions](.github/workflows/ci.yml) define calidad → construcción/escaneo → publicación GHCR → despliegue y validación kind. Trivy bloquea el flujo ante cualquier hallazgo crítico o alto, fallos operativos o reportes inválidos; conserva todas las severidades. Completar el pipeline no demuestra ausencia de todo riesgo. Las acciones y herramientas están fijadas a versiones y hashes. En pull requests no se publica ni se utilizan credenciales de publicación. El clúster del runner es efímero y desaparece al terminar; no proporciona un servicio permanente ni un endpoint público.
+[GitHub Actions](.github/workflows/ci.yml) define calidad → construcción/escaneo de imagen y SBOM → publicación GHCR → despliegue y validación kind. El SBOM CycloneDX se genera en el mismo build Maven y se copia junto al JAR en la imagen; sus hashes deben cubrir todas las librerías empaquetadas. Trivy bloquea el flujo ante cualquier hallazgo crítico o alto, fallos operativos, reportes inválidos o inventario incompleto; conserva todas las severidades. Completar el pipeline no demuestra ausencia de todo riesgo. Las acciones y herramientas están fijadas a versiones y hashes. En pull requests no se publica ni se utilizan credenciales de publicación. El clúster del runner es efímero y desaparece al terminar; no proporciona un servicio permanente ni un endpoint público.
 
 ### Construcción de imagen y despliegue
 
@@ -137,7 +138,7 @@ Este flujo conserva el volumen de datos; reutilizarlo requiere la contraseña co
 
 En la etapa Docker del 21 de octubre, dos construcciones limpias Linux generaron el mismo SHA-256 del JAR. El JAR Windows difería por los finales de línea de `pom.properties` generado por Maven. No se afirma identidad entre sistemas operativos ni de la imagen OCI completa. La [evidencia histórica](docs/evidence/docker-health/README.md) conserva hashes, logs e intentos fallidos. El pipeline publica una imagen identificada por commit, registra su digest y despliega los mismos bytes construidos, transferidos por archivo con checksum.
 
-La [publicación real](docs/evidence/pipeline/remote-run-40044688944/publication.json) corresponde a `ghcr.io/mpguevara/devsu-demo-devops-java:2506a339cd878b0c17d9da94caebccbcbfa1660c`, con digest `sha256:866fb924326ec03377b0d190131103ae281c1d31f869b42a185e1a4f9d9b2302`. El workflow publica mediante su `GITHUB_TOKEN` temporal, limitado a `packages: write` en ese job. Las instrucciones para publicar desde terminal con una credencial propia están en la guía de pipeline.
+La [publicación final](docs/evidence/pipeline/remote-run-40048321809/publication.json) corresponde a `ghcr.io/mpguevara/devsu-demo-devops-java:81beb47ba4b03f98e407860d94d143a22f2d2771`, con digest `sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e`. El workflow publica mediante su `GITHUB_TOKEN` temporal, limitado a `packages: write` en ese job. Las instrucciones para publicar desde terminal con una credencial propia están en la guía de pipeline.
 
 Los [manifiestos Kubernetes](k8s/) definen dos réplicas Java como mínimo, Service, requests/limits, probes, ConfigMap y HPA de dos a cuatro réplicas. PostgreSQL usa StatefulSet, PVC y credenciales inyectadas desde un Secret generado fuera del repositorio. Traefik implementa Ingress con el host local `devsu.local`; un port-forward limitado a loopback permite probarlo sin DNS ni servidor público. metrics-server proporciona CPU al HPA. Su configuración se distingue de la observación real del escalamiento, que debe quedar en los resultados de verificación.
 
@@ -210,9 +211,12 @@ Arquitectura Kubernetes **implementada y verificada localmente**; el workflow va
 ```mermaid
 flowchart LR
     GitHub[GitHub Actions] --> Calidad[Compilar, probar, analizar y medir cobertura]
-    Calidad --> Imagen[Construir y escanear imagen]
-    Imagen --> GHCR[GHCR - publicacion y digest registrado]
-    Imagen --> Archivo[Archivo de la imagen con checksum]
+    Calidad --> Imagen[Construir imagen y escanear todas las severidades]
+    Imagen --> SBOM[Verificar hashes del SBOM y escanear dependencias Maven]
+    SBOM --> Gate{Cero CRITICAL y HIGH en ambos escaneos}
+    Gate -->|No| Bloqueo[Bloquear publicacion y despliegue; conservar reporte]
+    Gate -->|Si| GHCR[GHCR - publicacion y digest registrado]
+    Gate -->|Si| Archivo[Archivo de la imagen con checksum]
     Archivo --> Kind[kind en CI - misma imagen construida]
     Kind --> Deployment[Deployment Java - 2 a 4 replicas]
     Cliente[Cliente local] --> Ingress[Port-forward e Ingress Traefik]

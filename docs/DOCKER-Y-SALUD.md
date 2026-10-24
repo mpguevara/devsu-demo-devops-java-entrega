@@ -4,7 +4,7 @@ Este documento conserva los resultados de la etapa del **21 de octubre de 2026**
 
 ## Estado y alcance
 
-La aplicación mantiene Java 17 y Spring Boot 3.0.5. Se incorporaron Actuator, una construcción Docker en dos etapas, ejecución sin privilegios y configuración Compose para conectar la API con PostgreSQL. La imagen se construyó localmente; **no está publicada en un registro**.
+En esta etapa histórica la aplicación mantenía Java 17 y Spring Boot 3.0.5. Se incorporaron Actuator, una construcción Docker en dos etapas, ejecución sin privilegios y configuración Compose para conectar la API con PostgreSQL. La imagen se construyó localmente y todavía no se había publicado. La [actualización de seguridad posterior](SEGURIDAD.md) utiliza Boot 4.1.2; los resultados y versiones siguientes conservan su alcance original.
 
 La compilación Windows y la construcción Linux ejecutaron **11 pruebas cada una, sin fallos ni errores**. Cinco corresponden a salud y exposición HTTP; las pruebas Maven utilizan el perfil `test` con H2 en memoria. Esto no convierte esos resultados en pruebas de PostgreSQL. La evidencia está en [docker-health](evidence/docker-health/), especialmente [test-summary.json](evidence/docker-health/test-summary.json), [maven-clean-verify.log](evidence/docker-health/maven-clean-verify.log) y [docker-build.log](evidence/docker-health/docker-build.log).
 

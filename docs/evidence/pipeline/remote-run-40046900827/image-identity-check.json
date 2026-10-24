@@ -1,0 +1,8 @@
+{
+  "image": "devsu-demo-java:ccf1adc4afed257e2c7bb7a7a4005c144f742a9c",
+  "containerJobImageId": "sha256:c97584f1f5e8b21491018675ecdc567fad4312984939d7088dfe6e59457642f1",
+  "scope": "Compares IDs recorded by container and Kubernetes jobs before kind load; registry digest is separate.",
+  "kubernetesJobDockerImageId": "sha256:c97584f1f5e8b21491018675ecdc567fad4312984939d7088dfe6e59457642f1",
+  "identical": true,
+  "checkedAt": "2026-10-24T01:07:53.5351806+00:00"
+}

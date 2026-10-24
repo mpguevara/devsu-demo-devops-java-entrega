@@ -1,0 +1,284 @@
+{
+  "checkedAt": "2026-10-24T01:07:24.8162310+00:00",
+  "source": "unit-test-fixture",
+  "passed": true,
+  "failure": null,
+  "jarSHA256": "cb86729c4015f5c9d6f3e71d4631cf5f732a398837a884ea17276c7b1079daa2",
+  "sbomSHA256": "2490ebe87f23f9c434c533e9d38ccf3fa0c9e7917ef95958378d0abbba8f3521",
+  "packagedJars": 14,
+  "jarsMatchedBySHA256": 14,
+  "sbomMavenComponents": 14,
+  "scannerInventoryChecked": true,
+  "scannedPackageRecords": 14,
+  "missingPackagedPurlsInScan": [],
+  "historicalCoordinates": [
+    {
+      "coordinate": "ch.qos.logback:logback-classic",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "ch.qos.logback:logback-core",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-core",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-databind",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "com.h2database:h2",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "io.micrometer:micrometer-core",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.apache.tomcat.embed:tomcat-embed-core",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.springframework.boot:spring-boot-autoconfigure",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.springframework:spring-core",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.springframework:spring-expression",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.springframework:spring-web",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.springframework:spring-webmvc",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    },
+    {
+      "coordinate": "org.yaml:snakeyaml",
+      "present": true,
+      "versions": [
+        "0.0.0-fixture"
+      ],
+      "scanned": true
+    }
+  ],
+  "jars": [
+    {
+      "path": "BOOT-INF/lib/logback-classic-0.0.0-fixture.jar",
+      "sha256": "6a49952ea62d0002448c698ed0da0c383f63540a502f80c7ceeabdd552547671",
+      "matched": true,
+      "coordinates": [
+        "ch.qos.logback:logback-classic:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/ch.qos.logback/logback-classic@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/logback-core-0.0.0-fixture.jar",
+      "sha256": "0487efc3f66d598db005362b38c515ef4925298bf78801340ab0b143ced19651",
+      "matched": true,
+      "coordinates": [
+        "ch.qos.logback:logback-core:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/ch.qos.logback/logback-core@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-core-0.0.0-fixture.jar",
+      "sha256": "e0b7b86d65c6e73dd975405b85045b345916b28c74ed0f280f1c58374f9b2ad0",
+      "matched": true,
+      "coordinates": [
+        "com.fasterxml.jackson.core:jackson-core:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/com.fasterxml.jackson.core/jackson-core@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/jackson-databind-0.0.0-fixture.jar",
+      "sha256": "f7fefa21a3b0839127c2b8928c0c5006b4acb8f4d436c3ea4ae0594ff3a48e52",
+      "matched": true,
+      "coordinates": [
+        "com.fasterxml.jackson.core:jackson-databind:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/com.fasterxml.jackson.core/jackson-databind@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/h2-0.0.0-fixture.jar",
+      "sha256": "78a11cf845438dfc4944c128558f564cce74602af86cadbe38c1e485d0f2ffaf",
+      "matched": true,
+      "coordinates": [
+        "com.h2database:h2:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/com.h2database/h2@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/micrometer-core-0.0.0-fixture.jar",
+      "sha256": "d1295c40cc5a717ee64d5e0a10acf5408c4a8992cfe31e6f866f29c5842d103f",
+      "matched": true,
+      "coordinates": [
+        "io.micrometer:micrometer-core:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/io.micrometer/micrometer-core@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/tomcat-embed-core-0.0.0-fixture.jar",
+      "sha256": "1ab6af24f4eb12f5dd1365329e63e6280f8d058f56afb14590fb4e6d357e592d",
+      "matched": true,
+      "coordinates": [
+        "org.apache.tomcat.embed:tomcat-embed-core:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-actuator-autoconfigure-0.0.0-fixture.jar",
+      "sha256": "8a95c568eca8f6675aaee75fb3d2fffefeb50a8721d040111128536cd8a225f1",
+      "matched": true,
+      "coordinates": [
+        "org.springframework.boot:spring-boot-actuator-autoconfigure:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/spring-boot-autoconfigure-0.0.0-fixture.jar",
+      "sha256": "11b70af0ba643fb34ceae4e15ddb25b1783daa862e722923a2fec974c9c4ee0e",
+      "matched": true,
+      "coordinates": [
+        "org.springframework.boot:spring-boot-autoconfigure:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/spring-core-0.0.0-fixture.jar",
+      "sha256": "32d399cf50c32e75251b53b7a77ffbb77066ae3005ce96a92509a811972d87c9",
+      "matched": true,
+      "coordinates": [
+        "org.springframework:spring-core:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.springframework/spring-core@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/spring-expression-0.0.0-fixture.jar",
+      "sha256": "0bf35f9e5d95f9c314f40a080bc7e35aa6984718d725964a55778e00962fb2bc",
+      "matched": true,
+      "coordinates": [
+        "org.springframework:spring-expression:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.springframework/spring-expression@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/spring-web-0.0.0-fixture.jar",
+      "sha256": "599a7d7328cda04e6f054e100b4027a89ab2a74c181835c1dc5ea00c570ab390",
+      "matched": true,
+      "coordinates": [
+        "org.springframework:spring-web:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.springframework/spring-web@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/spring-webmvc-0.0.0-fixture.jar",
+      "sha256": "d0837f05cdd5c38196948c6ce3ebd6989f371e6aa9b8bb7fdca6d7693b4a67f0",
+      "matched": true,
+      "coordinates": [
+        "org.springframework:spring-webmvc:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.springframework/spring-webmvc@0.0.0-fixture"
+      ]
+    },
+    {
+      "path": "BOOT-INF/lib/snakeyaml-0.0.0-fixture.jar",
+      "sha256": "a575eea1f0b1c240655d53aa774ac28e0bff76c86a4615f909404be0da9295c5",
+      "matched": true,
+      "coordinates": [
+        "org.yaml:snakeyaml:0.0.0-fixture"
+      ],
+      "purls": [
+        "pkg:maven/org.yaml/snakeyaml@0.0.0-fixture"
+      ]
+    }
+  ]
+}

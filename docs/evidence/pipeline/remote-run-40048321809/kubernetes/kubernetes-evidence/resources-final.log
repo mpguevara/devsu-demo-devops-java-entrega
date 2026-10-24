@@ -1,0 +1,30 @@
+NAME                                 READY   STATUS    RESTARTS   AGE     IP            NODE                  NOMINATED NODE   READINESS GATES
+pod/devsu-app-74dbb94b6b-cvwmm       1/1     Running   0          2m14s   10.244.0.10   devsu-control-plane   <none>           <none>
+pod/devsu-app-74dbb94b6b-h8fcp       1/1     Running   0          29s     10.244.0.15   devsu-control-plane   <none>           <none>
+pod/devsu-app-74dbb94b6b-phmgr       1/1     Running   0          29s     10.244.0.14   devsu-control-plane   <none>           <none>
+pod/devsu-app-74dbb94b6b-vjzbs       1/1     Running   0          109s    10.244.0.11   devsu-control-plane   <none>           <none>
+pod/devsu-http-load-13fbad22-xjvlt   1/1     Running   0          58s     10.244.0.13   devsu-control-plane   <none>           <none>
+pod/postgres-0                       1/1     Running   0          86s     10.244.0.12   devsu-control-plane   <none>           <none>
+pod/traefik-7c8fc4d65d-6vvbh         1/1     Running   0          3m      10.244.0.6    devsu-control-plane   <none>           <none>
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                                                                                    SELECTOR
+deployment.apps/devsu-app   4/4     4            4           2m14s   app          devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771                                  app=devsu-app
+deployment.apps/traefik     1/1     1            1           3m      traefik      traefik:v3.7.16@sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2   app=traefik
+
+NAME                        READY   AGE     CONTAINERS   IMAGES
+statefulset.apps/postgres   1/1     2m31s   postgres     postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982
+
+NAME                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE     SELECTOR
+service/devsu-app         ClusterIP   10.96.30.80     <none>        8000/TCP   2m14s   app=devsu-app
+service/postgres          ClusterIP   None            <none>        5432/TCP   2m31s   app=postgres
+service/postgres-client   ClusterIP   10.96.129.240   <none>        5432/TCP   2m31s   app=postgres
+service/traefik           ClusterIP   10.96.160.180   <none>        80/TCP     3m      app=traefik
+
+NAME                                    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/data-postgres-0   Bound    pvc-ab487202-6532-4b8d-9cae-c5f8a7dc5793   1Gi        RWO            standard       <unset>                 2m31s   Filesystem
+
+NAME                                            REFERENCE              TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/devsu-app   Deployment/devsu-app   cpu: 402%/60%   2         4         4          2m14s
+
+NAME                                  CLASS           HOSTS         ADDRESS   PORTS   AGE
+ingress.networking.k8s.io/devsu-app   traefik-devsu   devsu.local             80      2m14s

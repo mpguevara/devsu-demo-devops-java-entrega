@@ -1,0 +1,10 @@
+{
+  "workflowSHA256": "eb85a55de550f6253dd0d3bc819fe42815736c5049468af0cd58bf48dea092af",
+  "passed": true,
+  "command": "actionlint -no-color .github/workflows/ci.yml",
+  "version": "1.7.12\r\ninstalled by downloading from release page\r\nbuilt with go1.26.1 compiler for windows/amd64",
+  "checkedAt": "2026-10-24T01:05:21.4852290+00:00",
+  "binarySHA256": "54ca21be3de4c7cfa26914aa8b61bd76bf573ef3caac5f80d110558cdf241718",
+  "exitCode": 0,
+  "source": "real-local-static-validation"
+}

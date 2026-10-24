@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-23T19:26:12.2705159-06:00",
+  "markdownFiles": 67,
+  "localLinks": 429,
+  "missingLocalTargets": [],
+  "credentialPatternMatchingFileCount": 0,
+  "credentialPatternCheckScope": "High-confidence GitHub credential and private-key markers; not proof of absence of every secret",
+  "runtimeDifferencesVersusValidatedCommit": [],
+  "liveReady": 2,
+  "liveDesired": 2,
+  "passed": true
+}

@@ -1,0 +1,16 @@
+ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e: Pulling from mpguevara/devsu-demo-devops-java
+856dbf73dc09: Pulling fs layer
+60a3f3a23340: Pulling fs layer
+af14db959a1e: Pulling fs layer
+a4aa3edb28a2: Pulling fs layer
+856dbf73dc09: Download complete
+a4aa3edb28a2: Download complete
+af14db959a1e: Download complete
+a4aa3edb28a2: Pull complete
+af14db959a1e: Pull complete
+60a3f3a23340: Download complete
+856dbf73dc09: Pull complete
+60a3f3a23340: Pull complete
+Digest: sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+Status: Downloaded newer image for ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e
+ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e

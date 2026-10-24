@@ -1,0 +1,50 @@
+{
+  "observedAt": "2026-10-23T19:18:31.6563730-06:00",
+  "method": "Direct TLS registry pull into owned kind node containerd",
+  "node": "devsu-control-plane",
+  "previousVerification": "node-image-verified.json (failed because ctr inspect is human-readable rather than JSON)",
+  "passed": false,
+  "error": "No coincide: SHA256 contenido en nodo sha256:8e14801291b4460216bf22d63410b92922d16fd0fdfdc50a58224a35c8469045.",
+  "reference": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+  "destination": "docker.io/library/devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "nodeImage": null,
+  "blobHashes": [],
+  "checks": [
+    {
+      "name": "Imagen registrada en nodo apunta al manifest aprobado",
+      "actual": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "expected": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "passed": true
+    },
+    {
+      "name": "Config descriptor contra CI",
+      "actual": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "expected": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "passed": true
+    },
+    {
+      "name": "Capas iguales al manifest de registry verificado",
+      "actual": "sha256:8e14801291b4460216bf22d63410b92922d16fd0fdfdc50a58224a35c8469045,sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81,sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128,sha256:953e16d753b3a0be4499e0245bb1166f946a39b8088247b2d22930dbf4c06032,sha256:b84e7ff4e8f714aa702b09ab370049423696b34db4471101f4a1bffa2694a0d2,sha256:a4aa3edb28a203ad3d4f6a603761ecea1cfd66cf60990cb63ebb485dcfb81288,sha256:af14db959a1e863cb76826c2cfef8e6abe134ed700b66316a2a81200cf571816,sha256:60a3f3a23340c027a43d67d2952cb66ab5eb2818a3301d65113dc5289c2cca7f,sha256:856dbf73dc09033d2244491c2cc916503631d9cb7288d8e6f001b74caa3ff0e2",
+      "expected": "sha256:8e14801291b4460216bf22d63410b92922d16fd0fdfdc50a58224a35c8469045,sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81,sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128,sha256:953e16d753b3a0be4499e0245bb1166f946a39b8088247b2d22930dbf4c06032,sha256:b84e7ff4e8f714aa702b09ab370049423696b34db4471101f4a1bffa2694a0d2,sha256:a4aa3edb28a203ad3d4f6a603761ecea1cfd66cf60990cb63ebb485dcfb81288,sha256:af14db959a1e863cb76826c2cfef8e6abe134ed700b66316a2a81200cf571816,sha256:60a3f3a23340c027a43d67d2952cb66ab5eb2818a3301d65113dc5289c2cca7f,sha256:856dbf73dc09033d2244491c2cc916503631d9cb7288d8e6f001b74caa3ff0e2",
+      "passed": true
+    },
+    {
+      "name": "SHA256 contenido en nodo sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "actual": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "expected": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "passed": true
+    },
+    {
+      "name": "SHA256 contenido en nodo sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "actual": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "expected": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "passed": true
+    },
+    {
+      "name": "SHA256 contenido en nodo sha256:8e14801291b4460216bf22d63410b92922d16fd0fdfdc50a58224a35c8469045",
+      "actual": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected": "sha256:8e14801291b4460216bf22d63410b92922d16fd0fdfdc50a58224a35c8469045",
+      "passed": false
+    }
+  ]
+}

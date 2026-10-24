@@ -1,0 +1,18 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< devsu.devops:demo >--------------------------
+[INFO] Building demo-java 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- cyclonedx-maven-plugin:2.9.3:makeBom (default-cli) @ demo ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.6 with 110 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\bom.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.102 s
+[INFO] Finished at: 2026-10-23T19:00:13-06:00
+[INFO] ------------------------------------------------------------------------

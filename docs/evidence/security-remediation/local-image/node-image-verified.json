@@ -1,0 +1,12 @@
+{
+  "observedAt": "2026-10-23T19:17:45.0507146-06:00",
+  "method": "Direct TLS registry pull into owned kind node containerd",
+  "node": "devsu-control-plane",
+  "passed": false,
+  "error": "Conversion from JSON failed with error: Unexpected character encountered while parsing value: g. Path '', line 0, position 0.",
+  "reference": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+  "destination": "docker.io/library/devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "nodeImage": null,
+  "blobHashes": [],
+  "checks": []
+}

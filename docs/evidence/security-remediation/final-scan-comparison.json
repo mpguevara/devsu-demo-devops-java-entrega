@@ -1,0 +1,44 @@
+{
+  "capturedAt": "2026-10-23T19:14:24.2019532-06:00",
+  "source": "Real final image scan, real extracted SBOM scan and byte-level nested-JAR inventory",
+  "beforeRun": 40044688944,
+  "afterRun": 40048321809,
+  "validatedSourceCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "beforeSeverities": {
+    "CRITICAL": 9,
+    "HIGH": 40,
+    "MEDIUM": 58,
+    "LOW": 14,
+    "UNKNOWN": 0
+  },
+  "imageSeverities": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 28,
+    "LOW": 4,
+    "UNKNOWN": 0
+  },
+  "sbomSeverities": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "allImageAndSbomGatesPassed": true,
+  "packagedJars": 97,
+  "packagedJarsMatchedBySHA256": 97,
+  "sbomComponents": 110,
+  "scannedSbomPackageRecords": 111,
+  "allSbomComponentPurlsScanned": true,
+  "missingPackagedPurlsInScan": [],
+  "historicalCoordinatesVerified": 14,
+  "noCveExceptions": true,
+  "ignoreUnfixed": false,
+  "publication": {
+    "runUrl": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
+    "image": "ghcr.io/mpguevara/devsu-demo-devops-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+    "digest": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
+  },
+  "scope": "Reported vulnerabilities in application image and complete Maven SBOM; no claim of exhaustive security"
+}

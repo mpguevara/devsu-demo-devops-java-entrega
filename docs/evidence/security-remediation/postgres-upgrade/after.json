@@ -1,0 +1,165 @@
+{
+  "observedAt": "2026-10-23T19:20:54.8743212-06:00",
+  "mode": "After",
+  "context": "kind-devsu",
+  "namespace": "devsu",
+  "passed": true,
+  "error": null,
+  "readOnlySession": "on",
+  "users": [
+    {
+      "id": 1,
+      "dni": "1067665028",
+      "name": "Kubernetes Prueba"
+    },
+    {
+      "id": 2,
+      "dni": "1101923020",
+      "name": "Kubernetes Prueba"
+    }
+  ],
+  "userCount": 2,
+  "flyway": [
+    {
+      "installed_rank": 1,
+      "version": "1",
+      "checksum": -1665856150,
+      "success": true
+    }
+  ],
+  "pvcUID": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+  "applicationImage": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "applicationPods": [
+    {
+      "name": "devsu-app-74dbb94b6b-hjdsh",
+      "uid": "399c82a2-602c-476c-b391-ea3dcb405d61",
+      "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "imageID": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
+    },
+    {
+      "name": "devsu-app-74dbb94b6b-tvdj5",
+      "uid": "16d6e983-ea4e-458d-a627-71977583db5a",
+      "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "imageID": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
+    }
+  ],
+  "sourceMigrationV1SHA256": "389f8dc52e11a7a1f5439e359d4b809d5a1098aa05861b0fd9c975973b289400",
+  "beforeSnapshotPath": "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\docs\\evidence\\security-remediation\\postgres-upgrade\\before.json",
+  "previousUserCount": 2,
+  "checks": [
+    {
+      "name": "Namespace propio",
+      "actual": "deploy-script",
+      "expected": "deploy-script",
+      "passed": true
+    },
+    {
+      "name": "Imagen app identificada",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Pods con imageID real disponible",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Imagen app esperada",
+      "actual": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "expected": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "passed": true
+    },
+    {
+      "name": "Sesion PostgreSQL de solo lectura",
+      "actual": "on",
+      "expected": "on",
+      "passed": true
+    },
+    {
+      "name": "Snapshot Before aprobado",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Modo del snapshot anterior",
+      "actual": "Before",
+      "expected": "Before",
+      "passed": true
+    },
+    {
+      "name": "Contexto original",
+      "actual": "kind-devsu",
+      "expected": "kind-devsu",
+      "passed": true
+    },
+    {
+      "name": "PVC original",
+      "actual": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+      "expected": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+      "passed": true
+    },
+    {
+      "name": "Archivo fuente V1 sin cambios",
+      "actual": "389f8dc52e11a7a1f5439e359d4b809d5a1098aa05861b0fd9c975973b289400",
+      "expected": "389f8dc52e11a7a1f5439e359d4b809d5a1098aa05861b0fd9c975973b289400",
+      "passed": true
+    },
+    {
+      "name": "Historial Flyway version/checksum/success identico",
+      "actual": "[{\"installed_rank\":1,\"version\":\"1\",\"checksum\":-1665856150,\"success\":true}]",
+      "expected": "[{\"installed_rank\":1,\"version\":\"1\",\"checksum\":-1665856150,\"success\":true}]",
+      "passed": true
+    },
+    {
+      "name": "Usuario previo ID 1 existe",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Usuario previo ID 1: DNI",
+      "actual": "1067665028",
+      "expected": "1067665028",
+      "passed": true
+    },
+    {
+      "name": "Usuario previo ID 1: nombre",
+      "actual": "Kubernetes Prueba",
+      "expected": "Kubernetes Prueba",
+      "passed": true
+    },
+    {
+      "name": "Usuario previo ID 2 existe",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Usuario previo ID 2: DNI",
+      "actual": "1101923020",
+      "expected": "1101923020",
+      "passed": true
+    },
+    {
+      "name": "Usuario previo ID 2: nombre",
+      "actual": "Kubernetes Prueba",
+      "expected": "Kubernetes Prueba",
+      "passed": true
+    },
+    {
+      "name": "Cantidad de usuarios no disminuye",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Cambio real de imageID tras actualizar",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    }
+  ]
+}

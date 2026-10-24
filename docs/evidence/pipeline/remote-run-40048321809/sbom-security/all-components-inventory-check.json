@@ -1,0 +1,9 @@
+{
+  "sbomSHA256": "9ccb23d17165959e25888b1a76ed0a49637618c5f554ef826e724761ca573fab",
+  "checkedAt": "2026-10-24T01:13:03.3942149+00:00",
+  "allComponentPurlsScanned": true,
+  "scannedPackageRecords": 111,
+  "sbomComponents": 110,
+  "source": "real-image-extracted-sbom-and-real-trivy-sbom",
+  "missingPurls": []
+}

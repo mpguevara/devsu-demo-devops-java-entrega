@@ -1,0 +1,185 @@
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+        "annotations": {
+            "deployment.kubernetes.io/revision": "3",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"devsu-app\",\"namespace\":\"devsu\"},\"spec\":{\"progressDeadlineSeconds\":360,\"replicas\":2,\"revisionHistoryLimit\":2,\"selector\":{\"matchLabels\":{\"app\":\"devsu-app\"}},\"strategy\":{\"rollingUpdate\":{\"maxSurge\":1,\"maxUnavailable\":0},\"type\":\"RollingUpdate\"},\"template\":{\"metadata\":{\"annotations\":{\"checksum/config\":\"defb1cdbfe59c7fa773067df1878a320f4d7a452fe6666051cd5e6be0370600f\"},\"labels\":{\"app\":\"devsu-app\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"env\":[{\"name\":\"PASSWORD_DB\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"password\",\"name\":\"devsu-db\"}}}],\"envFrom\":[{\"configMapRef\":{\"name\":\"devsu-config\"}}],\"image\":\"devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771\",\"imagePullPolicy\":\"IfNotPresent\",\"livenessProbe\":{\"failureThreshold\":3,\"httpGet\":{\"path\":\"/api/actuator/health/liveness\",\"port\":\"http\"},\"periodSeconds\":10,\"timeoutSeconds\":3},\"name\":\"app\",\"ports\":[{\"containerPort\":8000,\"name\":\"http\"}],\"readinessProbe\":{\"failureThreshold\":2,\"httpGet\":{\"path\":\"/api/actuator/health/readiness\",\"port\":\"http\"},\"periodSeconds\":5,\"timeoutSeconds\":3},\"resources\":{\"limits\":{\"cpu\":\"500m\",\"memory\":\"512Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"256Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true},\"startupProbe\":{\"failureThreshold\":48,\"httpGet\":{\"path\":\"/api/actuator/health/liveness\",\"port\":\"http\"},\"periodSeconds\":5,\"timeoutSeconds\":3},\"volumeMounts\":[{\"mountPath\":\"/tmp\",\"name\":\"tmp\"}]}],\"securityContext\":{\"fsGroup\":10001,\"runAsGroup\":10001,\"runAsNonRoot\":true,\"runAsUser\":10001,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"terminationGracePeriodSeconds\":30,\"volumes\":[{\"emptyDir\":{\"sizeLimit\":\"64Mi\"},\"name\":\"tmp\"}]}}}}\n"
+        },
+        "creationTimestamp": "2026-10-24T00:14:38Z",
+        "generation": 9,
+        "name": "devsu-app",
+        "namespace": "devsu",
+        "resourceVersion": "7169",
+        "uid": "610a5310-e496-45c5-966e-4ef4526bff04"
+    },
+    "spec": {
+        "progressDeadlineSeconds": 360,
+        "replicas": 2,
+        "revisionHistoryLimit": 2,
+        "selector": {
+            "matchLabels": {
+                "app": "devsu-app"
+            }
+        },
+        "strategy": {
+            "rollingUpdate": {
+                "maxSurge": 1,
+                "maxUnavailable": 0
+            },
+            "type": "RollingUpdate"
+        },
+        "template": {
+            "metadata": {
+                "annotations": {
+                    "checksum/config": "defb1cdbfe59c7fa773067df1878a320f4d7a452fe6666051cd5e6be0370600f"
+                },
+                "labels": {
+                    "app": "devsu-app"
+                }
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "env": [
+                            {
+                                "name": "PASSWORD_DB",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "password",
+                                        "name": "devsu-db"
+                                    }
+                                }
+                            }
+                        ],
+                        "envFrom": [
+                            {
+                                "configMapRef": {
+                                    "name": "devsu-config"
+                                }
+                            }
+                        ],
+                        "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/api/actuator/health/liveness",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 3
+                        },
+                        "name": "app",
+                        "ports": [
+                            {
+                                "containerPort": 8000,
+                                "name": "http",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 2,
+                            "httpGet": {
+                                "path": "/api/actuator/health/readiness",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 3
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "500m",
+                                "memory": "512Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "256Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true
+                        },
+                        "startupProbe": {
+                            "failureThreshold": 48,
+                            "httpGet": {
+                                "path": "/api/actuator/health/liveness",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 3
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 10001,
+                    "runAsGroup": 10001,
+                    "runAsNonRoot": true,
+                    "runAsUser": 10001,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "emptyDir": {
+                            "sizeLimit": "64Mi"
+                        },
+                        "name": "tmp"
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "availableReplicas": 2,
+        "conditions": [
+            {
+                "lastTransitionTime": "2026-10-24T00:50:26Z",
+                "lastUpdateTime": "2026-10-24T00:50:26Z",
+                "message": "Deployment has minimum availability.",
+                "reason": "MinimumReplicasAvailable",
+                "status": "True",
+                "type": "Available"
+            },
+            {
+                "lastTransitionTime": "2026-10-24T00:14:38Z",
+                "lastUpdateTime": "2026-10-24T01:20:52Z",
+                "message": "ReplicaSet \"devsu-app-74dbb94b6b\" has successfully progressed.",
+                "reason": "NewReplicaSetAvailable",
+                "status": "True",
+                "type": "Progressing"
+            }
+        ],
+        "observedGeneration": 9,
+        "readyReplicas": 2,
+        "replicas": 2,
+        "terminatingReplicas": 0,
+        "updatedReplicas": 2
+    }
+}

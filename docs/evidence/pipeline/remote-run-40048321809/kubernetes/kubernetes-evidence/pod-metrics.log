@@ -1,0 +1,8 @@
+NAME                             CPU(cores)   MEMORY(bytes)   
+devsu-app-74dbb94b6b-cvwmm       301m         304Mi           
+devsu-app-74dbb94b6b-h8fcp       500m         167Mi           
+devsu-app-74dbb94b6b-phmgr       500m         169Mi           
+devsu-app-74dbb94b6b-vjzbs       351m         304Mi           
+devsu-http-load-13fbad22-xjvlt   293m         5Mi             
+postgres-0                       66m          28Mi            
+traefik-7c8fc4d65d-6vvbh         1m           22Mi            

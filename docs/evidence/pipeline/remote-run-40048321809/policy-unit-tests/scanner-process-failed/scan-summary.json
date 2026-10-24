@@ -1,0 +1,23 @@
+{
+  "startedAt": "2026-10-24T01:07:23.6615460+00:00",
+  "finishedAt": "2026-10-24T01:07:23.6624402+00:00",
+  "source": "unit-test-fixture",
+  "scanner": "Trivy 0.76.1",
+  "image": "fixture/not-a-real-image:test",
+  "exitCode": 2,
+  "completed": false,
+  "reportAvailable": true,
+  "assessmentSucceeded": false,
+  "gatePassed": false,
+  "status": "operational-error",
+  "failureKind": "operational",
+  "policy": "block-any-critical-or-high; retain-all-severities; fail-closed-on-scan-or-report-error",
+  "blockedSeverities": [
+    "CRITICAL",
+    "HIGH"
+  ],
+  "findings": null,
+  "blockingFindings": null,
+  "bySeverity": null,
+  "failure": "Trivy no termino correctamente (exitCode=2)."
+}

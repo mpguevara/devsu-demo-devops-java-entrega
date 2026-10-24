@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-10-23T19:16:30.4278500-06:00",
+  "method": "Direct registry pull into owned kind node containerd; no Docker-save transfer used locally.",
+  "node": "devsu-control-plane",
+  "namespace": "k8s.io",
+  "image": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+  "destinationTag": "docker.io/library/devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "TLS": "Default certificate verification; no skip-verify/plain-http flags",
+  "credentials": "No credentials supplied to ctr",
+  "passed": false,
+  "error": "ctr pull fallo: 1.",
+  "pullExitCode": 1,
+  "imageMetadata": null,
+  "checks": [],
+  "finishedAt": "2026-10-23T19:16:30.6605150-06:00"
+}

@@ -1,0 +1,43 @@
+{
+  "executedAt": "2026-10-24T01:07:24.9867059+00:00",
+  "source": "unit-test-fixture",
+  "scannerExecuted": false,
+  "dockerExecuted": false,
+  "tests": 4,
+  "failures": 0,
+  "passed": true,
+  "cases": [
+    {
+      "name": "complete",
+      "passed": true,
+      "expectedAccepted": true,
+      "rejected": false,
+      "reportWritten": true,
+      "failure": null
+    },
+    {
+      "name": "missing-component",
+      "passed": true,
+      "expectedAccepted": false,
+      "rejected": true,
+      "reportWritten": true,
+      "failure": "Cobertura incompleta: 1 JAR sin hash SBOM, 1 coordenadas historicas ausentes, 0 PURL empaquetados sin inventario Trivy."
+    },
+    {
+      "name": "incorrect-hash",
+      "passed": true,
+      "expectedAccepted": false,
+      "rejected": true,
+      "reportWritten": true,
+      "failure": "Cobertura incompleta: 1 JAR sin hash SBOM, 0 coordenadas historicas ausentes, 0 PURL empaquetados sin inventario Trivy."
+    },
+    {
+      "name": "missing-scanned-purl",
+      "passed": true,
+      "expectedAccepted": false,
+      "rejected": true,
+      "reportWritten": true,
+      "failure": "Cobertura incompleta: 0 JAR sin hash SBOM, 1 coordenadas historicas ausentes, 1 PURL empaquetados sin inventario Trivy."
+    }
+  ]
+}

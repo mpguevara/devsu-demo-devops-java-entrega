@@ -1,0 +1,10 @@
+{
+  "finishedAt": "2026-10-24T01:06:07.4737655+00:00",
+  "startedAt": "2026-10-24T01:05:52.0611590+00:00",
+  "command": "trivy sbom --scanners vuln --timeout 10m --exit-code 0 --config= --ignorefile= --ignore-unfixed=false --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --ignore-status= --ignore-policy= --list-all-pkgs --format json --output trivy-sbom.json bom.json",
+  "imageValidated": false,
+  "scanExitCode": 0,
+  "sbomSHA256": "ebb9df61092ddd1d4978fb3835bd5cd6fb1e1f26b6899b4e6cb31cdb8a041469",
+  "source": "real-standalone-maven-sbom; not extracted from final image",
+  "metadataExitCode": 0
+}

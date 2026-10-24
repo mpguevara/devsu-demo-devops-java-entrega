@@ -1,0 +1,29 @@
+{
+  "startedAt": "2026-10-24T01:10:30.7529348+00:00",
+  "finishedAt": "2026-10-24T01:11:08.3203607+00:00",
+  "source": "trivy-real-scan",
+  "scanner": "Trivy 0.76.1",
+  "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "exitCode": 0,
+  "completed": true,
+  "reportAvailable": true,
+  "assessmentSucceeded": true,
+  "gatePassed": true,
+  "status": "passed",
+  "failureKind": null,
+  "policy": "block-any-critical-or-high; retain-all-severities; fail-closed-on-scan-or-report-error",
+  "blockedSeverities": [
+    "CRITICAL",
+    "HIGH"
+  ],
+  "findings": 32,
+  "blockingFindings": 0,
+  "bySeverity": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 28,
+    "LOW": 4,
+    "UNKNOWN": 0
+  },
+  "failure": null
+}

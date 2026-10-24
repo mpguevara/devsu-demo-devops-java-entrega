@@ -1,0 +1,14 @@
+{
+  "command": "./mvnw.cmd -B -ntp org.cyclonedx:cyclonedx-maven-plugin:2.9.3:makeBom",
+  "purpose": "Standalone dependency inventory generation; does not compile or run tests",
+  "startedAt": "2026-10-23T18:59:50.6271244-06:00",
+  "finishedAt": "2026-10-23T19:00:13.7084478-06:00",
+  "exitCode": 0,
+  "java": "17.0.20.1+1",
+  "maven": "3.8.7",
+  "mavenHeapMiB": 384,
+  "plugin": "org.cyclonedx:cyclonedx-maven-plugin:2.9.3",
+  "pomSHA256": "1b24fc445116d3e79c096438ff9928c51b8c1417a96e0f8658dcca3c5c721495",
+  "existingJarSHA256Before": "7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c",
+  "existingJarSHA256After": "7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c"
+}

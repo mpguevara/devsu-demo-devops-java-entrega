@@ -1,0 +1,1 @@
+Initial ad-hoc archive comparison failed before writing output: PowerShell automatic $Matches was overwritten by -Match. Corrected the local collection name to $libraryMatches; no Maven or source code failure.

@@ -1,0 +1,158 @@
+{
+  "observedAt": "2026-10-23T19:14:38.9106743-06:00",
+  "passed": true,
+  "error": null,
+  "previousAttempt": "pull-inspect.json",
+  "explanation": "The initial check assumed local inspect.Id equals the OCI configuration digest. Here local Id equals Descriptor.digest (manifest digest), while CI imageId equals manifest.config.digest. The cause of the differing presentation is not proven. Verify cryptographic descriptors and content instead.",
+  "imageReference": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+  "localTag": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+  "localInspect": {
+    "id": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+    "descriptor": {
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "digest": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "size": 2203
+    },
+    "repoDigests": [
+      "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
+    ],
+    "source": "https://github.com/mpguevara/devsu-demo-devops-java",
+    "revision": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+    "user": "10001:10001",
+    "rootfsDiffIDs": [
+      "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16",
+      "sha256:4faace43fae6048251c35dafcf5baf2ad721cfad85b1544541a4c8bf4e895b22",
+      "sha256:7f183c2f006ecbe122c4b7c6e40e6388f280c08093a498233f5c4015c587dce6",
+      "sha256:ae7b2ed0e4948efc8d800805096abf2eb614b2d8fb1091873e45dafcb489aade",
+      "sha256:ba1e0d24b5d7ef5b70b4b9ec2cc98c881cf2d62b3fee6a40de6d8a7c0a87d625",
+      "sha256:e19ee02373bd5d358df428a385ca580f7b0eaa25b98e2702a5a545b0aba67a2c",
+      "sha256:4476bedc0bba5418e7eff517d1faae68f26d9850bc8181b4648b129684773ad3",
+      "sha256:905a1bfb305694d42a65ff8fb6441e03abd61100e5ded998d2174721ec0d58e3",
+      "sha256:cf505bd0940794a425f8493f09eb7c08ae4ed8be7921c80add1bbddb86f7eff7"
+    ]
+  },
+  "registry": {
+    "manifestSHA256": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+    "manifestMediaType": "application/vnd.docker.distribution.manifest.v2+json",
+    "configurationDigest": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+    "configurationUser": "10001:10001",
+    "configurationSource": "https://github.com/mpguevara/devsu-demo-devops-java",
+    "configurationRevision": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+    "layerDigests": [
+      "sha256:8e14801291b4460216bf22d63410b92922d16fd0fdfdc50a58224a35c8469045",
+      "sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81",
+      "sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128",
+      "sha256:953e16d753b3a0be4499e0245bb1166f946a39b8088247b2d22930dbf4c06032",
+      "sha256:b84e7ff4e8f714aa702b09ab370049423696b34db4471101f4a1bffa2694a0d2",
+      "sha256:a4aa3edb28a203ad3d4f6a603761ecea1cfd66cf60990cb63ebb485dcfb81288",
+      "sha256:af14db959a1e863cb76826c2cfef8e6abe134ed700b66316a2a81200cf571816",
+      "sha256:60a3f3a23340c027a43d67d2952cb66ab5eb2818a3301d65113dc5289c2cca7f",
+      "sha256:856dbf73dc09033d2244491c2cc916503631d9cb7288d8e6f001b74caa3ff0e2"
+    ],
+    "rootfsDiffIDs": [
+      "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16",
+      "sha256:4faace43fae6048251c35dafcf5baf2ad721cfad85b1544541a4c8bf4e895b22",
+      "sha256:7f183c2f006ecbe122c4b7c6e40e6388f280c08093a498233f5c4015c587dce6",
+      "sha256:ae7b2ed0e4948efc8d800805096abf2eb614b2d8fb1091873e45dafcb489aade",
+      "sha256:ba1e0d24b5d7ef5b70b4b9ec2cc98c881cf2d62b3fee6a40de6d8a7c0a87d625",
+      "sha256:e19ee02373bd5d358df428a385ca580f7b0eaa25b98e2702a5a545b0aba67a2c",
+      "sha256:4476bedc0bba5418e7eff517d1faae68f26d9850bc8181b4648b129684773ad3",
+      "sha256:905a1bfb305694d42a65ff8fb6441e03abd61100e5ded998d2174721ec0d58e3",
+      "sha256:cf505bd0940794a425f8493f09eb7c08ae4ed8be7921c80add1bbddb86f7eff7"
+    ],
+    "rawConfigurationPersisted": false
+  },
+  "ciImage": {
+    "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+    "user": "10001:10001",
+    "imageId": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713"
+  },
+  "checks": [
+    {
+      "name": "SHA256 del cuerpo manifest contra digest solicitado",
+      "actual": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "expected": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "passed": true
+    },
+    {
+      "name": "Descriptor config contra ID esperado",
+      "actual": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "expected": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "passed": true
+    },
+    {
+      "name": "ID de config contra artefacto CI image.json",
+      "actual": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "expected": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "passed": true
+    },
+    {
+      "name": "SHA256 del blob de configuracion",
+      "actual": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "expected": "sha256:ad99ff140855abbda19fdde585820eaf747b31aba84670fa6d155020bbbb9713",
+      "passed": true
+    },
+    {
+      "name": "RepoDigest local exacto",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Descriptor manifest local exacto",
+      "actual": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "expected": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "passed": true
+    },
+    {
+      "name": "Revision local",
+      "actual": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "expected": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "passed": true
+    },
+    {
+      "name": "Source local",
+      "actual": "https://github.com/mpguevara/devsu-demo-devops-java",
+      "expected": "https://github.com/mpguevara/devsu-demo-devops-java",
+      "passed": true
+    },
+    {
+      "name": "Usuario local",
+      "actual": "10001:10001",
+      "expected": "10001:10001",
+      "passed": true
+    },
+    {
+      "name": "Revision config OCI igual local",
+      "actual": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "expected": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "passed": true
+    },
+    {
+      "name": "Source config OCI igual local",
+      "actual": "https://github.com/mpguevara/devsu-demo-devops-java",
+      "expected": "https://github.com/mpguevara/devsu-demo-devops-java",
+      "passed": true
+    },
+    {
+      "name": "Usuario config OCI igual local",
+      "actual": "10001:10001",
+      "expected": "10001:10001",
+      "passed": true
+    },
+    {
+      "name": "DiffIDs de capas config OCI iguales al almacenamiento local",
+      "actual": "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16,sha256:4faace43fae6048251c35dafcf5baf2ad721cfad85b1544541a4c8bf4e895b22,sha256:7f183c2f006ecbe122c4b7c6e40e6388f280c08093a498233f5c4015c587dce6,sha256:ae7b2ed0e4948efc8d800805096abf2eb614b2d8fb1091873e45dafcb489aade,sha256:ba1e0d24b5d7ef5b70b4b9ec2cc98c881cf2d62b3fee6a40de6d8a7c0a87d625,sha256:e19ee02373bd5d358df428a385ca580f7b0eaa25b98e2702a5a545b0aba67a2c,sha256:4476bedc0bba5418e7eff517d1faae68f26d9850bc8181b4648b129684773ad3,sha256:905a1bfb305694d42a65ff8fb6441e03abd61100e5ded998d2174721ec0d58e3,sha256:cf505bd0940794a425f8493f09eb7c08ae4ed8be7921c80add1bbddb86f7eff7",
+      "expected": "sha256:32ab39660fd51c6dc3aae486b42d42bbe8fe4c1db78eaf57bb9c21198de48a16,sha256:4faace43fae6048251c35dafcf5baf2ad721cfad85b1544541a4c8bf4e895b22,sha256:7f183c2f006ecbe122c4b7c6e40e6388f280c08093a498233f5c4015c587dce6,sha256:ae7b2ed0e4948efc8d800805096abf2eb614b2d8fb1091873e45dafcb489aade,sha256:ba1e0d24b5d7ef5b70b4b9ec2cc98c881cf2d62b3fee6a40de6d8a7c0a87d625,sha256:e19ee02373bd5d358df428a385ca580f7b0eaa25b98e2702a5a545b0aba67a2c,sha256:4476bedc0bba5418e7eff517d1faae68f26d9850bc8181b4648b129684773ad3,sha256:905a1bfb305694d42a65ff8fb6441e03abd61100e5ded998d2174721ec0d58e3,sha256:cf505bd0940794a425f8493f09eb7c08ae4ed8be7921c80add1bbddb86f7eff7",
+      "passed": true
+    },
+    {
+      "name": "Etiqueta local conserva manifest descriptor",
+      "actual": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "expected": "sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e",
+      "passed": true
+    }
+  ],
+  "pullCredentialCaveat": "The normal Docker pull may use existing client credentials; anonymous pull is not claimed.",
+  "finishedAt": "2026-10-23T19:14:40.7061877-06:00"
+}

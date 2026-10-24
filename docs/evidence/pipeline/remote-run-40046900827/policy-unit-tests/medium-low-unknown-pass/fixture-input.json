@@ -1,0 +1,31 @@
+{
+  "Results": [
+    {
+      "Vulnerabilities": [
+        {
+          "PkgName": "fixture:library",
+          "FixedVersion": "",
+          "VulnerabilityID": "FIXTURE-MEDIUM-001",
+          "Severity": "MEDIUM",
+          "InstalledVersion": "0.0.0-test"
+        },
+        {
+          "PkgName": "fixture:library",
+          "FixedVersion": "",
+          "VulnerabilityID": "FIXTURE-LOW-001",
+          "Severity": "LOW",
+          "InstalledVersion": "0.0.0-test"
+        },
+        {
+          "PkgName": "fixture:library",
+          "FixedVersion": "",
+          "VulnerabilityID": "FIXTURE-UNKNOWN-001",
+          "Severity": "UNKNOWN",
+          "InstalledVersion": "0.0.0-test"
+        }
+      ],
+      "Target": "fixture"
+    }
+  ],
+  "SchemaVersion": 2
+}

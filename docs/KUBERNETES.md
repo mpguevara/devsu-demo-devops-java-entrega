@@ -2,7 +2,9 @@
 
 El despliegue utiliza un cluster kind de un nodo, dos replicas iniciales de Java y PostgreSQL compartido. Todo el acceso de prueba se mantiene en loopback. `devsu.local` es el host de la regla Ingress, no un dominio publicado ni un endpoint de Internet.
 
-La ejecucion local final aprobo 30 comprobaciones, lectura entre replicas, reemplazo de pods Java/PostgreSQL y escalamiento observado de dos a cuatro replicas con carga HTTP real. Al retirar la carga, HPA volvio a dos replicas Ready. El [indice de evidencia](evidence/kubernetes/README.md) conserva el resultado final, el primer fallo de recuperacion y su resolucion; este resultado local no sustituye la evidencia del pipeline remoto.
+La verificacion local inicial aprobo 30 comprobaciones y posteriormente volvio a dos replicas Ready; el [indice historico](evidence/kubernetes/README.md) conserva ese ensayo y sus problemas. La actualizacion de seguridad uso la imagen de la revision `81beb47`, con 0 CRITICAL/HIGH y SBOM verificado. El [ensayo local final](evidence/security-remediation/local-kubernetes/README.md) aprobo otras 30 comprobaciones, lectura entre replicas y recuperacion, con 7.104 GET correctos/0 fallidos. El HPA paso de dos a cuatro deseadas y tres Ready bajo carga; despues se observaron cuatro Ready. El [After](evidence/security-remediation/postgres-upgrade/after.json) conservo los dos usuarios anteriores, el PVC y Flyway/V1.
+
+El [pipeline final](evidence/pipeline/remote-run-40048321809/README.md) aprobo tambien 30 comprobaciones en un cluster nuevo de CI. La comprobacion local utilizo el cluster y la base existentes. En Docker Desktop fallo `kind load docker-image` para la imagen publicada; se resolvio descargando el mismo digest directamente en el nodo y desplegando sin `-LoadImage`. La [secuencia reproducible y los intentos conservados](evidence/security-remediation/local-image/README.md) explican esa diferencia. No se modificaron scripts, manifiestos, datos ni credenciales para el workaround.
 
 ## Componentes y decisiones
 

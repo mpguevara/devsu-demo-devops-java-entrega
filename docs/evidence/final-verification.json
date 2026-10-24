@@ -1,12 +1,14 @@
 {
-  "verifiedAt": "2026-10-23T18:34:56.6526832-06:00",
-  "purpose": "Consolidacion final de ejecuciones reales y comprobacion de fuentes; no se repitieron suites.",
+  "verifiedAt": "2026-10-23T19:26:12.2479239-06:00",
+  "purpose": "Final consolidation after dependency remediation, two real scans and local existing-database upgrade",
   "implementationVerified": true,
   "publicRepository": "https://github.com/mpguevara/devsu-demo-devops-java",
-  "pipelineURL": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944",
-  "validatedImplementationCommit": "2506a339cd878b0c17d9da94caebccbcbfa1660c",
+  "pipelineURL": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
+  "pipelineStatus": "success",
+  "validatedImplementationCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
   "currentImplementationMatchesValidatedCommit": true,
   "implementationDifferences": [],
+  "untrackedRuntimeFiles": [],
   "mavenTests": {
     "total": 22,
     "failures": 0,
@@ -15,66 +17,108 @@
   },
   "lineCoverage": {
     "type": "LINE",
-    "covered": 65,
+    "covered": 51,
     "missed": 7,
-    "percent": 90.28
+    "percent": 87.93
   },
   "branchCoverage": {
     "type": "BRANCH",
-    "covered": 8,
-    "missed": 54,
-    "percent": 12.9
+    "covered": 2,
+    "missed": 0,
+    "percent": 100.0
   },
   "pmdViolations": 0,
-  "localKubernetes": {
-    "load": {
-      "successfulRequests": 7382,
-      "failedRequests": 0
-    },
-    "scaledUnderRealHttpLoad": true,
-    "passed": true,
-    "checks": 30
-  },
-  "remoteKubernetes": {
-    "cleanupErrors": [],
-    "load": {
-      "failedRequests": 0,
-      "successfulRequests": 18770
-    },
-    "scaledUnderRealHttpLoad": true,
-    "passed": true,
-    "checks": 30
-  },
-  "liveLocalDeployment": {
-    "image": "devsu-demo-java:local",
-    "observedReady": 2,
-    "desired": 2
-  },
-  "publication": {
-    "image": "ghcr.io/mpguevara/devsu-demo-devops-java:2506a339cd878b0c17d9da94caebccbcbfa1660c",
-    "runUrl": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944",
-    "digest": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:866fb924326ec03377b0d190131103ae281c1d31f869b42a185e1a4f9d9b2302"
-  },
-  "vulnerabilityScan": {
-    "findings": 121,
-    "policy": "report-all-findings; fail-on-scanner-error",
-    "bySeverity": {
+  "offlinePolicyTests": 8,
+  "offlineInventoryTests": 4,
+  "nativeJarHttpChecks": 9,
+  "vulnerabilityVerification": {
+    "capturedAt": "2026-10-23T19:14:24.2019532-06:00",
+    "source": "Real final image scan, real extracted SBOM scan and byte-level nested-JAR inventory",
+    "beforeRun": 40044688944,
+    "afterRun": 40048321809,
+    "validatedSourceCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+    "beforeSeverities": {
       "CRITICAL": 9,
       "HIGH": 40,
       "MEDIUM": 58,
       "LOW": 14,
       "UNKNOWN": 0
     },
-    "completed": true,
-    "securityRemediationPending": true
+    "imageSeverities": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 28,
+      "LOW": 4,
+      "UNKNOWN": 0
+    },
+    "sbomSeverities": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0,
+      "UNKNOWN": 0
+    },
+    "allImageAndSbomGatesPassed": true,
+    "packagedJars": 97,
+    "packagedJarsMatchedBySHA256": 97,
+    "sbomComponents": 110,
+    "scannedSbomPackageRecords": 111,
+    "allSbomComponentPurlsScanned": true,
+    "missingPackagedPurlsInScan": [],
+    "historicalCoordinatesVerified": 14,
+    "noCveExceptions": true,
+    "ignoreUnfixed": false,
+    "publication": {
+      "runUrl": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
+      "image": "ghcr.io/mpguevara/devsu-demo-devops-java:81beb47ba4b03f98e407860d94d143a22f2d2771",
+      "digest": "ghcr.io/mpguevara/devsu-demo-devops-java@sha256:5186197365985f9249e005d82a47b6b7dc3abd7c88b89de6a2dbb45686d7b56e"
+    },
+    "scope": "Reported vulnerabilities in application image and complete Maven SBOM; no claim of exhaustive security"
   },
+  "localKubernetes": {
+    "passed": true,
+    "load": {
+      "successfulRequests": 7104,
+      "failedRequests": 0
+    },
+    "scaledUnderRealHttpLoad": true,
+    "cleanupErrors": [],
+    "checks": 30
+  },
+  "remoteKubernetes": {
+    "passed": true,
+    "load": {
+      "successfulRequests": 21354,
+      "failedRequests": 0
+    },
+    "scaledUnderRealHttpLoad": true,
+    "cleanupErrors": [],
+    "checks": 30
+  },
+  "existingDatabaseUpgrade": {
+    "previousUserCount": 2,
+    "pvcUID": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+    "passed": true,
+    "afterUserCount": 2,
+    "flywayV1Checksum": -1665856150,
+    "checks": 19,
+    "beforeAndAfterRecorded": true
+  },
+  "liveLocalDeployment": {
+    "observedReady": 2,
+    "desired": 2,
+    "image": "devsu-demo-java:81beb47ba4b03f98e407860d94d143a22f2d2771"
+  },
+  "criticalHighRemediationPending": false,
   "publicApiEndpoint": false,
-  "archiveProcedure": "scripts/New-Delivery.ps1: Git HEAD limpio, git archive, comprobacion de contenido y manifiesto SHA256 fuera del repositorio.",
+  "archiveProcedure": "scripts/New-Delivery.ps1: clean Git HEAD, git archive and SHA256 manifest outside repository",
   "limitations": [
-    "Dependencias vulnerables pendientes de actualizacion compatible.",
-    "PostgreSQL y cluster de un nodo sin alta disponibilidad.",
-    "Sin backup/restauracion ni recuperacion de perdida de disco verificados.",
-    "Carga acotada y recursos iniciales, sin SLA ni dimensionamiento de produccion.",
-    "Cluster CI efimero; API exclusivamente local."
+    "28 MEDIUM and 4 LOW Ubuntu findings retained, including one with known fixed version.",
+    "Pinned published Temurin image predates upstream17.0.21; Docker tag availability observed and documented.",
+    "Scans do not prove absence of unknown vulnerabilities or cover every infrastructure image.",
+    "Single PostgreSQL instance and one-node cluster; no HA or tested backup/disk-loss recovery.",
+    "Initial requests/limits and bounded HTTP load do not establish SLA or production sizing.",
+    "Local Docker-to-kind import failed; exact registry digest was pulled directly to node, preserving data.",
+    "Final archive is generated after a documentation-only commit; runtime source matches validated implementation commit."
   ]
 }

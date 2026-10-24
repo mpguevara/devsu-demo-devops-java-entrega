@@ -4,6 +4,8 @@
 
 El proyecto utiliza Java 17 y **Spring Boot 4.1.2**, actualizado desde 3.0.5 para remediar las dependencias vulnerables observadas. `clean verify` compila, ejecuta pruebas, empaqueta el JAR, genera cobertura y aplica los controles de calidad. Se mantienen **JaCoCo 0.8.15** y **Maven PMD Plugin 3.28.0**, que incluye PMD **7.17.0**. Se utiliza un solo analizador de código, sin servidor externo ni una plataforma adicional que operar.
 
+`verify` también genera `target/bom.json` mediante **CycloneDX Maven Plugin 2.9.3**. Es un inventario de dependencias para complementar el escaneo de imagen; no sustituye PMD, las pruebas ni el análisis de vulnerabilidades. La [guía de migración](MIGRACION-SEGURIDAD-JAVA.md#inventario-de-dependencias-y-cobertura-del-escáner) explica el problema real de identificación que motivó añadirlo y cómo se vincula al JAR empaquetado.
+
 JaCoCo incorpora un agente a la JVM de pruebas para medir qué bytecode se ejecuta. PMD analiza el código fuente de producción con un [conjunto explícito de nueve reglas](../config/pmd/ruleset.xml). Detecta imports y código innecesarios, variables sin uso, recursos sin cierre y construcciones que pueden ocultar errores, como `catch` vacío o `return` en `finally`. No se suprimieron hallazgos mediante exclusiones ni se cambiaron los contratos HTTP.
 
 ## Medición histórica antes de seleccionar umbrales
@@ -84,6 +86,7 @@ Surefire configura `@{jacocoArgLine} ${argLine}`: el agente preparado por JaCoCo
 | `target/pmd.xml` | Hallazgos de PMD en formato legible por herramientas |
 | `target/reports/pmd.html` | Reporte de análisis estático para lectura humana |
 | `target/surefire-reports/` | Resultados individuales de pruebas en XML y texto |
+| `target/bom.json` | SBOM CycloneDX 1.6 con coordenadas y hashes de dependencias compile, runtime y provided |
 
 `clean` elimina `target`. Los reportes que sirvan de evidencia deben copiarse antes de otra construcción o conservarse como artefactos del pipeline. El repositorio mantiene XML, resúmenes, comandos y logs reales en `docs/evidence/quality`; no necesita versionar todos los HTML generados.
 

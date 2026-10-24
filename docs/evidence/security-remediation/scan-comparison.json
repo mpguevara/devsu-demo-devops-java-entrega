@@ -1,0 +1,20 @@
+{
+  "capturedAt": "2026-10-23T18:54:25.8476368-06:00",
+  "comparisonType": "Real Trivy image reports; not synthetic fixtures",
+  "beforeRun": 40044688944,
+  "afterRun": 40046900827,
+  "originalBlockingFindings": 49,
+  "originalBlockingStillReported": 0,
+  "beforeFindings": 121,
+  "afterFindings": 32,
+  "afterCritical": 0,
+  "afterHigh": 0,
+  "afterMedium": 28,
+  "afterLow": 4,
+  "afterJavaFindings": 0,
+  "afterWithoutKnownFixedVersion": 31,
+  "noCveExceptions": true,
+  "ignoreUnfixed": false,
+  "scope": "Application image only; absence of reported CVEs is not proof of no security risk",
+  "pendingRegistryPublicationAndKubernetesValidation": true
+}
