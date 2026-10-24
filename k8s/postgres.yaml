@@ -12,6 +12,19 @@ spec:
       port: 5432
       targetPort: postgres
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-client
+  namespace: devsu
+spec:
+  selector:
+    app: postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: postgres
+---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:

@@ -24,7 +24,7 @@ foreach ($port in @($IngressPort, $PodPortA, $PodPortB)) {
 }
 New-Item -ItemType Directory -Path $EvidenceDirectory -Force | Out-Null
 $evidencePath = (Resolve-Path -LiteralPath $EvidenceDirectory).Path
-$kubectl = (Get-Command kubectl -CommandType Application -ErrorAction Stop).Source
+$kubectl = (Get-Command kubectl -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source
 $kubeArguments = @('--kubeconfig', $Kubeconfig, '--context', 'kind-devsu', '-n', 'devsu')
 $checks = [Collections.Generic.List[object]]::new()
 $commands = [Collections.Generic.List[object]]::new()
@@ -128,6 +128,25 @@ function Wait-HpaBaseline {
     } while ([DateTimeOffset]::Now -lt $deadline)
     throw 'HPA no alcanzo una linea base estable de dos replicas con metricas disponibles.'
 }
+function Wait-IngressRecovery {
+    # Solo GET de salud, sin repetir escrituras. Ready de Kubernetes es un estado muestreado.
+    $deadline = [DateTimeOffset]::Now.AddSeconds(90)
+    $consecutive = 0
+    $url = "http://127.0.0.1:$IngressPort/api/actuator/health/readiness"
+    do {
+        $status = $null; $health = $null; $networkError = $null
+        try {
+            $response = Invoke-WebRequest -Uri $url -Headers @{ Host = 'devsu.local'; Accept = 'application/json' } -TimeoutSec 10 -SkipHttpErrorCheck
+            $status = [int]$response.StatusCode
+            $health = ($response.Content | ConvertFrom-Json).status
+        } catch { $networkError = $_.Exception.Message }
+        if ($status -eq 200 -and $health -eq 'UP' -and @(Get-ReadyPods).Count -ge 2) { $consecutive++ } else { $consecutive = 0 }
+        $httpResults.Add([ordered]@{ timestamp = [DateTimeOffset]::Now.ToString('o'); type = 'recovery-readiness-poll'; method = 'Get'; url = $url; ingressHost = 'devsu.local'; actualStatus = $status; actualHealth = $health; consecutiveSuccessfulPolls = $consecutive; networkError = $networkError })
+        if ($consecutive -ge 3) { Assert-Value 'Readiness recuperada y estable por Ingress' $health 'UP'; return }
+        Start-Sleep -Seconds 3
+    } while ([DateTimeOffset]::Now -lt $deadline)
+    throw 'Readiness no se estabilizo en 90 segundos tras reemplazar PostgreSQL.'
+}
 try {
     $label = Invoke-Kubectl @('get', 'namespace', 'devsu', '-o', 'jsonpath={.metadata.labels.devsu-demo/managed-by}')
     Assert-Value 'Namespace propio' $label 'deploy-script'
@@ -176,8 +195,7 @@ try {
     $pvcAfter = (Invoke-Kubectl @('get', 'pvc', 'data-postgres-0', '-o', 'json')) | ConvertFrom-Json
     Assert-Value 'Mismo PVC tras reiniciar PostgreSQL' $pvcAfter.metadata.uid $pvcUid
     $null = Wait-ReadyApps
-    # Dar tiempo al controlador Ingress para observar los endpoints recuperados.
-    Start-Sleep -Seconds 3
+    Wait-IngressRecovery
     $afterPg = Invoke-Api $IngressPort "/users/$($created.id)" -Ingress
     foreach ($field in @('id', 'dni', 'name')) { Assert-Value "Persistencia tras reiniciar PostgreSQL: $field" $afterPg.$field $created.$field }
     if (-not $SkipLoad) {

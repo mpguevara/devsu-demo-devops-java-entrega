@@ -32,6 +32,8 @@ spec:
     metadata:
       labels:
         app: devsu-app
+      annotations:
+        checksum/config: pending
     spec:
       automountServiceAccountToken: false
       terminationGracePeriodSeconds: 30

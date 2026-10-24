@@ -131,6 +131,8 @@ try {
         # Sustituir antes de aplicar evita crear primero pods con una etiqueta incorrecta.
         $appManifest = Get-Content -LiteralPath (Join-Path $root 'k8s/app.yaml') -Raw
         $appManifest = $appManifest.Replace('image: devsu-demo-java:local', "image: $Image")
+        $configHash = (Get-FileHash -LiteralPath (Join-Path $root 'k8s/configmap.yaml') -Algorithm SHA256).Hash.ToLowerInvariant()
+        $appManifest = $appManifest.Replace('checksum/config: pending', "checksum/config: $configHash")
         $null = Invoke-Kubectl -Arguments @('apply', '-f', '-') -InputText $appManifest
         $null = Invoke-Kubectl @('apply', '-f', (Join-Path $root 'k8s/hpa.yaml'))
         $null = Invoke-Kubectl @('apply', '-f', (Join-Path $root 'k8s/ingress.yaml'))

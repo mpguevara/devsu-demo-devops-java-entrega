@@ -37,6 +37,8 @@ Java solicita 100m CPU y 256 MiB por replica, con limites de 500m y 512 MiB. Pos
 
 Los pods Java ejecutan UID/GID 10001, sin escalamiento de privilegios, sin capabilities, con seccomp RuntimeDefault, raiz de solo lectura y `/tmp` efimero escribible. No montan token de ServiceAccount. PostgreSQL ejecuta UID/GID 999 y monta sus directorios de datos y ejecucion necesarios. Traefik usa ServiceAccount propio: puede observar servicios, endpoints, Ingress y Secrets de `devsu`, y consultar IngressClasses/nodos a nivel de cluster. Ese acceso lo requiere su proveedor Ingress; la aplicacion Java no recibe esos permisos.
 
+PostgreSQL tiene dos servicios con funciones distintas: `postgres` es headless para la identidad de red del StatefulSet; `postgres-client` tiene ClusterIP y es el destino JDBC de Java. Al reemplazar el unico pod de BD, un servicio headless puede dejar de resolver mientras no tenga endpoints y la JVM puede conservar temporalmente ese fallo DNS. El servicio de clientes mantiene su IP/DNS aun durante esa ausencia. Esto evita ese problema de resolucion, pero no hace disponible la BD mientras esta reiniciando: pueden existir errores transitorios hasta recuperar conexiones y readiness.
+
 Startup y liveness consultan `/api/actuator/health/liveness`. Readiness consulta `/api/actuator/health/readiness`, que incluye la BD. Startup ofrece hasta cuatro minutos para iniciar antes de habilitar liveness. Readiness impide enviar trafico a un pod sin acceso a PostgreSQL; reiniciar todos los pods por una caida compartida de BD no solucionaria esa dependencia.
 
 El PVC local de kind reside en el nodo Docker. Reemplazar el pod de PostgreSQL no elimina el PVC. Eliminar el cluster kind elimina el nodo y puede perder esos datos: no constituye backup ni almacenamiento de produccion.
@@ -60,6 +62,8 @@ En Windows, menos de 3 GiB de RAM libre provoca un rechazo inicial. `-AllowLowMe
 
 La contrasena se genera solo cuando el Secret no existe. Un redespliegue conserva el Secret y el PVC; no cambia automaticamente la contrasena de una base inicializada. Las credenciales no se imprimen ni se pasan en argumentos del proceso. El usuario de BD compartido por migraciones y API es una limitacion heredada del alcance, descrita en [POSTGRESQL.md](POSTGRESQL.md).
 
+La plantilla de pods incluye el SHA-256 del ConfigMap como anotacion. Si cambia su archivo, el siguiente despliegue realiza el rollout necesario para que las variables de entorno se vuelvan a leer; aplicar solo un ConfigMap no modifica el entorno de procesos ya iniciados. Si no cambia ni la configuracion ni la imagen, esa anotacion no provoca un reinicio adicional.
+
 ## Acceso local mediante Ingress
 
 ```powershell
@@ -78,6 +82,8 @@ La peticion atraviesa Traefik y la regla Ingress. No hay un Service de tipo Load
 ## Verificacion y limites de cada prueba
 
 `Test-Kubernetes.ps1` comprueba pods Ready, UID efectivo, escritura temporal, PVC Bound y respuesta HTTP por Ingress. Crea un usuario sintetico directamente en el pod A y consulta ese mismo usuario directamente en B para demostrar datos compartidos. Reemplaza un pod Java, reemplaza el pod PostgreSQL y comprueba el mismo usuario y el mismo UID del PVC. No elimina el PVC ni los datos del ejercicio.
+
+Tras reemplazar PostgreSQL, espera dos pods Java Ready y tres comprobaciones HTTP consecutivas de readiness UP por Ingress, con un limite de 90 segundos. Las observaciones de la espera tambien se conservan. Esta es una comprobacion de recuperacion eventual, no una afirmacion de cero errores durante la indisponibilidad; no se repiten escrituras POST automaticamente.
 
 Para HPA espera primero una linea base real de dos replicas con metricas disponibles. Despues crea un Job propio con 16 trabajadores que realizan GET reales a `/api/users`, conserva el historial de CPU/replicas y exige observar mas de dos replicas Ready durante la carga. Los trabajadores informan peticiones exitosas y fallidas. No se utiliza un bucle artificial de CPU dentro de Java. El Job tiene un maximo de 300 segundos de carga; la prueba puede interrumpirlo antes al observar escalamiento y registra el intervalo real en sus comandos/historial. El `sleep` del coordinador solo limita duracion; los trabajadores son quienes envian HTTP.
 

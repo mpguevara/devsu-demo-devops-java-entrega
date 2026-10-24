@@ -5,6 +5,6 @@ metadata:
   namespace: devsu
 data:
   SPRING_PROFILES_ACTIVE: postgres
-  NAME_DB: jdbc:postgresql://postgres:5432/devsu
+  NAME_DB: jdbc:postgresql://postgres-client:5432/devsu
   USERNAME_DB: devsu
   PORT: "8000"
