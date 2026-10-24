@@ -1,5 +1,7 @@
 # PostgreSQL compartido y migraciones
 
+**Cierre del 23 de octubre:** la configuración también se desplegó y verificó en Kubernetes local y en CI privado. Véanse la [guía Kubernetes](KUBERNETES.md) y el [pipeline aprobado](evidence/pipeline/remote-run-40044688944/README.md). Las cifras de seis pruebas y 36 comprobaciones siguientes corresponden a la etapa histórica de persistencia; la suite actual tiene 22 pruebas.
+
 ## Resultado comprobado
 
 La aplicación conserva Java 17, Spring Boot 3.0.5 y sus contratos HTTP. Se añadieron PostgreSQL JDBC **42.7.14**, Flyway **9.5.1**, perfiles separados y la migración `V1__create_users.sql`.

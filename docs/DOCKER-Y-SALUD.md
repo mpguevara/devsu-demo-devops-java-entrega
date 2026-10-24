@@ -1,5 +1,7 @@
 # Etapa 2: contenedor y comprobaciones de salud
 
+Este documento conserva los resultados de la etapa del **21 de octubre de 2026**, cuando la suite tenía once casos. Posteriormente se amplió a 22 y se completaron [calidad](CALIDAD.md), [Kubernetes](KUBERNETES.md) y el [pipeline real](evidence/pipeline/remote-run-40044688944/README.md). Los comandos de construcción ejecutan los controles actuales del POM.
+
 ## Estado y alcance
 
 La aplicación mantiene Java 17 y Spring Boot 3.0.5. Se incorporaron Actuator, una construcción Docker en dos etapas, ejecución sin privilegios y configuración Compose para conectar la API con PostgreSQL. La imagen se construyó localmente; **no está publicada en un registro**.
@@ -151,7 +153,7 @@ El script valida los identificadores y etiquetas de sus recursos antes de admini
 | Primeros dos intentos del verificador Docker fallaron leyendo `Tmpfs` | El primer `docker inspect` asumía que siempre existía esa clave; el segundo produjo un falso negativo en la comprobación. Se corrigió el acceso a la clave, se aceptó su representación en `HostConfig.Tmpfs` o `Mounts` y se verificó también escritura con `test -w /tmp`. Los [intentos 1](evidence/docker-health/container-attempt-1/docker-results.json) y [2](evidence/docker-health/container-attempt-2/docker-results.json) conservaron logs y limpiaron sus recursos |
 | El tercer intento recibió HTTP 503 pero no pudo leer el estado de salud esperado | Se añadió `Accept: application/json` a la espera de readiness. El [intento 3](evidence/docker-health/container-attempt-3/docker-results.json) quedó preservado y limpió sus recursos; la ejecución final pasó las 39 comprobaciones |
 
-Quedan pendientes cobertura, análisis estático, escaneo CVE, publicación de imagen, pipeline remoto y manifiestos Kubernetes con dos réplicas y HPA. No existe un endpoint público de esta etapa. Una instancia PostgreSQL con volumen local sigue siendo un punto único de fallo; no se verificaron backup/restauración, alta disponibilidad ni recuperación ante pérdida del disco. El usuario inicial `devsu` de PostgreSQL sigue compartido entre migración y consultas, tal como se documentó en [POSTGRESQL.md](POSTGRESQL.md).
+Al cerrar la etapa del 21 de octubre quedaban pendientes cobertura, análisis estático, escaneo CVE, publicación, pipeline y Kubernetes; se completaron posteriormente y sus evidencias están enlazadas al inicio. La API permanece sin endpoint público. PostgreSQL con volumen local sigue siendo un punto único de fallo; backup/restauración, alta disponibilidad y recuperación ante pérdida del disco no se verificaron. El usuario inicial `devsu` de PostgreSQL sigue compartido entre migración y consultas, tal como se documentó en [POSTGRESQL.md](POSTGRESQL.md).
 
 ## Referencias primarias
 

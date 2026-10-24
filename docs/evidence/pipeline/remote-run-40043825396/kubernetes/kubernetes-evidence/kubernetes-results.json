@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-10-24T00:21:07.0839531+00:00",
+  "finishedAt": "2026-10-24T00:21:09.3983209+00:00",
+  "context": "kind-devsu",
+  "namespace": "devsu",
+  "passed": false,
+  "error": "The term '/home/runner/.cache/devsu-demo-tools/kubectl/v1.36.4/kubectl /usr/bin/kubectl /bin/kubectl' is not recognized as a name of a cmdlet, function, script file, or executable program.\nCheck the spelling of the name, or if a path was included, verify that the path is correct and try again.",
+  "cleanupErrors": [],
+  "publicEndpoint": false,
+  "loadSkipped": false,
+  "scaledUnderRealHttpLoad": false,
+  "loadTotals": null,
+  "checks": [],
+  "http": [],
+  "commands": []
+}

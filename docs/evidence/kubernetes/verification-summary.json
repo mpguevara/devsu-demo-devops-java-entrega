@@ -1,0 +1,120 @@
+{
+  "consolidatedAt": "2026-10-23T18:25:09.1260395-06:00",
+  "scope": "Consolidacion de evidencia local ejecutada; no se repitio la suite",
+  "runtimePassed": true,
+  "checks": 30,
+  "failedChecks": 0,
+  "httpObservations": 9,
+  "scaledUnderRealHttpLoad": true,
+  "loadTotals": {
+    "successfulRequests": 7382,
+    "failedRequests": 0
+  },
+  "initialReadyReplicas": 2,
+  "desiredReplicasAtLastLoadSample": 4,
+  "readyReplicasAtLastLoadSample": 3,
+  "fourReadyInFinalResources": true,
+  "postLoad": {
+    "observedAt": "2026-10-23T18:25:08.9387884-06:00",
+    "desired": 2,
+    "current": 2,
+    "ready": 2,
+    "metrics": [
+      {
+        "resource": {
+          "current": {
+            "averageUtilization": 7,
+            "averageValue": "7m"
+          },
+          "name": "cpu"
+        },
+        "type": "Resource"
+      }
+    ],
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-10-24T00:14:53Z",
+        "message": "recommended size matches current size",
+        "reason": "ReadyForNewScale",
+        "status": "True",
+        "type": "AbleToScale"
+      },
+      {
+        "lastTransitionTime": "2026-10-24T00:17:26Z",
+        "message": "the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)",
+        "reason": "ValidMetricFound",
+        "status": "True",
+        "type": "ScalingActive"
+      },
+      {
+        "lastTransitionTime": "2026-10-24T00:24:57Z",
+        "message": "the desired replica count is less than the minimum replica count",
+        "reason": "TooFewReplicas",
+        "status": "True",
+        "type": "ScalingLimited"
+      }
+    ]
+  },
+  "privateEndpointOnly": true,
+  "cleanupErrors": [],
+  "allInfrastructureDigestsMatched": true,
+  "inputHashesAtConsolidation": [
+    {
+      "path": "k8s/app.yaml",
+      "sha256": "6bf03d787a5b6b4fadd4480b02792b2457ba0adef0697267fcffd4471f934fa5"
+    },
+    {
+      "path": "k8s/configmap.yaml",
+      "sha256": "defb1cdbfe59c7fa773067df1878a320f4d7a452fe6666051cd5e6be0370600f"
+    },
+    {
+      "path": "k8s/hpa.yaml",
+      "sha256": "e4c4d4cd1d0c0b1e7f2731824320299a742c086d0752cea1d8dde35bb9002c87"
+    },
+    {
+      "path": "k8s/ingress.yaml",
+      "sha256": "57edcf3b81ed6218564eca0d24d3822e17192c6ede14366c8c83b990d4b6e7c4"
+    },
+    {
+      "path": "k8s/kind.yaml",
+      "sha256": "4ba2248d686a76893d8ae407e4ff10739133ed31a316abcaf507c61b483d511b"
+    },
+    {
+      "path": "k8s/load-job.yaml",
+      "sha256": "786df1ee547e4ef006eb57f52f631c2d60d0452592955e46e2fe7a2f319592fe"
+    },
+    {
+      "path": "k8s/metrics-server.yaml",
+      "sha256": "4f3918a2e8c9d79d725050f5b5e100c3a7b5f39dfd4426168512a3a0ab7cc06c"
+    },
+    {
+      "path": "k8s/namespace.yaml",
+      "sha256": "e387efb36db448e360080ee60bfb732a48251c904f30156e7d60ab104a2d744f"
+    },
+    {
+      "path": "k8s/postgres.yaml",
+      "sha256": "3f3f8549646ebe037b7ebaed4c006d8ae197074baca244d4db96a05518d107ad"
+    },
+    {
+      "path": "k8s/traefik.yaml",
+      "sha256": "effaef989c4ffe446db1f92059a0a1068e8d8f755d439441f040eec45353d53e"
+    },
+    {
+      "path": "scripts/Install-Kind.ps1",
+      "sha256": "47b13766e96c65f48ba30fb2d61bca517cb812e04c3998fce25c683d56e58a1b"
+    },
+    {
+      "path": "scripts/Deploy-Kubernetes.ps1",
+      "sha256": "c9157d497fdb99563112cffe1e32164c896a0ff8ffd14be2b2890a23ca55f629"
+    },
+    {
+      "path": "scripts/Test-Kubernetes.ps1",
+      "sha256": "b228231a84982cbcaf47fcb7644a53457b58d47c5f47dbc3c779ac1abb0a4c31"
+    }
+  ],
+  "notes": [
+    "Cluster y PVC propios conservados; no hay endpoint publico.",
+    "La correccion Linux de Get-Command se valido sintacticamente; su resultado remoto se documenta por separado.",
+    "La evidencia local fallida permanece en runtime-attempt-1."
+  ]
+}

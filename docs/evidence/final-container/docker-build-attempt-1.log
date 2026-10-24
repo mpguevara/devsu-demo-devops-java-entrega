@@ -1,0 +1,64 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.17kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#2 ...
+
+#3 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#4 ...
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#2 DONE 1.1s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#4 DONE 1.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 279B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 DONE 0.0s
+
+#7 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#7 resolve docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd 0.0s done
+#7 DONE 0.0s
+
+#8 [build 1/8] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#8 resolve docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2 0.0s done
+#8 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 110.05kB 0.0s done
+#6 DONE 0.1s
+
+#9 [build 2/8] WORKDIR /workspace
+#9 CACHED
+
+#10 [build 3/8] COPY .mvn/ .mvn/
+#10 CACHED
+
+#11 [build 4/8] COPY mvnw pom.xml ./
+#11 DONE 0.2s
+
+#12 [build 5/8] RUN sed -i 's/\r$//' mvnw && chmod 0755 mvnw
+#12 DONE 0.6s
+
+#13 [build 6/8] COPY src/ src/
+#13 DONE 0.0s
+
+#14 [build 7/8] COPY config/ config/
+#14 DONE 0.0s
+
+#15 [build 8/8] RUN --mount=type=cache,target=/root/.m2,sharing=locked     ./mvnw -B -ntp clean verify -DargLine=-Xmx384m
+#15 4.511 [INFO] Scanning for projects...
+#15 13.82 [INFO] 
+#15 13.82 [INFO] -------------------------< devsu.devops:demo >--------------------------
+#15 13.82 [INFO] Building demo-java 0.0.1
+#15 13.82 [INFO] --------------------------------[ jar ]---------------------------------

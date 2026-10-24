@@ -1,0 +1,41 @@
+{
+  "observedAt": "2026-10-23T18:24:18.6978880-06:00",
+  "desired": 3,
+  "current": 3,
+  "ready": 3,
+  "metrics": [
+    {
+      "resource": {
+        "current": {
+          "averageUtilization": 11,
+          "averageValue": "11m"
+        },
+        "name": "cpu"
+      },
+      "type": "Resource"
+    }
+  ],
+  "conditions": [
+    {
+      "lastTransitionTime": "2026-10-24T00:14:53Z",
+      "message": "recent recommendations were higher than current one, applying the highest recent recommendation",
+      "reason": "ScaleDownStabilized",
+      "status": "True",
+      "type": "AbleToScale"
+    },
+    {
+      "lastTransitionTime": "2026-10-24T00:17:26Z",
+      "message": "the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)",
+      "reason": "ValidMetricFound",
+      "status": "True",
+      "type": "ScalingActive"
+    },
+    {
+      "lastTransitionTime": "2026-10-24T00:23:57Z",
+      "message": "the desired replica count is decreasing faster than the maximum scale rate",
+      "reason": "ScaleDownLimit",
+      "status": "True",
+      "type": "ScalingLimited"
+    }
+  ]
+}

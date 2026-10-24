@@ -1,0 +1,311 @@
+{
+  "generatedAt": "2026-10-24T00:33:19.8510158+00:00",
+  "scope": "Selected evidence files; manifest excludes itself",
+  "files": [
+    {
+      "path": "artifacts-metadata.json",
+      "sizeBytes": 1863,
+      "sha256": "84050c6137e7675e1b8c4789c2039917c676a21741209b032631e7e743ab2842"
+    },
+    {
+      "path": "docker-build.log",
+      "sizeBytes": 26816,
+      "sha256": "a7735df69e9f23192a47e9aa6856c20083d4a448a95b9328bbc906b10687ecd4"
+    },
+    {
+      "path": "evidence-secret-check.json",
+      "sizeBytes": 396,
+      "sha256": "d428c22cf25612dc7595ee8ba74452e93a5477d5e066342d321f93b435115c92"
+    },
+    {
+      "path": "ghcr-anonymous-check.json",
+      "sizeBytes": 782,
+      "sha256": "e0d7aee42eb8629bc587c3ed3f4df390c8a95e6557e3830a1237fabf0e39e6e0"
+    },
+    {
+      "path": "ghcr-push.log",
+      "sizeBytes": 632,
+      "sha256": "28c314eb61dc5127b9b0c6019116bf47c1d4c26cfbb3426d5349dd9ce651ede6"
+    },
+    {
+      "path": "image-identity-check.json",
+      "sizeBytes": 521,
+      "sha256": "60e30ef5d5a96faed0f4e27981bb87ed6b97e2a06ce858a37da69e27308ccaf2"
+    },
+    {
+      "path": "image.json",
+      "sizeBytes": 187,
+      "sha256": "4c5f30c9494be61f11dce6c0f184c3e039a07917a418bb287c51ce55f66ffb41"
+    },
+    {
+      "path": "jacoco.csv",
+      "sizeBytes": 1103,
+      "sha256": "b0ea5c85e6b4a6c56877960f990913dd92611e36dcfdab7ad8f64525d8eaa3cb"
+    },
+    {
+      "path": "jacoco.xml",
+      "sizeBytes": 33763,
+      "sha256": "aa763bafeb89da812d406983fd8f0b51ff527dfe2f64dd3ceacd87e0502b1853"
+    },
+    {
+      "path": "jobs.json",
+      "sizeBytes": 7046,
+      "sha256": "c26cdcc4b5fc2cba6c1704f2c61ea4b1c279771d56cf4816b4575aeec8177ff6"
+    },
+    {
+      "path": "kubernetes-job.log",
+      "sizeBytes": 38336,
+      "sha256": "dfa1a691d979e537be1136b82bba051feb734a727a9d7ecbc5b726f85a21b3b0"
+    },
+    {
+      "path": "kubernetes/kind-install-evidence/kind-install.json",
+      "sizeBytes": 547,
+      "sha256": "92570d9ec55425d567e63f00e7d3c59e79383fd54c76ed2cbf4c9894066d37aa"
+    },
+    {
+      "path": "kubernetes/kubectl-install-evidence/kubectl-install.json",
+      "sizeBytes": 368,
+      "sha256": "bc9288856dd665a8fe6c6d0023776bcdbd996a90c0c659706d8f83cfa092a983"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/app-rollout.log",
+      "sizeBytes": 237,
+      "sha256": "27d358e7eaac13133cf39a2f903bcdd84a502b6badc2b51015ea96c4615fd836"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/application-image-id.log",
+      "sizeBytes": 72,
+      "sha256": "e2a68e34e85bcf6aba16304b7bdc119991e7b485305d225f886c51033bc4d389"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/deploy-results.json",
+      "sizeBytes": 20304,
+      "sha256": "f4d9b18beb4594244c28b7855ef4eb5018bcf0e400f2317be2353d9d7ae34a2c"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/kind-create.log",
+      "sizeBytes": 875,
+      "sha256": "a7d25e98a27dd6064c3bd3fea1e6a8ee97902abd883b7705f75a738ec7e3b5a1"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/kind-load-image.log",
+      "sizeBytes": 206,
+      "sha256": "124a1025561afb406eb65a7460a7cb029977b38421e08b336ebaab5ef3a33585"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/kubernetes-version.json",
+      "sizeBytes": 767,
+      "sha256": "5ece6992e965a1b4f8ed758d53d0c4707c0b401328626e2f878bec98fb0dd159"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/memory-preflight.json",
+      "sizeBytes": 105,
+      "sha256": "fcc2ea8cb23ebfe455183f57a4161f115e363f340ef80b09ec796d3d0a400ab9"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/metrics-rollout.log",
+      "sizeBytes": 152,
+      "sha256": "da307494f461e3b669dddd63834be14bae8be35cd49e6e98827e6d1857605433"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/node-resource-limits.log",
+      "sizeBytes": 20,
+      "sha256": "37d41400d6144c6c1476a009ca7331bd0cf4e0a1b27bad7ebee04b83a2ff37bf"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/postgres-rollout.log",
+      "sizeBytes": 97,
+      "sha256": "ed5b84bcca146527296068824610b6e880fa6b3496574c64be5774e5f939e141"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/resources.log",
+      "sizeBytes": 2681,
+      "sha256": "f832c04fe743b0a70d2ac15e05dfbc33d64bc068578cf310ef7cc65d49836ff2"
+    },
+    {
+      "path": "kubernetes/kubernetes-deploy-evidence/traefik-rollout.log",
+      "sizeBytes": 45,
+      "sha256": "62dd786dc9e8c98fc5cd7717f2383b37b28b347ca7f8d8a8235bbddc94f5b683"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/app-deployment.json",
+      "sizeBytes": 8991,
+      "sha256": "f7b178a19db89f8b6b14c90f8cfa28cf56c7350a4f6d2952298a424c7664152e"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/app-pod-delete.log",
+      "sizeBytes": 62,
+      "sha256": "ffcf5ddfa94f53dddf3ce43bf617cbf5f3ad521475502bd02ec3a6fe4217080c"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/events.log",
+      "sizeBytes": 12081,
+      "sha256": "cebbe40edf91e44c5cde157115b80cf4b9498a0787ed2f6d92e479f256f3d879"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/hpa-describe.log",
+      "sizeBytes": 2805,
+      "sha256": "2b6b5155b52117f292c392e79d126cbe1cf1f9d622ac64d11ab65a63e482ded7"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/hpa-history.json",
+      "sizeBytes": 16721,
+      "sha256": "491b7badb48b2fd9f95d6c56bb0863196795d6ea34261d7f8908c0d1e755c519"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/http-load.log",
+      "sizeBytes": 574,
+      "sha256": "96c5aa188945a7cb2849e454d2a6c75955fb822d99c4c239a819368a93e3a459"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/ingress-forward.stderr.log",
+      "sizeBytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/ingress-forward.stdout.log",
+      "sizeBytes": 281,
+      "sha256": "821dcc0a23500598ff81db4f7933729b61c0d90e11913574e75f9e4567ded6aa"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/kubernetes-results.json",
+      "sizeBytes": 1065212,
+      "sha256": "3e0ebaf518c6aeea02e053a5c0fbfbbf782596866d76d5dec1a5e7d92dec638b"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/load-job-cleanup.log",
+      "sizeBytes": 66,
+      "sha256": "1b2e01bf889f09d16c4997c27d30d9faf646a5aba468853ab92148f44d735fc6"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/nodes.log",
+      "sizeBytes": 337,
+      "sha256": "3efd5dc0759e84e5060ab6d8142d3797f1102efbeb34cce15bb71c9bcd305eb1"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/pod-a-forward.stderr.log",
+      "sizeBytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/pod-a-forward.stdout.log",
+      "sizeBytes": 101,
+      "sha256": "5801b528b5c2205a7e6f350d4431b199501f2e6d84c9fd7829c201503bb40232"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/pod-b-forward.stderr.log",
+      "sizeBytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/pod-b-forward.stdout.log",
+      "sizeBytes": 101,
+      "sha256": "cadb5ef2d17e91b678adbe434d7f83049887a6050056797fe834a0ec11d007ae"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/pod-metrics.log",
+      "sizeBytes": 504,
+      "sha256": "bc7f443bd5a8081ce1906ed91f6c2907b52dd73975b3a222706f3bd4b798cb6e"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/postgres-pod-delete.log",
+      "sizeBytes": 46,
+      "sha256": "dd9bdc116272a0ab99d275d72e8043bd6d5224310bd381f86b866478a6bf0972"
+    },
+    {
+      "path": "kubernetes/kubernetes-evidence/resources-final.log",
+      "sizeBytes": 3131,
+      "sha256": "5861c752b3d9fa21050563b493eaf70413d9b6e591041e08cd9715dd5bcc2130"
+    },
+    {
+      "path": "maven-verify.log",
+      "sizeBytes": 19140,
+      "sha256": "fd4378bbdcc71a7511c3144c017050a7750efd65b94c8c594eab7d1d018cac17"
+    },
+    {
+      "path": "pmd.xml",
+      "sizeBytes": 314,
+      "sha256": "ed5eb8db8e9cda157b77ec663c11fd82c5be319520dcd5faffee5fd5ceccd9d4"
+    },
+    {
+      "path": "publication.json",
+      "sizeBytes": 319,
+      "sha256": "2cb85090b2572eb6ace3977c5da1c748c56bd1fe77a02c5d7f4467bd909b8fc9"
+    },
+    {
+      "path": "quality-summary.json",
+      "sizeBytes": 1175,
+      "sha256": "a40eac6c0b4068d99f3d3a612ad31bed0195165135b6a19a59cc134133069c88"
+    },
+    {
+      "path": "README.md",
+      "sizeBytes": 5471,
+      "sha256": "c4484b9c67f910b13d49597a0ec5aa9ba8769066aec24e9925a4fbe8c645cdf5"
+    },
+    {
+      "path": "run-metadata.json",
+      "sizeBytes": 465,
+      "sha256": "f8c2c64da4c6e4c84f407e33612170cea6c9a69363b91bd456570c648678e7df"
+    },
+    {
+      "path": "security/critical-high.csv",
+      "sizeBytes": 11710,
+      "sha256": "577081b55a63be44a7c6727869d219ac89ff8f7c6109400585e662a73196ff41"
+    },
+    {
+      "path": "security/finding-set-comparison.json",
+      "sizeBytes": 445,
+      "sha256": "67739f3cd9de91a21c5745613195ff7a25457438f020bd2906b3e19f8dd96baf"
+    },
+    {
+      "path": "security/PRIORIDADES.md",
+      "sizeBytes": 5570,
+      "sha256": "448fb60dd963d38f35357314030b4a93ef6beb1d04d9721b32fea9ca5043e522"
+    },
+    {
+      "path": "security/scan-summary.json",
+      "sizeBytes": 450,
+      "sha256": "b1ec0a241c6048af37ecfbb5ad9f6481b187aa198d9582e11ac791ac3bf5a96e"
+    },
+    {
+      "path": "security/trivy-image.json",
+      "sizeBytes": 1047144,
+      "sha256": "78cc719bcc574d3fb000fef3f6811375161541b4589d1da02dbb646ca40a7824"
+    },
+    {
+      "path": "security/trivy-summary.md",
+      "sizeBytes": 474,
+      "sha256": "da6585a35bfd5871b8c5cede05b6973bec4672328a22e2d05d7833e9776c47fb"
+    },
+    {
+      "path": "security/trivy.log",
+      "sizeBytes": 10831,
+      "sha256": "ba8dd4ae9c562d7aa5e1d2b8dd866a2ab020fdffd9abb4d874c38933a484c3f8"
+    },
+    {
+      "path": "surefire/devsu.devops.demo.controller.UserControllerTest.txt",
+      "sizeBytes": 343,
+      "sha256": "ddaa2157624c13c387086a8d1e3bf8ede2dfc7fb8b572492b9d8c3767be87b42"
+    },
+    {
+      "path": "surefire/devsu.devops.demo.DemoJavaApplicationTests.txt",
+      "sizeBytes": 333,
+      "sha256": "282da35319c4e0ed1fef98b9d5d64d3015efc3016c7bde824d72bb79a612b4f0"
+    },
+    {
+      "path": "surefire/devsu.devops.demo.health.HealthEndpointTest.txt",
+      "sizeBytes": 335,
+      "sha256": "e5880bc83bd9b16592ed0ffed20fb831eca85b618534140cc361b7538ebe4fb1"
+    },
+    {
+      "path": "surefire/devsu.devops.demo.repository.UserRepositoryTest.txt",
+      "sizeBytes": 343,
+      "sha256": "165fa49582e94b1c49ea415aebd11a6b9148e9a54f34e76de4d8960e7c8801ae"
+    },
+    {
+      "path": "surefire/devsu.devops.demo.service.UserServiceTest.txt",
+      "sizeBytes": 331,
+      "sha256": "a6b139fd96d7abfbc72349287f153c35915182277bae10bd21080a5f5abd9b27"
+    }
+  ]
+}

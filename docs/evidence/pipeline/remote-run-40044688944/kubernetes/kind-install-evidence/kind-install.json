@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-10-24T00:26:36.6085664+00:00",
+  "version": "v0.33.0",
+  "platform": "linux-amd64",
+  "source": "https://github.com/kubernetes-sigs/kind/releases/download/v0.33.0/kind-linux-amd64",
+  "checksumSource": "https://github.com/kubernetes-sigs/kind/releases/download/v0.33.0/kind-linux-amd64.sha256sum",
+  "sha256": "aee6151561422756b764a4ae28e7f44cda5af5a9eead3cc9985112b1de8d8e0d",
+  "binary": "/home/runner/.cache/devsu-demo-tools/kind/v0.33.0/kind",
+  "versionOutput": "kind v0.33.0 go1.26.7 linux/amd64",
+  "passed": true
+}

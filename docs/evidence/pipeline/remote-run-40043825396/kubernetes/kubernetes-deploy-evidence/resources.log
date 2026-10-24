@@ -1,0 +1,26 @@
+NAME                             READY   STATUS    RESTARTS   AGE   IP            NODE                  NOMINATED NODE   READINESS GATES
+pod/devsu-app-69c7d4cbd5-glfct   1/1     Running   0          31s   10.244.0.10   devsu-control-plane   <none>           <none>
+pod/devsu-app-69c7d4cbd5-tpcx9   1/1     Running   0          31s   10.244.0.9    devsu-control-plane   <none>           <none>
+pod/postgres-0                   1/1     Running   0          47s   10.244.0.8    devsu-control-plane   <none>           <none>
+pod/traefik-7c8fc4d65d-h7wqc     1/1     Running   0          77s   10.244.0.6    devsu-control-plane   <none>           <none>
+
+NAME                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                                                                    SELECTOR
+deployment.apps/devsu-app   2/2     2            2           31s   app          devsu-demo-java:f5a65da4592c6d09884513e23df6fa82b3567001                                  app=devsu-app
+deployment.apps/traefik     1/1     1            1           77s   traefik      traefik:v3.7.16@sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2   app=traefik
+
+NAME                        READY   AGE   CONTAINERS   IMAGES
+statefulset.apps/postgres   1/1     47s   postgres     postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982
+
+NAME                TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE   SELECTOR
+service/devsu-app   ClusterIP   10.96.179.140   <none>        8000/TCP   31s   app=devsu-app
+service/postgres    ClusterIP   None            <none>        5432/TCP   47s   app=postgres
+service/traefik     ClusterIP   10.96.246.182   <none>        80/TCP     77s   app=traefik
+
+NAME                                    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE   VOLUMEMODE
+persistentvolumeclaim/data-postgres-0   Bound    pvc-3363f81b-562d-4e2a-b7f4-6c2ad39c4966   1Gi        RWO            standard       <unset>                 47s   Filesystem
+
+NAME                                            REFERENCE              TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/devsu-app   Deployment/devsu-app   cpu: <unknown>/60%   2         4         2          31s
+
+NAME                                  CLASS           HOSTS         ADDRESS   PORTS   AGE
+ingress.networking.k8s.io/devsu-app   traefik-devsu   devsu.local             80      31s

@@ -1,0 +1,18 @@
+{
+  "startedAt": "2026-10-24T00:15:19.5994770+00:00",
+  "finishedAt": "2026-10-24T00:15:49.0467527+00:00",
+  "scanner": "Trivy 0.76.1",
+  "image": "devsu-demo-java:f5a65da4592c6d09884513e23df6fa82b3567001",
+  "exitCode": 0,
+  "completed": true,
+  "policy": "report-all-findings; fail-on-scanner-error",
+  "findings": 121,
+  "bySeverity": {
+    "CRITICAL": 9,
+    "HIGH": 40,
+    "MEDIUM": 58,
+    "LOW": 14,
+    "UNKNOWN": 0
+  },
+  "failure": null
+}

@@ -1,0 +1,7 @@
+{
+  "startedAt": "2026-10-23T18:10:49.4097886-06:00",
+  "finishedAt": "2026-10-23T18:13:11.1345156-06:00",
+  "command": "docker build --progress=plain --tag devsu-demo-java:local .",
+  "exitCode": 0,
+  "passed": true
+}

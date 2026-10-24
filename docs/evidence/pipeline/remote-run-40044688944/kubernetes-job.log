@@ -1,0 +1,258 @@
+Deploy and validate private Kubernetes	Set up job	﻿2026-10-24T00:26:09.2643574Z Current runner version: '2.338.0'
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2667628Z ##[group]Runner Image Provisioner
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2668325Z Hosted Compute Agent
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2668901Z Version: 20261012.601
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2669736Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2670371Z Build Date: 2026-10-12T17:48:21Z
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2670950Z Worker ID: {0fc4b179-30aa-431b-9b19-61e819481a01}
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2671582Z Region: centralus
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2672107Z Cloud: Azure
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2672554Z ##[endgroup]
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2673761Z ##[group]Operating System
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2674333Z Ubuntu
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2674773Z 24.04.5
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2675580Z LTS
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2676018Z ##[endgroup]
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2676458Z ##[group]Runner Image
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2677034Z Image: ubuntu-24.04
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2677541Z Version: 20261012.334.1
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2678430Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2680018Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2680931Z ##[endgroup]
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2681826Z ##[group]GITHUB_TOKEN Permissions
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2683690Z Contents: read
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2684191Z Metadata: read
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2684744Z ##[endgroup]
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2686458Z Secret source: Actions
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2687313Z Cache mode: write
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.2688166Z Prepare workflow directory
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.3793968Z Prepare all required actions
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.3850995Z Getting action download info
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.6047327Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:09.8211213Z Download action repository 'actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333' (SHA:9000827ccba6bdab643e8b6fd33ac0654aef8333)
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:10.9991581Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+Deploy and validate private Kubernetes	Set up job	2026-10-24T00:26:12.0792712Z Complete job name: Deploy and validate private Kubernetes
+Deploy and validate private Kubernetes	Checkout	﻿2026-10-24T00:26:12.1300732Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1301432Z with:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1301663Z   persist-credentials: false
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1301941Z   repository: mpguevara/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1303990Z   token: ***
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1304203Z   ssh-strict: true
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1304419Z   ssh-user: git
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1304622Z   clean: true
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1304841Z   sparse-checkout-cone-mode: true
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1305098Z   fetch-depth: 1
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1305300Z   fetch-tags: false
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1305511Z   show-progress: true
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1305729Z   lfs: false
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1305937Z   submodules: false
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1306149Z   set-safe-directory: true
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1306408Z   allow-unsafe-pr-checkout: false
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1307059Z env:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1307345Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.1307666Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2054125Z Syncing repository: mpguevara/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2055357Z ##[group]Getting Git version info
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2055777Z Working directory is '/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java'
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2056388Z [command]/usr/bin/git version
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2094464Z git version 2.55.0
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2109471Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2117516Z Temporarily overriding HOME='/home/runner/work/_temp/25e64afc-4b11-4a22-aed7-66ff725e42d0' before making global git config changes
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2118579Z Adding repository directory to the temporary git global config as a safe directory
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2122016Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2158300Z Deleting the contents of '/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java'
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2160996Z ##[group]Determining repository object format
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2162181Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2162533Z ##[group]Initializing the repository
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2165559Z [command]/usr/bin/git init /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2239794Z hint: Using 'master' as the name for the initial branch. This default branch name
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2240508Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2241260Z hint: to use in all of your new repositories, which will suppress this warning,
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2241797Z hint: call:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2243398Z hint:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2243946Z hint: 	git config --global init.defaultBranch <name>
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2244465Z hint:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2244924Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2245658Z hint: 'development'. The just-created branch can be renamed via this command:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2246241Z hint:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2246623Z hint: 	git branch -m <name>
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2247034Z hint:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2247537Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2248482Z Initialized empty Git repository in /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git/
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2253279Z [command]/usr/bin/git remote add origin https://github.com/mpguevara/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2290628Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2291033Z ##[group]Disabling automatic garbage collection
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2293287Z [command]/usr/bin/git config --local gc.auto 0
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2318601Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2319540Z ##[group]Setting up auth
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2319932Z Removing SSH command configuration
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2324171Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2348804Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2652774Z Removing HTTP extra header
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2657189Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2684151Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2862627Z Removing includeIf entries pointing to credentials config files
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2867291Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.2892385Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3097863Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3139453Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git.path /home/runner/work/_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3166037Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3194401Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3221300Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3245650Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3246253Z ##[group]Fetching the repository
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.3252388Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2506a339cd878b0c17d9da94caebccbcbfa1660c:refs/remotes/origin/main
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8082030Z From https://github.com/mpguevara/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8082756Z  * [new ref]         2506a339cd878b0c17d9da94caebccbcbfa1660c -> origin/main
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8093675Z [command]/usr/bin/git branch --list --remote origin/main
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8115676Z   origin/main
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8123343Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8142020Z 2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8149024Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8149872Z ##[group]Determining the checkout info
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8150619Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8151974Z [command]/usr/bin/git sparse-checkout disable
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8192724Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8218105Z ##[group]Checking out the ref
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8221440Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8392419Z Switched to a new branch 'main'
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8398743Z branch 'main' set up to track 'origin/main'.
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8401314Z ##[endgroup]
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8435435Z [command]/usr/bin/git log -1 --format=%H
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8456799Z 2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8464919Z ##[group]Removing auth
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8465722Z Removing SSH command configuration
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8468385Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8493463Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8690434Z Removing HTTP extra header
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8694887Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8728525Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8918548Z Removing includeIf entries pointing to credentials config files
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8933508Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8956090Z includeif.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8957499Z includeif.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git/worktrees/*.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8958683Z includeif.gitdir:/github/workspace/.git.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8959710Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8965127Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8984097Z /home/runner/work/_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.8992201Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-9e0f74fd\-f48a\-4f84\-8db7\-e89efc74d9f2\.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9028899Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git/worktrees/*.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9048566Z /home/runner/work/_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9057531Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-9e0f74fd\-f48a\-4f84\-8db7\-e89efc74d9f2\.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9086606Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9106853Z /github/runner_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9113718Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-9e0f74fd\-f48a\-4f84\-8db7\-e89efc74d9f2\.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9140778Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9158450Z /github/runner_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9166531Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-9e0f74fd\-f48a\-4f84\-8db7\-e89efc74d9f2\.config
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9196065Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9386076Z Removing credentials config '/home/runner/work/_temp/git-credentials-9e0f74fd-f48a-4f84-8db7-e89efc74d9f2.config'
+Deploy and validate private Kubernetes	Checkout	2026-10-24T00:26:12.9396237Z ##[endgroup]
+Deploy and validate private Kubernetes	Download the built image	﻿2026-10-24T00:26:12.9641285Z ##[group]Run actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9641665Z with:
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9641842Z   name: container-40044688944
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9642039Z   path: target
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9642213Z   merge-multiple: false
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9642424Z   repository: mpguevara/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9642654Z   run-id: 40044688944
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9642833Z   skip-decompress: false
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9643022Z   digest-mismatch: error
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9643215Z env:
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9643438Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:12.9643710Z ##[endgroup]
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:13.0691774Z Downloading single artifact
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:13.2333359Z Preparing to download the following artifacts:
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:13.2334284Z - container-40044688944 (ID: 12541091048, Size: 328065345, Expected Digest: sha256:8179133eac82a31c9983512fa0472fdca6ebac08df8b20b4ed8956b0bd27dd5d)
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:13.5430147Z Redirecting to blob download url: https://productionresultssa9.blob.core.windows.net/actions-results/ae620ce3-c89a-84e3-8f4d-c2d523cb1abd/workflow-job-run-634d68d8-6588-5b13-84cb-f69a99097009/artifacts/1a7bac352cf0bfdb7803106484b72e8a926cf0340c96b9ba27c4d0d5e965f20a.zip
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:13.5431372Z Starting download of artifact to: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/target
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:13.7480018Z (node:2165) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:13.7480851Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:20.3121599Z SHA256 digest of downloaded artifact is 8179133eac82a31c9983512fa0472fdca6ebac08df8b20b4ed8956b0bd27dd5d
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:20.3122549Z Artifact download completed successfully.
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:20.3122982Z Total of 1 artifact(s) downloaded
+Deploy and validate private Kubernetes	Download the built image	2026-10-24T00:26:20.3129947Z Download artifact has finished successfully
+Deploy and validate private Kubernetes	Load the exact image	﻿2026-10-24T00:26:20.3298230Z ##[group]Run $expected = (Get-Content target/image.tar.sha256 -Raw).Trim()
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3298809Z ^[[36;1m$expected = (Get-Content target/image.tar.sha256 -Raw).Trim()^[[0m
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3299582Z ^[[36;1mif ((Get-FileHash target/image.tar -Algorithm SHA256).Hash -ine $expected) { throw 'Image archive checksum mismatch.' }^[[0m
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3300063Z ^[[36;1mdocker load --input target/image.tar^[[0m
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3300533Z ^[[36;1mif ($LASTEXITCODE -ne 0) { throw 'Image load failed.' }^[[0m
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3324482Z shell: /usr/bin/pwsh -command ". '{0}'"
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3324738Z env:
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3324987Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:20.3325566Z ##[endgroup]
+Deploy and validate private Kubernetes	Load the exact image	2026-10-24T00:26:33.5376877Z Loaded image: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Install pinned kubectl matching Kubernetes	﻿2026-10-24T00:26:33.6222957Z ##[group]Run ./scripts/ci/Install-Kubectl.ps1
+Deploy and validate private Kubernetes	Install pinned kubectl matching Kubernetes	2026-10-24T00:26:33.6223333Z ^[[36;1m./scripts/ci/Install-Kubectl.ps1^[[0m
+Deploy and validate private Kubernetes	Install pinned kubectl matching Kubernetes	2026-10-24T00:26:33.6243783Z shell: /usr/bin/pwsh -command ". '{0}'"
+Deploy and validate private Kubernetes	Install pinned kubectl matching Kubernetes	2026-10-24T00:26:33.6244029Z env:
+Deploy and validate private Kubernetes	Install pinned kubectl matching Kubernetes	2026-10-24T00:26:33.6244268Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Install pinned kubectl matching Kubernetes	2026-10-24T00:26:33.6244562Z ##[endgroup]
+Deploy and validate private Kubernetes	Install pinned kubectl matching Kubernetes	2026-10-24T00:26:35.1457259Z kubectl v1.36.4 verificado. PATH actualizado para este proceso y para los siguientes pasos de Actions cuando corresponde.
+Deploy and validate private Kubernetes	Install pinned kind	﻿2026-10-24T00:26:35.1879013Z ##[group]Run ./scripts/Install-Kind.ps1
+Deploy and validate private Kubernetes	Install pinned kind	2026-10-24T00:26:35.1879546Z ^[[36;1m./scripts/Install-Kind.ps1^[[0m
+Deploy and validate private Kubernetes	Install pinned kind	2026-10-24T00:26:35.1902612Z shell: /usr/bin/pwsh -command ". '{0}'"
+Deploy and validate private Kubernetes	Install pinned kind	2026-10-24T00:26:35.1902900Z env:
+Deploy and validate private Kubernetes	Install pinned kind	2026-10-24T00:26:35.1903148Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Install pinned kind	2026-10-24T00:26:35.1903433Z ##[endgroup]
+Deploy and validate private Kubernetes	Install pinned kind	2026-10-24T00:26:36.6220489Z kind v0.33.0 verificado en /home/runner/.cache/devsu-demo-tools/kind/v0.33.0/kind. PATH actualizado solo para el proceso actual.
+Deploy and validate private Kubernetes	Deploy PostgreSQL, application replicas, HPA and ingress	﻿2026-10-24T00:26:36.6676658Z ##[group]Run ./scripts/Deploy-Kubernetes.ps1 -Image $env:IMAGE -LoadImage
+Deploy and validate private Kubernetes	Deploy PostgreSQL, application replicas, HPA and ingress	2026-10-24T00:26:36.6677372Z ^[[36;1m./scripts/Deploy-Kubernetes.ps1 -Image $env:IMAGE -LoadImage^[[0m
+Deploy and validate private Kubernetes	Deploy PostgreSQL, application replicas, HPA and ingress	2026-10-24T00:26:36.6704355Z shell: /usr/bin/pwsh -command ". '{0}'"
+Deploy and validate private Kubernetes	Deploy PostgreSQL, application replicas, HPA and ingress	2026-10-24T00:26:36.6704611Z env:
+Deploy and validate private Kubernetes	Deploy PostgreSQL, application replicas, HPA and ingress	2026-10-24T00:26:36.6704859Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Deploy PostgreSQL, application replicas, HPA and ingress	2026-10-24T00:26:36.6705149Z ##[endgroup]
+Deploy and validate private Kubernetes	Deploy PostgreSQL, application replicas, HPA and ingress	2026-10-24T00:28:30.5442564Z Despliegue verificado en kind-devsu; namespace devsu. Sin endpoint publico. Evidencia: /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/target/kubernetes-deploy-evidence
+Deploy and validate private Kubernetes	Validate HTTP, probes, replicas, persistence and autoscaling	﻿2026-10-24T00:28:30.5907163Z ##[group]Run ./scripts/Test-Kubernetes.ps1 -EvidenceDirectory target/kubernetes-evidence
+Deploy and validate private Kubernetes	Validate HTTP, probes, replicas, persistence and autoscaling	2026-10-24T00:28:30.5907689Z ^[[36;1m./scripts/Test-Kubernetes.ps1 -EvidenceDirectory target/kubernetes-evidence^[[0m
+Deploy and validate private Kubernetes	Validate HTTP, probes, replicas, persistence and autoscaling	2026-10-24T00:28:30.5929009Z shell: /usr/bin/pwsh -command ". '{0}'"
+Deploy and validate private Kubernetes	Validate HTTP, probes, replicas, persistence and autoscaling	2026-10-24T00:28:30.5929426Z env:
+Deploy and validate private Kubernetes	Validate HTTP, probes, replicas, persistence and autoscaling	2026-10-24T00:28:30.5929697Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Validate HTTP, probes, replicas, persistence and autoscaling	2026-10-24T00:28:30.5929987Z ##[endgroup]
+Deploy and validate private Kubernetes	Validate HTTP, probes, replicas, persistence and autoscaling	2026-10-24T00:30:19.9619713Z Kubernetes verificado: 30 comprobaciones; escalamiento HTTP observado=True. Sin endpoint publico.
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	﻿2026-10-24T00:30:20.0780047Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0780382Z with:
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0780553Z   name: kubernetes-40044688944
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0780754Z   retention-days: 14
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0781189Z   path: target/kubernetes-evidence/
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	target/kubernetes-deploy-evidence/
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	target/kind-install-evidence/
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	target/kubectl-install-evidence/
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0781685Z   if-no-files-found: warn
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0781882Z   compression-level: 6
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0782059Z   overwrite: false
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0782242Z   include-hidden-files: false
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0782443Z   archive: true
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0782600Z env:
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0782821Z   IMAGE: devsu-demo-java:2506a339cd878b0c17d9da94caebccbcbfa1660c
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.0783093Z ##[endgroup]
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.2027615Z Multiple search paths detected. Calculating the least common ancestor of all paths
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.2030042Z The least common ancestor is /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java/target. This will be the root directory of the artifact
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.2031014Z With the provided path, there will be 32 files uploaded
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.2033284Z Artifact name is valid!
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.2033638Z Root directory input is valid!
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.4478952Z Uploading artifact: kubernetes-40044688944.zip
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.4520978Z Beginning upload of artifact content to blob storage
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.7689710Z Uploaded bytes 56891
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.8142910Z Finished uploading artifact content to blob storage!
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.8143866Z SHA256 digest of uploaded artifact is 4f7a4b77af1929502532b14a0bb9ff02ef9dbdd5422221b8573e62b6b2b4ea54
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:20.8144657Z Finalizing artifact upload
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:21.3218961Z Artifact kubernetes-40044688944 successfully finalized. Artifact ID 12540684310
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:21.3219923Z Artifact kubernetes-40044688944 has been successfully uploaded! Final size is 56891 bytes. Artifact ID is 12540684310
+Deploy and validate private Kubernetes	Preserve safe Kubernetes evidence	2026-10-24T00:30:21.3222720Z Artifact download URL: https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944/artifacts/12540684310
+Deploy and validate private Kubernetes	Post Checkout	﻿2026-10-24T00:30:21.3379764Z Post job cleanup.
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4044771Z [command]/usr/bin/git version
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4081824Z git version 2.55.0
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4108563Z Temporarily overriding HOME='/home/runner/work/_temp/1e1e30d8-bedb-4106-9acd-46511e86ed5d' before making global git config changes
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4109757Z Adding repository directory to the temporary git global config as a safe directory
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4112751Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/devsu-demo-devops-java/devsu-demo-devops-java
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4138071Z Removing SSH command configuration
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4143023Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4170280Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4356222Z Removing HTTP extra header
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4359709Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4385060Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4573046Z Removing includeIf entries pointing to credentials config files
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4577868Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy and validate private Kubernetes	Post Checkout	2026-10-24T00:30:21.4606007Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy and validate private Kubernetes	Complete job	﻿2026-10-24T00:30:21.4917811Z Cleaning up orphan processes

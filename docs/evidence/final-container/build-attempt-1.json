@@ -1,0 +1,8 @@
+{
+  "recordedAt": "2026-10-23T18:09:18.2819263-06:00",
+  "command": "docker build --progress=plain --tag devsu-demo-java:local .",
+  "exitCode": 1,
+  "status": "interrupted",
+  "reason": "Se interrumpio la construccion local al coincidir con la descarga/descompresion del nodo kind y observarse presion de memoria. No hubo fallo de pruebas en este intento.",
+  "nextStep": "Repetir la construccion por separado o en el runner CI."
+}

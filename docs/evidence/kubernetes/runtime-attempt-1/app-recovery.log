@@ -1,0 +1,20 @@
+[pod/devsu-app-7b85d47846-7zk4m/app] 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+[pod/devsu-app-7b85d47846-7zk4m/app] 	... 80 common frames omitted
+[pod/devsu-app-7b85d47846-7zk4m/app] Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+[pod/devsu-app-7b85d47846-7zk4m/app] 	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:1050) ~[postgresql-42.7.14.jar!/:42.7.14]
+[pod/devsu-app-7b85d47846-7zk4m/app] 	at org.postgresql.jdbc.PgConnection.setNetworkTimeout(PgConnection.java:1791) ~[postgresql-42.7.14.jar!/:42.7.14]
+[pod/devsu-app-7b85d47846-7zk4m/app] 	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:561) ~[HikariCP-5.0.1.jar!/:na]
+[pod/devsu-app-7b85d47846-7zk4m/app] 	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:168) ~[HikariCP-5.0.1.jar!/:na]
+[pod/devsu-app-7b85d47846-7zk4m/app] 	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:170) ~[HikariCP-5.0.1.jar!/:na]
+[pod/devsu-app-7b85d47846-7zk4m/app] 	... 85 common frames omitted
+[pod/devsu-app-7b85d47846-7zk4m/app] 
+[pod/devsu-app-7b85d47846-tjfhc/app] Caused by: java.net.UnknownHostException: postgres
+[pod/devsu-app-7b85d47846-tjfhc/app] 	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+[pod/devsu-app-7b85d47846-tjfhc/app] 	at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
+[pod/devsu-app-7b85d47846-tjfhc/app] 	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+[pod/devsu-app-7b85d47846-tjfhc/app] 	at org.postgresql.core.PGStream.createSocket(PGStream.java:270) ~[postgresql-42.7.14.jar!/:42.7.14]
+[pod/devsu-app-7b85d47846-tjfhc/app] 	at org.postgresql.core.PGStream.<init>(PGStream.java:131) ~[postgresql-42.7.14.jar!/:42.7.14]
+[pod/devsu-app-7b85d47846-tjfhc/app] 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:221) ~[postgresql-42.7.14.jar!/:42.7.14]
+[pod/devsu-app-7b85d47846-tjfhc/app] 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:367) ~[postgresql-42.7.14.jar!/:42.7.14]
+[pod/devsu-app-7b85d47846-tjfhc/app] 	... 14 common frames omitted
+[pod/devsu-app-7b85d47846-tjfhc/app] 

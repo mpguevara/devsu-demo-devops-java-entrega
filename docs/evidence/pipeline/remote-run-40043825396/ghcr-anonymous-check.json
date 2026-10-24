@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-24T00:18:43.9168037+00:00",
+  "manifestUri": "https://ghcr.io/v2/mpguevara/devsu-demo-devops-java/manifests/f5a65da4592c6d09884513e23df6fa82b3567001",
+  "initialAnonymousHeadStatus": 401,
+  "tokenEndpoint": "https://ghcr.io/token?service=ghcr.io&scope=repository:mpguevara/devsu-demo-devops-java:pull",
+  "tokenIssued": true,
+  "anonymousBearerHeadStatus": 200,
+  "anonymousDigest": "sha256:7ebe174eafe2718ca861e398b23c745941e01a5007d5b12668c5b8cace9018ad",
+  "anonymousPullMetadataAllowed": true,
+  "registryVisibilityChanged": false,
+  "notes": "Used only unauthenticated requests and, if issued, an anonymous pull token held in memory. No GitHub credentials used; no token persisted."
+}

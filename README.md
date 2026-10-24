@@ -12,7 +12,11 @@ This is a simple application to be used in the technical test of DevOps.
 
 **Calidad completada el 23 de octubre de 2026:** 22 pruebas aprobadas, PMD sin infracciones y cobertura JaCoCo de **90,28 % de líneas** y **12,90 % de ramas** globales. El servicio tiene 100 % de líneas y ramas. Maven bloquea la construcción si fallan pruebas, PMD o los umbrales documentados. No se excluyeron clases para elevar artificialmente la cobertura.
 
-Se prepararon GitHub Actions, publicación GHCR y Kubernetes privado con kind, dos réplicas, HPA, ConfigMap, Secret, PostgreSQL persistente e Ingress. Su ejecución completa y sus resultados remotos se verificarán antes de declarar terminada la entrega. **No se requiere un endpoint público**; la API se valida en localhost.
+**Kubernetes local verificado:** 30 comprobaciones aprobadas, incluyendo lectura entre pods, Ingress y persistencia al reemplazar Java y PostgreSQL. El HPA aumentó su objetivo de dos a cuatro réplicas con carga HTTP real; se observaron más de dos Ready durante la carga y cuatro Ready en la captura final. Los 16 trabajadores registraron 7.382 GET exitosos y cero fallidos en ese ensayo acotado, que no representa un SLA ni un dimensionamiento de producción.
+
+El [repositorio público](https://github.com/mpguevara/devsu-demo-devops-java) y el [pipeline completo aprobado](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944) están disponibles. El run validó la revisión `2506a339cd878b0c17d9da94caebccbcbfa1660c`: calidad, construcción/escaneo, publicación GHCR y Kubernetes. La validación remota pasó 30 comprobaciones y registró 18.770 GET exitosos y cero fallidos durante su carga acotada. La primera ejecución fallida y su corrección también se conservan. **No existe ni se requiere un endpoint público**; el acceso de la API queda en localhost.
+
+**Limitación de seguridad pendiente:** Trivy registró 121 hallazgos, incluidos **9 críticos y 40 altos**, en el stack heredado y su base. El escaneo es informativo frente a hallazgos y bloqueante ante errores operativos. Las actualizaciones compatibles y una política de bloqueo para producción quedan pendientes; un pipeline aprobado no declara la imagen libre de vulnerabilidades. Véanse [resultados y prioridades](docs/evidence/pipeline/remote-run-40044688944/security/PRIORIDADES.md).
 
 - [Diagnóstico, resultados y problemas encontrados](docs/DIAGNOSTICO.md).
 - [Plan guiado para los siete días y preguntas de defensa](docs/PLAN-DE-TRABAJO.md).
@@ -24,6 +28,9 @@ Se prepararon GitHub Actions, publicación GHCR y Kubernetes privado con kind, d
 - [Pruebas, PMD, cobertura y controles de calidad](docs/CALIDAD.md).
 - [Evidencia de calidad y medición inicial](docs/evidence/quality/README.md).
 - [Pipeline como código y ejecución local](docs/PIPELINE.md).
+- [Kubernetes privado, acceso local y verificación](docs/KUBERNETES.md).
+- [Evidencia del pipeline completo aprobado](docs/evidence/pipeline/remote-run-40044688944/README.md).
+- [Consolidación final de implementación y evidencias](docs/evidence/final-verification.json).
 - [README original sin modificaciones](docs/evidence/baseline/README-original.md).
 
 ### Entorno identificado
@@ -37,9 +44,9 @@ Se prepararon GitHub Actions, publicación GHCR y Kubernetes privado con kind, d
 | Java utilizado | Temurin JDK 17.0.20.1+1 portable; ZIP verificado por SHA-256 |
 | Maven | Global 3.9.15; construcción con Maven 3.8.7 mediante Wrapper 3.3.4 y checksums fijados |
 | Docker | Cliente y motor Linux 29.6.1; Docker Desktop 4.80.0 y Compose 5.1.4 comprobados en la etapa 2 |
-| Kubernetes | kubectl 1.36.1 instalado; no hay contextos configurados |
-| Otros | Git 2.54.0; WSL2 con distribución docker-desktop; kind, minikube, Helm, gh y Trivy ausentes de PATH |
-| GitHub | Conector autenticado como `mpguevara`; creación de repositorio, push, GHCR y Actions aún sin verificar |
+| Kubernetes | kubectl 1.36.1 inicial; kind 0.33.0 y Kubernetes 1.36.4 instalados el 23 de octubre; kubeconfig dedicado fuera del repositorio |
+| Otros | Git 2.54.0; WSL2 docker-desktop; CLI GitHub 2.103.2 portable; instaladores fijados para kind, kubectl y Trivy |
+| GitHub | Repositorio público `mpguevara/devsu-demo-devops-java`; Actions, GHCR y validación Kubernetes aprobados |
 
 La copia inicial procede de un ZIP. El 23 de octubre se inicializó Git para registrar el trabajo real. Docker volvió a presentar sockets obsoletos; se recuperó conservando esos directorios como respaldo, sin restablecerlo ni borrar volúmenes. La memoria disponible del diagnóstico es una captura histórica; las validaciones actuales se ejecutan por separado y el nodo kind se limita a 4 GiB y cuatro CPU.
 
@@ -127,11 +134,44 @@ Remove-Item Env:PASSWORD_DB -ErrorAction SilentlyContinue
 
 Este flujo conserva el volumen de datos; reutilizarlo requiere la contraseña con que se inicializó. Los puertos por defecto son 8000 para la API y 5432 para PostgreSQL en Windows. Para otra asignación, consulta `PORT`, `APP_PORT` y `POSTGRES_PORT` en la [guía de Docker](docs/DOCKER-Y-SALUD.md). Liveness no consulta la BD; readiness incluye su conectividad. El healthcheck Docker usa readiness, pero no reinicia el contenedor ni sustituye las probes Kubernetes.
 
-En la etapa Docker del 21 de octubre, dos construcciones limpias Linux generaron el mismo SHA-256 del JAR. El JAR Windows difería por los finales de línea de `pom.properties` generado por Maven. No se afirma identidad entre sistemas operativos ni de la imagen OCI completa. La [evidencia histórica](docs/evidence/docker-health/README.md) conserva hashes, logs e intentos fallidos. El pipeline preparado publicará una imagen identificada por commit, registrará su digest y desplegará los mismos bytes construidos, transferidos por archivo con checksum.
+En la etapa Docker del 21 de octubre, dos construcciones limpias Linux generaron el mismo SHA-256 del JAR. El JAR Windows difería por los finales de línea de `pom.properties` generado por Maven. No se afirma identidad entre sistemas operativos ni de la imagen OCI completa. La [evidencia histórica](docs/evidence/docker-health/README.md) conserva hashes, logs e intentos fallidos. El pipeline publica una imagen identificada por commit, registra su digest y despliega los mismos bytes construidos, transferidos por archivo con checksum.
+
+La [publicación real](docs/evidence/pipeline/remote-run-40044688944/publication.json) corresponde a `ghcr.io/mpguevara/devsu-demo-devops-java:2506a339cd878b0c17d9da94caebccbcbfa1660c`, con digest `sha256:866fb924326ec03377b0d190131103ae281c1d31f869b42a185e1a4f9d9b2302`. El workflow publica mediante su `GITHUB_TOKEN` temporal, limitado a `packages: write` en ese job. Las instrucciones para publicar desde terminal con una credencial propia están en la guía de pipeline.
 
 Los [manifiestos Kubernetes](k8s/) definen dos réplicas Java como mínimo, Service, requests/limits, probes, ConfigMap y HPA de dos a cuatro réplicas. PostgreSQL usa StatefulSet, PVC y credenciales inyectadas desde un Secret generado fuera del repositorio. Traefik implementa Ingress con el host local `devsu.local`; un port-forward limitado a loopback permite probarlo sin DNS ni servidor público. metrics-server proporciona CPU al HPA. Su configuración se distingue de la observación real del escalamiento, que debe quedar en los resultados de verificación.
 
-Una instancia PostgreSQL con PVC es proporcionada al ejercicio, pero no tiene alta disponibilidad. Se verificaron datos compartidos entre JVM y persistencia al reiniciar PostgreSQL con su volumen Docker. No se han validado volúmenes Kubernetes, restauraciones, carga o consumo real por pod.
+Una instancia PostgreSQL con PVC es proporcionada al ejercicio, pero no tiene alta disponibilidad. En Kubernetes se verificaron lectura compartida, conservación del usuario al reemplazar ambos tipos de pod y mantenimiento del mismo PVC. La carga HTTP y las métricas de CPU acreditan el escalamiento observado; no son un dimensionamiento de producción. Backup/restauración y recuperación ante pérdida del disco siguen sin verificarse.
+
+El primer ensayo de recuperación encontró un HTTP 500 transitorio con PostgreSQL headless. Se conservó ese resultado y se separó el Service headless de identidad (`postgres`) del Service ClusterIP de cliente (`postgres-client`). El verificador espera tres respuestas consecutivas de readiness antes de consultar los datos, sin repetir escrituras. La [evidencia Kubernetes](docs/evidence/kubernetes/README.md) registra ambos intentos y el resultado final.
+
+### Desplegar y validar Kubernetes sin endpoint público
+
+En PowerShell 7, con Docker Linux funcionando:
+
+```powershell
+.\scripts\ci\Install-Kubectl.ps1
+.\scripts\Install-Kind.ps1
+docker build -t devsu-demo-java:local .
+.\scripts\Deploy-Kubernetes.ps1 -Image devsu-demo-java:local -LoadImage
+.\scripts\Test-Kubernetes.ps1
+```
+
+El despliegue utiliza el contexto dedicado `kind-devsu` y un kubeconfig fuera del repositorio. No modifica el contexto predeterminado del usuario. En Windows el preflight solicita 3 GiB de memoria libre; en la ejecución de esta máquina se utilizó `-AllowLowMemory` conscientemente, con el nodo limitado a 4 GiB y cuatro CPU. La [guía Kubernetes](docs/KUBERNETES.md) explica ese recurso y sus límites.
+
+El verificador crea datos sintéticos, reemplaza pods y genera carga HTTP en ese clúster aislado. Conserva el PVC y los usuarios, y retira sus Jobs y port-forwards al terminar. Para acceder manualmente, deja este comando en una terminal:
+
+```powershell
+kubectl --kubeconfig "$HOME/.kube/devsu-kind.config" --context kind-devsu -n devsu port-forward --address 127.0.0.1 service/traefik 18080:80
+```
+
+En otra terminal:
+
+```powershell
+Invoke-RestMethod 'http://127.0.0.1:18080/api/users' -Headers @{ Host = 'devsu.local'; Accept = 'application/json' }
+kubectl --kubeconfig "$HOME/.kube/devsu-kind.config" --context kind-devsu -n devsu get pods,hpa,pvc,ingress
+```
+
+El host de Ingress se envía en la cabecera HTTP; no requiere editar DNS ni publicar un dominio. Para repetir la automatización completa desde una máquina con recursos suficientes, selecciona JDK 17 y ejecuta `scripts/ci/Invoke-LocalPipeline.ps1`. La [guía de pipeline](docs/PIPELINE.md) describe sus etapas, la publicación opcional desde terminal y los artefactos de GitHub Actions.
 
 ### Diagramas
 
@@ -164,21 +204,28 @@ flowchart LR
     Salud[Healthcheck readiness] --> API
 ```
 
-Arquitectura Kubernetes **propuesta, todavía sin desplegar**:
+Arquitectura Kubernetes **implementada y verificada localmente**; el workflow valida el mismo procedimiento en su clúster efímero:
 
 ```mermaid
 flowchart LR
     GitHub[GitHub Actions] --> Calidad[Compilar, probar, analizar y medir cobertura]
     Calidad --> Imagen[Construir y escanear imagen]
-    Imagen --> GHCR[GHCR - imagen por digest]
-    GHCR --> Kind[kind en CI]
-    Cliente[Cliente por port-forward o Ingress] --> Servicio[Service Java]
+    Imagen --> GHCR[GHCR - publicacion y digest registrado]
+    Imagen --> Archivo[Archivo de la imagen con checksum]
+    Archivo --> Kind[kind en CI - misma imagen construida]
+    Kind --> Deployment[Deployment Java - 2 a 4 replicas]
+    Cliente[Cliente local] --> Ingress[Port-forward e Ingress Traefik]
+    Ingress --> Servicio[Service Java]
     Servicio --> Pod1[Replica Java 1]
     Servicio --> Pod2[Replica Java 2]
+    Deployment --> Pod1
+    Deployment --> Pod2
     Pod1 --> DB[PostgreSQL con PVC]
     Pod2 --> DB
-    HPA[HPA con metrics-server] -.-> Pod1
-    HPA -.-> Pod2
+    Config[ConfigMap y Secret] --> Pod1
+    Config --> Pod2
+    Metrics[metrics-server] --> HPA[HPA]
+    HPA --> Deployment
 ```
 
 ### Entregables y siguiente etapa
@@ -186,16 +233,24 @@ flowchart LR
 | Entregable | Estado |
 | --- | --- |
 | Diagnóstico, logs locales, guía y plan | Disponibles en este proyecto |
-| PostgreSQL compartido y Flyway | Implementados y verificados con dos JVM y PostgreSQL nativo |
+| PostgreSQL compartido y Flyway | Verificados con JVM, Docker y Kubernetes; datos conservados al reemplazar pods |
 | Docker y Actuator | Implementados y verificados localmente con PostgreSQL |
 | Análisis estático y cobertura | Implementados y verificados; 22 pruebas, PMD y gates JaCoCo aprobados |
-| Kubernetes | Manifiestos y scripts preparados; validación completa en curso |
-| Repositorio público GitHub y publicación GHCR | Pendientes |
-| URL/capturas y artefactos de un pipeline real | Pendientes |
-| ZIP/ RAR final sin datos sensibles | Pendiente al completar/verificar el proyecto |
+| Kubernetes | 30 comprobaciones locales aprobadas; Ingress, dos réplicas mínimas y escalamiento observado |
+| Repositorio público GitHub y publicación GHCR | Publicados; URL del repositorio al inicio y metadatos en las evidencias |
+| URL y artefactos de un pipeline real | Run 40044688944 aprobado; reportes y logs copiados al repositorio, junto al primer intento fallido |
+| ZIP del proyecto versionado | Generación y verificación mediante `scripts/New-Delivery.ps1`; instrucciones a continuación |
 | Endpoint público | No existe; es opcional en el ejercicio |
 
-Las preguntas de defensa se incluyen en las guías de [Docker](docs/DOCKER-Y-SALUD.md#preguntas-de-defensa), [calidad](docs/CALIDAD.md) y [pipeline](docs/PIPELINE.md), además del [plan guiado](docs/PLAN-DE-TRABAJO.md#preguntas-de-defensa-por-etapa). El cierre de entrega requiere comprobar el pipeline real, el despliegue, el repositorio público y el ZIP, sin sustituir resultados pendientes por archivos preparados.
+Para producir el archivo desde un commit real y un árbol Git limpio:
+
+```powershell
+.\scripts\New-Delivery.ps1
+```
+
+El script genera `devsu-demo-devops-java-entrega.zip` en el directorio padre y un manifiesto con commit, SHA-256 del ZIP y hashes de cada archivo. Utiliza `git archive HEAD`, comprueba archivos necesarios y rechaza datos de BD, configuraciones locales, credenciales y cachés. El ZIP contiene las fuentes, infraestructura, pipeline, documentación y evidencias versionadas. También puede descargarse el [ZIP del repositorio público](https://github.com/mpguevara/devsu-demo-devops-java/archive/refs/heads/main.zip).
+
+Las preguntas de defensa se incluyen en las guías de [Docker](docs/DOCKER-Y-SALUD.md#preguntas-de-defensa), [calidad](docs/CALIDAD.md), [Kubernetes](docs/KUBERNETES.md) y [pipeline](docs/PIPELINE.md), además del [plan guiado](docs/PLAN-DE-TRABAJO.md#preguntas-de-defensa-por-etapa).
 
 ## Referencia de la API
 

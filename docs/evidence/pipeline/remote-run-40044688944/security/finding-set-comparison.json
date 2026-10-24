@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-24T00:27:02.7595052+00:00",
+  "firstRun": 40043825396,
+  "secondRun": 40044688944,
+  "fields": [
+    "VulnerabilityID",
+    "PkgName",
+    "InstalledVersion",
+    "FixedVersion",
+    "Severity"
+  ],
+  "findingsOld": 121,
+  "findingsNew": 121,
+  "identicalFindingSet": true,
+  "note": "Both scanner executions and their raw reports are separate; only the human triage is reused after data comparison."
+}

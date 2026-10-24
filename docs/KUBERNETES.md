@@ -2,6 +2,8 @@
 
 El despliegue utiliza un cluster kind de un nodo, dos replicas iniciales de Java y PostgreSQL compartido. Todo el acceso de prueba se mantiene en loopback. `devsu.local` es el host de la regla Ingress, no un dominio publicado ni un endpoint de Internet.
 
+La ejecucion local final aprobo 30 comprobaciones, lectura entre replicas, reemplazo de pods Java/PostgreSQL y escalamiento observado de dos a cuatro replicas con carga HTTP real. Al retirar la carga, HPA volvio a dos replicas Ready. El [indice de evidencia](evidence/kubernetes/README.md) conserva el resultado final, el primer fallo de recuperacion y su resolucion; este resultado local no sustituye la evidencia del pipeline remoto.
+
 ## Componentes y decisiones
 
 | Componente | Configuracion | Motivo y limite |
@@ -23,12 +25,14 @@ flowchart LR
   PF --> Traefik[Traefik / Ingress]
   Traefik --> A[Java pod A]
   Traefik --> B[Java pod B]
-  A --> PG[PostgreSQL StatefulSet]
-  B --> PG
+  A --> DBService[postgres-client / ClusterIP]
+  B --> DBService
+  DBService --> PG[PostgreSQL StatefulSet]
   PG --> PVC[PVC local 1 GiB]
   Metrics[metrics-server] --> HPA[HPA 2 a 4]
-  HPA --> A
-  HPA --> B
+  HPA --> Deployment[Deployment Java]
+  Deployment --> A
+  Deployment --> B
 ```
 
 ## Recursos y seguridad

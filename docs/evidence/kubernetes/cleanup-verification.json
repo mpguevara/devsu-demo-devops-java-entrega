@@ -1,0 +1,8 @@
+{
+  "verifiedAt": "2026-10-23T18:25:44.0079637-06:00",
+  "remainingOwnLoadJobs": 0,
+  "remainingOwnPortForwards": 0,
+  "pvcUID": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+  "pvcPhase": "Bound",
+  "clusterPreserved": true
+}
