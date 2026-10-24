@@ -1,8 +1,8 @@
 # Migración al repositorio de entrega
 
-El [repositorio público de entrega](https://github.com/mpguevara/devsu-demo-devops-java-entrega) se creó el 23 de octubre de 2026, hora de El Salvador, con el historial saneado. Es un repositorio independiente, no un fork. El [repositorio anterior](https://github.com/mpguevara/devsu-demo-devops-java) se conserva con su HEAD `b28d8c4acf9cb2479e992454c7d70c03a90d3067`; no se elimina ni se publica allí esta migración.
+El [repositorio público de entrega](https://github.com/mpguevara/devsu-demo-devops-java-entrega) se creó el 23 de octubre de 2026, hora de El Salvador, con el historial saneado. Es un repositorio independiente, no un fork. El [repositorio anterior](https://github.com/mpguevara/devsu-demo-devops-java) estuvo conservado con su HEAD `b28d8c4acf9cb2479e992454c7d70c03a90d3067` durante la migración, que no se publicó allí. Su eliminación posterior se documenta más abajo; la URL se mantiene como procedencia histórica y ya no está disponible.
 
-[creation.json](creation.json) registra las comprobaciones de creación, rama predeterminada `main`, Actions habilitado y conservación del repositorio anterior. La consulta de un blob original previamente identificado devolvió HTTP 404 en el repositorio nuevo. Es una comprobación de ese objeto, no una garantía sobre toda copia o retención externa.
+[creation.json](creation.json) registra las comprobaciones de creación, rama predeterminada `main`, Actions habilitado y conservación del repositorio anterior en ese momento. La consulta de un blob original previamente identificado devolvió HTTP 404 en el repositorio nuevo. Es una comprobación de ese objeto, no una garantía sobre toda copia o retención externa.
 
 ## Inicio de la nueva ejecución
 
@@ -30,10 +30,16 @@ El primer chequeo auxiliar de identidad falló al convertir a texto el `Content`
 
 El README y la matriz de entrega apuntan al repositorio y run nuevos. El [consolidado actual](../final-verification.json) separa esta revalidación remota de los ensayos locales históricos. El ZIP se genera después del commit documental final y su manifiesto externo registra ese HEAD real. Los resultados de CI corresponden al commit de ejecución, no al commit posterior que incorpora su documentación.
 
-El repositorio anterior se conserva también después de esta validación; no se elimina ni se cambia su visibilidad. Crear el repositorio nuevo no borra copias externas del anterior ni modifica sus ejecuciones o imágenes publicadas. No existe un endpoint público de la API.
+## Eliminación posterior autorizada
+
+Después de finalizar la migración, el usuario solicitó expresamente eliminar únicamente `mpguevara/devsu-demo-devops-java`, conservando `mpguevara/devsu-demo-devops-java-entrega`. El primer intento mediante CLI devolvió HTTP 403 al requerir el permiso `delete_repo`. La eliminación se completó mediante la interfaz de GitHub, tras verificar la identidad del usuario.
+
+La [verificación de la eliminación](deletion-verification.json), realizada el 23 de octubre de 2026 a las 22:48, hora de El Salvador, confirmó HTTP 404 para el repositorio anterior en consultas autenticada y anónima. El repositorio de entrega siguió público, con HTTP 200 e ID `1431791920`, y el run `40060607467` permaneció en `success`. Estas consultas verifican el estado posterior al borrado; no son una nueva ejecución de pruebas ni de escaneos.
+
+Las URLs del repositorio anterior y de sus ejecuciones ya no son vías de acceso disponibles. Se conservan como procedencia en las [copias versionadas de los resultados anteriores](../pipeline/remote-run-40048321809/README.md), junto con sus SHA, imagen y digest originales. Los registros de creación y validación previa conservan sus hechos históricos, incluido que el repositorio anterior estaba preservado entonces. No se modificaron los resultados ni se atribuyeron ejecuciones a otros commits. Esta operación no acredita la eliminación de copias externas ni de paquetes GHCR antiguos. No existe un endpoint público de la API.
 
 ## Preguntas de defensa de esta etapa
 
 1. ¿Por qué ejecutar el pipeline en el nuevo repositorio si el código Java no cambió? ¿Qué permisos e integraciones se volvieron a comprobar?
 2. ¿Qué vincula el commit de ejecución con la imagen construida, el digest publicado y la imagen cargada en Kubernetes?
-3. ¿Por qué se conservan las URLs y SHA anteriores en las evidencias históricas, mientras la entrega apunta al nuevo run?
+3. ¿Por qué conservar las copias de resultados, las URLs de procedencia y los SHA originales después de eliminar el repositorio anterior, mientras la entrega apunta al nuevo run?
