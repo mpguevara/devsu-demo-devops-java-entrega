@@ -160,6 +160,8 @@ docker build -t devsu-demo-java:local .
 
 El despliegue utiliza el contexto dedicado `kind-devsu` y un kubeconfig fuera del repositorio. No modifica el contexto predeterminado del usuario. En Windows el preflight solicita 3 GiB de memoria libre; en la ejecución de esta máquina se utilizó `-AllowLowMemory` conscientemente, con el nodo limitado a 4 GiB y cuatro CPU. La [guía Kubernetes](docs/KUBERNETES.md) explica ese recurso y sus límites.
 
+Al descargar la imagen final del registro en este Docker Desktop, `kind load docker-image` falló durante su importación. La [secuencia alternativa verificada](docs/evidence/security-remediation/local-image/README.md) descarga el mismo digest directamente en el nodo y despliega sin `-LoadImage`. Este problema y su resolución están documentados para reproducir ese caso.
+
 El verificador crea datos sintéticos, reemplaza pods y genera carga HTTP en ese clúster aislado. Conserva el PVC y los usuarios, y retira sus Jobs y port-forwards al terminar. Para acceder manualmente, deja este comando en una terminal:
 
 ```powershell
@@ -233,7 +235,9 @@ flowchart LR
     HPA --> Deployment
 ```
 
-### Entregables y siguiente etapa
+### Entregables y validación antes del envío
+
+La [matriz de cumplimiento](docs/VALIDACION-ENTREGA.md) contrasta las instrucciones del ejercicio con los archivos y resultados reales, distingue los puntos opcionales y enumera los pasos pendientes de envío al evaluador.
 
 | Entregable | Estado |
 | --- | --- |
@@ -243,7 +247,7 @@ flowchart LR
 | Análisis estático y cobertura | Implementados y verificados; 22 pruebas, PMD y gates JaCoCo aprobados |
 | Kubernetes | 30 comprobaciones locales aprobadas; Ingress, dos réplicas mínimas y escalamiento observado |
 | Repositorio público GitHub y publicación GHCR | Publicados; URL del repositorio al inicio y metadatos en las evidencias |
-| URL y artefactos de un pipeline real | Run 40044688944 aprobado; reportes y logs copiados al repositorio, junto al primer intento fallido |
+| URL y artefactos de un pipeline real | [Run final 40048321809 aprobado](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809); cuatro jobs aprobados, reportes y logs versionados; los intentos anteriores se conservan como evidencia histórica |
 | ZIP del proyecto versionado | Generación y verificación mediante `scripts/New-Delivery.ps1`; instrucciones a continuación |
 | Endpoint público | No existe; es opcional en el ejercicio |
 

@@ -1,0 +1,61 @@
+{
+  "reviewedAt": "2026-10-23T20:51:26.9661794-06:00",
+  "purpose": "Requirements review against the four assessment screenshots; read-only refresh of public GitHub metadata and documentation checks",
+  "publicRepository": {
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java",
+    "visibility": "public",
+    "private": false,
+    "defaultBranch": "main",
+    "headAtReview": "7a2dea4fbb7fd8c8f800199d6eebdb2d5afb9232"
+  },
+  "pipeline": {
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809",
+    "id": 40048321809,
+    "status": "completed",
+    "conclusion": "success",
+    "validatedImplementationCommit": "81beb47ba4b03f98e407860d94d143a22f2d2771",
+    "jobs": [
+      {
+        "name": "Compile, test, PMD and coverage",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Build and inspect the image",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Publish the verified image to GHCR",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Deploy and validate private Kubernetes",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "runtimeDifferencesVersusValidatedCommit": [],
+  "markdownCheck": {
+    "files": 68,
+    "localTargetChecks": 475,
+    "missingTargets": [],
+    "scope": "Markdown target file and directory existence; fragment anchors not validated"
+  },
+  "credentialPatternCheck": {
+    "matchingFileCount": 0,
+    "scope": "High-confidence GitHub token and private-key markers in tracked and nonignored text files; not proof of absence of every secret"
+  },
+  "newApplicationTestsExecutedDuringThisReview": false,
+  "applicationResultSource": "docs/evidence/pipeline/remote-run-40048321809/",
+  "packaging": "Regenerate ZIP after documentation-only commit; external ZIP manifest records the final commit and archive hashes",
+  "submission": {
+    "assessmentCommentPosted": false,
+    "assessmentZipUploaded": false,
+    "publicApiEndpoint": false
+  },
+  "passed": true,
+  "documentationRecheckedAt": "2026-10-23T20:51:57.9852508-06:00"
+}
