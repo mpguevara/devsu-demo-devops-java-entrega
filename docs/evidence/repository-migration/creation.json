@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-10-23T22:00:21.4766407-06:00",
+  "repository": {
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java-entrega",
+    "id": 1431791920,
+    "visibility": "public",
+    "fork": false,
+    "defaultBranch": "main"
+  },
+  "importedSanitizedHead": "b28d8c4acf9cb2479e992454c7d70c03a90d3067",
+  "previousRepository": {
+    "url": "https://github.com/mpguevara/devsu-demo-devops-java",
+    "head": "b28d8c4acf9cb2479e992454c7d70c03a90d3067",
+    "preserved": true
+  },
+  "actions": {
+    "enabled": true,
+    "allowedActions": "all",
+    "defaultWorkflowPermissions": "read",
+    "publishJobExplicitlyRequestsPackagesWrite": true
+  },
+  "sampleOriginalUnsanitizedBlob": {
+    "id": "3578bd32200ac0914d48f871a266cf45dfbbbeed",
+    "newRepositoryApiStatus": 404,
+    "scope": "One previously observed original blob; not a claim of exhaustive server-side data deletion"
+  },
+  "firstDispatchAttempt": {
+    "command": "./.devsu-local/Invoke-GitHub.ps1 workflow run ci.yml --repo mpguevara/devsu-demo-devops-java-entrega --ref main",
+    "exitCode": 1,
+    "observedError": "HTTP 404: workflow ci.yml not found on the default branch",
+    "followUpObservation": {
+      "workflowFileStatus": 200,
+      "registeredWorkflowCount": 0,
+      "branch": "main"
+    },
+    "nextAction": "Push an actual documentation commit without skip-ci to register and trigger the first workflow; no workflow logic changed"
+  }
+}
