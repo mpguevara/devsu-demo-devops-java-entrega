@@ -1,0 +1,799 @@
+{
+  "sanitizedAt": "2026-10-23T21:07:06.0214689-06:00",
+  "originalReportsRevision": "800bed2550af27fc56ca143d1bf9bc97069db7cf",
+  "scope": "Archived local Surefire XML copies only; application, test source, pipeline and actual results unchanged",
+  "policy": {
+    "property": "java.library.path",
+    "action": "Replace the entire environment-path value with an explicit neutral marker",
+    "replacement": "[REDACTED_LOCAL_ENVIRONMENT_PATHS]",
+    "otherReportBytesPreserved": true,
+    "gitHistoryRewritten": false,
+    "originalReportsRecoverableFromRevision": true
+  },
+  "verification": {
+    "reportsChanged": 25,
+    "reportsWithIdenticalProtectedContent": 25,
+    "reportsWithIdenticalTestcases": 25,
+    "newApplicationTestsExecuted": false,
+    "coverageReportsModified": false,
+    "pmdReportsModified": false,
+    "pipelineReportsModified": false
+  },
+  "files": [
+    {
+      "path": "docs/evidence/quality/baseline/surefire-reports/TEST-devsu.devops.demo.DemoJavaApplicationTests.xml",
+      "originalGitBlob": "3578bd32200ac0914d48f871a266cf45dfbbbeed",
+      "beforeSHA256": "d84633c25395b14d400530c4d8163f9d2d888d0c2af6b67d6af84de8c930e5cf",
+      "afterSHA256": "978cf72c3c37c78539b56b2b18c9d67b6dbefd9ad4b032c241d65094a54586bf",
+      "protectedContentBeforeSHA256": "502dde4e93722b14473f23b9b629a17985ad29f50499f5bf2443c917993b6e8d",
+      "protectedContentAfterSHA256": "502dde4e93722b14473f23b9b629a17985ad29f50499f5bf2443c917993b6e8d",
+      "testcasesBeforeSHA256": "738197af9f11786f12b869d023f61a5daa7f4aecccdc64caa97e2ffd3067a939",
+      "testcasesAfterSHA256": "738197af9f11786f12b869d023f61a5daa7f4aecccdc64caa97e2ffd3067a939",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.777",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.777",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/baseline/surefire-reports/TEST-devsu.devops.demo.controller.UserControllerTest.xml",
+      "originalGitBlob": "e3564a6ab37ea45fb6cc26b0cfe016e880de9d3c",
+      "beforeSHA256": "751bc30f4828d0784bae4706c1b09e886ac1390ba97a23fa5c0bfd05e80495f0",
+      "afterSHA256": "4712a80db584a1377d5a23fa0767b87989feff361a7ae7d1f029257eb108150d",
+      "protectedContentBeforeSHA256": "94fee63d00840ccb2f703ce497da422dcd0bdf7b2ebc9ece07161a8b58d96ddf",
+      "protectedContentAfterSHA256": "94fee63d00840ccb2f703ce497da422dcd0bdf7b2ebc9ece07161a8b58d96ddf",
+      "testcasesBeforeSHA256": "ab5961e879219a7e83d2a3adfa7361aec0a712530f907cbc15b35ca934e819e9",
+      "testcasesAfterSHA256": "ab5961e879219a7e83d2a3adfa7361aec0a712530f907cbc15b35ca934e819e9",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "10.507",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "10.507",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/baseline/surefire-reports/TEST-devsu.devops.demo.health.HealthEndpointTest.xml",
+      "originalGitBlob": "b49a1625d1d42c50892dacceaeb402377735de41",
+      "beforeSHA256": "de7c98c24874551bbf14303686dbdc2c4701f777d97652b9e74b79dbc80fa1f4",
+      "afterSHA256": "6f19c67cfadf51280b06de63cb3cb4888d4c98f9aa39c7d4c5889e73530c66d5",
+      "protectedContentBeforeSHA256": "6a3f8adef1dba42da2d24918f46f6f002f01be207a11d7b4d264df343ef266bb",
+      "protectedContentAfterSHA256": "6a3f8adef1dba42da2d24918f46f6f002f01be207a11d7b4d264df343ef266bb",
+      "testcasesBeforeSHA256": "dddea8cff0cc6461e3e08bd4bbe78cde66ba63c78d444587c036c0030f7a771e",
+      "testcasesAfterSHA256": "dddea8cff0cc6461e3e08bd4bbe78cde66ba63c78d444587c036c0030f7a771e",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.28",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.28",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/baseline/surefire-reports/TEST-devsu.devops.demo.repository.UserRepositoryTest.xml",
+      "originalGitBlob": "208bf8e1c0e8af3e5c3ba71fde2913121e3acd71",
+      "beforeSHA256": "8b0cc8e2079adec21e7b5691b58b832bafa9cd0776d0eadf8e95cfe84e85f9e7",
+      "afterSHA256": "7f9fa4aa76bce9cc52d0e669d642cdd7a77b2a3e3bd5aa8be8d9e16d9069937f",
+      "protectedContentBeforeSHA256": "2a1a08d2cf7a10d51c5c0359d9e15b9dd3ab26905134f24b691ff92aed12eab4",
+      "protectedContentAfterSHA256": "2a1a08d2cf7a10d51c5c0359d9e15b9dd3ab26905134f24b691ff92aed12eab4",
+      "testcasesBeforeSHA256": "e351eefc9c39a5bf08769727e1182bd90d31c71490ad3da027f346ce0597e4f2",
+      "testcasesAfterSHA256": "e351eefc9c39a5bf08769727e1182bd90d31c71490ad3da027f346ce0597e4f2",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.521",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.521",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/baseline/surefire-reports/TEST-devsu.devops.demo.service.UserServiceTest.xml",
+      "originalGitBlob": "e05599235c13918491c916f50636ea0cb2b9c754",
+      "beforeSHA256": "7de9ab8c818d6e796bfb876fdf77c6da80a3496b869074917ef4a83266f71cc0",
+      "afterSHA256": "573f891fa88a5747b7ab9bd1e30f04f664a8121becad06f2565d2579ca5058cf",
+      "protectedContentBeforeSHA256": "851fee5a58ded5c44c1251e298c5cdad62051b211124e6c5f439fb5c7745bb92",
+      "protectedContentAfterSHA256": "851fee5a58ded5c44c1251e298c5cdad62051b211124e6c5f439fb5c7745bb92",
+      "testcasesBeforeSHA256": "5c6df071160228492207423f6cd35d754f323fb88882a3f5c42602853395591f",
+      "testcasesAfterSHA256": "5c6df071160228492207423f6cd35d754f323fb88882a3f5c42602853395591f",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.248",
+        "timestamp": "",
+        "testcaseCount": 3
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.248",
+        "timestamp": "",
+        "testcaseCount": 3
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/final/surefire-reports/TEST-devsu.devops.demo.DemoJavaApplicationTests.xml",
+      "originalGitBlob": "c0abe3e855b9f8c044d811b26719afb58b8da743",
+      "beforeSHA256": "692198ee8a82681525b97cce2427645803b852cafff686d3f12a7e76f3a9af35",
+      "afterSHA256": "173269841d5d4ae948566eb56cbf401d2d5d1e8dce247437fd523088c8c69eb1",
+      "protectedContentBeforeSHA256": "2a52e74bccc47e0ff4f9f6182a927343c08a1d3adca6d082a1ed3c6e73c4fd2a",
+      "protectedContentAfterSHA256": "2a52e74bccc47e0ff4f9f6182a927343c08a1d3adca6d082a1ed3c6e73c4fd2a",
+      "testcasesBeforeSHA256": "8d052994f208fe0da2dd60cd70e6f441b99217eca35416b938480028ef610034",
+      "testcasesAfterSHA256": "8d052994f208fe0da2dd60cd70e6f441b99217eca35416b938480028ef610034",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.868",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.868",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/final/surefire-reports/TEST-devsu.devops.demo.controller.UserControllerTest.xml",
+      "originalGitBlob": "ea1518f6398f7f3b02a8b4757e099acac8e13e50",
+      "beforeSHA256": "7ed5b5f26a9110db8cbf9170a87547b39ecc18ab0fba97442ff7def4e097af56",
+      "afterSHA256": "7308f4f6f9d6ca5ee0af230b67f3a8af02000c514f40bcb3ff4fdfe3b940b5c8",
+      "protectedContentBeforeSHA256": "bed470cd704e5d32bd37380053905ac2befc35f720aac6ef3624415e94708495",
+      "protectedContentAfterSHA256": "bed470cd704e5d32bd37380053905ac2befc35f720aac6ef3624415e94708495",
+      "testcasesBeforeSHA256": "7ce2abbbce8bf427f706df4e8621b2548b1b2df18447e704c1bd9c319c0bb7a1",
+      "testcasesAfterSHA256": "7ce2abbbce8bf427f706df4e8621b2548b1b2df18447e704c1bd9c319c0bb7a1",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "17.659",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "17.659",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/final/surefire-reports/TEST-devsu.devops.demo.health.HealthEndpointTest.xml",
+      "originalGitBlob": "8e0ff5824e06c11280631dd6b0981155237b1708",
+      "beforeSHA256": "69484e447874844bd2f320ef0153b2034f456e79063f9477ec4142fce2859683",
+      "afterSHA256": "399fc49ade7ea6f89d5e02fe0637eebcf750b96e005d29e1a827776f395d0e98",
+      "protectedContentBeforeSHA256": "5fba1f3a0be46657304cd4f5dc7abeab9851dfcb79f00aaa6967c2bdd8efaaea",
+      "protectedContentAfterSHA256": "5fba1f3a0be46657304cd4f5dc7abeab9851dfcb79f00aaa6967c2bdd8efaaea",
+      "testcasesBeforeSHA256": "47a90985a9cadf1b8ea3fa072099542f0fe7f174870ca0d9f53c29c4b8cb2efb",
+      "testcasesAfterSHA256": "47a90985a9cadf1b8ea3fa072099542f0fe7f174870ca0d9f53c29c4b8cb2efb",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.1",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.1",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/final/surefire-reports/TEST-devsu.devops.demo.repository.UserRepositoryTest.xml",
+      "originalGitBlob": "a162abee950223539a16b5826a831a8e429f4635",
+      "beforeSHA256": "3e74a8c11e72cd4c3d9ca446296a05fa530d7022f72d053125a6eaf718bf44c7",
+      "afterSHA256": "c0bab4a1c01d6e73f050b98b16dbe15eb7988889bd7a55100b3df83af5a27479",
+      "protectedContentBeforeSHA256": "1b4aa42915446f49736ded2c31752cb8a4c84c7f7d063c9255aa31ab6cf2abc3",
+      "protectedContentAfterSHA256": "1b4aa42915446f49736ded2c31752cb8a4c84c7f7d063c9255aa31ab6cf2abc3",
+      "testcasesBeforeSHA256": "907ca65da9f6178a2c88e45e09d6ba2b9a8ebb95790a561788389626c60b353a",
+      "testcasesAfterSHA256": "907ca65da9f6178a2c88e45e09d6ba2b9a8ebb95790a561788389626c60b353a",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.389",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.389",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/final/surefire-reports/TEST-devsu.devops.demo.service.UserServiceTest.xml",
+      "originalGitBlob": "426f8bbd465ebf30b9c1d40164a19de6c5728202",
+      "beforeSHA256": "b0b08a32e2cabaf26622b5484d398c37236ecbc924c3fdb9ba748e011ea96a47",
+      "afterSHA256": "b8ec3cfe26c6506da749568e6ddb3f734f2774c2ca793e2b009e79ef72cb5eba",
+      "protectedContentBeforeSHA256": "90e5b2857a85308126c12fee35cbfbddd02f246867f01e247576128ea04b9194",
+      "protectedContentAfterSHA256": "90e5b2857a85308126c12fee35cbfbddd02f246867f01e247576128ea04b9194",
+      "testcasesBeforeSHA256": "153a70ccf845f555aa37c8763e376e788b338db36e4a872e088066b4c8fd8cb2",
+      "testcasesAfterSHA256": "153a70ccf845f555aa37c8763e376e788b338db36e4a872e088066b4c8fd8cb2",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.363",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.363",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/improved-measurement/surefire-reports/TEST-devsu.devops.demo.DemoJavaApplicationTests.xml",
+      "originalGitBlob": "344adc76c112aa8892ee04a3a8420e9b3c35efa9",
+      "beforeSHA256": "1cc43d218a1743bdc7bed021685c24e82a3552b9899753f4f5a89ca867f9b0f1",
+      "afterSHA256": "2062780036363792125f2cbf4e6a3780dac8b375ad842513408c099ceefd7a94",
+      "protectedContentBeforeSHA256": "9eb7172fd9c8b017b292a0d9a7212cbc2a84f0f48b84c5ecf028a51fc7572167",
+      "protectedContentAfterSHA256": "9eb7172fd9c8b017b292a0d9a7212cbc2a84f0f48b84c5ecf028a51fc7572167",
+      "testcasesBeforeSHA256": "51970e201d57ba7f29425517449efb17c4144a86f35a88ba5d68055359470f9b",
+      "testcasesAfterSHA256": "51970e201d57ba7f29425517449efb17c4144a86f35a88ba5d68055359470f9b",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "2.014",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "2.014",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/improved-measurement/surefire-reports/TEST-devsu.devops.demo.controller.UserControllerTest.xml",
+      "originalGitBlob": "00730c21337c7ab790f5c1724cfb1ce66a75e38d",
+      "beforeSHA256": "3ac4b8385365a72596295a1d1aa9bc85cd7649c4ca30faf6783b9450848e18f8",
+      "afterSHA256": "5a7dbda22cacf35c821002b81ec0b90188c6ee6473d68d853c2d0f1a4f6ce14c",
+      "protectedContentBeforeSHA256": "023ad3d9df0c691c1bc7b2bb7256858679b9dab90449e436b9357977ca197461",
+      "protectedContentAfterSHA256": "023ad3d9df0c691c1bc7b2bb7256858679b9dab90449e436b9357977ca197461",
+      "testcasesBeforeSHA256": "13b430b58725c62bcbb7e988ab9ff9ab5e30bb67909a54c289da8fdc31448cab",
+      "testcasesAfterSHA256": "13b430b58725c62bcbb7e988ab9ff9ab5e30bb67909a54c289da8fdc31448cab",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "25.433",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "25.433",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/improved-measurement/surefire-reports/TEST-devsu.devops.demo.health.HealthEndpointTest.xml",
+      "originalGitBlob": "c4ac0443217def1b9297cfc2b02c61910b181392",
+      "beforeSHA256": "9cf9473c36ebb99addf5339811a8af4953a945b31b931a55d0bd4b767506a637",
+      "afterSHA256": "d5eadca853b1c3ec1387e3d6b2b990439e55f6076c3f27318b59c4f28c8fea63",
+      "protectedContentBeforeSHA256": "0ae18643159f58c6f07d51967a0c85f58d7f947009a7d9ffb55a2c03da483a93",
+      "protectedContentAfterSHA256": "0ae18643159f58c6f07d51967a0c85f58d7f947009a7d9ffb55a2c03da483a93",
+      "testcasesBeforeSHA256": "15a5bab706451fc430f228052ccc207afade2b03b6f7f1c607404ceac564a7f4",
+      "testcasesAfterSHA256": "15a5bab706451fc430f228052ccc207afade2b03b6f7f1c607404ceac564a7f4",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.176",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.176",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/improved-measurement/surefire-reports/TEST-devsu.devops.demo.repository.UserRepositoryTest.xml",
+      "originalGitBlob": "46731f27f633a84d227a529f45fd6daedd93389f",
+      "beforeSHA256": "69f02cc84f43b3fc078e28088d4a17f813ee69abdc7b5cbc3978dcd21103916a",
+      "afterSHA256": "2532092f7a7180ceaa550f7fd13083f3c48c8542c53bfecaf83111792c3c857e",
+      "protectedContentBeforeSHA256": "966912611a630b4b1190bd9959f17a61f435b50785b25f713e2776928ce8bc53",
+      "protectedContentAfterSHA256": "966912611a630b4b1190bd9959f17a61f435b50785b25f713e2776928ce8bc53",
+      "testcasesBeforeSHA256": "c9c67201b8874840d6138f473d2cfb56bd345d7ff76b3de0675c100ad87c4039",
+      "testcasesAfterSHA256": "c9c67201b8874840d6138f473d2cfb56bd345d7ff76b3de0675c100ad87c4039",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.62",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.62",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/quality/improved-measurement/surefire-reports/TEST-devsu.devops.demo.service.UserServiceTest.xml",
+      "originalGitBlob": "174068e075f5259152df51bdf13e817e05d8835b",
+      "beforeSHA256": "0f4f176e0ba18c2d197f18892455fdc1480b0dc71f54b5b625228a28bbc5e9ec",
+      "afterSHA256": "3b22062f1ddccd259de92469617d2d40d2590e3becf4cae2843404b1a6db5b2d",
+      "protectedContentBeforeSHA256": "7cdac286dd4881845a2b9fc930af4b89bb3475d6bdd88cf9a11d5d87e42cb576",
+      "protectedContentAfterSHA256": "7cdac286dd4881845a2b9fc930af4b89bb3475d6bdd88cf9a11d5d87e42cb576",
+      "testcasesBeforeSHA256": "8238b7bbe303fcc9fc3cce7cfd48fdf70fa8a59bcca68b3caf93776390f0f59e",
+      "testcasesAfterSHA256": "8238b7bbe303fcc9fc3cce7cfd48fdf70fa8a59bcca68b3caf93776390f0f59e",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.744",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.744",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-1/surefire-reports/TEST-devsu.devops.demo.DemoJavaApplicationTests.xml",
+      "originalGitBlob": "199b81927e1f056481b3772cd3bfdd3e7badb09f",
+      "beforeSHA256": "a7de3acf9630de939f089b052aa449241dbb3562b0184263207b2270bdba15b9",
+      "afterSHA256": "536e6703f5e4a81b6ba318f92dc2cca07e3a91e440ad1fa7f3c6769edaccda76",
+      "protectedContentBeforeSHA256": "a50d2720633158fe88255754b20d6aa4a1523cbbccd908ff55fe858d041df6ac",
+      "protectedContentAfterSHA256": "a50d2720633158fe88255754b20d6aa4a1523cbbccd908ff55fe858d041df6ac",
+      "testcasesBeforeSHA256": "13bb9a8b0dbf75d2d2ad0c5caf6b5743f8b85e26167508c36e3b4b0f2178f592",
+      "testcasesAfterSHA256": "13bb9a8b0dbf75d2d2ad0c5caf6b5743f8b85e26167508c36e3b4b0f2178f592",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "1.564",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "1.564",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-1/surefire-reports/TEST-devsu.devops.demo.controller.UserControllerTest.xml",
+      "originalGitBlob": "28998fc35973e36f013a4ca7b025eaa699a202ea",
+      "beforeSHA256": "c2bbbcd90a961a056f28ff496aff181ca00adbb9326367478e7a2846f7ddd1fe",
+      "afterSHA256": "cd38cde7d4312578a279d7ce9d6ee6375bfb8e4c64bd76bebd752e347384073d",
+      "protectedContentBeforeSHA256": "0f01e07f8787758b9c733790344c9fb651eb1ca9ec291419fe0bf3a3dc58faaf",
+      "protectedContentAfterSHA256": "0f01e07f8787758b9c733790344c9fb651eb1ca9ec291419fe0bf3a3dc58faaf",
+      "testcasesBeforeSHA256": "77c1aaf782cc17d337c644744cddf9c407bd6e4f10d77bacc0e158a7cb9d5448",
+      "testcasesAfterSHA256": "77c1aaf782cc17d337c644744cddf9c407bd6e4f10d77bacc0e158a7cb9d5448",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "16.353",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "16.353",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-1/surefire-reports/TEST-devsu.devops.demo.health.HealthEndpointTest.xml",
+      "originalGitBlob": "27ff67e5b118d9ddec21783e93ec606d5649043a",
+      "beforeSHA256": "d60420206c89576a92e28d34eb175c33bca5ece0c5ff6996182749a59cf0798f",
+      "afterSHA256": "88ce7c7e4ba2ae2e16e4ffd7fd443b1c9019da238f51cdaa153d3e2928b788ac",
+      "protectedContentBeforeSHA256": "43c6a27aeeddda1aa07abe332e93253abeebda52a7c155c280ecb6a369ef7353",
+      "protectedContentAfterSHA256": "43c6a27aeeddda1aa07abe332e93253abeebda52a7c155c280ecb6a369ef7353",
+      "testcasesBeforeSHA256": "92b90b7f742e5b2fd57dc7dca30a35b86d09231d9dd74213c2e29bbf3f6fbef6",
+      "testcasesAfterSHA256": "92b90b7f742e5b2fd57dc7dca30a35b86d09231d9dd74213c2e29bbf3f6fbef6",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.139",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.139",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-1/surefire-reports/TEST-devsu.devops.demo.repository.UserRepositoryTest.xml",
+      "originalGitBlob": "16be3c147c3b668786d4a4e440427f6e091dea1e",
+      "beforeSHA256": "3a7eb25c9bc181a4c6c828bfca16ea86e1f2d940c3f1701e61429db3b20ca01d",
+      "afterSHA256": "430bedcf84246230511b6cc972f8c53e444418d0ffa61b9679b90d5e55534138",
+      "protectedContentBeforeSHA256": "c9797582a17034f8d8f0f9bdf74edfaba06c751877f75be52e59b6e8bd34b813",
+      "protectedContentAfterSHA256": "c9797582a17034f8d8f0f9bdf74edfaba06c751877f75be52e59b6e8bd34b813",
+      "testcasesBeforeSHA256": "f1559253245a78358b07e5a2f84031e156686cee7237c5df168560d3a48a2047",
+      "testcasesAfterSHA256": "f1559253245a78358b07e5a2f84031e156686cee7237c5df168560d3a48a2047",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.497",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.497",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-1/surefire-reports/TEST-devsu.devops.demo.service.UserServiceTest.xml",
+      "originalGitBlob": "f1161a5106734367867c1678224ff7115949a5b0",
+      "beforeSHA256": "dbb1ff2fa8ddac0a79e9af1173446c4134e2f688367a03a142051e3b10983a5e",
+      "afterSHA256": "f1c28450e1c97ab2dba6dbd7b7d5363ef5bb43da0b0e34c5506ab1828138bd3b",
+      "protectedContentBeforeSHA256": "0101065dea3ceb6e68b31d9be4a4d46931a132a78ed2f09f35bfdf11b270dbef",
+      "protectedContentAfterSHA256": "0101065dea3ceb6e68b31d9be4a4d46931a132a78ed2f09f35bfdf11b270dbef",
+      "testcasesBeforeSHA256": "9882b954bb7c0d1a3145b71e2c509826b3745dd311872c954913c36a65225d8b",
+      "testcasesAfterSHA256": "9882b954bb7c0d1a3145b71e2c509826b3745dd311872c954913c36a65225d8b",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "1.4",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "1.4",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-2/surefire-reports/TEST-devsu.devops.demo.DemoJavaApplicationTests.xml",
+      "originalGitBlob": "6897107612d99e28a041bb5ab8e30526aa0ae5cc",
+      "beforeSHA256": "deb799853f32ecf74983189c0b8628d20022a702de550cf0085177d278e6e6b2",
+      "afterSHA256": "7c53260c272a33235e71d817fb041f45a985b4a7aa62f71b454ebfca0249de1a",
+      "protectedContentBeforeSHA256": "0e646e79c0a47c3c06d2ae838be689050f4ee0c7b8fe29b2f392859a95ba31ad",
+      "protectedContentAfterSHA256": "0e646e79c0a47c3c06d2ae838be689050f4ee0c7b8fe29b2f392859a95ba31ad",
+      "testcasesBeforeSHA256": "dd6dfa51d34ce6f84f29a5510f860f0976bc67fa3f86030bedb3ca2b55e17515",
+      "testcasesAfterSHA256": "dd6dfa51d34ce6f84f29a5510f860f0976bc67fa3f86030bedb3ca2b55e17515",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.948",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.DemoJavaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.948",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-2/surefire-reports/TEST-devsu.devops.demo.controller.UserControllerTest.xml",
+      "originalGitBlob": "5492796cdb64cff7e60d91a3fc8de420692aa6d1",
+      "beforeSHA256": "dd1bef86436ccf88a390d793cfb7a04b0b2424fb28750532ee798bbb372ea275",
+      "afterSHA256": "f9128388b0abb8577e9d63ccd6c44cbb9ea37a61d3eacdb0492e146894720ecc",
+      "protectedContentBeforeSHA256": "d36d8c460417884ce0d967456552415c683a73719fd9446cf0221e59bb3ffc1d",
+      "protectedContentAfterSHA256": "d36d8c460417884ce0d967456552415c683a73719fd9446cf0221e59bb3ffc1d",
+      "testcasesBeforeSHA256": "d032c349c8b20f70b7214400d81bc5d4b5246867dd352847c51def195fc22297",
+      "testcasesAfterSHA256": "d032c349c8b20f70b7214400d81bc5d4b5246867dd352847c51def195fc22297",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "14.924",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.controller.UserControllerTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "14.924",
+        "timestamp": "",
+        "testcaseCount": 9
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-2/surefire-reports/TEST-devsu.devops.demo.health.HealthEndpointTest.xml",
+      "originalGitBlob": "5085916932efd5df39ac39f96fde6169db31b8bd",
+      "beforeSHA256": "c90c45d5348db3e5d98938ccb60466158b911f5d22b2d0f2d2d5d11e6383639d",
+      "afterSHA256": "0d38c5ce8f88368e10cbdf84fc73baa6ed57fb8ede16afb42f0851db3bdbc923",
+      "protectedContentBeforeSHA256": "76b3476d6716f0c0e3dc576c91e1adfe0c202eb83d89c9fe4a4a52df74bd3c99",
+      "protectedContentAfterSHA256": "76b3476d6716f0c0e3dc576c91e1adfe0c202eb83d89c9fe4a4a52df74bd3c99",
+      "testcasesBeforeSHA256": "684c440f6099e14e6b1e887f609da2e413e941db9e6f34c557f0c3d1a224f43a",
+      "testcasesAfterSHA256": "684c440f6099e14e6b1e887f609da2e413e941db9e6f34c557f0c3d1a224f43a",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.141",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.health.HealthEndpointTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.141",
+        "timestamp": "",
+        "testcaseCount": 5
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-2/surefire-reports/TEST-devsu.devops.demo.repository.UserRepositoryTest.xml",
+      "originalGitBlob": "070943b090359eb2d5205c51c235d59bfeb72b99",
+      "beforeSHA256": "4246004940dfb1af6a6c0bf40c5cbaa3565c7f22c8fbec48163ed4d745d190af",
+      "afterSHA256": "24cd288f47c8ea4988851d581cca96c84983830d5df87efe8e253e0d5c96a507",
+      "protectedContentBeforeSHA256": "655baea7bf43289189ea1303935c02d95f684e595722e8be966b196a61f713c8",
+      "protectedContentAfterSHA256": "655baea7bf43289189ea1303935c02d95f684e595722e8be966b196a61f713c8",
+      "testcasesBeforeSHA256": "b1fc3a8a7901c570b90d7512a323dfd73560268996e852af1242d84d100a0044",
+      "testcasesAfterSHA256": "b1fc3a8a7901c570b90d7512a323dfd73560268996e852af1242d84d100a0044",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.479",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.repository.UserRepositoryTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "0.479",
+        "timestamp": "",
+        "testcaseCount": 1
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    },
+    {
+      "path": "docs/evidence/security-remediation/native/attempt-2/surefire-reports/TEST-devsu.devops.demo.service.UserServiceTest.xml",
+      "originalGitBlob": "ba7648c58658043c988aea3d94390b91486f3d73",
+      "beforeSHA256": "34417937ab8b4afff4c1619c59ca559fa646acffdb589ce8e8a1759e5bf97b8c",
+      "afterSHA256": "b1c3b5518a7911286b3dd185d2e714e1e97a4918a0a6d1bad1d0bca68f157838",
+      "protectedContentBeforeSHA256": "71bf9e901827a08d3c3d451f399d8a705cd8994413389723dae2590b357955e1",
+      "protectedContentAfterSHA256": "71bf9e901827a08d3c3d451f399d8a705cd8994413389723dae2590b357955e1",
+      "testcasesBeforeSHA256": "b8df66130b0ce56ae5fdadef3dc03eeed452c2c4f35b610b0b62f1d73f3ad262",
+      "testcasesAfterSHA256": "b8df66130b0ce56ae5fdadef3dc03eeed452c2c4f35b610b0b62f1d73f3ad262",
+      "suiteBefore": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "1.373",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "suiteAfter": {
+        "name": "devsu.devops.demo.service.UserServiceTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "time": "1.373",
+        "timestamp": "",
+        "testcaseCount": 6
+      },
+      "onlyEnvironmentPropertyValueChanged": true
+    }
+  ]
+}

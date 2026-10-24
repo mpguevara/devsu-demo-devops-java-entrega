@@ -2,6 +2,8 @@
 
 Validación ejecutada el **23 de octubre de 2026**, hora de El Salvador, con Temurin 17.0.20.1+1 y Maven 3.8.7. Se mantuvieron los heaps máximos de 384 MiB para Maven y el proceso de pruebas. Durante las dos suites completas y el smoke HTTP, el clúster propio estaba detenido para evitar competir por memoria; no se ejecutó Docker como parte de esas comprobaciones. La generación aislada posterior del SBOM se realizó con Docker y el nodo activos, sin compilar ni lanzar pruebas.
 
+Las copias XML de Surefire tienen saneado únicamente el valor de `java.library.path`. El [manifiesto de saneamiento](../../report-metadata-sanitization/README.md) verifica resultados y contenido restantes idénticos, con hashes antes/después y referencia Git de los originales. Esta operación no repite ni modifica la ejecución de pruebas.
+
 ## Resultados
 
 | Verificación | Resultado | Evidencia |
@@ -30,6 +32,6 @@ La suite conserva seis casos unitarios del servicio, nueve casos de contrato con
 
 Ambos builds de remediación registraron **51/58 líneas, 87,93 %**, y **2/2 ramas, 100 %**. El servicio tiene catorce líneas y dos ramas, todas cubiertas. Los límites no cambiaron: 85 % global de líneas y 100 % en líneas y ramas del servicio.
 
-El BOM actualiza Lombok a 1.18.48, que marca código generado por defecto. JaCoCo lo filtra automáticamente. La medición histórica con Lombok 1.18.26, de **65/72 líneas y 8/62 ramas**, permanece en [quality](../../quality/README.md). No se añadieron exclusiones ni se alteraron esas evidencias; comparar únicamente los porcentajes sin sus denominadores daría una conclusión engañosa.
+El BOM actualiza Lombok a 1.18.48, que marca código generado por defecto. JaCoCo lo filtra automáticamente. La medición histórica con Lombok 1.18.26, de **65/72 líneas y 8/62 ramas**, permanece en [quality](../../quality/README.md). No se añadieron exclusiones ni se modificaron los contadores históricos; comparar únicamente los porcentajes sin sus denominadores daría una conclusión engañosa. El saneamiento posterior de rutas locales no cambia estas mediciones.
 
 PMD solo emitió la advertencia de navegación por falta de URL del proyecto padre. No hubo fallos de compilación o pruebas nativas que ocultar o corregir. Esta carpeta no prueba ausencia de CVE ni sustituye el nuevo escaneo de imagen y pipeline remoto. La [guía de migración](../../../MIGRACION-SEGURIDAD-JAVA.md) explica las decisiones y los límites.

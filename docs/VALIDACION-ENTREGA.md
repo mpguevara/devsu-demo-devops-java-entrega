@@ -25,6 +25,8 @@ Revisión del 23 de octubre de 2026, hora de El Salvador. Se contrastaron las cu
 
 Los resultados anteriores proceden del [run final 40048321809](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40048321809), ejecutado sobre `81beb47ba4b03f98e407860d94d143a22f2d2771`. La API pública de GitHub volvió a consultarse para esta revisión y confirmó repositorio público y los cuatro jobs en `success`. Los cambios posteriores a ese commit son documentación y evidencias; no modifican la aplicación, el Dockerfile, los manifiestos, el POM ni el workflow validado. Esta revisión documental no se presenta como una nueva ejecución de pruebas o de escaneo.
 
+Antes de regenerar la entrega se realizó un [saneamiento explícito de metadatos](evidence/report-metadata-sanitization/README.md): 25 copias XML de Surefire sustituyen el valor de `java.library.path` por un marcador. Se comprobó que los demás bytes y los resultados permanecen idénticos. No se reescribió el historial ni se alteraron los reportes del pipeline, JaCoCo o PMD.
+
 ## Entregables y acciones de envío
 
 | Entregable del enunciado | Preparado | Acción pendiente en la plataforma |
