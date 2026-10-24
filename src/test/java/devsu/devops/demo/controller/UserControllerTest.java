@@ -7,15 +7,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
@@ -46,13 +46,16 @@ class UserControllerTest {
 
     @Test
     void createsAndRetrievesAUserWithAServerGeneratedId() throws Exception {
-        String body = mockMvc.perform(post("/users").contentType(MediaType.APPLICATION_JSON).content(VALID_USER))
+        String requestWithClientId = """
+                {"id":2147483647,"dni":"9999999901","name":"Prueba DevOps"}
+                """;
+        String body = mockMvc.perform(post("/users").contentType(MediaType.APPLICATION_JSON).content(requestWithClientId))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.dni").value("9999999901"))
                 .andExpect(jsonPath("$.name").value("Prueba DevOps"))
                 .andReturn().getResponse().getContentAsString();
         JsonNode user = objectMapper.readTree(body);
-        assertThat(user.path("id").asLong()).isPositive();
+        assertThat(user.path("id").asLong()).isPositive().isNotEqualTo(2147483647L);
 
         mockMvc.perform(get("/users/{id}", user.path("id").asLong()))
                 .andExpect(status().isOk())

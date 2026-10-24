@@ -11,7 +11,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -49,7 +48,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 	@Override
 	public ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException exception, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
 		Map<String, Object> body = new LinkedHashMap<>();
-        List<String> errors = ((BindException) exception).getBindingResult()
+        List<String> errors = exception.getBindingResult()
                 .getFieldErrors()
                 .stream()
                 .map(x -> x.getField() + ": " + x.getDefaultMessage())

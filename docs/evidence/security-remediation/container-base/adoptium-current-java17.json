@@ -1,0 +1,18 @@
+{
+  "observedAt": "2026-10-23T18:43:03.8928650-06:00",
+  "api": "https://api.adoptium.net/v3/assets/latest/17/hotspot?architecture=x64&image_type=jdk&os=linux&vendor=eclipse",
+  "releaseName": "jdk-17.0.21+9",
+  "version": {
+    "build": 9,
+    "major": 17,
+    "minor": 0,
+    "openjdk_version": "17.0.21+9",
+    "security": 21,
+    "semver": "17.0.21+9"
+  },
+  "releaseLink": "https://github.com/adoptium/temurin17-binaries/releases/tag/jdk-17.0.21%2B9",
+  "releasePublishedAt": "2026-10-22T17:28:09Z",
+  "linuxJdkPackageSHA256": "8b9b611d917e3dfd8419d3566b5949226f69b052fed7e109c1368add1dfe8711",
+  "linuxJdkChecksumSource": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21%2B9/OpenJDK17U-jdk_x64_linux_hotspot_17.0.21_9.tar.gz.sha256.txt",
+  "downloadedBinary": false
+}

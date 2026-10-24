@@ -1,0 +1,51 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-23T18:44:17.490-06:00  INFO 46596 --- [           main] devsu.devops.demo.DemoJavaApplication    : Starting DemoJavaApplication v0.0.1 using Java 17.0.20.1 with PID 46596 (C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\demo-0.0.1.jar started by mario in C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java)
+2026-10-23T18:44:17.497-06:00  INFO 46596 --- [           main] devsu.devops.demo.DemoJavaApplication    : The following 1 profile is active: "local"
+2026-10-23T18:44:19.383-06:00  INFO 46596 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-23T18:44:19.458-06:00  INFO 46596 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2026-10-23T18:44:21.283-06:00  INFO 46596 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8000 (http)
+2026-10-23T18:44:21.306-06:00  INFO 46596 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-23T18:44:21.307-06:00  INFO 46596 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-10-23T18:44:21.396-06:00  INFO 46596 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3809 ms
+2026-10-23T18:44:22.266-06:00  INFO 46596 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-23T18:44:22.373-06:00  INFO 46596 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-10-23T18:44:22.833-06:00  INFO 46596 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-23T18:44:22.863-06:00  INFO 46596 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-23T18:44:23.033-06:00  INFO 46596 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:smoke-18164 user=USER
+2026-10-23T18:44:23.050-06:00  INFO 46596 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-23T18:44:23.078-06:00  WARN 46596 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-23T18:44:23.135-06:00  INFO 46596 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:smoke-18164]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: SMOKE-18164/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-23T18:44:24.232-06:00  INFO 46596 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-23T18:44:24.279-06:00  INFO 46596 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-23T18:44:24.452-06:00  INFO 46596 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-23T18:44:26.165-06:00  INFO 46596 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-23T18:44:26.328-06:00  INFO 46596 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8000 (http) with context path '/api'
+2026-10-23T18:44:26.339-06:00  INFO 46596 --- [           main] devsu.devops.demo.DemoJavaApplication    : Started DemoJavaApplication in 9.758 seconds (process running for 10.928)
+2026-10-23T18:44:26.381-06:00  WARN 46596 --- [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-23T18:44:26.382-06:00  WARN 46596 --- [           main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-23T18:44:26.573-06:00  INFO 46596 --- [0.1-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-23T18:44:26.573-06:00  INFO 46596 --- [0.1-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-23T18:44:26.576-06:00  INFO 46596 --- [0.1-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-23T18:44:27.769-06:00 ERROR 46596 --- [0.1-8000-exec-1] d.d.c.RestResponseEntityExceptionHandler : User already exists
+2026-10-23T18:44:27.832-06:00 ERROR 46596 --- [0.1-8000-exec-3] d.d.c.RestResponseEntityExceptionHandler : User not found: 999999
+2026-10-23T18:44:28.167-06:00  INFO 46596 --- [0.1-8000-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 250 ms

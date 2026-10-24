@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-23T18:43:46.0876486-06:00",
+  "sources": [
+    {
+      "url": "https://docs.spring.io/spring-boot/system-requirements.html",
+      "usedFor": "Spring Boot4.1.2 stable; Java17 minimum and Maven3.6.3 minimum; Framework7.0.10 baseline"
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.2/spring-boot-dependencies-4.1.2.pom",
+      "usedFor": "Exact managed versions read directly from the released BOM"
+    },
+    {
+      "url": "https://spring.io/security/cve-2026-47884/",
+      "usedFor": "Framework7.0.9 is the OSS fixed release for the XsltView advisory; older fixes shown as enterprise only"
+    },
+    {
+      "url": "https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide",
+      "usedFor": "Modular starters/tests, Flyway starter, Jackson3 packages and retained jackson-annotations namespace"
+    },
+    {
+      "url": "https://springdoc.org/",
+      "usedFor": "springdoc3.x compatible with Boot4; current stable3.1.1"
+    },
+    {
+      "url": "https://hibernate.org/orm/releases/7.4/",
+      "usedFor": "Hibernate7.4.13.Final compatibility with Java17 and Boot4.1"
+    },
+    {
+      "url": "https://docs.spring.io/spring-boot/api/java/allclasses-index.html",
+      "usedFor": "Exact Boot4 test annotation and TestEntityManager package names"
+    }
+  ]
+}

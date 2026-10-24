@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-23T18:39:29.7432522-06:00",
+  "source": "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/4.1.2/spring-boot-dependencies-4.1.2.pom",
+  "status": 200,
+  "springBoot": "4.1.2",
+  "versions": {
+    "springFramework": "7.0.10",
+    "jackson2": "2.21.7",
+    "jackson3": "3.1.7",
+    "tomcat": "11.0.27",
+    "logback": "1.5.38",
+    "h2": "2.4.240",
+    "flyway": "12.4.0",
+    "hibernate": "7.4.13.Final",
+    "lombok": "1.18.48",
+    "junit": "6.0.3",
+    "micrometer": "1.17.2",
+    "snakeyaml": "2.6",
+    "postgresql": "42.7.14"
+  }
+}

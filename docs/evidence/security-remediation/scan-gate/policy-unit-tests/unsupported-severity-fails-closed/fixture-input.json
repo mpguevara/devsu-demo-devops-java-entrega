@@ -1,0 +1,17 @@
+{
+  "Results": [
+    {
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "FIXTURE-INVALID-001",
+          "FixedVersion": "",
+          "Severity": "INVALID",
+          "InstalledVersion": "0.0.0-test",
+          "PkgName": "fixture:library"
+        }
+      ],
+      "Target": "fixture"
+    }
+  ],
+  "SchemaVersion": 2
+}

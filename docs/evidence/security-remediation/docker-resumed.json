@@ -1,0 +1,8 @@
+{
+  "capturedAt": "2026-10-23T18:48:56.9367694-06:00",
+  "engine": "29.6.1",
+  "node": "devsu-control-plane",
+  "nodeReady": true,
+  "ownNodeRestarted": true,
+  "priorPVCAndDataKept": true
+}

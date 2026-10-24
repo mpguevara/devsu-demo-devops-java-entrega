@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-10-23T18:48:20.6938391-06:00",
+  "observedError": "Docker Desktop failed initializing Inference manager: obsolete dockerInference AF_UNIX socket; identical error to preserved environment-20261023 evidence",
+  "safetyGuard": "First rename attempt halted while stopped processes were still exiting; nothing renamed until subsequent verification confirmed zero active Docker Desktop/backend processes",
+  "preservedRuntimeDirectories": [
+    {
+      "backup": "C:\\Users\\mario\\AppData\\Local\\Docker\\run.stale-20261023-184820",
+      "source": "C:\\Users\\mario\\AppData\\Local\\Docker\\run",
+      "entries": [
+        "dockerEthernetVfkit",
+        "dockerInference",
+        "userAnalyticsOtlpHttp.sock"
+      ]
+    },
+    {
+      "backup": "C:\\Users\\mario\\AppData\\Local\\docker-secrets-engine.stale-20261023-184820",
+      "source": "C:\\Users\\mario\\AppData\\Local\\docker-secrets-engine",
+      "entries": [
+        "engine.sock"
+      ]
+    }
+  ],
+  "factoryReset": false,
+  "containersOrVolumesDeleted": false,
+  "credentialsReadOrChanged": false
+}

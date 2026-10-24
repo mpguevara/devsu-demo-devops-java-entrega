@@ -1,0 +1,29 @@
+{
+  "startedAt": "2026-10-24T00:45:03.4905286+00:00",
+  "finishedAt": "2026-10-24T00:45:03.4940596+00:00",
+  "source": "unit-test-fixture",
+  "scanner": "Trivy 0.76.1",
+  "image": "fixture/not-a-real-image:test",
+  "exitCode": 0,
+  "completed": true,
+  "reportAvailable": true,
+  "assessmentSucceeded": true,
+  "gatePassed": true,
+  "status": "passed",
+  "failureKind": null,
+  "policy": "block-any-critical-or-high; retain-all-severities; fail-closed-on-scan-or-report-error",
+  "blockedSeverities": [
+    "CRITICAL",
+    "HIGH"
+  ],
+  "findings": 3,
+  "blockingFindings": 0,
+  "bySeverity": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 1,
+    "LOW": 1,
+    "UNKNOWN": 1
+  },
+  "failure": null
+}

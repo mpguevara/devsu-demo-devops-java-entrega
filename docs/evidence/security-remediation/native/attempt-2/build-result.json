@@ -1,0 +1,10 @@
+{
+  "command": ".\\mvnw.cmd -B -ntp clean verify -DargLine=-Xmx384m",
+  "startedAt": "2026-10-23T18:45:52.2394178-06:00",
+  "finishedAt": "2026-10-23T18:46:27.6193077-06:00",
+  "exitCode": 0,
+  "springBoot": "4.1.2",
+  "java": "17.0.20.1+1",
+  "maven": "3.8.7",
+  "reason": "Existing create/read HTTP test additionally verifies Jackson3 honors read-only id when client submits2147483647"
+}

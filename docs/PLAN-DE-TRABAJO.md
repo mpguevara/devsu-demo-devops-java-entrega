@@ -40,7 +40,7 @@ Si el diagnóstico local impide una etapa, se continuará con preparación de ar
 
 ### Java y construcción
 
-Mantener inicialmente Java 17 y Spring Boot 3.0.5 porque son las versiones declaradas por la aplicación. No incorporar una migración de framework sin una necesidad comprobada. Las vulnerabilidades encontradas podrían justificar actualizaciones acotadas, verificadas con pruebas y documentadas.
+Se mantuvieron inicialmente Java 17 y Spring Boot 3.0.5 para comprobar la base entregada. El escaneo real encontró nueve hallazgos críticos y cuarenta altos en librerías Java; esa evidencia justifica la actualización posterior a Spring Boot 4.1.2 y springdoc 3.1.1, conservando Java 17. El BOM coordina las versiones corregidas y evita combinar Spring 7 con Boot 3. La [guía de seguridad](SEGURIDAD.md) conserva la justificación y sus verificaciones.
 
 Usar Maven Wrapper para fijar Maven. Se actualizó el wrapper de 3.1.1 a 3.3.4 para verificar descargas por checksum, manteniendo Maven 3.8.7. Las bases Docker están fijadas por digest. Dos construcciones limpias Linux generaron el mismo JAR; el alcance y la diferencia de metadatos Windows/Linux están en la guía de Docker. No se afirma identidad de la imagen OCI completa.
 
@@ -68,7 +68,7 @@ GitHub Actions y GHCR reducen la cantidad de servicios externos y permiten enlaz
 
 El pipeline ejecuta compilación, pruebas, análisis estático y cobertura antes de construir, escanear y publicar la imagen. La etiqueta incluye el commit y la publicación registra su digest. Los jobs siguientes comprueban el SHA-256 del archivo de imagen para desplegar los mismos bytes, sin recompilar otra imagen.
 
-Trivy 0.76.1 encontró 121 hallazgos en la imagen, incluidos nueve críticos y cuarenta altos. No se omiten severidades ni vulnerabilidades sin corrección. La política es informativa frente a hallazgos y bloqueante ante errores operativos; el reporte y las prioridades se conservan en la evidencia. La actualización compatible del stack heredado y una política de bloqueo para producción quedan pendientes.
+El primer escaneo Trivy 0.76.1 encontró 121 hallazgos, incluidos nueve críticos y cuarenta altos. Su política informativa se conserva en la evidencia histórica. La política actual bloquea la publicación y el despliegue ante cualquier crítico o alto, así como ante errores operativos o reportes inválidos. El informe completo se escribe antes de devolver el fallo; no se omiten severidades ni vulnerabilidades sin corrección. Las pruebas unitarias de esta política usan fixtures identificados y no se presentan como escaneos reales.
 
 ### Kubernetes y acceso
 

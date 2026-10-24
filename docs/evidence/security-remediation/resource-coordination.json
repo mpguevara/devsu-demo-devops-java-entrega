@@ -1,0 +1,10 @@
+{
+  "capturedAt": "2026-10-23T18:41:27.7647753-06:00",
+  "reason": "Pause own kind node to free memory for sequential native dependency migration tests",
+  "node": "devsu-control-plane",
+  "action": "docker stop --time 30",
+  "removed": false,
+  "pvcDeleted": false,
+  "freeMemoryKiBBefore": 545024,
+  "freeMemoryKiBAfter": 429096
+}

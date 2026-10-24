@@ -1,6 +1,6 @@
 # Pipeline y evidencia
 
-El workflow [ci.yml](../.github/workflows/ci.yml) construye la aplicacion Java original, ejecuta los controles de calidad, genera una imagen, publica esa misma imagen en GHCR cuando corresponde y la despliega en un cluster kind del runner. El cluster y la API no tienen endpoint publico. Una ejecucion local y una ejecucion de GitHub Actions son evidencias distintas.
+El workflow [ci.yml](../.github/workflows/ci.yml) construye la aplicacion Java del ejercicio, ejecuta los controles de calidad, genera una imagen, publica esa misma imagen en GHCR cuando corresponde y la despliega en un cluster kind del runner. El cluster y la API no tienen endpoint publico. Una ejecucion local y una ejecucion de GitHub Actions son evidencias distintas.
 
 ## Flujo
 
@@ -12,7 +12,9 @@ flowchart LR
     C --> E[Docker build]
     D --> E
     E --> F[Trivy: reporte completo]
-    F --> G[Imagen tar y SHA256]
+    F --> V{0 CRITICAL y 0 HIGH?}
+    V -->|si| G[Imagen tar y SHA256]
+    V -->|no o error| X[Bloquear publicacion y despliegue]
     G --> H[GHCR: solo rama predeterminada]
     G --> I[PR: omitir publicacion]
     H --> J[kind privado en runner]
@@ -22,8 +24,8 @@ flowchart LR
 
 | Job | Que comprueba | Resultado conservado |
 |---|---|---|
-| `quality` | Java 17, compilacion, pruebas, empaquetado, PMD, cobertura y umbrales JaCoCo | Log Maven, Surefire, JaCoCo, PMD y `quality-summary.json` |
-| `container` | Dockerfile completo y usuario `10001:10001`; escaneo de la imagen | Log build, ID de imagen, JSON Trivy y resumen por severidad |
+| `quality` | Java 17, pruebas unitarias offline del gate, compilacion, pruebas Java, empaquetado, PMD, cobertura y umbrales JaCoCo | Log Maven, Surefire, JaCoCo, PMD y `quality-summary.json` |
+| `container` | Dockerfile completo y usuario `10001:10001`; escaneo completo y bloqueo ante cualquier CRITICAL/HIGH | Log build, ID de imagen, JSON Trivy y resumen por severidad |
 | `publish` | Carga y publica la imagen ya construida; valida SHA256 del archivo transferido | Log push y digest realmente devuelto por Docker |
 | `kubernetes` | Despliegue y pruebas del cluster kind privado | Evidencia producida por `Test-Kubernetes.ps1` |
 
@@ -59,11 +61,27 @@ Trivy `0.76.1` se descarga de su release oficial. [Install-Trivy.ps1](../scripts
 
 ## Politica de vulnerabilidades
 
-El escaneo inicial es **informativo**: informa todas las severidades y no oculta vulnerabilidades sin correccion. Los fallos de descarga, base de datos o ejecucion del escaner bloquean el job. Tener CVE no se interpreta como un fallo operativo del escaner, y una ejecucion verde no afirma que la imagen este libre de vulnerabilidades.
+La politica actual **bloquea publicacion y despliegue ante cualquier CRITICAL o HIGH**, tenga o no version corregida. El JSON conserva todas las severidades; MEDIUM, LOW y UNKNOWN siguen visibles. No se aplican exclusiones por CVE ni `ignore-unfixed`. Los flags explicitos `--config=` y `--ignorefile=` desactivan la carga automatica de configuracion y exclusiones locales; `--ignore-unfixed=false` conserva hallazgos sin correccion.
 
-Esta decision permite entregar y evaluar la automatizacion sobre el stack heredado. Actualizar Spring Boot y dependencias vulnerables requiere un trabajo de compatibilidad separado. Antes de un despliegue de produccion habria que priorizar los hallazgos, corregir o justificar cada riesgo y acordar una politica bloqueante. El informe JSON conserva paquete, version instalada, severidad y version corregida cuando Trivy la conoce.
+Trivy produce primero el JSON completo con `--exit-code 0`. Ese valor permite distinguir errores operativos del escaner de los hallazgos. [Assert-ImageScanPolicy.ps1](../scripts/ci/Assert-ImageScanPolicy.ps1) evalua despues el reporte y devuelve un error si hay CRITICAL/HIGH. Antes de ese error escribe `scan-summary.json`, `trivy-summary.md` y `scan-policy.log`; el JSON original y `trivy.log` permanecen disponibles. El upload del artifact usa `if: always()`. La exportacion de la imagen, GHCR y Kubernetes requieren que el job `container` termine correctamente.
 
-La base de CVE se actualiza con el tiempo. Por ello dos escaneos de una misma imagen pueden informar diferentes resultados. No se debe inventar una cifra ni copiar un resultado anterior como si correspondiera a la ejecucion actual.
+El resumen distingue:
+
+| Campo | Significado |
+|---|---|
+| `completed` | Trivy termino con codigo 0; no significa que la politica aprobo. |
+| `assessmentSucceeded` | Se pudo validar y evaluar el JSON completo. |
+| `gatePassed` | La evaluacion fue valida y no encontro CRITICAL/HIGH. |
+| `status` | `passed`, `blocked-vulnerabilities`, `operational-error` o `report-error`. |
+| `failureKind` | Distingue hallazgos de un fallo operativo o de un reporte invalido. |
+
+Por ejemplo, un escaneo con HIGH termina con `completed=true`, `assessmentSucceeded=true`, `gatePassed=false` y bloquea el flujo. Si falla la descarga de la base de CVE o el proceso Trivy, el pipeline falla sin informar un conteo falso de cero vulnerabilidades. Un reporte ausente o invalido tambien bloquea. No se sobrescribe un `trivy-image.json` existente: repetir el escaneo requiere otra carpeta de evidencia.
+
+[Test-ImageScanPolicy.ps1](../scripts/ci/Test-ImageScanPolicy.ps1) ejecuta ocho pruebas unitarias offline: HIGH sin correccion en un segundo resultado, CRITICAL sin correccion, MEDIUM/LOW/UNKNOWN, reporte vacio valido, error del proceso, JSON invalido, reporte ausente y severidad invalida. Verifica tambien que los resultados se escriban antes de rechazar el gate. Los fixtures estan marcados `unit-test-fixture` y no ejecutan Trivy, Docker ni descargas. La evidencia local esta en [scan-gate](evidence/security-remediation/scan-gate/README.md); no reemplaza un escaneo real de la imagen.
+
+Las ejecuciones historicas [40043825396](evidence/pipeline/remote-run-40043825396/README.md) y [40044688944](evidence/pipeline/remote-run-40044688944/README.md) usaron una politica informativa y conservaron sus hallazgos. Sus resultados permanecen sin alteracion. La correccion del stack y los nuevos resultados se documentan en [SEGURIDAD.md](SEGURIDAD.md). Hasta contar con un nuevo escaneo real no se afirma que la imagen corregida tenga cero CRITICAL/HIGH.
+
+La base de CVE cambia con el tiempo. Cada escaneo conserva la fecha y la version de la herramienta. Despues de ejecutar Trivy captura `trivy-version.json` con la salida real de `trivy --version --format json`, incluyendo las fechas de las bases que esten disponibles en su cache. Aprobar este gate significa cero CRITICAL/HIGH detectados en ese snapshot; no demuestra ausencia de todos los riesgos.
 
 ## Ejecutar y revisar GitHub Actions
 
@@ -127,7 +145,7 @@ No escribir el token literal en el historial, `.env`, capturas, README ni argume
 2. Como se demuestra que la imagen publicada y la desplegada corresponden a la construida?
 3. Por que un PR puede probar Kubernetes sin recibir permisos para publicar paquetes?
 4. Que diferencia hay entre el SHA256 del archivo `docker save`, el ID local de imagen y un digest del registry?
-5. Por que el escaneo informativo puede producir un pipeline verde con CVE? Que faltaria para produccion?
+5. Por que Trivy puede terminar con codigo 0 y el gate bloquear el pipeline? Como se distingue ese caso de un error operativo?
 6. Que prueba una ejecucion local, que prueba GitHub Actions y que no prueba el cluster efimero?
 
 ## Referencias primarias

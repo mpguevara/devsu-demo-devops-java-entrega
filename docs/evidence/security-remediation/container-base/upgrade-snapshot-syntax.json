@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-10-23T18:49:02.9514003-06:00",
+  "script": "scripts/Test-DependencyUpgrade.ps1",
+  "parseErrors": [],
+  "parserPassed": true,
+  "scriptSHA256": "461f5a918019d4c92ec5b8365ec112aabc62b5d70a815733e50c4ac48998152c",
+  "runtimeExecuted": false
+}

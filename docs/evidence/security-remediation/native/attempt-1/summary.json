@@ -1,0 +1,132 @@
+{
+  "recordedAt": "2026-10-23T18:44:50.1843158-06:00",
+  "source": "JaCoCo, Surefire and PMD XML",
+  "springBoot": "4.1.2",
+  "tests": 22.0,
+  "failures": 0.0,
+  "errors": 0.0,
+  "skipped": 0.0,
+  "testSuites": [
+    {
+      "name": "devsu.devops.demo.controller.UserControllerTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.DemoJavaApplicationTests",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.health.HealthEndpointTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.repository.UserRepositoryTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.service.UserServiceTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "coverage": [
+    {
+      "type": "INSTRUCTION",
+      "covered": 235,
+      "missed": 24,
+      "total": 259,
+      "percent": 90.73
+    },
+    {
+      "type": "BRANCH",
+      "covered": 2,
+      "missed": 0,
+      "total": 2,
+      "percent": 100.0
+    },
+    {
+      "type": "LINE",
+      "covered": 51,
+      "missed": 7,
+      "total": 58,
+      "percent": 87.93
+    },
+    {
+      "type": "COMPLEXITY",
+      "covered": 27,
+      "missed": 4,
+      "total": 31,
+      "percent": 87.1
+    },
+    {
+      "type": "METHOD",
+      "covered": 26,
+      "missed": 4,
+      "total": 30,
+      "percent": 86.67
+    },
+    {
+      "type": "CLASS",
+      "covered": 8,
+      "missed": 0,
+      "total": 8,
+      "percent": 100.0
+    }
+  ],
+  "serviceCoverage": [
+    {
+      "name": "devsu/devops/demo/service/UserServiceImpl",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "covered": 72,
+          "missed": 0
+        },
+        {
+          "type": "BRANCH",
+          "covered": 2,
+          "missed": 0
+        },
+        {
+          "type": "LINE",
+          "covered": 14,
+          "missed": 0
+        },
+        {
+          "type": "COMPLEXITY",
+          "covered": 7,
+          "missed": 0
+        },
+        {
+          "type": "METHOD",
+          "covered": 6,
+          "missed": 0
+        },
+        {
+          "type": "CLASS",
+          "covered": 1,
+          "missed": 0
+        }
+      ]
+    }
+  ],
+  "pmdViolations": 0,
+  "pmdProcessingErrors": 0,
+  "coverageGatesUnchanged": true,
+  "manualCoverageExclusions": [],
+  "jarSHA256": "7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c"
+}

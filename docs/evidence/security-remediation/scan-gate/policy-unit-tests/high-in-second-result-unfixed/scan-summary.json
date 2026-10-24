@@ -1,0 +1,29 @@
+{
+  "startedAt": "2026-10-24T00:45:03.3507804+00:00",
+  "finishedAt": "2026-10-24T00:45:03.4211609+00:00",
+  "source": "unit-test-fixture",
+  "scanner": "Trivy 0.76.1",
+  "image": "fixture/not-a-real-image:test",
+  "exitCode": 0,
+  "completed": true,
+  "reportAvailable": true,
+  "assessmentSucceeded": true,
+  "gatePassed": false,
+  "status": "blocked-vulnerabilities",
+  "failureKind": "findings",
+  "policy": "block-any-critical-or-high; retain-all-severities; fail-closed-on-scan-or-report-error",
+  "blockedSeverities": [
+    "CRITICAL",
+    "HIGH"
+  ],
+  "findings": 2,
+  "blockingFindings": 1,
+  "bySeverity": {
+    "CRITICAL": 0,
+    "HIGH": 1,
+    "MEDIUM": 1,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "failure": "La politica bloquea 0 CRITICAL y 1 HIGH."
+}

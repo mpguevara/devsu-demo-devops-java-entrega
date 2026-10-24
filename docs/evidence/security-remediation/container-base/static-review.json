@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-23T18:43:34.1592601-06:00",
+  "scope": "Inspeccion estatica, sin compilar ni ejecutar contenedores",
+  "frameworkParent": "4.1.2",
+  "javaMajor": "17",
+  "maven": "3.8.7",
+  "officialBootRequirementsSource": "https://docs.spring.io/spring-boot/system-requirements.html",
+  "officialBootPackagingSource": "https://docs.spring.io/spring-boot/maven-plugin/packaging.html",
+  "officialPinnedJreSource": "https://raw.githubusercontent.com/adoptium/containers/511f9356dc4d50932a0a5f8cfb0f87ed1aef4f07/17/jre/ubuntu/noble/Dockerfile",
+  "officialPinnedJreSourceSHA256": "a8bb8a4bf1e718cfd2ea457f648650b5fd7b00ffa0fb597be0bd5b963af7cf25",
+  "dockerfileSHA256": "46a8d2793db29ec4e2522019c857cbecc7987aa6610a97c98c1146fb533e5e29",
+  "checks": [
+    {
+      "name": "Builder pin coincide con la imagen publicada consultada",
+      "passed": true
+    },
+    {
+      "name": "Runtime pin coincide con la imagen publicada consultada",
+      "passed": true
+    },
+    {
+      "name": "Dos etapas JDK/JRE",
+      "passed": true
+    },
+    {
+      "name": "Usuario y grupo 10001",
+      "passed": true
+    },
+    {
+      "name": "Entrypoint java -jar",
+      "passed": true
+    },
+    {
+      "name": "curl presente en fuente oficial JRE fijada",
+      "passed": true
+    },
+    {
+      "name": "Healthcheck usa puerto configurable y readiness",
+      "passed": true
+    },
+    {
+      "name": "Docker copia configuracion del analizador",
+      "passed": true
+    },
+    {
+      "name": "No apt upgrade agregado",
+      "passed": true
+    },
+    {
+      "name": "Java major 17 en POM",
+      "passed": true
+    },
+    {
+      "name": "Maven wrapper 3.8.7",
+      "passed": true
+    },
+    {
+      "name": "Nombre JAR coincide con Docker COPY",
+      "passed": true
+    },
+    {
+      "name": "Propiedad JaCoCo distinta de argLine de memoria",
+      "passed": true
+    },
+    {
+      "name": "Timestamp reproducible configurado",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "dockerfileChanged": false,
+  "dockerBuildExecuted": false,
+  "vulnerabilityScanExecuted": false
+}

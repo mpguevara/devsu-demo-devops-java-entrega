@@ -1,0 +1,37 @@
+{
+  "observedAt": "2026-10-23T18:43:06.8507335-06:00",
+  "registry": "https://registry-1.docker.io/v2/library/eclipse-temurin/",
+  "images": [
+    {
+      "floatingTag": "17-jdk-noble",
+      "indexDigest": "sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2",
+      "amd64ManifestDigest": "sha256:70b8a92fda11a54477cffe9af30accb758766df6f3208bfac47c3ee4a769a651",
+      "configDigest": "sha256:b2d4d005ad7fd09100bdf4a01415473c6713cfaa8964d68a6727b33545732351",
+      "explicitVersionTag": "17.0.20.1_1-jdk-noble",
+      "sourceRevision": "511f9356dc4d50932a0a5f8cfb0f87ed1aef4f07",
+      "source": "https://github.com/adoptium/containers.git#511f9356dc4d50932a0a5f8cfb0f87ed1aef4f07:17/jdk/ubuntu/noble",
+      "baseImage": "ubuntu:24.04",
+      "baseDigest": "sha256:a2d43bffc46670d7108bb3c0468c67c5557c4c92e83e1e34cbff1322ad1b94dc",
+      "publicBaseJavaVersion": [
+        "JAVA_VERSION=jdk-17.0.20.1+1"
+      ],
+      "createdAt": "2026-10-17T00:18:34Z"
+    },
+    {
+      "floatingTag": "17-jre-noble",
+      "indexDigest": "sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd",
+      "amd64ManifestDigest": "sha256:e7ee15413d334217ca732978500b310e1a0bb8a5e54d9b6dd12509f636cda99e",
+      "configDigest": "sha256:5eb339fa0dc333ecdb302fbacc8292df0d5bb12b13b22c74a493b0ff2b476852",
+      "explicitVersionTag": "17.0.20.1_1-jre-noble",
+      "sourceRevision": "511f9356dc4d50932a0a5f8cfb0f87ed1aef4f07",
+      "source": "https://github.com/adoptium/containers.git#511f9356dc4d50932a0a5f8cfb0f87ed1aef4f07:17/jre/ubuntu/noble",
+      "baseImage": "ubuntu:24.04",
+      "baseDigest": "sha256:a2d43bffc46670d7108bb3c0468c67c5557c4c92e83e1e34cbff1322ad1b94dc",
+      "publicBaseJavaVersion": [
+        "JAVA_VERSION=jdk-17.0.20.1+1"
+      ],
+      "createdAt": "2026-10-17T00:18:46Z"
+    }
+  ],
+  "noDockerPullOrBuildPerformed": true
+}

@@ -1,0 +1,28 @@
+{
+  "observedAt": "2026-10-23T18:43:08.2830651-06:00",
+  "tagSearchURL": "https://hub.docker.com/v2/repositories/library/eclipse-temurin/tags?page_size=100&name=17.0.21",
+  "tagSearchCount": 0,
+  "manifestRequests": [
+    {
+      "tag": "17.0.21_9-jdk-noble",
+      "url": "https://registry-1.docker.io/v2/library/eclipse-temurin/manifests/17.0.21_9-jdk-noble",
+      "httpStatus": 404
+    },
+    {
+      "tag": "17.0.21_9-jre-noble",
+      "url": "https://registry-1.docker.io/v2/library/eclipse-temurin/manifests/17.0.21_9-jre-noble",
+      "httpStatus": 404
+    },
+    {
+      "tag": "17.0.21_9-jdk-jammy",
+      "url": "https://registry-1.docker.io/v2/library/eclipse-temurin/manifests/17.0.21_9-jdk-jammy",
+      "httpStatus": 404
+    },
+    {
+      "tag": "17.0.21_9-jre-jammy",
+      "url": "https://registry-1.docker.io/v2/library/eclipse-temurin/manifests/17.0.21_9-jre-jammy",
+      "httpStatus": 404
+    }
+  ],
+  "conclusion": "A esta consulta no existe imagen oficial Temurin 17.0.21 publicada en estos tags. No es evidencia de que nunca se vaya a publicar."
+}

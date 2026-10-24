@@ -1,0 +1,8 @@
+{
+  "capturedAt": "2026-10-23T18:42:05.9028477-06:00",
+  "action": "docker desktop stop --timeout 45",
+  "exitCode": 0,
+  "reason": "Only own kind node existed and was already stopped; release Linux VM memory before Maven migration tests",
+  "freeMemoryKiB": 1989752,
+  "dataDeleted": false
+}

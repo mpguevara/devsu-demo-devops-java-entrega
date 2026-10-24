@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+demo-java,devsu.devops.demo.controller,RestResponseEntityExceptionHandler,13,108,0,0,1,21,1,8,1,8
+demo-java,devsu.devops.demo.controller,UserController,0,20,0,0,0,6,0,4,0,4
+demo-java,devsu.devops.demo.service.mapper,UserMapper,0,17,0,0,0,3,0,3,0,3
+demo-java,devsu.devops.demo.config,ModelMapperConfig,0,7,0,0,0,2,0,2,0,2
+demo-java,devsu.devops.demo.exception,ResourceNotFoundException,3,4,0,0,2,2,1,1,1,1
+demo-java,devsu.devops.demo.exception,BadRequestException,3,4,0,0,2,2,1,1,1,1
+demo-java,devsu.devops.demo.service,UserServiceImpl,0,72,0,2,0,14,0,7,0,6
+demo-java,devsu.devops.demo,DemoJavaApplication,5,3,0,0,2,1,1,1,1,1

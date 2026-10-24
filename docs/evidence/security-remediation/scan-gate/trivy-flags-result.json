@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-24T00:47:12.5337759+00:00",
+  "scope": "Installed pinned binary help/version only; no scan, Docker or DB download",
+  "command": "trivy image --help --config= --ignorefile= --ignore-unfixed=false --ignore-status= --ignore-policy= --severity 'UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL'",
+  "exitCode": 0,
+  "binarySHA256": "94618922c9eb324d7099bf217b01504bfc1f87a0d46d6008cb24ec89b1d1a4bb",
+  "version": "0.76.1",
+  "passed": true
+}

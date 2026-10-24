@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-10-23T18:47:04.4505815-06:00",
+  "attempt1JarSHA256": "7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c",
+  "attempt2JarSHA256": "7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c",
+  "smokeJarSHA256": "7a31462fbc2709e493d7bc0658c464f9eebeaee89a7a6f39ccb0689b6d02632c",
+  "equal": true,
+  "scope": "Two clean builds on same Windows JDK/Maven after only a test assertion changed; not cross-OS/OCI reproducibility",
+  "smokeRepeated": false,
+  "reason": "Production JAR bytes unchanged; smoke already validated identical artifact"
+}

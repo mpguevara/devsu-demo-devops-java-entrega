@@ -1,0 +1,17 @@
+[
+  {
+    "file": "scripts/ci/Invoke-ImageScan.ps1",
+    "errors": [],
+    "sha256": "3a14ccab308bf4672d18ec327f639db4fe1228381c4b41093d0a036a1fddccd9"
+  },
+  {
+    "file": "scripts/ci/Assert-ImageScanPolicy.ps1",
+    "errors": [],
+    "sha256": "c0d400a78f0a48ac1318886e299e31b44236e6d567ed98a9ad726a0998cb5796"
+  },
+  {
+    "file": "scripts/ci/Test-ImageScanPolicy.ps1",
+    "errors": [],
+    "sha256": "bba09f7dbfee9ff4324c90caf205ded10db6bf338be3b29e8daab2b56f610fff"
+  }
+]

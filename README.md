@@ -16,7 +16,7 @@ This is a simple application to be used in the technical test of DevOps.
 
 El [repositorio público](https://github.com/mpguevara/devsu-demo-devops-java) y el [pipeline completo aprobado](https://github.com/mpguevara/devsu-demo-devops-java/actions/runs/40044688944) están disponibles. El run validó la revisión `2506a339cd878b0c17d9da94caebccbcbfa1660c`: calidad, construcción/escaneo, publicación GHCR y Kubernetes. La validación remota pasó 30 comprobaciones y registró 18.770 GET exitosos y cero fallidos durante su carga acotada. La primera ejecución fallida y su corrección también se conservan. **No existe ni se requiere un endpoint público**; el acceso de la API queda en localhost.
 
-**Limitación de seguridad pendiente:** Trivy registró 121 hallazgos, incluidos **9 críticos y 40 altos**, en el stack heredado y su base. El escaneo es informativo frente a hallazgos y bloqueante ante errores operativos. Las actualizaciones compatibles y una política de bloqueo para producción quedan pendientes; un pipeline aprobado no declara la imagen libre de vulnerabilidades. Véanse [resultados y prioridades](docs/evidence/pipeline/remote-run-40044688944/security/PRIORIDADES.md).
+**Actualización de seguridad en verificación:** el escaneo anterior registró 121 hallazgos, incluidos **9 críticos y 40 altos** en librerías Java. Se actualiza el stack con Spring Boot 4.1.2 y una política que bloquea publicación y despliegue ante cualquier crítico o alto. Los resultados del nuevo escaneo y pipeline se documentarán después de ejecutarlos. Se conservan los [resultados anteriores](docs/evidence/pipeline/remote-run-40044688944/security/PRIORIDADES.md) y la [explicación de la corrección](docs/SEGURIDAD.md).
 
 - [Diagnóstico, resultados y problemas encontrados](docs/DIAGNOSTICO.md).
 - [Plan guiado para los siete días y preguntas de defensa](docs/PLAN-DE-TRABAJO.md).
@@ -28,6 +28,7 @@ El [repositorio público](https://github.com/mpguevara/devsu-demo-devops-java) y
 - [Pruebas, PMD, cobertura y controles de calidad](docs/CALIDAD.md).
 - [Evidencia de calidad y medición inicial](docs/evidence/quality/README.md).
 - [Pipeline como código y ejecución local](docs/PIPELINE.md).
+- [Corrección de vulnerabilidades, compatibilidad y límites del escaneo](docs/SEGURIDAD.md).
 - [Kubernetes privado, acceso local y verificación](docs/KUBERNETES.md).
 - [Evidencia del pipeline completo aprobado](docs/evidence/pipeline/remote-run-40044688944/README.md).
 - [Consolidación final de implementación y evidencias](docs/evidence/final-verification.json).
@@ -52,9 +53,9 @@ La copia inicial procede de un ZIP. El 23 de octubre se inicializó Git para reg
 
 ### Versiones y dependencias confirmadas
 
-Se mantienen Java **17**, Spring Boot **3.0.5**, ModelMapper **2.4.5** y springdoc **2.1.0**. El proyecto incluye Web, JPA, Validation, Test, H2, Lombok y DevTools. El árbol inicial resuelto confirma Spring Framework **6.0.7**, Hibernate **6.1.7.Final**, H2 **2.1.214**, Lombok **1.18.26**, JUnit Jupiter **5.9.2** y Mockito **4.8.1**. Se añadieron PostgreSQL JDBC **42.7.14**, Flyway **9.5.1** y Actuator **3.0.5**. Se conservan el [árbol inicial](docs/evidence/baseline/dependency-tree.txt) y el [árbol de la etapa PostgreSQL, anterior a Actuator](docs/evidence/postgres/dependency-tree.txt).
+La versión actual mantiene Java **17** y ModelMapper **2.4.5**, y actualiza Spring Boot a **4.1.2** y springdoc a **3.1.1** para corregir las vulnerabilidades identificadas. El BOM gestiona Spring Framework **7.0.10**, Tomcat **11.0.27**, Jackson **3.1.7**, H2 **2.4.240**, Flyway **12.4.0** y PostgreSQL JDBC **42.7.14**. Flyway incorpora ahora su módulo PostgreSQL. La [guía de seguridad](docs/SEGURIDAD.md) explica la migración y su validación.
 
-Usaremos Java 17 para respetar la base entregada. La [documentación de Spring Boot 3.0.5](https://docs.spring.io/spring-boot/docs/3.0.5/reference/html/getting-started.html#getting-started.system-requirements) declara compatibilidad con Java 17–20; Java 26 queda fuera de ese rango. No se ejecutó ni se afirma una compilación fallida con Java 26.
+La base original utilizaba Spring Boot **3.0.5**, Spring **6.0.7**, Hibernate **6.1.7.Final**, H2 **2.1.214**, Lombok **1.18.26**, JUnit **5.9.2** y Mockito **4.8.1**. Se conservan el [árbol inicial](docs/evidence/baseline/dependency-tree.txt) y el [árbol de la etapa PostgreSQL](docs/evidence/postgres/dependency-tree.txt). Java 17 era compatible con la base y sigue siendo compatible con [Spring Boot 4.1.2](https://docs.spring.io/spring-boot/system-requirements.html); no se usa el Java 26 global para las verificaciones.
 
 ### Preparación en Windows y ejecución local
 
@@ -115,7 +116,7 @@ Las verificaciones anteriores de nueve peticiones H2, 39 comprobaciones Docker y
 
 JaCoCo **0.8.15** mide cobertura; Maven PMD Plugin **3.28.0**, con PMD **7.17.0**, aplica nueve reglas explícitas. Los controles requieren al menos 85 % de líneas globales y 100 % de líneas/ramas del pequeño servicio. La baja cobertura global de ramas incluye métodos generados por Lombok y permanece visible, sin exclusiones. La [guía de calidad](docs/CALIDAD.md) explica los límites y las decisiones.
 
-[GitHub Actions](.github/workflows/ci.yml) define calidad → construcción/escaneo → publicación GHCR → despliegue y validación kind. El escaneo Trivy es informativo respecto a CVE y bloquea si falla el escáner; no se afirma que una imagen sea segura por completar el pipeline. Las acciones y herramientas están fijadas a versiones y hashes. En pull requests no se publica ni se utilizan credenciales de publicación. El clúster del runner es efímero y desaparece al terminar; no proporciona un servicio permanente ni un endpoint público.
+[GitHub Actions](.github/workflows/ci.yml) define calidad → construcción/escaneo → publicación GHCR → despliegue y validación kind. Trivy bloquea el flujo ante cualquier hallazgo crítico o alto, fallos operativos o reportes inválidos; conserva todas las severidades. Completar el pipeline no demuestra ausencia de todo riesgo. Las acciones y herramientas están fijadas a versiones y hashes. En pull requests no se publica ni se utilizan credenciales de publicación. El clúster del runner es efímero y desaparece al terminar; no proporciona un servicio permanente ni un endpoint público.
 
 ### Construcción de imagen y despliegue
 

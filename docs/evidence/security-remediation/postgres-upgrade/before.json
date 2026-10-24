@@ -1,0 +1,61 @@
+{
+  "observedAt": "2026-10-23T18:48:55.5617112-06:00",
+  "mode": "Before",
+  "context": "kind-devsu",
+  "namespace": "devsu",
+  "passed": true,
+  "error": null,
+  "readOnlySession": "on",
+  "users": [
+    {
+      "id": 1,
+      "dni": "1067665028",
+      "name": "Kubernetes Prueba"
+    },
+    {
+      "id": 2,
+      "dni": "1101923020",
+      "name": "Kubernetes Prueba"
+    }
+  ],
+  "userCount": 2,
+  "flyway": [
+    {
+      "installed_rank": 1,
+      "version": "1",
+      "checksum": -1665856150,
+      "success": true
+    }
+  ],
+  "pvcUID": "0052b7a3-772c-49b4-984b-4e437fb8bef9",
+  "applicationImage": "devsu-demo-java:local",
+  "applicationPods": [
+    {
+      "name": "devsu-app-7fb785b48d-jttns",
+      "uid": "5ab94328-fd86-4af4-a06a-cd4901b37177",
+      "image": "devsu-demo-java:local",
+      "imageID": "docker.io/library/import-2026-10-24@sha256:3fc8dd5f66e69ca7134384b51dd9b6c473d252207cedea322b631631e084152d"
+    },
+    {
+      "name": "devsu-app-7fb785b48d-r9x6b",
+      "uid": "ffa7dfe1-38d4-4473-aa50-a97d105dfa3d",
+      "image": "devsu-demo-java:local",
+      "imageID": "docker.io/library/import-2026-10-24@sha256:3fc8dd5f66e69ca7134384b51dd9b6c473d252207cedea322b631631e084152d"
+    }
+  ],
+  "sourceMigrationV1SHA256": "389f8dc52e11a7a1f5439e359d4b809d5a1098aa05861b0fd9c975973b289400",
+  "checks": [
+    {
+      "name": "Namespace propio",
+      "actual": "deploy-script",
+      "expected": "deploy-script",
+      "passed": true
+    },
+    {
+      "name": "Sesion PostgreSQL de solo lectura",
+      "actual": "on",
+      "expected": "on",
+      "passed": true
+    }
+  ]
+}

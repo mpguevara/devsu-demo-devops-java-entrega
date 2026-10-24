@@ -1,0 +1,449 @@
+{
+  "recordedAt": "2026-10-23T18:42:08.7786785-06:00",
+  "baseline": "docs/evidence/pipeline/remote-run-40044688944/security/critical-high.csv",
+  "springBoot": "4.1.2",
+  "baselineCriticalHighFindings": 49,
+  "findings": [
+    {
+      "id": "CVE-2023-6378",
+      "severity": "HIGH",
+      "package": "ch.qos.logback:logback-classic",
+      "previousVersion": "1.4.6",
+      "scannerFixedVersions": "1.3.12, 1.4.12, 1.2.13",
+      "proposedBomVersion": "1.5.38",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2023-6378",
+      "severity": "HIGH",
+      "package": "ch.qos.logback:logback-core",
+      "previousVersion": "1.4.6",
+      "scannerFixedVersions": "1.3.12, 1.4.12, 1.2.13",
+      "proposedBomVersion": "1.5.38",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-52999",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.15.0",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-core 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-68494",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.18.8, 2.21.4",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-core 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-89425",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.21.7, 2.22.3, 2.18.11",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-core 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-54512",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.18.8, 3.1.4, 2.21.4",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-databind 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-54513",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.18.8, 2.21.4, 3.1.4",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-databind 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-68497",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.18.10, 2.21.6, 2.22.2",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-databind 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-91776",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.18.11, 2.21.7, 2.22.3",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-databind 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-91777",
+      "severity": "HIGH",
+      "package": "com.fasterxml.jackson.core:jackson-databind",
+      "previousVersion": "2.14.2",
+      "scannerFixedVersions": "2.21.7, 2.18.11, 2.22.3",
+      "proposedBomVersion": "2.21.7 (legacy managed); preferred tools.jackson.core:jackson-databind 3.1.7",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2022-45868",
+      "severity": "HIGH",
+      "package": "com.h2database:h2",
+      "previousVersion": "2.1.214",
+      "scannerFixedVersions": "2.2.220",
+      "proposedBomVersion": "2.4.240",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-40984",
+      "severity": "HIGH",
+      "package": "io.micrometer:micrometer-core",
+      "previousVersion": "1.10.5",
+      "scannerFixedVersions": "1.16.6, 1.15.12",
+      "proposedBomVersion": "1.17.2",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-24813",
+      "severity": "CRITICAL",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.3, 10.1.35, 9.0.99",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-41293",
+      "severity": "CRITICAL",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.118, 10.1.55, 11.0.22",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-43512",
+      "severity": "CRITICAL",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.118, 10.1.55, 11.0.22",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-43515",
+      "severity": "CRITICAL",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.118, 10.1.55, 11.0.22",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-65182",
+      "severity": "CRITICAL",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.25, 10.1.58, 9.0.121",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-65905",
+      "severity": "CRITICAL",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.25, 10.1.58, 9.0.121",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-68525",
+      "severity": "CRITICAL",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.25, 10.1.58, 9.0.121",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2023-28709",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.0-M5, 10.1.8, 9.0.74",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2023-46589",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.0-M11, 10.1.16, 9.0.83, 8.5.96",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-34750",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.0-M21, 10.1.25, 9.0.90",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-38286",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.0-M21, 10.1.25, 9.0.90",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-50379",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.2, 10.1.34, 9.0.98",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-56337",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.2, 10.1.34, 9.0.98",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-48988",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.8, 10.1.42, 9.0.106",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-48989",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.10, 10.1.44, 9.0.108",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-52520",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.9, 10.1.43, 9.0.107",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-53506",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.107, 10.1.43, 11.0.9",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-55752",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.11, 10.1.45, 9.0.109",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-24734",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "11.0.18, 10.1.52, 9.0.115",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-24880",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.116, 10.1.52, 11.0.20",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-34483",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.116, 10.1.54, 11.0.21",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-34487",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.117, 10.1.54, 11.0.21",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-41284",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.118, 10.1.55, 11.0.22",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-42498",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.118, 10.1.55, 11.0.22",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-43513",
+      "severity": "HIGH",
+      "package": "org.apache.tomcat.embed:tomcat-embed-core",
+      "previousVersion": "10.1.7",
+      "scannerFixedVersions": "9.0.118, 10.1.55, 11.0.22",
+      "proposedBomVersion": "11.0.27",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2023-20873",
+      "severity": "CRITICAL",
+      "package": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+      "previousVersion": "3.0.5",
+      "scannerFixedVersions": "3.0.6, 2.7.11, 2.6.15, 2.5.15",
+      "proposedBomVersion": "4.1.2 (modular actuator equivalents)",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2023-20883",
+      "severity": "HIGH",
+      "package": "org.springframework.boot:spring-boot-autoconfigure",
+      "previousVersion": "3.0.5",
+      "scannerFixedVersions": "3.0.7, 2.7.12, 2.6.15, 2.5.15",
+      "proposedBomVersion": "4.1.2",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2025-41249",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-core",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "6.2.11",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2023-20863",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-expression",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "6.0.8, 5.3.27, 5.2.24.RELEASE",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-22243",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-web",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "6.1.4, 6.0.17, 5.3.32",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-22259",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-web",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "6.1.5, 6.0.18, 5.3.33",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-22262",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-web",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "5.3.34, 6.0.19, 6.1.6",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2026-47884",
+      "severity": "CRITICAL",
+      "package": "org.springframework:spring-webmvc",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "7.0.9",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2023-34053",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-webmvc",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "6.0.14",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-38816",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-webmvc",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "6.1.13",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2024-38819",
+      "severity": "HIGH",
+      "package": "org.springframework:spring-webmvc",
+      "previousVersion": "6.0.7",
+      "scannerFixedVersions": "6.1.14",
+      "proposedBomVersion": "7.0.10",
+      "status": "proposed; dependency resolution and scan pending"
+    },
+    {
+      "id": "CVE-2022-1471",
+      "severity": "HIGH",
+      "package": "org.yaml:snakeyaml",
+      "previousVersion": "1.33",
+      "scannerFixedVersions": "2.0",
+      "proposedBomVersion": "2.6",
+      "status": "proposed; dependency resolution and scan pending"
+    }
+  ]
+}
