@@ -1,0 +1,14 @@
+{
+  "startedAt": "2026-10-24T00:07:34.8891223+00:00",
+  "finishedAt": "2026-10-24T00:07:34.9839002+00:00",
+  "scope": "Static workflow validation only; no GitHub Actions execution",
+  "command": "actionlint -no-color .github/workflows/ci.yml",
+  "toolVersion": "1.7.12\r\ninstalled by downloading from release page\r\nbuilt with go1.26.1 compiler for windows/amd64",
+  "releaseUrl": "https://github.com/rhysd/actionlint/releases/tag/v1.7.12",
+  "archiveSHA256": "6e7241b51e6817ea6a047693d8e6fed13b31819c9a0dd6c5a726e1592d22f6e9",
+  "archiveChecksumVerifiedAgainst": "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_checksums.txt",
+  "binarySHA256": "54ca21be3de4c7cfa26914aa8b61bd76bf573ef3caac5f80d110558cdf241718",
+  "workflowSHA256": "64aba18e803dc44cc412bb0a1e149a962617c09f60b914631068010018dd2c28",
+  "exitCode": 0,
+  "passed": true
+}

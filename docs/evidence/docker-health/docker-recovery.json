@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-10-21T00:13:19.1832493-06:00",
+  "action": "Rename inactive zero-byte Docker runtime socket",
+  "name": "dockerInference",
+  "result": "failed",
+  "error": "The file cannot be accessed by the system.",
+  "containersAndVolumesChanged": false
+}

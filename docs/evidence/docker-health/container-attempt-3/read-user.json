@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-21T00:35:23.2605761-06:00",
+  "method": "Get",
+  "url": "http://127.0.0.1:8003/api/users/1",
+  "requestBody": "",
+  "actualStatus": 200,
+  "expectedStatus": 200,
+  "responseBody": "{\"id\":1,\"dni\":\"1856789013\",\"name\":\"Docker Prueba\"}"
+}

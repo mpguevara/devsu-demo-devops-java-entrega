@@ -1,0 +1,16 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< devsu.devops:demo >--------------------------
+[INFO] Building demo-java 0.0.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- wrapper:3.3.4:wrapper (default-cli) @ demo ---
+[INFO] Unpacked bin type wrapper distribution org.apache.maven.wrapper:maven-wrapper-distribution:zip:bin:3.3.4
+[INFO] Configuring .mvn/wrapper/maven-wrapper.properties to use Maven 3.8.7 and download from https://repo.maven.apache.org/maven2
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.616 s
+[INFO] Finished at: 2026-10-21T00:14:55-06:00
+[INFO] ------------------------------------------------------------------------

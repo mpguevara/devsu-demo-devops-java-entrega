@@ -1,0 +1,12 @@
+{
+  "entry": "META-INF/maven/devsu.devops/demo/pom.properties",
+  "windowsHasCRLF": true,
+  "linuxHasCRLF": false,
+  "equalAfterCRLFtoLFNormalization": true,
+  "properties": [
+    "artifactId=demo",
+    "groupId=devsu.devops",
+    "version=0.0.1"
+  ],
+  "conclusion": "Only generated Maven pom.properties line endings differ between the Windows and Linux JAR payloads."
+}

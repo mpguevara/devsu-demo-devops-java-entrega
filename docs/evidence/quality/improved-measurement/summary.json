@@ -1,0 +1,489 @@
+{
+  "phase": "improved-measurement",
+  "source": "JaCoCo XML, Surefire XML and PMD XML; no inferred percentages",
+  "tests": 22,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "testSuites": [
+    {
+      "name": "devsu.devops.demo.controller.UserControllerTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.DemoJavaApplicationTests",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.health.HealthEndpointTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.repository.UserRepositoryTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.service.UserServiceTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "coverageCounters": [
+    {
+      "type": "INSTRUCTION",
+      "missed": 267,
+      "covered": 406,
+      "total": 673,
+      "coveredPercent": 60.33
+    },
+    {
+      "type": "BRANCH",
+      "missed": 54,
+      "covered": 8,
+      "total": 62,
+      "coveredPercent": 12.9
+    },
+    {
+      "type": "LINE",
+      "missed": 7,
+      "covered": 65,
+      "total": 72,
+      "coveredPercent": 90.28
+    },
+    {
+      "type": "COMPLEXITY",
+      "missed": 41,
+      "covered": 58,
+      "total": 99,
+      "coveredPercent": 58.59
+    },
+    {
+      "type": "METHOD",
+      "missed": 11,
+      "covered": 57,
+      "total": 68,
+      "coveredPercent": 83.82
+    },
+    {
+      "type": "CLASS",
+      "missed": 0,
+      "covered": 12,
+      "total": 12,
+      "coveredPercent": 100.0
+    }
+  ],
+  "classCounters": [
+    {
+      "name": "devsu/devops/demo/controller/RestResponseEntityExceptionHandler",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 13,
+          "covered": 108
+        },
+        {
+          "type": "LINE",
+          "missed": 1,
+          "covered": 21
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 1,
+          "covered": 8
+        },
+        {
+          "type": "METHOD",
+          "missed": 1,
+          "covered": 8
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/controller/UserController",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 0,
+          "covered": 20
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 6
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 0,
+          "covered": 4
+        },
+        {
+          "type": "METHOD",
+          "missed": 0,
+          "covered": 4
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/service/dto/UserDto$UserDtoBuilder",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 8,
+          "covered": 28
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 1
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 1,
+          "covered": 5
+        },
+        {
+          "type": "METHOD",
+          "missed": 1,
+          "covered": 5
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/service/dto/UserDto",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 126,
+          "covered": 45
+        },
+        {
+          "type": "BRANCH",
+          "missed": 29,
+          "covered": 1
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 7
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 18,
+          "covered": 10
+        },
+        {
+          "type": "METHOD",
+          "missed": 3,
+          "covered": 10
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/service/mapper/UserMapper",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 0,
+          "covered": 17
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 3
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 0,
+          "covered": 3
+        },
+        {
+          "type": "METHOD",
+          "missed": 0,
+          "covered": 3
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/config/ModelMapperConfig",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 0,
+          "covered": 7
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 2
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 0,
+          "covered": 2
+        },
+        {
+          "type": "METHOD",
+          "missed": 0,
+          "covered": 2
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/entity/User$UserBuilder",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 8,
+          "covered": 28
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 1
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 1,
+          "covered": 5
+        },
+        {
+          "type": "METHOD",
+          "missed": 1,
+          "covered": 5
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/entity/User",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 101,
+          "covered": 70
+        },
+        {
+          "type": "BRANCH",
+          "missed": 25,
+          "covered": 5
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 7
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 17,
+          "covered": 11
+        },
+        {
+          "type": "METHOD",
+          "missed": 2,
+          "covered": 11
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/exception/ResourceNotFoundException",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 3,
+          "covered": 4
+        },
+        {
+          "type": "LINE",
+          "missed": 2,
+          "covered": 2
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 1,
+          "covered": 1
+        },
+        {
+          "type": "METHOD",
+          "missed": 1,
+          "covered": 1
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/exception/BadRequestException",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 3,
+          "covered": 4
+        },
+        {
+          "type": "LINE",
+          "missed": 2,
+          "covered": 2
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 1,
+          "covered": 1
+        },
+        {
+          "type": "METHOD",
+          "missed": 1,
+          "covered": 1
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/service/UserService",
+      "counters": [
+        {
+          "type": "",
+          "missed": 0,
+          "covered": 0
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/service/UserServiceImpl",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 0,
+          "covered": 72
+        },
+        {
+          "type": "BRANCH",
+          "missed": 0,
+          "covered": 2
+        },
+        {
+          "type": "LINE",
+          "missed": 0,
+          "covered": 14
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 0,
+          "covered": 7
+        },
+        {
+          "type": "METHOD",
+          "missed": 0,
+          "covered": 6
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/DemoJavaApplication",
+      "counters": [
+        {
+          "type": "INSTRUCTION",
+          "missed": 5,
+          "covered": 3
+        },
+        {
+          "type": "LINE",
+          "missed": 2,
+          "covered": 1
+        },
+        {
+          "type": "COMPLEXITY",
+          "missed": 1,
+          "covered": 1
+        },
+        {
+          "type": "METHOD",
+          "missed": 1,
+          "covered": 1
+        },
+        {
+          "type": "CLASS",
+          "missed": 0,
+          "covered": 1
+        }
+      ]
+    },
+    {
+      "name": "devsu/devops/demo/repository/UserRepository",
+      "counters": [
+        {
+          "type": "",
+          "missed": 0,
+          "covered": 0
+        }
+      ]
+    }
+  ],
+  "pmdViolationCount": 0,
+  "pmdViolations": [],
+  "pmdProcessingErrorCount": 0
+}

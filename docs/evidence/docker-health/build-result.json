@@ -1,0 +1,6 @@
+{
+  "command": ".\\mvnw.cmd -B -ntp clean verify -DargLine=-Xmx384m",
+  "startedAt": "2026-10-21T00:17:46.3252480-06:00",
+  "finishedAt": "2026-10-21T00:18:03.5294578-06:00",
+  "exitCode": 0
+}

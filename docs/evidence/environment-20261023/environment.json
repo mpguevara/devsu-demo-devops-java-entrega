@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-10-23T18:05:28.6785494-06:00",
+  "windows": "Microsoft Windows 11 Home Single Language",
+  "version": "10.0.26200",
+  "totalPhysicalMemoryKiB": 16393140,
+  "availablePhysicalMemoryKiB": 1025128,
+  "dockerServerVersion": "29.6.1",
+  "dockerServerOS": "linux",
+  "dockerServerArchitecture": "amd64",
+  "dockerMemoryBytes": 8130293760,
+  "runningContainers": [],
+  "githubAuthenticatedLogin": "mpguevara",
+  "githubCliVersion": "2.103.2",
+  "githubCliArchiveSHA256": "fef9fcdd8fdabd0501ab8b3d99eac976f504ab55d01bef9e8ef428a5d900ddda",
+  "publicEndpointCreated": false
+}

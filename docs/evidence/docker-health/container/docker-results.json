@@ -1,0 +1,910 @@
+{
+  "startedAt": "2026-10-21T00:38:03.8973631-06:00",
+  "finishedAt": "2026-10-21T00:38:33.5369565-06:00",
+  "project": "devsu-verify-4cb91622",
+  "image": "devsu-demo-java:local",
+  "baseUrl": "http://127.0.0.1:8003/api",
+  "appPort": 8003,
+  "postgresPort": 55434,
+  "containerPort": 8080,
+  "passed": true,
+  "cleanupSucceeded": true,
+  "errors": [],
+  "jarHashes": {
+    "containerSha256": "d98f0fd30931fff7d4215e793df30ef9b3a7d6968f49f4a2689a43a720f37251",
+    "nativeSha256": "ef6a2fb51d035776e88c7dffd068bb821e52e94a49ac132214121e9155645e59",
+    "equal": false,
+    "note": "Comparacion observacional entre el JAR del contenedor Linux y el JAR nativo disponible; no es una condicion de aprobacion."
+  },
+  "checks": [
+    {
+      "timestamp": "2026-10-21T00:38:04.3791735-06:00",
+      "name": "Motor Docker Linux",
+      "actual": "linux",
+      "expected": "linux",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:04.8818178-06:00",
+      "name": "Proyecto no contiene contenedores preexistentes",
+      "actual": "",
+      "expected": "",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:04.8820322-06:00",
+      "name": "Proyecto no contiene volumenes preexistentes",
+      "actual": "",
+      "expected": "",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:22.8660287-06:00",
+      "name": "Imagen de la aplicacion",
+      "actual": "devsu-demo-java:local",
+      "expected": "devsu-demo-java:local",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:22.8668270-06:00",
+      "name": "USER configurado",
+      "actual": "10001:10001",
+      "expected": "10001:10001",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.0808270-06:00",
+      "name": "UID efectivo",
+      "actual": "10001",
+      "expected": "10001",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.0831886-06:00",
+      "name": "Raiz de solo lectura",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.0867488-06:00",
+      "name": "Capabilities eliminadas",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.0879032-06:00",
+      "name": "No-new-privileges",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.0913781-06:00",
+      "name": "Tmpfs escribible en /tmp",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.3142631-06:00",
+      "name": "Docker HEALTHCHECK saludable",
+      "actual": "healthy",
+      "expected": "healthy",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.3160357-06:00",
+      "name": "Sin OOM inicial",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.8156760-06:00",
+      "name": "health-up salud HTTP",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2195280-06:00",
+      "name": "create HTTP Post",
+      "actual": 201,
+      "expected": 201,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2230548-06:00",
+      "name": "Usuario creado tiene ID positivo",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2294529-06:00",
+      "name": "POST conserva dni",
+      "actual": "1663154380",
+      "expected": "1663154380",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2300542-06:00",
+      "name": "POST conserva name",
+      "actual": "Docker Prueba",
+      "expected": "Docker Prueba",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2676464-06:00",
+      "name": "read HTTP Get",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2693624-06:00",
+      "name": "GET conserva id",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2694667-06:00",
+      "name": "GET conserva dni",
+      "actual": "1663154380",
+      "expected": "1663154380",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.2695079-06:00",
+      "name": "GET conserva name",
+      "actual": "Docker Prueba",
+      "expected": "Docker Prueba",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:26.8734277-06:00",
+      "name": "Readiness alcanza DOWN",
+      "actual": "DOWN",
+      "expected": "DOWN",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:28.9658885-06:00",
+      "name": "health-down salud HTTP",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.1221211-06:00",
+      "name": "App sigue ejecutandose sin PostgreSQL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.1222245-06:00",
+      "name": "App mantiene el mismo ID",
+      "actual": "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+      "expected": "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.1224300-06:00",
+      "name": "App no se reinicia por fallo de base",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.1225223-06:00",
+      "name": "Sin OOM durante fallo de base",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.9860857-06:00",
+      "name": "Readiness alcanza UP",
+      "actual": "UP",
+      "expected": "UP",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.0180903-06:00",
+      "name": "health-recovered salud HTTP",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.0288217-06:00",
+      "name": "recovered HTTP Get",
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.0293052-06:00",
+      "name": "Tras recuperar PostgreSQL conserva id",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.0293732-06:00",
+      "name": "Tras recuperar PostgreSQL conserva dni",
+      "actual": "1663154380",
+      "expected": "1663154380",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.0295529-06:00",
+      "name": "Tras recuperar PostgreSQL conserva name",
+      "actual": "Docker Prueba",
+      "expected": "Docker Prueba",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.0269143-06:00",
+      "name": "App detenida",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.0291609-06:00",
+      "name": "Salida compatible con SIGTERM o terminacion normal",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.0292769-06:00",
+      "name": "Sin OOM al detenerse",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.0296319-06:00",
+      "name": "Log confirma apagado graceful completo",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:33.5309687-06:00",
+      "name": "Limpieza de contenedores propios",
+      "actual": "",
+      "expected": "",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-21T00:38:33.5311202-06:00",
+      "name": "Limpieza de volumenes efimeros propios",
+      "actual": "",
+      "expected": "",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "timestamp": "2026-10-21T00:38:04.3740258-06:00",
+      "arguments": [
+        "info",
+        "--format",
+        "{{.OSType}}"
+      ],
+      "exitCode": 0,
+      "logFile": "docker-engine.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:04.5596629-06:00",
+      "arguments": [
+        "image",
+        "inspect",
+        "--format",
+        "{{.Id}}",
+        "devsu-demo-java:local"
+      ],
+      "exitCode": 0,
+      "logFile": "image-id.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:04.7194902-06:00",
+      "arguments": [
+        "ps",
+        "-aq",
+        "--filter",
+        "label=com.docker.compose.project=devsu-verify-4cb91622"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:04.8813467-06:00",
+      "arguments": [
+        "volume",
+        "ls",
+        "-q",
+        "--filter",
+        "label=com.docker.compose.project=devsu-verify-4cb91622"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:21.7870337-06:00",
+      "arguments": [
+        "compose",
+        "--project-directory",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java",
+        "-p",
+        "devsu-verify-4cb91622",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.yaml",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.app.yaml",
+        "up",
+        "-d",
+        "--no-build",
+        "--wait",
+        "--wait-timeout",
+        "180"
+      ],
+      "exitCode": 0,
+      "logFile": "compose-up.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:22.1512422-06:00",
+      "arguments": [
+        "compose",
+        "--project-directory",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java",
+        "-p",
+        "devsu-verify-4cb91622",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.yaml",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.app.yaml",
+        "ps",
+        "-q",
+        "app"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:22.5284521-06:00",
+      "arguments": [
+        "compose",
+        "--project-directory",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java",
+        "-p",
+        "devsu-verify-4cb91622",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.yaml",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.app.yaml",
+        "ps",
+        "-q",
+        "postgres"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:22.6908667-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"image\":{{json .Config.Image}},\"user\":{{json .Config.User}},\"readonlyRootfs\":{{json .HostConfig.ReadonlyRootfs}},\"capDrop\":{{json .HostConfig.CapDrop}},\"securityOpt\":{{json .HostConfig.SecurityOpt}},\"tmpfs\":{{json (index .HostConfig \"Tmpfs\")}},\"mounts\":{{json .Mounts}},\"oomKilled\":{{json .State.OOMKilled}},\"restartCount\":{{json .RestartCount}},\"running\":{{json .State.Running}},\"exitCode\":{{json .State.ExitCode}},\"healthStatus\":{{if .State.Health}}{{json .State.Health.Status}}{{else}}\"none\"{{end}}}",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:22.8649198-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"image\":{{json .Config.Image}},\"user\":{{json .Config.User}},\"readonlyRootfs\":{{json .HostConfig.ReadonlyRootfs}},\"capDrop\":{{json .HostConfig.CapDrop}},\"securityOpt\":{{json .HostConfig.SecurityOpt}},\"tmpfs\":{{json (index .HostConfig \"Tmpfs\")}},\"mounts\":{{json .Mounts}},\"oomKilled\":{{json .State.OOMKilled}},\"restartCount\":{{json .RestartCount}},\"running\":{{json .State.Running}},\"exitCode\":{{json .State.ExitCode}},\"healthStatus\":{{if .State.Health}}{{json .State.Health.Status}}{{else}}\"none\"{{end}}}",
+        "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.0801411-06:00",
+      "arguments": [
+        "exec",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+        "id",
+        "-u"
+      ],
+      "exitCode": 0,
+      "logFile": "runtime-uid.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.3120767-06:00",
+      "arguments": [
+        "exec",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+        "test",
+        "-w",
+        "/tmp"
+      ],
+      "exitCode": 0,
+      "logFile": "tmp-writable.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:23.5643885-06:00",
+      "arguments": [
+        "exec",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+        "sha256sum",
+        "/app/app.jar"
+      ],
+      "exitCode": 0,
+      "logFile": "container-jar-sha256.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.4284181-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"image\":{{json .Config.Image}},\"user\":{{json .Config.User}},\"readonlyRootfs\":{{json .HostConfig.ReadonlyRootfs}},\"capDrop\":{{json .HostConfig.CapDrop}},\"securityOpt\":{{json .HostConfig.SecurityOpt}},\"tmpfs\":{{json (index .HostConfig \"Tmpfs\")}},\"mounts\":{{json .Mounts}},\"oomKilled\":{{json .State.OOMKilled}},\"restartCount\":{{json .RestartCount}},\"running\":{{json .State.Running}},\"exitCode\":{{json .State.ExitCode}},\"healthStatus\":{{if .State.Health}}{{json .State.Health.Status}}{{else}}\"none\"{{end}}}",
+        "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:24.8453770-06:00",
+      "arguments": [
+        "stop",
+        "--time",
+        "15",
+        "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf"
+      ],
+      "exitCode": 0,
+      "logFile": "postgres-stop.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.1199930-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"image\":{{json .Config.Image}},\"user\":{{json .Config.User}},\"readonlyRootfs\":{{json .HostConfig.ReadonlyRootfs}},\"capDrop\":{{json .HostConfig.CapDrop}},\"securityOpt\":{{json .HostConfig.SecurityOpt}},\"tmpfs\":{{json (index .HostConfig \"Tmpfs\")}},\"mounts\":{{json .Mounts}},\"oomKilled\":{{json .State.OOMKilled}},\"restartCount\":{{json .RestartCount}},\"running\":{{json .State.Running}},\"exitCode\":{{json .State.ExitCode}},\"healthStatus\":{{if .State.Health}}{{json .State.Health.Status}}{{else}}\"none\"{{end}}}",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.2783597-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"image\":{{json .Config.Image}},\"user\":{{json .Config.User}},\"readonlyRootfs\":{{json .HostConfig.ReadonlyRootfs}},\"capDrop\":{{json .HostConfig.CapDrop}},\"securityOpt\":{{json .HostConfig.SecurityOpt}},\"tmpfs\":{{json (index .HostConfig \"Tmpfs\")}},\"mounts\":{{json .Mounts}},\"oomKilled\":{{json .State.OOMKilled}},\"restartCount\":{{json .RestartCount}},\"running\":{{json .State.Running}},\"exitCode\":{{json .State.ExitCode}},\"healthStatus\":{{if .State.Health}}{{json .State.Health.Status}}{{else}}\"none\"{{end}}}",
+        "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.5777001-06:00",
+      "arguments": [
+        "start",
+        "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf"
+      ],
+      "exitCode": 0,
+      "logFile": "postgres-start.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.1933092-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"image\":{{json .Config.Image}},\"user\":{{json .Config.User}},\"readonlyRootfs\":{{json .HostConfig.ReadonlyRootfs}},\"capDrop\":{{json .HostConfig.CapDrop}},\"securityOpt\":{{json .HostConfig.SecurityOpt}},\"tmpfs\":{{json (index .HostConfig \"Tmpfs\")}},\"mounts\":{{json .Mounts}},\"oomKilled\":{{json .State.OOMKilled}},\"restartCount\":{{json .RestartCount}},\"running\":{{json .State.Running}},\"exitCode\":{{json .State.ExitCode}},\"healthStatus\":{{if .State.Health}}{{json .State.Health.Status}}{{else}}\"none\"{{end}}}",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.6584666-06:00",
+      "arguments": [
+        "stop",
+        "--time",
+        "25",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363"
+      ],
+      "exitCode": 0,
+      "logFile": "app-stop.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.8464475-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}},\"image\":{{json .Config.Image}},\"user\":{{json .Config.User}},\"readonlyRootfs\":{{json .HostConfig.ReadonlyRootfs}},\"capDrop\":{{json .HostConfig.CapDrop}},\"securityOpt\":{{json .HostConfig.SecurityOpt}},\"tmpfs\":{{json (index .HostConfig \"Tmpfs\")}},\"mounts\":{{json .Mounts}},\"oomKilled\":{{json .State.OOMKilled}},\"restartCount\":{{json .RestartCount}},\"running\":{{json .State.Running}},\"exitCode\":{{json .State.ExitCode}},\"healthStatus\":{{if .State.Health}}{{json .State.Health.Status}}{{else}}\"none\"{{end}}}",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.0263857-06:00",
+      "arguments": [
+        "logs",
+        "--timestamps",
+        "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363"
+      ],
+      "exitCode": 0,
+      "logFile": "app.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.2069413-06:00",
+      "arguments": [
+        "ps",
+        "-aq",
+        "--filter",
+        "label=com.docker.compose.project=devsu-verify-4cb91622"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.3665168-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}}}",
+        "aaf5fdee5451"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.5405782-06:00",
+      "arguments": [
+        "logs",
+        "--timestamps",
+        "aaf5fdee5451"
+      ],
+      "exitCode": 0,
+      "logFile": "app-final.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.6980772-06:00",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"project\":{{json (index .Config.Labels \"com.docker.compose.project\")}},\"service\":{{json (index .Config.Labels \"com.docker.compose.service\")}}}",
+        "36bfb7fcc918"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:31.8657480-06:00",
+      "arguments": [
+        "logs",
+        "--timestamps",
+        "36bfb7fcc918"
+      ],
+      "exitCode": 0,
+      "logFile": "postgres-final.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:32.0300197-06:00",
+      "arguments": [
+        "volume",
+        "ls",
+        "-q",
+        "--filter",
+        "label=com.docker.compose.project=devsu-verify-4cb91622"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:32.2161426-06:00",
+      "arguments": [
+        "volume",
+        "inspect",
+        "--format",
+        "{\"name\":{{json .Name}},\"project\":{{json (index .Labels \"com.docker.compose.project\")}}}",
+        "devsu-verify-4cb91622_postgres-data"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:33.2134211-06:00",
+      "arguments": [
+        "compose",
+        "--project-directory",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java",
+        "-p",
+        "devsu-verify-4cb91622",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.yaml",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\compose.app.yaml",
+        "down",
+        "--volumes",
+        "--timeout",
+        "25"
+      ],
+      "exitCode": 0,
+      "logFile": "compose-down.log",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:33.3709849-06:00",
+      "arguments": [
+        "ps",
+        "-aq",
+        "--filter",
+        "label=com.docker.compose.project=devsu-verify-4cb91622"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    },
+    {
+      "timestamp": "2026-10-21T00:38:33.5305147-06:00",
+      "arguments": [
+        "volume",
+        "ls",
+        "-q",
+        "--filter",
+        "label=com.docker.compose.project=devsu-verify-4cb91622"
+      ],
+      "exitCode": 0,
+      "logFile": "",
+      "errorOutput": null
+    }
+  ],
+  "snapshots": [
+    {
+      "phase": "initial",
+      "metadata": {
+        "id": "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+        "name": "/devsu-verify-4cb91622-app-1",
+        "project": "devsu-verify-4cb91622",
+        "service": "app",
+        "image": "devsu-demo-java:local",
+        "user": "10001:10001",
+        "readonlyRootfs": true,
+        "capDrop": [
+          "ALL"
+        ],
+        "securityOpt": [
+          "no-new-privileges:true"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,noexec,nosuid,size=64m"
+        },
+        "mounts": [],
+        "oomKilled": false,
+        "restartCount": 0,
+        "running": true,
+        "exitCode": 0,
+        "healthStatus": "healthy"
+      }
+    },
+    {
+      "phase": "initial",
+      "metadata": {
+        "id": "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf",
+        "name": "/devsu-verify-4cb91622-postgres-1",
+        "project": "devsu-verify-4cb91622",
+        "service": "postgres",
+        "image": "postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982",
+        "user": "",
+        "readonlyRootfs": false,
+        "capDrop": null,
+        "securityOpt": null,
+        "tmpfs": null,
+        "mounts": [
+          {
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "devsu-verify-4cb91622_postgres-data",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/devsu-verify-4cb91622_postgres-data/_data",
+            "Type": "volume"
+          }
+        ],
+        "oomKilled": false,
+        "restartCount": 0,
+        "running": true,
+        "exitCode": 0,
+        "healthStatus": "healthy"
+      }
+    },
+    {
+      "phase": "before-database-stop",
+      "metadata": {
+        "id": "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf",
+        "name": "/devsu-verify-4cb91622-postgres-1",
+        "project": "devsu-verify-4cb91622",
+        "service": "postgres",
+        "image": "postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982",
+        "user": "",
+        "readonlyRootfs": false,
+        "capDrop": null,
+        "securityOpt": null,
+        "tmpfs": null,
+        "mounts": [
+          {
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "devsu-verify-4cb91622_postgres-data",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/devsu-verify-4cb91622_postgres-data/_data",
+            "Type": "volume"
+          }
+        ],
+        "oomKilled": false,
+        "restartCount": 0,
+        "running": true,
+        "exitCode": 0,
+        "healthStatus": "healthy"
+      }
+    },
+    {
+      "phase": "database-down",
+      "metadata": {
+        "id": "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+        "name": "/devsu-verify-4cb91622-app-1",
+        "project": "devsu-verify-4cb91622",
+        "service": "app",
+        "image": "devsu-demo-java:local",
+        "user": "10001:10001",
+        "readonlyRootfs": true,
+        "capDrop": [
+          "ALL"
+        ],
+        "securityOpt": [
+          "no-new-privileges:true"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,noexec,nosuid,size=64m"
+        },
+        "mounts": [],
+        "oomKilled": false,
+        "restartCount": 0,
+        "running": true,
+        "exitCode": 0,
+        "healthStatus": "healthy"
+      }
+    },
+    {
+      "phase": "before-database-start",
+      "metadata": {
+        "id": "36bfb7fcc918da830169e1bc14012e5613ab40761ba4caf53bdd2af1f2c6d6bf",
+        "name": "/devsu-verify-4cb91622-postgres-1",
+        "project": "devsu-verify-4cb91622",
+        "service": "postgres",
+        "image": "postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982",
+        "user": "",
+        "readonlyRootfs": false,
+        "capDrop": null,
+        "securityOpt": null,
+        "tmpfs": null,
+        "mounts": [
+          {
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "Name": "devsu-verify-4cb91622_postgres-data",
+            "Propagation": "",
+            "RW": true,
+            "Source": "/var/lib/docker/volumes/devsu-verify-4cb91622_postgres-data/_data",
+            "Type": "volume"
+          }
+        ],
+        "oomKilled": false,
+        "restartCount": 0,
+        "running": false,
+        "exitCode": 0,
+        "healthStatus": "unhealthy"
+      }
+    },
+    {
+      "phase": "before-app-stop",
+      "metadata": {
+        "id": "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+        "name": "/devsu-verify-4cb91622-app-1",
+        "project": "devsu-verify-4cb91622",
+        "service": "app",
+        "image": "devsu-demo-java:local",
+        "user": "10001:10001",
+        "readonlyRootfs": true,
+        "capDrop": [
+          "ALL"
+        ],
+        "securityOpt": [
+          "no-new-privileges:true"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,noexec,nosuid,size=64m"
+        },
+        "mounts": [],
+        "oomKilled": false,
+        "restartCount": 0,
+        "running": true,
+        "exitCode": 0,
+        "healthStatus": "healthy"
+      }
+    },
+    {
+      "phase": "after-app-stop",
+      "metadata": {
+        "id": "aaf5fdee5451f1301ea72b248e6eae005b4beb0e3b10d70c141092def160f363",
+        "name": "/devsu-verify-4cb91622-app-1",
+        "project": "devsu-verify-4cb91622",
+        "service": "app",
+        "image": "devsu-demo-java:local",
+        "user": "10001:10001",
+        "readonlyRootfs": true,
+        "capDrop": [
+          "ALL"
+        ],
+        "securityOpt": [
+          "no-new-privileges:true"
+        ],
+        "tmpfs": {
+          "/tmp": "rw,noexec,nosuid,size=64m"
+        },
+        "mounts": [],
+        "oomKilled": false,
+        "restartCount": 0,
+        "running": false,
+        "exitCode": 143,
+        "healthStatus": "unhealthy"
+      }
+    }
+  ]
+}

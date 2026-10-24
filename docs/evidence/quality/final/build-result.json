@@ -1,0 +1,14 @@
+{
+  "command": ".\\mvnw.cmd -B -ntp clean verify -DargLine=-Xmx384m",
+  "startedAt": "2026-10-23T18:06:20.5193974-06:00",
+  "finishedAt": "2026-10-23T18:07:07.7187836-06:00",
+  "exitCode": 0,
+  "coverageGates": [
+    "Bundle LINE >=0.85",
+    "UserServiceImpl LINE >=1.00",
+    "UserServiceImpl BRANCH >=1.00"
+  ],
+  "mavenVersion": "3.8.7",
+  "javaVersion": "17.0.20.1+1",
+  "jarSHA256": "c121db95af84310da54f1ce47649bd07af148b514609b806b28ac59bab98e8d8"
+}

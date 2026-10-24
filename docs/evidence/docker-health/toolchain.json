@@ -1,0 +1,11 @@
+{
+  "mavenVersion": "3.8.7",
+  "wrapperVersion": "3.3.4",
+  "mavenArchiveSHA256": "70f7fec785728560e5382f1f17fbd8d9dfab391bf87b29cad1a60e54e60b2a7a",
+  "mavenArchiveSHA512": "c687fcdc3890bcf0f9f9dbc42ceded21dc80f0dcc5541c28912a99224694793f6e437998e46b5939bd314178865263c62a069c6c6f15d1d0541eea75748c46fd",
+  "apacheChecksumUrl": "https://archive.apache.org/dist/maven/maven-3/3.8.7/binaries/apache-maven-3.8.7-bin.zip.sha512",
+  "mavenArchiveVerifiedAgainstApache": true,
+  "wrapperJarSHA256": "4e2fbf6554bc8a4702cdfdd3bef464f423393d784ddbb037216320ce55d5e4e1",
+  "jdkImage": "eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2",
+  "jreImage": "eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd"
+}

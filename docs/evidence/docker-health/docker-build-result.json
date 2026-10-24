@@ -1,0 +1,6 @@
+{
+  "command": "docker build --progress=plain -t devsu-demo-java:local .",
+  "startedAt": "2026-10-21T00:24:30.1477740-06:00",
+  "finishedAt": "2026-10-21T00:26:26.8365028-06:00",
+  "exitCode": 0
+}

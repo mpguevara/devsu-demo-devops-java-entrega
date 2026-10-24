@@ -1,0 +1,31 @@
+{
+  "capturedAt": "2026-10-20T23:32:22.6973468-06:00",
+  "timezone": "America/El_Salvador",
+  "os": "Microsoft Windows 11 Home Single Language",
+  "osVersion": "10.0.26200",
+  "architecture": "64-bit",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13620H",
+  "logicalProcessors": 16,
+  "totalRAMGiB": 15.63,
+  "freeRAMGiB": 1.31,
+  "freeDiskCGiB": 692.82,
+  "powershell": "7.6.5",
+  "initialJava": "Oracle JDK 26",
+  "initialJavaHomeConfigured": false,
+  "installedMaven": "3.9.15",
+  "git": "2.54.0.windows.1",
+  "dockerClient": "29.6.1",
+  "dockerEngineReachable": false,
+  "kubectl": "1.36.1",
+  "kubernetesContexts": [],
+  "wslDefaultVersion": 2,
+  "wslDistribution": "docker-desktop",
+  "missingFromPath": [
+    "kind",
+    "minikube",
+    "helm",
+    "gh",
+    "trivy"
+  ],
+  "gitRepositoryPresent": false
+}

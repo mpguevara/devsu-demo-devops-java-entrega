@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-10-21T00:17:45.9347597-06:00",
+  "action": "Rename inactive runtime directory with exactly three zero-byte socket reparse entries",
+  "target": "Docker/run",
+  "backupName": "run.stale-20261021-001745",
+  "result": "success",
+  "containersAndVolumesChanged": false
+}

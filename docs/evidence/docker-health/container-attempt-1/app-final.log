@@ -1,0 +1,42 @@
+2026-10-21T06:31:03.895955604Z Picked up JAVA_TOOL_OPTIONS: -XX:MaxRAMPercentage=60.0 -XX:InitialRAMPercentage=20.0
+2026-10-21T06:31:05.591026167Z 
+2026-10-21T06:31:05.591045745Z   .   ____          _            __ _ _
+2026-10-21T06:31:05.591047091Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-10-21T06:31:05.591048265Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-10-21T06:31:05.591049209Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-10-21T06:31:05.591050047Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-10-21T06:31:05.591050890Z  =========|_|==============|___/=/_/_/_/
+2026-10-21T06:31:05.592174840Z  :: Spring Boot ::                (v3.0.5)
+2026-10-21T06:31:05.592182746Z 
+2026-10-21T06:31:05.686188469Z 2026-10-21T06:31:05.684Z  INFO 1 --- [           main] devsu.devops.demo.DemoJavaApplication    : Starting DemoJavaApplication v0.0.1 using Java 17.0.20.1 with PID 1 (/app/app.jar started by app in /app)
+2026-10-21T06:31:05.686634447Z 2026-10-21T06:31:05.686Z  INFO 1 --- [           main] devsu.devops.demo.DemoJavaApplication    : No active profile set, falling back to 1 default profile: "postgres"
+2026-10-21T06:31:07.480323651Z 2026-10-21T06:31:07.479Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T06:31:07.573728632Z 2026-10-21T06:31:07.573Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 1 JPA repository interfaces.
+2026-10-21T06:31:08.583910022Z 2026-10-21T06:31:08.583Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-10-21T06:31:08.592026452Z 2026-10-21T06:31:08.591Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T06:31:08.649882171Z 2026-10-21T06:31:08.648Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2026-10-21T06:31:08.885593429Z 2026-10-21T06:31:08.885Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2026-10-21T06:31:08.886728539Z 2026-10-21T06:31:08.886Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3113 ms
+2026-10-21T06:31:09.676640216Z 2026-10-21T06:31:09.676Z  INFO 1 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2026-10-21T06:31:09.676661740Z 2026-10-21T06:31:09.676Z  INFO 1 --- [           main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2026-10-21T06:31:09.676663338Z 2026-10-21T06:31:09.676Z  INFO 1 --- [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-10-21T06:31:09.682297748Z 2026-10-21T06:31:09.681Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-21T06:31:10.076842393Z 2026-10-21T06:31:10.076Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2375b321
+2026-10-21T06:31:10.078202414Z 2026-10-21T06:31:10.077Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-21T06:31:10.091573498Z 2026-10-21T06:31:10.091Z  INFO 1 --- [           main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://postgres:5432/devsu (PostgreSQL 15.19)
+2026-10-21T06:31:10.167231099Z 2026-10-21T06:31:10.166Z  INFO 1 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.008s)
+2026-10-21T06:31:10.175547493Z 2026-10-21T06:31:10.175Z  INFO 1 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-10-21T06:31:10.260355205Z 2026-10-21T06:31:10.259Z  INFO 1 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-10-21T06:31:10.263940746Z 2026-10-21T06:31:10.263Z  INFO 1 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - create users"
+2026-10-21T06:31:10.277808808Z 2026-10-21T06:31:10.277Z  INFO 1 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:00.023s)
+2026-10-21T06:31:10.390305734Z 2026-10-21T06:31:10.389Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-21T06:31:10.566722718Z 2026-10-21T06:31:10.566Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2026-10-21T06:31:10.905457860Z 2026-10-21T06:31:10.905Z  INFO 1 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-10-21T06:31:12.168646874Z 2026-10-21T06:31:12.168Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-10-21T06:31:12.174520291Z 2026-10-21T06:31:12.174Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T06:31:13.970109059Z 2026-10-21T06:31:13.969Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-10-21T06:31:14.079726953Z 2026-10-21T06:31:14.079Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2026-10-21T06:31:14.088836359Z 2026-10-21T06:31:14.088Z  INFO 1 --- [           main] devsu.devops.demo.DemoJavaApplication    : Started DemoJavaApplication in 9.096 seconds (process running for 10.195)
+2026-10-21T06:31:14.367893844Z 2026-10-21T06:31:14.367Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T06:31:14.367967221Z 2026-10-21T06:31:14.367Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T06:31:14.369424478Z 2026-10-21T06:31:14.369Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

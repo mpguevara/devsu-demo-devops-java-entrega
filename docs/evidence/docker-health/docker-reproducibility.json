@@ -1,0 +1,11 @@
+{
+  "command": "docker build --no-cache --progress=plain -t devsu-demo-java:rebuild .",
+  "startedAt": "2026-10-21T00:28:53.2226146-06:00",
+  "finishedAt": "2026-10-21T00:30:27.7119354-06:00",
+  "exitCode": 0,
+  "firstJarSHA256": "d98f0fd30931fff7d4215e793df30ef9b3a7d6968f49f4a2689a43a720f37251",
+  "secondJarSHA256": "d98f0fd30931fff7d4215e793df30ef9b3a7d6968f49f4a2689a43a720f37251",
+  "identicalJar": true,
+  "scope": "Two clean Linux builds using pinned Temurin images and fixed archive timestamp; OCI image identity not asserted",
+  "nativeWindowsMatchesLinux": false
+}

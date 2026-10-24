@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-21T00:38:24.2173929-06:00",
+  "method": "Post",
+  "url": "http://127.0.0.1:8003/api/users",
+  "requestBody": "{\"dni\":\"1663154380\",\"name\":\"Docker Prueba\"}",
+  "actualStatus": 201,
+  "expectedStatus": 201,
+  "responseBody": "{\"id\":1,\"dni\":\"1663154380\",\"name\":\"Docker Prueba\"}"
+}

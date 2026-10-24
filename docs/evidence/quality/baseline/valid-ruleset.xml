@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Devsu Java quality"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.github.io/schema/ruleset_2_0_0.xsd">
+    <description>Small explicit ruleset for production Java sources: resource safety, hidden errors and unnecessary code.</description>
+    <rule ref="category/java/codestyle.xml/UnnecessaryImport" />
+    <rule ref="category/java/bestpractices.xml/UnusedLocalVariable" />
+    <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod" />
+    <rule ref="category/java/errorprone.xml/CloseResource" />
+    <rule ref="category/java/errorprone.xml/EmptyCatchBlock" />
+    <rule ref="category/java/codestyle.xml/EmptyControlStatement" />
+    <rule ref="category/java/errorprone.xml/ReturnFromFinallyBlock" />
+    <rule ref="category/java/errorprone.xml/AvoidCatchingNPE" />
+    <rule ref="category/java/codestyle.xml/VariableCanBeInlined" />
+</ruleset>

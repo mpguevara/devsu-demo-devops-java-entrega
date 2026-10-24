@@ -1,0 +1,51 @@
+{
+  "verifiedAt": "2026-10-23T18:11:09.0785407-06:00",
+  "images": [
+    {
+      "reference": "kindest/node:v1.36.4@sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+      "registryManifest": "https://registry-1.docker.io/v2/kindest/node/manifests/sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+      "expectedDigest": "sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+      "actualDigest": "sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+      "matched": true
+    },
+    {
+      "reference": "library/traefik:v3.7.16@sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2",
+      "registryManifest": "https://registry-1.docker.io/v2/library/traefik/manifests/sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2",
+      "expectedDigest": "sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2",
+      "actualDigest": "sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2",
+      "matched": true
+    },
+    {
+      "reference": "library/postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982",
+      "registryManifest": "https://registry-1.docker.io/v2/library/postgres/manifests/sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982",
+      "expectedDigest": "sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982",
+      "actualDigest": "sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982",
+      "matched": true
+    },
+    {
+      "reference": "library/busybox:1.37.0-musl@sha256:5cec3fc171c87218698e85a52af7087de727372aae264a787b8112901a5b0092",
+      "registryManifest": "https://registry-1.docker.io/v2/library/busybox/manifests/sha256:5cec3fc171c87218698e85a52af7087de727372aae264a787b8112901a5b0092",
+      "expectedDigest": "sha256:5cec3fc171c87218698e85a52af7087de727372aae264a787b8112901a5b0092",
+      "actualDigest": "sha256:5cec3fc171c87218698e85a52af7087de727372aae264a787b8112901a5b0092",
+      "matched": true
+    },
+    {
+      "reference": "registry.k8s.io/metrics-server/metrics-server:v0.9.0@sha256:d9862115e7c7881280d3d75ca26bda8ffc0fc213315979575bf23ce9826205c0",
+      "registryManifest": "https://registry.k8s.io/v2/metrics-server/metrics-server/manifests/sha256:d9862115e7c7881280d3d75ca26bda8ffc0fc213315979575bf23ce9826205c0",
+      "expectedDigest": "sha256:d9862115e7c7881280d3d75ca26bda8ffc0fc213315979575bf23ce9826205c0",
+      "actualDigest": "sha256:d9862115e7c7881280d3d75ca26bda8ffc0fc213315979575bf23ce9826205c0",
+      "matched": true
+    }
+  ],
+  "kindRelease": "https://github.com/kubernetes-sigs/kind/releases/tag/v0.33.0",
+  "traefikRelease": "https://github.com/traefik/traefik/releases/tag/v3.7.16",
+  "metricsRelease": "https://github.com/kubernetes-sigs/metrics-server/releases/tag/v0.9.0",
+  "metricsSource": "https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.9.0/components.yaml",
+  "metricsUpstreamSHA256": "1cec29a5267809306a2c6ec74a3e449abbb705b4a8beed0c8a1963910f72c79b",
+  "metricsLocalSHA256": "4f3918a2e8c9d79d725050f5b5e100c3a7b5f39dfd4426168512a3a0ab7cc06c",
+  "metricsChanges": [
+    "Pinned image digest",
+    "Local kind kubelet TLS exception",
+    "One-node resource requests/limits"
+  ]
+}

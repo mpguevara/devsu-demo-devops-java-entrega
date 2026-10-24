@@ -1,0 +1,12 @@
+{
+  "firstBuildCommand": ".\\mvnw.cmd -B -ntp clean verify -DargLine=-Xmx384m",
+  "secondBuildCommand": ".\\mvnw.cmd -B -ntp clean package -DskipTests",
+  "secondBuildStartedAt": "2026-10-21T00:19:17.4478925-06:00",
+  "secondBuildFinishedAt": "2026-10-21T00:19:28.3341845-06:00",
+  "firstSHA256": "ef6a2fb51d035776e88c7dffd068bb821e52e94a49ac132214121e9155645e59",
+  "secondSHA256": "ef6a2fb51d035776e88c7dffd068bb821e52e94a49ac132214121e9155645e59",
+  "identical": true,
+  "environment": "Same Windows machine, Temurin 17.0.20.1, Maven 3.8.7",
+  "outputTimestamp": "2026-10-21T00:00:00Z",
+  "scope": "JAR bytes only; does not prove cross-OS or OCI image reproducibility"
+}

@@ -1,0 +1,41 @@
+{
+  "totalTests": 6,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "devsu.devops.demo.controller.UserControllerTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.DemoJavaApplicationTests",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.repository.UserRepositoryTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.service.UserServiceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "jar": {
+    "name": "demo-0.0.1.jar",
+    "sizeBytes": 57436417,
+    "sha256": "45b6dd2a0ee283e76b64453589f31710f2a1230e20a8acb38c89a53b6a87110d"
+  }
+}

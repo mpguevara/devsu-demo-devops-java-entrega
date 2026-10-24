@@ -1,0 +1,79 @@
+{
+  "startedAt": "2026-10-21T00:38:29.9892348-06:00",
+  "finishedAt": "2026-10-21T00:38:30.0131953-06:00",
+  "baseUrl": "http://127.0.0.1:8003/api",
+  "expectedReadiness": "UP",
+  "passed": true,
+  "checks": [
+    {
+      "timestamp": "2026-10-21T00:38:29.9892907-06:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8003/api/actuator/health/liveness",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "expectedHealthStatus": "UP",
+      "actualHealthStatus": "UP",
+      "elapsedMilliseconds": 4,
+      "responseBody": "{\"status\":\"UP\"}",
+      "responseBodyOmitted": false,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.9936533-06:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8003/api/actuator/health/readiness",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "expectedHealthStatus": "UP",
+      "actualHealthStatus": "UP",
+      "elapsedMilliseconds": 3,
+      "responseBody": "{\"status\":\"UP\"}",
+      "responseBodyOmitted": false,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "timestamp": "2026-10-21T00:38:29.9974598-06:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8003/api/actuator/env",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "expectedHealthStatus": "",
+      "actualHealthStatus": null,
+      "elapsedMilliseconds": 5,
+      "responseBody": "{\"timestamp\":\"2026-10-21T06:38:30.000+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/actuator/env\"}",
+      "responseBodyOmitted": false,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.0027458-06:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8003/api/actuator/configprops",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "expectedHealthStatus": "",
+      "actualHealthStatus": null,
+      "elapsedMilliseconds": 4,
+      "responseBody": "{\"timestamp\":\"2026-10-21T06:38:30.005+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/actuator/configprops\"}",
+      "responseBodyOmitted": false,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "timestamp": "2026-10-21T00:38:30.0076833-06:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8003/api/actuator/metrics",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "expectedHealthStatus": "",
+      "actualHealthStatus": null,
+      "elapsedMilliseconds": 5,
+      "responseBody": "{\"timestamp\":\"2026-10-21T06:38:30.011+00:00\",\"status\":404,\"error\":\"Not Found\",\"path\":\"/api/actuator/metrics\"}",
+      "responseBodyOmitted": false,
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

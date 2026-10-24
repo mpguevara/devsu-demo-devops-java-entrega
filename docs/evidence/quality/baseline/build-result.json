@@ -1,0 +1,8 @@
+{
+  "command": ".\\mvnw.cmd -B -ntp clean verify -DargLine=-Xmx384m",
+  "startedAt": "2026-10-23T18:00:56.6488130-06:00",
+  "finishedAt": "2026-10-23T18:01:36.3949255-06:00",
+  "exitCode": 1,
+  "coverageGate": "Not configured: initial measurement",
+  "javaHomeSelected": 17
+}

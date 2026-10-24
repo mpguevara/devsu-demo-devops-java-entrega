@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< devsu.devops:demo >--------------------------
+[INFO] Building demo-java 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ demo ---
+[INFO] Deleting C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.0:resources (default-resources) @ demo ---
+[INFO] Copying 3 resources
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.0:testResources (default-testResources) @ demo ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ demo ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ demo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ demo ---
+[INFO] Building jar: C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\demo-0.0.1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:3.0.5:repackage (repackage) @ demo ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.633 s
+[INFO] Finished at: 2026-10-21T00:19:28-06:00
+[INFO] ------------------------------------------------------------------------

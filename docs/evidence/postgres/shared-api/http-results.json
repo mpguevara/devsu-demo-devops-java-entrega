@@ -1,0 +1,376 @@
+{
+  "startedAt": "2026-10-20T23:57:27.1516537-06:00",
+  "finishedAt": "2026-10-20T23:58:46.7541234-06:00",
+  "jarSHA256": "45b6dd2a0ee283e76b64453589f31710f2a1230e20a8acb38c89a53b6a87110d",
+  "database": "PostgreSQL shared, initially empty; test users retained; no data reset",
+  "sqlTransport": "native psql",
+  "baseUrls": [
+    "http://127.0.0.1:8001/api",
+    "http://127.0.0.1:8002/api"
+  ],
+  "passed": true,
+  "failure": null,
+  "createdUserReadAcrossReplicas": true,
+  "createdUserSurvivedRestart": true,
+  "applicationStopped": true,
+  "processes": [
+    {
+      "label": "app-a-start",
+      "processId": 1868,
+      "stopped": true,
+      "stdout": "app-a-start.stdout.log",
+      "stderr": "app-a-start.stderr.log"
+    },
+    {
+      "label": "app-b-start",
+      "processId": 22648,
+      "stopped": true,
+      "stdout": "app-b-start.stdout.log",
+      "stderr": "app-b-start.stderr.log"
+    },
+    {
+      "label": "app-a-restart",
+      "processId": 31276,
+      "stopped": true,
+      "stdout": "app-a-restart.stdout.log",
+      "stderr": "app-a-restart.stderr.log"
+    }
+  ],
+  "checks": [
+    {
+      "timestamp": "2026-10-20T23:57:29.7356523-06:00",
+      "type": "sql",
+      "name": "La base no contiene users ni historial Flyway",
+      "sql": "SELECT (to_regclass('public.users') IS NULL AND to_regclass('public.flyway_schema_history') IS NULL)::text;",
+      "expected": "true",
+      "actual": "true",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:57:29.8417137-06:00",
+      "type": "sql",
+      "name": "La base no contiene tablas de aplicacion preexistentes",
+      "sql": "SELECT count(*) FROM information_schema.tables WHERE table_schema NOT IN ('pg_catalog', 'information_schema') AND table_type = 'BASE TABLE';",
+      "expected": "0",
+      "actual": "0",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:24.1207308-06:00",
+      "type": "readiness",
+      "url": "http://127.0.0.1:8001/api/users",
+      "actualStatus": 200,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.1112841-06:00",
+      "type": "readiness",
+      "url": "http://127.0.0.1:8002/api/users",
+      "actualStatus": 200,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.2798878-06:00",
+      "type": "sql",
+      "name": "Flyway aplico V1 exactamente una vez",
+      "sql": "SELECT count(*) FROM public.flyway_schema_history WHERE version = '1' AND success;",
+      "expected": "1",
+      "actual": "1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.4352064-06:00",
+      "type": "sql",
+      "name": "Solo existe la migracion V1",
+      "sql": "SELECT count(*) FROM public.flyway_schema_history;",
+      "expected": "1",
+      "actual": "1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.5482218-06:00",
+      "type": "sql",
+      "name": "La tabla users inicia vacia",
+      "sql": "SELECT count(*) FROM public.users;",
+      "expected": "0",
+      "actual": "0",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.5829094-06:00",
+      "type": "http",
+      "method": "GET",
+      "url": "http://127.0.0.1:8001/api/users",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "[]"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.5976892-06:00",
+      "type": "http",
+      "method": "GET",
+      "url": "http://127.0.0.1:8002/api/users",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "[]"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.6133341-06:00",
+      "type": "assertion",
+      "name": "La replica A inicia sin usuarios",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:25.6141280-06:00",
+      "type": "assertion",
+      "name": "La replica B inicia sin usuarios",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:27.2432671-06:00",
+      "type": "http",
+      "method": "POST",
+      "url": "http://127.0.0.1:8001/api/users",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "passed": true,
+      "responseBody": "{\"id\":1,\"dni\":\"9999999901\",\"name\":\"Prueba compartida\"}"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:28.2665930-06:00",
+      "type": "http",
+      "method": "GET",
+      "url": "http://127.0.0.1:8002/api/users/1",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "{\"id\":1,\"dni\":\"9999999901\",\"name\":\"Prueba compartida\"}"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:28.2690062-06:00",
+      "type": "assertion",
+      "name": "B lee el ID creado en A",
+      "expected": 1,
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:28.2709196-06:00",
+      "type": "assertion",
+      "name": "B lee el DNI creado en A",
+      "expected": "9999999901",
+      "actual": "9999999901",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:28.2724807-06:00",
+      "type": "assertion",
+      "name": "B lee el nombre creado en A",
+      "expected": "Prueba compartida",
+      "actual": "Prueba compartida",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:28.9923318-06:00",
+      "type": "http",
+      "method": "POST",
+      "url": "http://127.0.0.1:8002/api/users",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "passed": true,
+      "responseBody": "{\"errors\":[\"User already exists\"]}"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:29.2263324-06:00",
+      "type": "http",
+      "method": "POST",
+      "url": "http://127.0.0.1:8001/api/users",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "passed": true,
+      "responseBody": "123 34 116 121 112 101 34 58 34 97 98 111 117 116 58 98 108 97 110 107 34 44 34 116 105 116 108 101 34 58 34 66 97 100 32 82 101 113 117 101 115 116 34 44 34 115 116 97 116 117 115 34 58 52 48 48 44 34 100 101 116 97 105 108 34 58 34 70 97 105 108 101 100 32 116 111 32 114 101 97 100 32 114 101 113 117 101 115 116 34 44 34 105 110 115 116 97 110 99 101 34 58 34 47 97 112 105 47 117 115 101 114 115 34 125"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:29.4307392-06:00",
+      "type": "http",
+      "method": "POST",
+      "url": "http://127.0.0.1:8001/api/users",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "passed": true,
+      "responseBody": "{\"errors\":[\"name: Name is mandatory\",\"dni: DNI is mandatory\",\"name: size must be between 5 and 30\",\"dni: size must be between 10 and 13\"]}"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:29.4726912-06:00",
+      "type": "http",
+      "method": "GET",
+      "url": "http://127.0.0.1:8002/api/users/9223372036854775807",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "passed": true,
+      "responseBody": "{\"errors\":[\"User not found: 9223372036854775807\"]}"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:29.5592447-06:00",
+      "type": "http-concurrent",
+      "method": "POST",
+      "url": "http://127.0.0.1:8001/api/users",
+      "expectedStatuses": [
+        201,
+        400
+      ],
+      "actualStatus": 201,
+      "responseBody": "{\"id\":2,\"dni\":\"9999999902\",\"name\":\"Prueba concurrente\"}",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:29.5807263-06:00",
+      "type": "http-concurrent",
+      "method": "POST",
+      "url": "http://127.0.0.1:8002/api/users",
+      "expectedStatuses": [
+        201,
+        400
+      ],
+      "actualStatus": 400,
+      "responseBody": "{\"errors\":[\"User already exists\"]}",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:29.5885069-06:00",
+      "type": "assertion",
+      "name": "Los POST concurrentes producen exactamente 201 y 400",
+      "expected": "201,400",
+      "actual": "201,400",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:29.8956063-06:00",
+      "type": "sql",
+      "name": "La restriccion unica conserva un usuario concurrente",
+      "sql": "SELECT count(*) FROM public.users WHERE dni = '9999999902';",
+      "expected": "1",
+      "actual": "1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:30.0877655-06:00",
+      "type": "sql",
+      "name": "Hay exactamente dos usuarios antes del reinicio",
+      "sql": "SELECT count(*) FROM public.users;",
+      "expected": "2",
+      "actual": "2",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:30.1866565-06:00",
+      "type": "assertion",
+      "name": "B continua ejecutandose al detener A",
+      "expected": false,
+      "actual": false,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:30.2287489-06:00",
+      "type": "http",
+      "method": "GET",
+      "url": "http://127.0.0.1:8002/api/users/1",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "{\"id\":1,\"dni\":\"9999999901\",\"name\":\"Prueba compartida\"}"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.0626385-06:00",
+      "type": "readiness",
+      "url": "http://127.0.0.1:8001/api/users",
+      "actualStatus": 200,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.0903237-06:00",
+      "type": "http",
+      "method": "GET",
+      "url": "http://127.0.0.1:8001/api/users/1",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "{\"id\":1,\"dni\":\"9999999901\",\"name\":\"Prueba compartida\"}"
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.0911847-06:00",
+      "type": "assertion",
+      "name": "El ID original se conserva tras reiniciar A",
+      "expected": 1,
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.0912559-06:00",
+      "type": "assertion",
+      "name": "El DNI original se conserva tras reiniciar A",
+      "expected": "9999999901",
+      "actual": "9999999901",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.0912920-06:00",
+      "type": "assertion",
+      "name": "El nombre original se conserva tras reiniciar A",
+      "expected": "Prueba compartida",
+      "actual": "Prueba compartida",
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.1849948-06:00",
+      "type": "sql",
+      "name": "Los dos usuarios sobreviven al reinicio",
+      "sql": "SELECT count(*) FROM public.users;",
+      "expected": "2",
+      "actual": "2",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.2807199-06:00",
+      "type": "sql",
+      "name": "El reinicio no vuelve a aplicar V1",
+      "sql": "SELECT count(*) FROM public.flyway_schema_history WHERE version = '1' AND success;",
+      "expected": "1",
+      "actual": "1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.5937942-06:00",
+      "type": "sql",
+      "name": "El historial sigue conteniendo solo V1",
+      "sql": "SELECT count(*) FROM public.flyway_schema_history;",
+      "expected": "1",
+      "actual": "1",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "timestamp": "2026-10-20T23:58:46.5943373-06:00",
+      "type": "assertion",
+      "name": "B sigue ejecutandose despues del reinicio de A",
+      "expected": false,
+      "actual": false,
+      "passed": true
+    }
+  ]
+}

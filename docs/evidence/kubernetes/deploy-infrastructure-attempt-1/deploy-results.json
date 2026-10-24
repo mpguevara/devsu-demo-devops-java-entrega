@@ -1,0 +1,269 @@
+{
+  "startedAt": "2026-10-23T18:07:50.1316076-06:00",
+  "finishedAt": "2026-10-23T18:09:39.8770317-06:00",
+  "passed": true,
+  "cluster": "devsu",
+  "context": "kind-devsu",
+  "nodeImage": "kindest/node:v1.36.4@sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+  "image": "devsu-demo-java:local",
+  "infrastructureOnly": true,
+  "createdCluster": true,
+  "publicEndpoint": false,
+  "error": null,
+  "commands": [
+    {
+      "timestamp": "2026-10-23T18:07:50.7651497-06:00",
+      "tool": "docker",
+      "arguments": [
+        "info",
+        "--format",
+        "{{.OSType}}"
+      ],
+      "exitCode": 0,
+      "output": "linux"
+    },
+    {
+      "timestamp": "2026-10-23T18:07:51.3002575-06:00",
+      "tool": "C:\\Users\\mario\\.cache\\devsu-demo-tools\\kind\\v0.33.0\\kind.exe",
+      "arguments": [
+        "version"
+      ],
+      "exitCode": 0,
+      "output": "kind v0.33.0 go1.26.7 windows/amd64"
+    },
+    {
+      "timestamp": "2026-10-23T18:07:51.6893258-06:00",
+      "tool": "C:\\Users\\mario\\.cache\\devsu-demo-tools\\kind\\v0.33.0\\kind.exe",
+      "arguments": [
+        "get",
+        "clusters"
+      ],
+      "exitCode": 0,
+      "output": "No kind clusters found."
+    },
+    {
+      "timestamp": "2026-10-23T18:09:01.3310021-06:00",
+      "tool": "C:\\Users\\mario\\.cache\\devsu-demo-tools\\kind\\v0.33.0\\kind.exe",
+      "arguments": [
+        "create",
+        "cluster",
+        "--name",
+        "devsu",
+        "--image",
+        "kindest/node:v1.36.4@sha256:099e049362a1526b2db71494e1947aae99bd16290d7c895f2b7ea312e3cbfaed",
+        "--config",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\k8s\\kind.yaml",
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--wait",
+        "180s"
+      ],
+      "exitCode": 0,
+      "output": "Creating cluster \"devsu\" ...\n • Ensuring node image (kindest/node:v1.36.4) 🖼️  ...\n ✓ Ensuring node image (kindest/node:v1.36.4) 🖼️\n • Preparing nodes 📦   ...\n ✓ Preparing nodes 📦 \n • Writing configuration 📜  ...\n ✓ Writing configuration 📜\n • Starting control-plane 🕹️  ...\n ✓ Starting control-plane 🕹️\n • Installing CNI 🔌  ...\n ✓ Installing CNI 🔌\n • Installing StorageClass 💾  ...\n ✓ Installing StorageClass 💾\n • Waiting ≤ 3m0s for control-plane = Ready ⏳  ...\n ✓ Waiting ≤ 3m0s for control-plane = Ready ⏳\n • Ready after 15s 💚\nSet kubectl context to \"kind-devsu\"\nYou can now use your cluster with:\n\nkubectl cluster-info --context kind-devsu --kubeconfig 'C:\\Users\\mario\\.kube\\devsu-kind.config'\n\nThanks for using kind! 😊"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:01.8521299-06:00",
+      "tool": "C:\\Users\\mario\\.cache\\devsu-demo-tools\\kind\\v0.33.0\\kind.exe",
+      "arguments": [
+        "get",
+        "nodes",
+        "--name",
+        "devsu"
+      ],
+      "exitCode": 0,
+      "output": "devsu-control-plane"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:02.0443141-06:00",
+      "tool": "docker",
+      "arguments": [
+        "inspect",
+        "--format",
+        "{{index .Config.Labels \"io.x-k8s.kind.cluster\"}}",
+        "devsu-control-plane"
+      ],
+      "exitCode": 0,
+      "output": "devsu"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:02.3774670-06:00",
+      "tool": "docker",
+      "arguments": [
+        "update",
+        "--memory",
+        "4g",
+        "--memory-swap",
+        "4g",
+        "--cpus",
+        "4",
+        "devsu-control-plane"
+      ],
+      "exitCode": 0,
+      "output": "devsu-control-plane"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:05.9779963-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "wait",
+        "--for=condition=Ready",
+        "node/devsu-control-plane",
+        "--timeout=180s"
+      ],
+      "exitCode": 0,
+      "output": "node/devsu-control-plane condition met"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:06.1289692-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "version",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "output": "{\n  \"clientVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"36\",\n    \"gitVersion\": \"v1.36.1\",\n    \"gitCommit\": \"756939600b9a7180fc2df6550a4585b638875e67\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2026-05-12T09:54:35Z\",\n    \"goVersion\": \"go1.26.2\",\n    \"compiler\": \"gc\",\n    \"platform\": \"windows/amd64\"\n  },\n  \"kustomizeVersion\": \"v5.8.1\",\n  \"serverVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"36\",\n    \"emulationMajor\": \"1\",\n    \"emulationMinor\": \"36\",\n    \"minCompatibilityMajor\": \"1\",\n    \"minCompatibilityMinor\": \"35\",\n    \"gitVersion\": \"v1.36.4\",\n    \"gitCommit\": \"bb826b1d48562f110659e64e8ec444327433db95\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2026-08-20T03:06:28Z\",\n    \"goVersion\": \"go1.26.5\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  }\n}"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:06.3102643-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "get",
+        "namespace",
+        "devsu",
+        "--ignore-not-found",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "timestamp": "2026-10-23T18:09:06.5817532-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\k8s\\namespace.yaml"
+      ],
+      "exitCode": 0,
+      "output": "namespace/devsu created"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:06.7330970-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "local-path-storage",
+        "get",
+        "configmap",
+        "local-path-config",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "output": "{\n    \"apiVersion\": \"v1\",\n    \"data\": {\n        \"config.json\": \"{\\n        \\\"nodePathMap\\\":[\\n        {\\n                \\\"node\\\":\\\"DEFAULT_PATH_FOR_NON_LISTED_NODES\\\",\\n                \\\"paths\\\":[\\\"/var/local-path-provisioner\\\"]\\n        }\\n        ]\\n}\",\n        \"helperPod.yaml\": \"apiVersion: v1\\nkind: Pod\\nmetadata:\\n  name: helper-pod\\nspec:\\n  priorityClassName: system-node-critical\\n  tolerations:\\n    - operator: Exists\\n      effect: NoSchedule\\n    - operator: Exists\\n      effect: NoExecute\\n  containers:\\n  - name: helper-pod\\n    image: docker.io/kindest/local-path-helper:v20260131-7181c60a\\n    imagePullPolicy: IfNotPresent\",\n        \"setup\": \"#!/bin/sh\\nset -eu\\nmkdir -m 0777 -p \\\"$VOL_DIR\\\"\",\n        \"teardown\": \"#!/bin/sh\\nset -eu\\nrm -rf \\\"$VOL_DIR\\\"\"\n    },\n    \"kind\": \"ConfigMap\",\n    \"metadata\": {\n        \"annotations\": {\n            \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"v1\\\",\\\"data\\\":{\\\"config.json\\\":\\\"{\\\\n        \\\\\\\"nodePathMap\\\\\\\":[\\\\n        {\\\\n                \\\\\\\"node\\\\\\\":\\\\\\\"DEFAULT_PATH_FOR_NON_LISTED_NODES\\\\\\\",\\\\n                \\\\\\\"paths\\\\\\\":[\\\\\\\"/var/local-path-provisioner\\\\\\\"]\\\\n        }\\\\n        ]\\\\n}\\\",\\\"helperPod.yaml\\\":\\\"apiVersion: v1\\\\nkind: Pod\\\\nmetadata:\\\\n  name: helper-pod\\\\nspec:\\\\n  priorityClassName: system-node-critical\\\\n  tolerations:\\\\n    - operator: Exists\\\\n      effect: NoSchedule\\\\n    - operator: Exists\\\\n      effect: NoExecute\\\\n  containers:\\\\n  - name: helper-pod\\\\n    image: docker.io/kindest/local-path-helper:v20260131-7181c60a\\\\n    imagePullPolicy: IfNotPresent\\\",\\\"setup\\\":\\\"#!/bin/sh\\\\nset -eu\\\\nmkdir -m 0777 -p \\\\\\\"$VOL_DIR\\\\\\\"\\\",\\\"teardown\\\":\\\"#!/bin/sh\\\\nset -eu\\\\nrm -rf \\\\\\\"$VOL_DIR\\\\\\\"\\\"},\\\"kind\\\":\\\"ConfigMap\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"local-path-config\\\",\\\"namespace\\\":\\\"local-path-storage\\\"}}\\n\"\n        },\n        \"creationTimestamp\": \"2026-10-24T00:08:43Z\",\n        \"name\": \"local-path-config\",\n        \"namespace\": \"local-path-storage\",\n        \"resourceVersion\": \"346\",\n        \"uid\": \"ff184a89-7fc1-442d-a880-aae730bf5875\"\n    }\n}"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:07.0691931-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "-"
+      ],
+      "exitCode": 0,
+      "output": "configmap/local-path-config configured"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:07.6112638-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\k8s\\metrics-server.yaml"
+      ],
+      "exitCode": 0,
+      "output": "serviceaccount/metrics-server created\nclusterrole.rbac.authorization.k8s.io/system:aggregated-metrics-reader created\nclusterrole.rbac.authorization.k8s.io/system:metrics-server created\nrolebinding.rbac.authorization.k8s.io/metrics-server-auth-reader created\nclusterrolebinding.rbac.authorization.k8s.io/metrics-server:system:auth-delegator created\nclusterrolebinding.rbac.authorization.k8s.io/system:metrics-server created\nservice/metrics-server created\ndeployment.apps/metrics-server created\napiservice.apiregistration.k8s.io/v1beta1.metrics.k8s.io created"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:08.0528792-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "apply",
+        "-f",
+        "C:\\Users\\mario\\Downloads\\devsu-demo-devops\\devsu-demo-devops-java\\devsu-demo-devops-java\\k8s\\traefik.yaml"
+      ],
+      "exitCode": 0,
+      "output": "serviceaccount/traefik created\nrole.rbac.authorization.k8s.io/traefik created\nrolebinding.rbac.authorization.k8s.io/traefik created\nclusterrole.rbac.authorization.k8s.io/devsu-traefik-ingressclasses created\nclusterrolebinding.rbac.authorization.k8s.io/devsu-traefik-ingressclasses created\ningressclass.networking.k8s.io/traefik-devsu created\nservice/traefik created\ndeployment.apps/traefik created"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:39.7198009-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "kube-system",
+        "rollout",
+        "status",
+        "deployment/metrics-server",
+        "--timeout=180s"
+      ],
+      "exitCode": 0,
+      "output": "Waiting for deployment \"metrics-server\" rollout to finish: 0 of 1 updated replicas are available...\ndeployment \"metrics-server\" successfully rolled out"
+    },
+    {
+      "timestamp": "2026-10-23T18:09:39.8751310-06:00",
+      "tool": "kubectl",
+      "arguments": [
+        "--kubeconfig",
+        "C:\\Users\\mario\\.kube\\devsu-kind.config",
+        "--context",
+        "kind-devsu",
+        "-n",
+        "devsu",
+        "rollout",
+        "status",
+        "deployment/traefik",
+        "--timeout=180s"
+      ],
+      "exitCode": 0,
+      "output": "deployment \"traefik\" successfully rolled out"
+    }
+  ]
+}

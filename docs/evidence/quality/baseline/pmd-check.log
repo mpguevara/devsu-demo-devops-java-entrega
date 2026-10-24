@@ -1,0 +1,32 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< devsu.devops:demo >--------------------------
+[INFO] Building demo-java 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> maven-pmd-plugin:3.28.0:check (default-cli) > :pmd @ demo >>>
+[INFO] 
+[INFO] --- maven-pmd-plugin:3.28.0:pmd (pmd) @ demo ---
+[INFO] PMD version: 7.17.0
+[WARNING] Unable to find a URL to the parent project. The parent menu will NOT be added.
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.0.0-M9 skin
+[INFO] 
+[INFO] <<< maven-pmd-plugin:3.28.0:check (default-cli) < :pmd @ demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-pmd-plugin:3.28.0:check (default-cli) @ demo ---
+[WARNING] PMD Failure: devsu.devops.demo.service.mapper.UserMapper:17 Rule:VariableCanBeInlined Priority:3 Consider simply using the value vs. storing it in local variable 'userDto'..
+[WARNING] PMD Failure: devsu.devops.demo.service.mapper.UserMapper:22 Rule:VariableCanBeInlined Priority:3 Consider simply using the value vs. storing it in local variable 'user'..
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.841 s
+[INFO] Finished at: 2026-10-23T18:02:48-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-pmd-plugin:3.28.0:check (default-cli) on project demo: PMD 7.17.0 has found 2 violations. For more details see: C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\pmd.xml -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

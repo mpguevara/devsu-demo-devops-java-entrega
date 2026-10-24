@@ -1,0 +1,35 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2026-10-21T00:21:24.472-06:00  INFO 44976 --- [           main] devsu.devops.demo.DemoJavaApplication    : Starting DemoJavaApplication v0.0.1 using Java 17.0.20.1 with PID 44976 (C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\demo-0.0.1.jar started by mario in C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java)
+2026-10-21T00:21:24.475-06:00  INFO 44976 --- [           main] devsu.devops.demo.DemoJavaApplication    : The following 1 profile is active: "local"
+2026-10-21T00:21:25.553-06:00  INFO 44976 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T00:21:25.609-06:00  INFO 44976 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+2026-10-21T00:21:26.512-06:00  INFO 44976 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2026-10-21T00:21:26.531-06:00  INFO 44976 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T00:21:26.531-06:00  INFO 44976 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2026-10-21T00:21:26.669-06:00  INFO 44976 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2026-10-21T00:21:26.674-06:00  INFO 44976 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2149 ms
+2026-10-21T00:21:27.042-06:00  INFO 44976 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-21T00:21:27.148-06:00  INFO 44976 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2026-10-21T00:21:27.638-06:00  INFO 44976 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-21T00:21:27.819-06:00  INFO 44976 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:smoke-20992 user=USER
+2026-10-21T00:21:27.821-06:00  INFO 44976 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-21T00:21:27.836-06:00  INFO 44976 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-10-21T00:21:28.397-06:00  INFO 44976 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-10-21T00:21:28.404-06:00  INFO 44976 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T00:21:29.935-06:00  INFO 44976 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-10-21T00:21:30.065-06:00  INFO 44976 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/api'
+2026-10-21T00:21:30.081-06:00  INFO 44976 --- [           main] devsu.devops.demo.DemoJavaApplication    : Started DemoJavaApplication in 6.039 seconds (process running for 6.749)
+2026-10-21T00:21:30.917-06:00  INFO 44976 --- [0.1-8000-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T00:21:30.918-06:00  INFO 44976 --- [0.1-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T00:21:30.919-06:00  INFO 44976 --- [0.1-8000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-21T00:21:31.442-06:00 ERROR 44976 --- [0.1-8000-exec-3] d.d.c.RestResponseEntityExceptionHandler : User already exists
+2026-10-21T00:21:31.489-06:00 ERROR 44976 --- [0.1-8000-exec-4] d.d.c.RestResponseEntityExceptionHandler : User not found: 999999
+2026-10-21T00:21:31.726-06:00  INFO 44976 --- [0.1-8000-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 173 ms

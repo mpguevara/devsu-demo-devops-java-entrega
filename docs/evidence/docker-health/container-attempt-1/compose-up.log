@@ -1,0 +1,192 @@
+ Image postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982 Pulling 
+ 98b7e922ffb1 Pulling fs layer 0B
+ 391ba2893a12 Pulling fs layer 0B
+ 6a529ba2802d Pulling fs layer 0B
+ ce76243852b2 Pulling fs layer 0B
+ e50840df9e37 Pulling fs layer 0B
+ 8bd29bbcec77 Pulling fs layer 0B
+ a20d053bdddb Pulling fs layer 0B
+ a1d695dd4d28 Pulling fs layer 0B
+ e4ac94489d71 Pulling fs layer 0B
+ 43753b50480d Pulling fs layer 0B
+ 4e2109b8634e Pulling fs layer 0B
+ 11422d7ca1a4 Pulling fs layer 0B
+ 29bdc69c7a39 Pulling fs layer 0B
+ 4d00a71985a3 Pulling fs layer 0B
+ a4901e39d84e Download complete 0B
+ 98b7e922ffb1 Download complete 0B
+ 391ba2893a12 Download complete 0B
+ d7b7af569f19 Downloading 2.097MB
+ 6a529ba2802d Download complete 0B
+ e4ac94489d71 Download complete 0B
+ a1d695dd4d28 Download complete 0B
+ 8bd29bbcec77 Download complete 0B
+ e50840df9e37 Download complete 0B
+ a20d053bdddb Download complete 0B
+ d7b7af569f19 Downloading 2.097MB
+ d7b7af569f19 Downloading 4.194MB
+ d7b7af569f19 Downloading 5.243MB
+ ce76243852b2 Downloading 1.049MB
+ 4d00a71985a3 Downloading 1.049MB
+ 29bdc69c7a39 Downloading 1.049MB
+ 43753b50480d Download complete 0B
+ 11422d7ca1a4 Downloading 1.049MB
+ d7b7af569f19 Download complete 0B
+ ce76243852b2 Download complete 0B
+ 4e2109b8634e Downloading 1.049MB
+ 29bdc69c7a39 Downloading 2.097MB
+ 11422d7ca1a4 Downloading 2.097MB
+ 4e2109b8634e Downloading 2.097MB
+ 4d00a71985a3 Downloading 2.097MB
+ 4d00a71985a3 Downloading 2.097MB
+ 29bdc69c7a39 Downloading 3.146MB
+ 11422d7ca1a4 Downloading 3.146MB
+ 4e2109b8634e Downloading 3.146MB
+ 4d00a71985a3 Downloading 3.146MB
+ 29bdc69c7a39 Downloading 3.146MB
+ 11422d7ca1a4 Downloading 3.146MB
+ 4e2109b8634e Downloading 3.146MB
+ 4e2109b8634e Downloading 5.243MB
+ 4d00a71985a3 Downloading 4.194MB
+ 29bdc69c7a39 Download complete 0B
+ 11422d7ca1a4 Downloading 5.243MB
+ 4e2109b8634e Downloading 5.243MB
+ 4d00a71985a3 Downloading 5.243MB
+ 11422d7ca1a4 Downloading 5.243MB
+ 11422d7ca1a4 Downloading 6.291MB
+ 4e2109b8634e Downloading 6.291MB
+ 4d00a71985a3 Downloading 6.291MB
+ 4e2109b8634e Downloading 8.389MB
+ 4d00a71985a3 Download complete 0B
+ 11422d7ca1a4 Downloading 8.389MB
+ 11422d7ca1a4 Downloading 8.389MB
+ 4e2109b8634e Downloading 8.389MB
+ 11422d7ca1a4 Downloading 10.49MB
+ 4e2109b8634e Downloading 10.49MB
+ 11422d7ca1a4 Downloading 11.53MB
+ 4e2109b8634e Downloading 12.58MB
+ 11422d7ca1a4 Downloading 13.63MB
+ 4e2109b8634e Downloading 14.68MB
+ 11422d7ca1a4 Downloading 15.73MB
+ 4e2109b8634e Downloading 17.83MB
+ 11422d7ca1a4 Downloading 17.83MB
+ 4e2109b8634e Downloading 19.92MB
+ 4e2109b8634e Downloading 22.02MB
+ 11422d7ca1a4 Downloading 19.92MB
+ 11422d7ca1a4 Downloading 22.02MB
+ 4e2109b8634e Downloading 24.12MB
+ 11422d7ca1a4 Downloading 23.07MB
+ 4e2109b8634e Downloading 26.21MB
+ 4e2109b8634e Downloading 28.31MB
+ 11422d7ca1a4 Downloading 25.17MB
+ 11422d7ca1a4 Downloading 27.26MB
+ 4e2109b8634e Downloading 30.41MB
+ 4e2109b8634e Downloading 32.51MB
+ 11422d7ca1a4 Downloading 27.26MB
+ 11422d7ca1a4 Download complete 0B
+ 4e2109b8634e Downloading 35.65MB
+ 11422d7ca1a4 Extracting 1B
+ 4e2109b8634e Downloading 38.8MB
+ 11422d7ca1a4 Extracting 1B
+ 4e2109b8634e Downloading 40.89MB
+ 11422d7ca1a4 Extracting 1B
+ 4e2109b8634e Downloading 42.99MB
+ 11422d7ca1a4 Extracting 1B
+ 4e2109b8634e Downloading 44.04MB
+ 11422d7ca1a4 Extracting 1B
+ 4e2109b8634e Downloading 46.14MB
+ 11422d7ca1a4 Extracting 1B
+ 4e2109b8634e Downloading 47.19MB
+ 4e2109b8634e Downloading 49.28MB
+ e4ac94489d71 Pull complete 0B
+ 29bdc69c7a39 Extracting 1B
+ 11422d7ca1a4 Pull complete 0B
+ 4e2109b8634e Downloading 50.33MB
+ ce76243852b2 Pull complete 0B
+ 29bdc69c7a39 Pull complete 0B
+ 4d00a71985a3 Extracting 1B
+ 4e2109b8634e Downloading 52.43MB
+ 4d00a71985a3 Extracting 1B
+ 4e2109b8634e Downloading 54.53MB
+ a20d053bdddb Pull complete 0B
+ 43753b50480d Pull complete 0B
+ 4d00a71985a3 Pull complete 0B
+ 4e2109b8634e Downloading 55.57MB
+ 6a529ba2802d Pull complete 0B
+ 4e2109b8634e Downloading 57.67MB
+ 4e2109b8634e Downloading 58.72MB
+ 4e2109b8634e Downloading 59.77MB
+ 4e2109b8634e Downloading 61.87MB
+ 4e2109b8634e Downloading 62.91MB
+ 4e2109b8634e Downloading 63.96MB
+ 4e2109b8634e Downloading 66.06MB
+ 4e2109b8634e Downloading 67.11MB
+ 4e2109b8634e Downloading 68.16MB
+ 4e2109b8634e Downloading 69.21MB
+ 4e2109b8634e Downloading 71.3MB
+ 4e2109b8634e Downloading 72.35MB
+ 4e2109b8634e Downloading 73.4MB
+ 4e2109b8634e Downloading 74.45MB
+ 4e2109b8634e Downloading 76.55MB
+ 4e2109b8634e Downloading 78.64MB
+ 4e2109b8634e Downloading 81.79MB
+ 4e2109b8634e Downloading 83.89MB
+ 4e2109b8634e Downloading 84.93MB
+ 4e2109b8634e Downloading 85.98MB
+ 4e2109b8634e Downloading 88.08MB
+ 4e2109b8634e Downloading 89.13MB
+ 4e2109b8634e Downloading 90.18MB
+ 4e2109b8634e Downloading 92.27MB
+ 4e2109b8634e Downloading 93.32MB
+ 4e2109b8634e Downloading 94.37MB
+ 4e2109b8634e Downloading 95.42MB
+ 4e2109b8634e Downloading 97.52MB
+ 4e2109b8634e Downloading 98.57MB
+ 4e2109b8634e Downloading 99.61MB
+ 4e2109b8634e Downloading 101.7MB
+ 4e2109b8634e Downloading 102.8MB
+ 4e2109b8634e Downloading 103.8MB
+ 4e2109b8634e Downloading 104.9MB
+ 4e2109b8634e Downloading 107MB
+ 4e2109b8634e Downloading 108MB
+ 4e2109b8634e Downloading 109.7MB
+ 4e2109b8634e Download complete 0B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 1B
+ 4e2109b8634e Extracting 2B
+ 4e2109b8634e Extracting 2B
+ 4e2109b8634e Extracting 2B
+ a1d695dd4d28 Pull complete 0B
+ 8bd29bbcec77 Pull complete 0B
+ 4e2109b8634e Pull complete 0B
+ 98b7e922ffb1 Pull complete 0B
+ 391ba2893a12 Pull complete 0B
+ e50840df9e37 Pull complete 0B
+ Image postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982 Pulled 
+ Network devsu-verify-ef2fd6cb_default Creating 
+ Network devsu-verify-ef2fd6cb_default Created 
+ Volume devsu-verify-ef2fd6cb_postgres-data Creating 
+ Volume devsu-verify-ef2fd6cb_postgres-data Created 
+ Container devsu-verify-ef2fd6cb-postgres-1 Creating 
+ Container devsu-verify-ef2fd6cb-postgres-1 Created 
+ Container devsu-verify-ef2fd6cb-app-1 Creating 
+ Container devsu-verify-ef2fd6cb-app-1 Created 
+ Container devsu-verify-ef2fd6cb-postgres-1 Starting 
+ Container devsu-verify-ef2fd6cb-postgres-1 Started 
+ Container devsu-verify-ef2fd6cb-postgres-1 Waiting 
+ Container devsu-verify-ef2fd6cb-postgres-1 Healthy 
+ Container devsu-verify-ef2fd6cb-app-1 Starting 
+ Container devsu-verify-ef2fd6cb-app-1 Started 
+ Container devsu-verify-ef2fd6cb-postgres-1 Waiting 
+ Container devsu-verify-ef2fd6cb-app-1 Waiting 
+ Container devsu-verify-ef2fd6cb-postgres-1 Healthy 
+ Container devsu-verify-ef2fd6cb-app-1 Healthy 

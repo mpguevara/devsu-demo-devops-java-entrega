@@ -1,0 +1,14 @@
+{
+  "comparedAt": "2026-10-21T00:29:05.5505730-06:00",
+  "differences": [
+    {
+      "entry": "META-INF/maven/devsu.devops/demo/pom.properties",
+      "contentsEqual": false,
+      "windowsTimestamp": "2026-10-21T00:00:00.0000000-06:00",
+      "linuxTimestamp": "2026-10-21T00:00:00.0000000-06:00",
+      "windowsLength": 54,
+      "linuxLength": 51
+    }
+  ],
+  "scope": "Entry payload and timestamps; does not compare compression or central-directory metadata"
+}

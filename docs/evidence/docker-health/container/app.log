@@ -1,0 +1,250 @@
+2026-10-21T06:38:12.355971698Z 
+2026-10-21T06:38:11.053152671Z Picked up JAVA_TOOL_OPTIONS: -XX:MaxRAMPercentage=60.0 -XX:InitialRAMPercentage=20.0
+2026-10-21T06:38:12.355994607Z   .   ____          _            __ _ _
+2026-10-21T06:38:12.355996121Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-10-21T06:38:12.355997269Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-10-21T06:38:12.355998330Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-10-21T06:38:12.409309840Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-10-21T06:38:12.409390732Z  =========|_|==============|___/=/_/_/_/
+2026-10-21T06:38:12.411393126Z  :: Spring Boot ::                (v3.0.5)
+2026-10-21T06:38:12.411415231Z 
+2026-10-21T06:38:12.516566260Z 2026-10-21T06:38:12.513Z  INFO 1 --- [           main] devsu.devops.demo.DemoJavaApplication    : Starting DemoJavaApplication v0.0.1 using Java 17.0.20.1 with PID 1 (/app/app.jar started by app in /app)
+2026-10-21T06:38:12.517649125Z 2026-10-21T06:38:12.517Z  INFO 1 --- [           main] devsu.devops.demo.DemoJavaApplication    : No active profile set, falling back to 1 default profile: "postgres"
+2026-10-21T06:38:14.244427810Z 2026-10-21T06:38:14.244Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-21T06:38:14.332267766Z 2026-10-21T06:38:14.331Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interfaces.
+2026-10-21T06:38:15.314447609Z 2026-10-21T06:38:15.313Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-10-21T06:38:15.324390761Z 2026-10-21T06:38:15.324Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-21T06:38:15.324408721Z 2026-10-21T06:38:15.324Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2026-10-21T06:38:15.512678782Z 2026-10-21T06:38:15.511Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2026-10-21T06:38:15.515382098Z 2026-10-21T06:38:15.515Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2966 ms
+2026-10-21T06:38:16.240522198Z 2026-10-21T06:38:16.240Z  INFO 1 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2026-10-21T06:38:16.240559689Z 2026-10-21T06:38:16.240Z  INFO 1 --- [           main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2026-10-21T06:38:16.240561336Z 2026-10-21T06:38:16.240Z  INFO 1 --- [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-10-21T06:38:16.246796531Z 2026-10-21T06:38:16.245Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-21T06:38:16.613988123Z 2026-10-21T06:38:16.613Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2375b321
+2026-10-21T06:38:16.615881764Z 2026-10-21T06:38:16.615Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-21T06:38:16.629203142Z 2026-10-21T06:38:16.628Z  INFO 1 --- [           main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://postgres:5432/devsu (PostgreSQL 15.19)
+2026-10-21T06:38:16.647608987Z 2026-10-21T06:38:16.647Z  INFO 1 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.008s)
+2026-10-21T06:38:16.654985135Z 2026-10-21T06:38:16.654Z  INFO 1 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-10-21T06:38:16.741925809Z 2026-10-21T06:38:16.741Z  INFO 1 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-10-21T06:38:16.744593439Z 2026-10-21T06:38:16.744Z  INFO 1 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - create users"
+2026-10-21T06:38:16.817398543Z 2026-10-21T06:38:16.816Z  INFO 1 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:00.078s)
+2026-10-21T06:38:16.931120706Z 2026-10-21T06:38:16.930Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-21T06:38:17.033651986Z 2026-10-21T06:38:17.033Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2026-10-21T06:38:17.350691487Z 2026-10-21T06:38:17.350Z  INFO 1 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-10-21T06:38:18.444741696Z 2026-10-21T06:38:18.444Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-10-21T06:38:18.449368007Z 2026-10-21T06:38:18.449Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T06:38:20.250907971Z 2026-10-21T06:38:20.250Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-10-21T06:38:20.425883990Z 2026-10-21T06:38:20.425Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2026-10-21T06:38:20.437615309Z 2026-10-21T06:38:20.436Z  INFO 1 --- [           main] devsu.devops.demo.DemoJavaApplication    : Started DemoJavaApplication in 8.708 seconds (process running for 9.384)
+2026-10-21T06:38:21.311350197Z 2026-10-21T06:38:21.311Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-21T06:38:21.311439592Z 2026-10-21T06:38:21.311Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-21T06:38:21.312471113Z 2026-10-21T06:38:21.312Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-21T06:38:24.857292821Z 2026-10-21T06:38:24.857Z  WARN 1 --- [nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2375b321 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-10-21T06:38:24.857970712Z 2026-10-21T06:38:24.857Z  WARN 1 --- [nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7cb0cb2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-10-21T06:38:24.858382689Z 2026-10-21T06:38:24.858Z  WARN 1 --- [nio-8080-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@728b71cc (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-10-21T06:38:26.865901938Z 2026-10-21T06:38:26.858Z  WARN 1 --- [nio-8080-exec-6] o.s.b.a.jdbc.DataSourceHealthIndicator   : DataSource health check failed
+2026-10-21T06:38:26.865930042Z 
+2026-10-21T06:38:26.865932521Z org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+2026-10-21T06:38:26.865934583Z 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:83) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.865936795Z 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.865938667Z 	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865940686Z 	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865942604Z 	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865944473Z 	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865946399Z 	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865948252Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865950159Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865952003Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865953845Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865966306Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865968819Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865970311Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865971717Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:78) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865973132Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865974546Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:75) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865975986Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+2026-10-21T06:38:26.865977316Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:26.865978631Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:26.865979947Z 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:26.865981299Z 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.865982710Z 	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865984846Z 	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865986313Z 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:321) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865988517Z 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:428) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:26.865990242Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+2026-10-21T06:38:26.865991593Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:26.865992931Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:26.865994286Z 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:26.865995616Z 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.865998764Z 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866000270Z 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866001805Z 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866003287Z 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866004745Z 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866006177Z 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866007554Z 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866008943Z 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866010326Z 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866011724Z 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866013092Z 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866014721Z 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866016147Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866017607Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866019002Z 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866020328Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866021691Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866023059Z 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866024458Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866027404Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866028863Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866030243Z 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866031630Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866033042Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866034415Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866035771Z 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866037362Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866038764Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866040150Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866041517Z 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866042909Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866044296Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866045693Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866047083Z 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866048456Z 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866049828Z 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866051498Z 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866053139Z 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866054476Z 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866057575Z 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866058975Z 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866060331Z 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866061748Z 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866063298Z 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866064675Z 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866066045Z 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866067442Z 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866068832Z 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:26.866070207Z 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+2026-10-21T06:38:26.866071504Z Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 2001ms.
+2026-10-21T06:38:26.866072867Z 	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:26.866074212Z 	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:181) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:26.866075549Z 	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:26.866076857Z 	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:26.866078210Z 	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866079626Z 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866080992Z 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:26.866082418Z 	... 79 common frames omitted
+2026-10-21T06:38:26.866083724Z Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+2026-10-21T06:38:26.866085023Z 	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:1050) ~[postgresql-42.7.14.jar!/:42.7.14]
+2026-10-21T06:38:26.866086376Z 	at org.postgresql.jdbc.PgConnection.setNetworkTimeout(PgConnection.java:1791) ~[postgresql-42.7.14.jar!/:42.7.14]
+2026-10-21T06:38:26.866089529Z 	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:561) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:26.866090910Z 	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:168) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:26.866092259Z 	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:170) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:26.866093646Z 	... 84 common frames omitted
+2026-10-21T06:38:26.866094944Z 
+2026-10-21T06:38:28.887755690Z 2026-10-21T06:38:28.885Z  WARN 1 --- [nio-8080-exec-9] o.s.b.a.jdbc.DataSourceHealthIndicator   : DataSource health check failed
+2026-10-21T06:38:28.887786497Z 
+2026-10-21T06:38:28.887789701Z org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+2026-10-21T06:38:28.887791856Z 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:83) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887794396Z 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887796380Z 	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887798578Z 	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887800626Z 	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887802634Z 	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887804656Z 	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887806642Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887808699Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887810678Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887812668Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887814697Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887817934Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887832984Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887835139Z 	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:78) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887837143Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887839126Z 	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:75) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887841157Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+2026-10-21T06:38:28.887843046Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:28.887844913Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:28.887846776Z 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:28.887848630Z 	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887850600Z 	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887852797Z 	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887854884Z 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:321) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887857870Z 	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:428) ~[spring-boot-actuator-3.0.5.jar!/:3.0.5]
+2026-10-21T06:38:28.887860688Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+2026-10-21T06:38:28.887862851Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:28.887864824Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:28.887867083Z 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+2026-10-21T06:38:28.887869019Z 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887871014Z 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887873049Z 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887877695Z 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887879842Z 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887881889Z 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887883894Z 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887885865Z 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887887852Z 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887889835Z 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887891780Z 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887893698Z 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887895979Z 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887897845Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887899779Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887901742Z 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887903654Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887905616Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887907546Z 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887909494Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887911402Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887913361Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887915649Z 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887919527Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887921492Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887923435Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887925404Z 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887928248Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887930215Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887932186Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887934168Z 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887936143Z 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887938081Z 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887940010Z 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887942009Z 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887943991Z 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887945926Z 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887947892Z 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887949795Z 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887951675Z 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887953596Z 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887955492Z 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887957433Z 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887967942Z 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887970213Z 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887972155Z 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887974130Z 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887976112Z 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887978028Z 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar!/:na]
+2026-10-21T06:38:28.887979991Z 	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+2026-10-21T06:38:28.887981847Z Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 2000ms.
+2026-10-21T06:38:28.887983809Z 	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:28.887985723Z 	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:181) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:28.887987585Z 	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:146) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:28.887989434Z 	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:28.887991358Z 	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887993341Z 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887995260Z 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-6.0.7.jar!/:6.0.7]
+2026-10-21T06:38:28.887997259Z 	... 79 common frames omitted
+2026-10-21T06:38:28.887999082Z Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+2026-10-21T06:38:28.888000926Z 	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:1050) ~[postgresql-42.7.14.jar!/:42.7.14]
+2026-10-21T06:38:28.888002847Z 	at org.postgresql.jdbc.PgConnection.setNetworkTimeout(PgConnection.java:1791) ~[postgresql-42.7.14.jar!/:42.7.14]
+2026-10-21T06:38:28.888004989Z 	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:561) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:28.888006836Z 	at com.zaxxer.hikari.pool.PoolBase.isConnectionDead(PoolBase.java:168) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:28.888008696Z 	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:170) ~[HikariCP-5.0.1.jar!/:na]
+2026-10-21T06:38:28.888012374Z 	... 84 common frames omitted
+2026-10-21T06:38:28.888014256Z 
+2026-10-21T06:38:30.263809141Z 2026-10-21T06:38:30.263Z  INFO 1 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-21T06:38:30.266967565Z 2026-10-21T06:38:30.266Z  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-10-21T06:38:30.275458398Z 2026-10-21T06:38:30.275Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-21T06:38:30.277162599Z 2026-10-21T06:38:30.276Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-21T06:38:30.278837626Z 2026-10-21T06:38:30.278Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

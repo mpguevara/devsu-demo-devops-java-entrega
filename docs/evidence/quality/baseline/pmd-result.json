@@ -1,0 +1,7 @@
+{
+  "command": ".\\mvnw.cmd -B -ntp pmd:check",
+  "startedAt": "2026-10-23T18:02:40.7122868-06:00",
+  "finishedAt": "2026-10-23T18:02:48.9131031-06:00",
+  "exitCode": 1,
+  "note": "Corrected valid PMD7 rule names; production and test sources unchanged from initial coverage measurement"
+}

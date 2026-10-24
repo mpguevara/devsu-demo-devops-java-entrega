@@ -1,0 +1,5 @@
+{
+  "command": "docker compose -f compose.yaml -f compose.app.yaml config --quiet",
+  "exitCode": 0,
+  "runtimeVerified": false
+}

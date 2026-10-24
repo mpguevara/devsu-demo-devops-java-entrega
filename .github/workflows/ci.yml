@@ -1,0 +1,201 @@
+name: Java quality, image and Kubernetes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: devsu-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: pwsh
+
+jobs:
+  quality:
+    name: Compile, test, PMD and coverage
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Java 17 and Maven cache
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17.0.20.1+1'
+          cache: maven
+      - name: Maven verify (compile, unit tests, package, PMD, JaCoCo gates)
+        run: ./scripts/ci/Invoke-Quality.ps1
+      - name: Preserve real quality results
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: quality-${{ github.run_id }}
+          retention-days: 14
+          include-hidden-files: true
+          path: |
+            .devsu-local/quality-evidence/
+            target/surefire-reports/
+            target/site/jacoco/
+            target/pmd.xml
+            target/reports/pmd.html
+          if-no-files-found: warn
+
+  container:
+    name: Build and inspect the image
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      IMAGE: devsu-demo-java:${{ github.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build the non-root image
+        run: |
+          New-Item -ItemType Directory -Path target/image-evidence -Force | Out-Null
+          docker build --progress plain --tag $env:IMAGE --label "org.opencontainers.image.source=$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY" --label "org.opencontainers.image.revision=$env:GITHUB_SHA" . 2>&1 | Tee-Object target/image-evidence/docker-build.log
+          if ($LASTEXITCODE -ne 0) { throw 'Docker build failed.' }
+          $imageId = docker image inspect --format '{{.Id}}' $env:IMAGE
+          if ($LASTEXITCODE -ne 0) { throw 'Image inspection failed.' }
+          $user = docker image inspect --format '{{.Config.User}}' $env:IMAGE
+          if ($LASTEXITCODE -ne 0 -or $user -ne '10001:10001') { throw 'The image must use UID/GID 10001.' }
+          @{ image = $env:IMAGE; imageId = $imageId; user = $user } | ConvertTo-Json | Set-Content target/image-evidence/image.json
+      - name: Vulnerability report (all findings; scanner errors fail)
+        run: ./scripts/ci/Invoke-ImageScan.ps1 -Image $env:IMAGE
+      - name: Export the exact image for subsequent jobs
+        run: |
+          docker save --output target/image.tar $env:IMAGE
+          if ($LASTEXITCODE -ne 0) { throw 'Image export failed.' }
+          (Get-FileHash target/image.tar -Algorithm SHA256).Hash.ToLowerInvariant() | Set-Content target/image.tar.sha256
+      - name: Preserve image and scan evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: image-evidence-${{ github.run_id }}
+          retention-days: 14
+          path: |
+            target/image-evidence/
+            target/security-evidence/
+          if-no-files-found: warn
+      - name: Transfer image
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: container-${{ github.run_id }}
+          retention-days: 3
+          compression-level: 0
+          path: |
+            target/image.tar
+            target/image.tar.sha256
+          if-no-files-found: error
+
+  publish:
+    name: Publish the verified image to GHCR
+    needs: container
+    if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      LOCAL_IMAGE: devsu-demo-java:${{ github.sha }}
+    steps:
+      - name: Download the built image
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
+        with:
+          name: container-${{ github.run_id }}
+          path: target
+      - name: Load and tag the exact image
+        run: |
+          $expected = (Get-Content target/image.tar.sha256 -Raw).Trim()
+          if ((Get-FileHash target/image.tar -Algorithm SHA256).Hash -ine $expected) { throw 'Image archive checksum mismatch.' }
+          docker load --input target/image.tar
+          if ($LASTEXITCODE -ne 0) { throw 'Image load failed.' }
+          $registryImage = "ghcr.io/$($env:GITHUB_REPOSITORY.ToLowerInvariant()):$env:GITHUB_SHA"
+          docker tag $env:LOCAL_IMAGE $registryImage
+          if ($LASTEXITCODE -ne 0) { throw 'Image tagging failed.' }
+          "REGISTRY_IMAGE=$registryImage" | Add-Content $env:GITHUB_ENV
+      - name: Authenticate and push
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $env:GHCR_TOKEN | docker login ghcr.io --username $env:GITHUB_ACTOR --password-stdin
+          if ($LASTEXITCODE -ne 0) { throw 'GHCR authentication failed.' }
+          docker push $env:REGISTRY_IMAGE 2>&1 | Tee-Object target/ghcr-push.log
+          if ($LASTEXITCODE -ne 0) { throw 'GHCR push failed.' }
+          $digest = docker image inspect --format '{{index .RepoDigests 0}}' $env:REGISTRY_IMAGE
+          if ($LASTEXITCODE -ne 0) { throw 'Published digest inspection failed.' }
+          @{ image = $env:REGISTRY_IMAGE; digest = $digest; runUrl = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY/actions/runs/$env:GITHUB_RUN_ID" } |
+            ConvertTo-Json | Set-Content target/publication.json
+          "Published: $digest" | Add-Content $env:GITHUB_STEP_SUMMARY
+      - name: Remove registry session
+        if: always()
+        run: docker logout ghcr.io
+      - name: Preserve publication evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: publication-${{ github.run_id }}
+          retention-days: 14
+          path: |
+            target/publication.json
+            target/ghcr-push.log
+          if-no-files-found: warn
+
+  kubernetes:
+    name: Deploy and validate private Kubernetes
+    needs: [container, publish]
+    if: always() && needs.container.result == 'success' && (needs.publish.result == 'success' || needs.publish.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      IMAGE: devsu-demo-java:${{ github.sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Download the built image
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
+        with:
+          name: container-${{ github.run_id }}
+          path: target
+      - name: Load the exact image
+        run: |
+          $expected = (Get-Content target/image.tar.sha256 -Raw).Trim()
+          if ((Get-FileHash target/image.tar -Algorithm SHA256).Hash -ine $expected) { throw 'Image archive checksum mismatch.' }
+          docker load --input target/image.tar
+          if ($LASTEXITCODE -ne 0) { throw 'Image load failed.' }
+      - name: Install pinned kubectl matching Kubernetes
+        run: ./scripts/ci/Install-Kubectl.ps1
+      - name: Install pinned kind
+        run: ./scripts/Install-Kind.ps1
+      - name: Deploy PostgreSQL, application replicas, HPA and ingress
+        run: ./scripts/Deploy-Kubernetes.ps1 -Image $env:IMAGE -LoadImage
+      - name: Validate HTTP, probes, replicas, persistence and autoscaling
+        run: ./scripts/Test-Kubernetes.ps1 -EvidenceDirectory target/kubernetes-evidence
+      - name: Preserve safe Kubernetes evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: kubernetes-${{ github.run_id }}
+          retention-days: 14
+          path: |
+            target/kubernetes-evidence/
+            target/kubernetes-deploy-evidence/
+            target/kind-install-evidence/
+            target/kubectl-install-evidence/
+          if-no-files-found: warn
+      # Hosted runners are disposable. No port or endpoint is exposed publicly.

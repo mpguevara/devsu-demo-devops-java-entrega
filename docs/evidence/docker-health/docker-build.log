@@ -1,0 +1,314 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.15kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#3 DONE 3.1s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#2 DONE 3.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 259B done
+#4 DONE 0.0s
+
+#5 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#5 resolve docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd 0.0s done
+#5 ...
+
+#6 [internal] load build context
+#6 transferring context: 100.72kB 0.1s done
+#6 DONE 0.1s
+
+#5 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#5 sha256:b84e7ff4e8f714aa702b09ab370049423696b34db4471101f4a1bffa2694a0d2 0B / 2.46kB 0.2s
+#5 sha256:b84e7ff4e8f714aa702b09ab370049423696b34db4471101f4a1bffa2694a0d2 2.46kB / 2.46kB 0.2s done
+#5 sha256:953e16d753b3a0be4499e0245bb1166f946a39b8088247b2d22930dbf4c06032 159B / 159B 0.2s done
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 0B / 47.52MB 0.3s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 0B / 16.97MB 0.2s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 0B / 29.77MB 0.2s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 3.15MB / 47.52MB 0.9s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 2.10MB / 16.97MB 0.8s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 5.24MB / 16.97MB 1.1s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 2.10MB / 29.77MB 0.9s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 7.34MB / 47.52MB 1.4s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 6.29MB / 16.97MB 1.2s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 7.34MB / 16.97MB 1.4s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 4.19MB / 29.77MB 1.2s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 10.49MB / 47.52MB 1.7s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 9.44MB / 16.97MB 1.5s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 6.29MB / 29.77MB 1.4s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 11.53MB / 16.97MB 1.7s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 14.68MB / 47.52MB 2.1s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 14.68MB / 16.97MB 2.0s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 9.44MB / 29.77MB 1.8s
+#5 sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 16.97MB / 16.97MB 2.1s done
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 11.53MB / 29.77MB 2.0s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 18.87MB / 47.52MB 2.4s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 14.68MB / 29.77MB 2.1s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 22.02MB / 47.52MB 2.6s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 16.78MB / 29.77MB 2.3s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 25.17MB / 47.52MB 2.9s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 20.97MB / 29.77MB 2.7s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 30.41MB / 47.52MB 3.2s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 23.07MB / 29.77MB 2.9s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 25.17MB / 29.77MB 3.0s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 33.55MB / 47.52MB 3.5s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 27.26MB / 29.77MB 3.2s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 36.70MB / 47.52MB 3.6s
+#5 sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 29.77MB / 29.77MB 3.3s done
+#5 extracting sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 42.99MB / 47.52MB 3.9s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 46.14MB / 47.52MB 4.1s
+#5 sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 47.52MB / 47.52MB 4.2s done
+#5 extracting sha256:f2b4ef06ff01a67d4bed7657a4ae379a7d07934b7c3e743454a22a0d5275fb2b 0.7s done
+#5 extracting sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81
+#5 extracting sha256:53881550a73777150bc3f49f1023445a37182e4a1fba2887a353d7c430cc9e81 0.3s done
+#5 DONE 4.7s
+
+#7 [build 1/7] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#7 resolve docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2 0.0s done
+#7 sha256:80e97c6a1f1b99aec34d8ed52badfa9a3596af4bb196052e137886bfc8d62b53 2.46kB / 2.46kB 0.3s done
+#7 sha256:8bd610ba439590a030cc26325b7525a49b77fc3680e330303bed2ab23b430317 160B / 160B 0.2s done
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 17.83MB / 145.83MB 3.8s
+#7 sha256:33d400b7d2db37c72a7b9f3cfa912bbe2a5d2f05d2d08e1198de615aeb859fe1 22.95MB / 22.95MB 1.8s done
+#7 extracting sha256:33d400b7d2db37c72a7b9f3cfa912bbe2a5d2f05d2d08e1198de615aeb859fe1
+#7 extracting sha256:33d400b7d2db37c72a7b9f3cfa912bbe2a5d2f05d2d08e1198de615aeb859fe1 0.4s done
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 25.17MB / 145.83MB 4.5s
+#7 ...
+
+#5 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jre-noble@sha256:07fa0356cf354c5252947575f42ed42aa6fd921f36438b7bc77ad81c31c537dd
+#5 extracting sha256:35aad6bca00c45382d1f6829ebe1062b3e088d4926dfaed4b4d6e087978e4128 0.7s done
+#5 extracting sha256:953e16d753b3a0be4499e0245bb1166f946a39b8088247b2d22930dbf4c06032 0.0s done
+#5 extracting sha256:b84e7ff4e8f714aa702b09ab370049423696b34db4471101f4a1bffa2694a0d2 0.0s done
+#5 DONE 5.4s
+
+#7 [build 1/7] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#7 ...
+
+#8 [stage-1 2/4] WORKDIR /app
+#8 DONE 0.3s
+
+#7 [build 1/7] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 33.55MB / 145.83MB 5.1s
+#7 ...
+
+#9 [stage-1 3/4] RUN groupadd --gid 10001 app     && useradd --uid 10001 --gid 10001 --no-create-home --shell /usr/sbin/nologin app
+#9 DONE 0.4s
+
+#7 [build 1/7] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 40.89MB / 145.83MB 5.7s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 48.23MB / 145.83MB 6.2s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 55.57MB / 145.83MB 6.6s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 62.91MB / 145.83MB 7.2s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 71.30MB / 145.83MB 7.8s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 79.69MB / 145.83MB 8.3s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 89.13MB / 145.83MB 8.9s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 96.47MB / 145.83MB 9.5s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 103.81MB / 145.83MB 9.9s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 113.25MB / 145.83MB 10.5s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 120.59MB / 145.83MB 11.1s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 127.93MB / 145.83MB 11.6s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 136.31MB / 145.83MB 12.2s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 144.70MB / 145.83MB 12.8s
+#7 sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 145.83MB / 145.83MB 12.8s done
+#7 extracting sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac
+#7 extracting sha256:fa976812e9ba19bddcc6d44f13d552870af2edad73b3a91f410d403b6795a5ac 1.3s done
+#7 DONE 15.0s
+
+#7 [build 1/7] FROM docker.io/library/eclipse-temurin:17.0.20.1_1-jdk-noble@sha256:fdae60b4aee31b7228cd10fa883141fe8da67b59ba4d6292af47ccf8e5fd59d2
+#7 extracting sha256:8bd610ba439590a030cc26325b7525a49b77fc3680e330303bed2ab23b430317 0.0s done
+#7 extracting sha256:80e97c6a1f1b99aec34d8ed52badfa9a3596af4bb196052e137886bfc8d62b53 0.0s done
+#7 DONE 15.0s
+
+#10 [build 2/7] WORKDIR /workspace
+#10 DONE 0.2s
+
+#11 [build 3/7] COPY .mvn/ .mvn/
+#11 DONE 0.1s
+
+#12 [build 4/7] COPY mvnw pom.xml ./
+#12 DONE 0.1s
+
+#13 [build 5/7] RUN sed -i 's/\r$//' mvnw && chmod 0755 mvnw
+#13 DONE 0.3s
+
+#14 [build 6/7] COPY src/ src/
+#14 DONE 0.0s
+
+#15 [build 7/7] RUN --mount=type=cache,target=/root/.m2,sharing=locked     ./mvnw -B -ntp clean verify -DargLine=-Xmx384m
+#15 2.414 [INFO] Scanning for projects...
+#15 10.47 [INFO] 
+#15 10.47 [INFO] -------------------------< devsu.devops:demo >--------------------------
+#15 10.47 [INFO] Building demo-java 0.0.1
+#15 10.47 [INFO] --------------------------------[ jar ]---------------------------------
+#15 48.18 [INFO] 
+#15 48.18 [INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ demo ---
+#15 49.22 [INFO] 
+#15 49.22 [INFO] --- maven-resources-plugin:3.3.0:resources (default-resources) @ demo ---
+#15 51.66 [INFO] Copying 3 resources
+#15 51.67 [INFO] Copying 2 resources
+#15 51.67 [INFO] 
+#15 51.67 [INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ demo ---
+#15 54.99 [INFO] Changes detected - recompiling the module!
+#15 54.99 [INFO] Compiling 12 source files to /workspace/target/classes
+#15 56.24 [INFO] 
+#15 56.24 [INFO] --- maven-resources-plugin:3.3.0:testResources (default-testResources) @ demo ---
+#15 56.24 [INFO] Copying 1 resource
+#15 56.24 [INFO] 
+#15 56.24 [INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ demo ---
+#15 56.25 [INFO] Changes detected - recompiling the module!
+#15 56.25 [INFO] Compiling 5 source files to /workspace/target/test-classes
+#15 56.83 [INFO] 
+#15 56.83 [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ demo ---
+#15 69.40 [INFO] 
+#15 69.40 [INFO] -------------------------------------------------------
+#15 69.40 [INFO]  T E S T S
+#15 69.40 [INFO] -------------------------------------------------------
+#15 69.84 [INFO] Running devsu.devops.demo.service.UserServiceTest
+#15 69.94 06:25:59.893 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [UserServiceTest]: using SpringBootContextLoader
+#15 69.94 06:25:59.897 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [devsu.devops.demo.service.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+#15 69.94 06:25:59.897 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [devsu.devops.demo.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+#15 69.95 06:25:59.913 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [UserServiceTest]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+#15 70.01 06:25:59.968 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [/workspace/target/classes/devsu/devops/demo/DemoJavaApplication.class]
+#15 70.01 06:25:59.968 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration devsu.devops.demo.DemoJavaApplication for test class devsu.devops.demo.service.UserServiceTest
+#15 70.06 06:26:00.019 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [UserServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+#15 70.06 06:26:00.020 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [UserServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+#15 70.24 
+#15 70.24   .   ____          _            __ _ _
+#15 70.24  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+#15 70.24 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+#15 70.24  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+#15 70.24   '  |____| .__|_| |_|_| |_\__, | / / / /
+#15 70.24  =========|_|==============|___/=/_/_/_/
+#15 70.24  :: Spring Boot ::                (v3.0.5)
+#15 70.24 
+#15 70.26 2026-10-21T06:26:00.221Z  INFO 133 --- [           main] d.devops.demo.service.UserServiceTest    : Starting UserServiceTest using Java 17.0.20.1 with PID 133 (started by root in /workspace)
+#15 70.26 2026-10-21T06:26:00.222Z  INFO 133 --- [           main] d.devops.demo.service.UserServiceTest    : The following 1 profile is active: "test"
+#15 70.96 2026-10-21T06:26:00.923Z  INFO 133 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+#15 71.00 2026-10-21T06:26:00.962Z  INFO 133 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+#15 71.36 2026-10-21T06:26:01.315Z  INFO 133 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+#15 71.41 2026-10-21T06:26:01.367Z  INFO 133 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+#15 71.74 2026-10-21T06:26:01.702Z  INFO 133 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+#15 71.88 2026-10-21T06:26:01.833Z  INFO 133 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:unit-tests user=SA
+#15 71.88 2026-10-21T06:26:01.834Z  INFO 133 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+#15 71.89 2026-10-21T06:26:01.847Z  INFO 133 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+#15 72.33 2026-10-21T06:26:02.288Z  INFO 133 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+#15 72.34 2026-10-21T06:26:02.294Z  INFO 133 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+#15 73.82 2026-10-21T06:26:03.782Z  INFO 133 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+#15 73.87 2026-10-21T06:26:03.831Z  INFO 133 --- [           main] d.devops.demo.service.UserServiceTest    : Started UserServiceTest in 3.785 seconds (process running for 4.441)
+#15 74.19 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.331 s - in devsu.devops.demo.service.UserServiceTest
+#15 74.19 [INFO] Running devsu.devops.demo.health.HealthEndpointTest
+#15 74.19 2026-10-21T06:26:04.132Z  INFO 133 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [devsu.devops.demo.health.HealthEndpointTest]: HealthEndpointTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+#15 74.19 2026-10-21T06:26:04.144Z  INFO 133 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration devsu.devops.demo.DemoJavaApplication for test class devsu.devops.demo.health.HealthEndpointTest
+#15 74.22 
+#15 74.22   .   ____          _            __ _ _
+#15 74.22  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+#15 74.22 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+#15 74.22  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+#15 74.22   '  |____| .__|_| |_|_| |_\__, | / / / /
+#15 74.22  =========|_|==============|___/=/_/_/_/
+#15 74.22  :: Spring Boot ::                (v3.0.5)
+#15 74.22 
+#15 74.22 2026-10-21T06:26:04.180Z  INFO 133 --- [           main] d.devops.demo.health.HealthEndpointTest  : Starting HealthEndpointTest using Java 17.0.20.1 with PID 133 (started by root in /workspace)
+#15 74.22 2026-10-21T06:26:04.180Z  INFO 133 --- [           main] d.devops.demo.health.HealthEndpointTest  : The following 1 profile is active: "test"
+#15 74.48 2026-10-21T06:26:04.436Z  INFO 133 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+#15 74.49 2026-10-21T06:26:04.446Z  INFO 133 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
+#15 74.56 2026-10-21T06:26:04.519Z  INFO 133 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+#15 74.57 2026-10-21T06:26:04.524Z  INFO 133 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+#15 74.57 2026-10-21T06:26:04.526Z  INFO 133 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:unit-tests user=SA
+#15 74.57 2026-10-21T06:26:04.526Z  INFO 133 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+#15 74.57 2026-10-21T06:26:04.527Z  INFO 133 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+#15 74.61 2026-10-21T06:26:04.565Z  INFO 133 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+#15 74.61 2026-10-21T06:26:04.566Z  INFO 133 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+#15 74.95 2026-10-21T06:26:04.909Z  INFO 133 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+#15 74.95 2026-10-21T06:26:04.909Z  INFO 133 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+#15 74.96 2026-10-21T06:26:04.916Z  INFO 133 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+#15 74.97 2026-10-21T06:26:04.926Z  INFO 133 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 14 ms
+#15 74.99 2026-10-21T06:26:04.950Z  INFO 133 --- [           main] d.devops.demo.health.HealthEndpointTest  : Started HealthEndpointTest in 0.79 seconds (process running for 5.56)
+#15 75.26 [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.06 s - in devsu.devops.demo.health.HealthEndpointTest
+#15 75.26 [INFO] Running devsu.devops.demo.DemoJavaApplicationTests
+#15 75.26 2026-10-21T06:26:05.207Z  INFO 133 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [devsu.devops.demo.DemoJavaApplicationTests]: DemoJavaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+#15 75.26 2026-10-21T06:26:05.214Z  INFO 133 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration devsu.devops.demo.DemoJavaApplication for test class devsu.devops.demo.DemoJavaApplicationTests
+#15 75.28 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in devsu.devops.demo.DemoJavaApplicationTests
+#15 75.28 [INFO] Running devsu.devops.demo.controller.UserControllerTest
+#15 75.28 2026-10-21T06:26:05.229Z  INFO 133 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [devsu.devops.demo.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+#15 75.28 2026-10-21T06:26:05.240Z  INFO 133 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration devsu.devops.demo.DemoJavaApplication for test class devsu.devops.demo.controller.UserControllerTest
+#15 75.40 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.12 s - in devsu.devops.demo.controller.UserControllerTest
+#15 75.40 [INFO] Running devsu.devops.demo.repository.UserRepositoryTest
+#15 75.40 2026-10-21T06:26:05.357Z  INFO 133 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [devsu.devops.demo.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+#15 75.41 2026-10-21T06:26:05.369Z  INFO 133 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration devsu.devops.demo.DemoJavaApplication for test class devsu.devops.demo.repository.UserRepositoryTest
+#15 75.43 
+#15 75.43   .   ____          _            __ _ _
+#15 75.43  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+#15 75.43 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+#15 75.43  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+#15 75.43   '  |____| .__|_| |_|_| |_\__, | / / / /
+#15 75.43  =========|_|==============|___/=/_/_/_/
+#15 75.43  :: Spring Boot ::                (v3.0.5)
+#15 75.43 
+#15 75.44 2026-10-21T06:26:05.396Z  INFO 133 --- [           main] d.d.demo.repository.UserRepositoryTest   : Starting UserRepositoryTest using Java 17.0.20.1 with PID 133 (started by root in /workspace)
+#15 75.44 2026-10-21T06:26:05.397Z  INFO 133 --- [           main] d.d.demo.repository.UserRepositoryTest   : The following 1 profile is active: "test"
+#15 75.52 2026-10-21T06:26:05.477Z  INFO 133 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+#15 75.53 2026-10-21T06:26:05.487Z  INFO 133 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+#15 75.54 2026-10-21T06:26:05.497Z  INFO 133 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+#15 75.56 2026-10-21T06:26:05.520Z  INFO 133 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:100967dd-be3a-4e2c-ac2c-e62c32f4a4d4;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+#15 75.58 2026-10-21T06:26:05.539Z  INFO 133 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+#15 75.59 2026-10-21T06:26:05.544Z  INFO 133 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+#15 75.63 Hibernate: drop table if exists users cascade 
+#15 75.63 Hibernate: create table users (id bigint generated by default as identity, dni varchar(13) not null, name varchar(30) not null, primary key (id))
+#15 75.63 Hibernate: alter table if exists users add constraint UK_6aphui3g30h49muho4c91n0yl unique (dni)
+#15 75.63 2026-10-21T06:26:05.592Z  INFO 133 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+#15 75.63 2026-10-21T06:26:05.592Z  INFO 133 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+#15 75.68 2026-10-21T06:26:05.642Z  INFO 133 --- [           main] d.d.demo.repository.UserRepositoryTest   : Started UserRepositoryTest in 0.27 seconds (process running for 6.252)
+#15 75.71 Hibernate: insert into users (id, dni, name) values (default, ?, ?)
+#15 75.74 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.334 s - in devsu.devops.demo.repository.UserRepositoryTest
+#15 75.74 2026-10-21T06:26:05.701Z  INFO 133 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+#15 75.74 2026-10-21T06:26:05.702Z  INFO 133 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+#15 75.75 2026-10-21T06:26:05.706Z  INFO 133 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+#15 75.75 2026-10-21T06:26:05.709Z  INFO 133 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+#15 75.75 2026-10-21T06:26:05.713Z  INFO 133 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+#15 75.75 2026-10-21T06:26:05.713Z  INFO 133 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+#15 75.76 2026-10-21T06:26:05.714Z  INFO 133 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+#15 75.76 2026-10-21T06:26:05.715Z  INFO 133 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+#15 75.76 2026-10-21T06:26:05.716Z  INFO 133 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+#15 75.76 2026-10-21T06:26:05.716Z  INFO 133 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+#15 75.76 Hibernate: drop table if exists users cascade 
+#15 76.09 [INFO] 
+#15 76.09 [INFO] Results:
+#15 76.09 [INFO] 
+#15 76.09 [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+#15 76.09 [INFO] 
+#15 76.10 [INFO] 
+#15 76.10 [INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ demo ---
+#15 78.03 [INFO] Building jar: /workspace/target/demo-0.0.1.jar
+#15 78.08 [INFO] 
+#15 78.08 [INFO] --- spring-boot-maven-plugin:3.0.5:repackage (repackage) @ demo ---
+#15 94.67 [INFO] Replacing main artifact with repackaged archive
+#15 94.67 [INFO] ------------------------------------------------------------------------
+#15 94.67 [INFO] BUILD SUCCESS
+#15 94.67 [INFO] ------------------------------------------------------------------------
+#15 94.67 [INFO] Total time:  01:32 min
+#15 94.67 [INFO] Finished at: 2026-10-21T06:26:24Z
+#15 94.67 [INFO] ------------------------------------------------------------------------
+#15 DONE 94.7s
+
+#16 [stage-1 4/4] COPY --from=build /workspace/target/demo-0.0.1.jar /app/app.jar
+#16 DONE 0.1s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 1.3s done
+#17 exporting manifest sha256:362d7c393deb29e3a8cc4ede53b6b0122f3e995f9d82b17bf80adeca42a3074d done
+#17 exporting config sha256:b84233c48ec6fa14ae770a8a87e1ce65592adaf714618e819fec3a1555058f37 done
+#17 exporting attestation manifest sha256:aabadde19bb49e71b47a1bd58d1f76d679594057ebcbae89de12402a7f6a4f31 0.0s done
+#17 exporting manifest list sha256:b5b63283ab65e805eb19fc21642877fed260d626dbc9f28d086f5b510442989d done
+#17 naming to docker.io/library/devsu-demo-java:local done
+#17 unpacking to docker.io/library/devsu-demo-java:local
+#17 unpacking to docker.io/library/devsu-demo-java:local 0.3s done
+#17 DONE 1.7s

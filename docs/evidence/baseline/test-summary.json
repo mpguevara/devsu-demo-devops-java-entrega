@@ -1,0 +1,59 @@
+{
+  "totalTests": 6.0,
+  "failures": 0.0,
+  "errors": 0.0,
+  "skipped": 0.0,
+  "suites": [
+    {
+      "name": "devsu.devops.demo.controller.UserControllerTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timeSeconds": 6.157,
+      "testCases": [
+        "getUsers_statusOk"
+      ]
+    },
+    {
+      "name": "devsu.devops.demo.DemoJavaApplicationTests",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timeSeconds": 0.75,
+      "testCases": [
+        "contextLoads"
+      ]
+    },
+    {
+      "name": "devsu.devops.demo.repository.UserRepositoryTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timeSeconds": 0.578,
+      "testCases": [
+        "findById_thenReturnClient"
+      ]
+    },
+    {
+      "name": "devsu.devops.demo.service.UserServiceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timeSeconds": 0.239,
+      "testCases": [
+        "findById_Null",
+        "findAll_Empty",
+        "findById_NotNull"
+      ]
+    }
+  ],
+  "jar": {
+    "name": "demo-0.0.1.jar",
+    "sizeBytes": 55096121,
+    "sha256": "c02df7b6ed880c1de9255dfb3a5d529abc5b1bca6ece36e55e46ec261bd2b9e2"
+  }
+}

@@ -1,0 +1,35 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2026-10-20T23:35:26.894-06:00  INFO 40092 --- [           main] devsu.devops.demo.DemoJavaApplication    : Starting DemoJavaApplication v0.0.1 using Java 17.0.20.1 with PID 40092 (C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\demo-0.0.1.jar started by mario in C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java)
+2026-10-20T23:35:26.903-06:00  INFO 40092 --- [           main] devsu.devops.demo.DemoJavaApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-10-20T23:35:28.154-06:00  INFO 40092 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-20T23:35:28.272-06:00  INFO 40092 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interfaces.
+2026-10-20T23:35:29.211-06:00  INFO 40092 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2026-10-20T23:35:29.222-06:00  INFO 40092 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-20T23:35:29.222-06:00  INFO 40092 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2026-10-20T23:35:29.338-06:00  INFO 40092 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2026-10-20T23:35:29.341-06:00  INFO 40092 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2341 ms
+2026-10-20T23:35:29.530-06:00  INFO 40092 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-20T23:35:29.600-06:00  INFO 40092 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2026-10-20T23:35:29.994-06:00  INFO 40092 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-20T23:35:30.301-06:00  INFO 40092 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:smoke-5980 user=USER
+2026-10-20T23:35:30.303-06:00  INFO 40092 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-20T23:35:30.329-06:00  INFO 40092 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-10-20T23:35:31.279-06:00  INFO 40092 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-10-20T23:35:31.288-06:00  INFO 40092 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-20T23:35:31.954-06:00  WARN 40092 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-20T23:35:32.750-06:00  INFO 40092 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/api'
+2026-10-20T23:35:32.781-06:00  INFO 40092 --- [           main] devsu.devops.demo.DemoJavaApplication    : Started DemoJavaApplication in 6.408 seconds (process running for 7.025)
+2026-10-20T23:35:33.255-06:00  INFO 40092 --- [0.1-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-20T23:35:33.255-06:00  INFO 40092 --- [0.1-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-20T23:35:33.258-06:00  INFO 40092 --- [0.1-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-20T23:35:33.805-06:00 ERROR 40092 --- [0.1-8000-exec-2] d.d.c.RestResponseEntityExceptionHandler : User already exists
+2026-10-20T23:35:33.880-06:00 ERROR 40092 --- [0.1-8000-exec-4] d.d.c.RestResponseEntityExceptionHandler : User not found: 999999
+2026-10-20T23:35:34.153-06:00  INFO 40092 --- [0.1-8000-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 181 ms

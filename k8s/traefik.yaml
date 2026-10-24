@@ -1,0 +1,142 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: traefik
+  namespace: devsu
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: traefik
+  namespace: devsu
+rules:
+  - apiGroups: [""]
+    resources: [services, endpoints, secrets]
+    verbs: [get, list, watch]
+  - apiGroups: [discovery.k8s.io]
+    resources: [endpointslices]
+    verbs: [get, list, watch]
+  - apiGroups: [networking.k8s.io]
+    resources: [ingresses]
+    verbs: [get, list, watch]
+  - apiGroups: [networking.k8s.io]
+    resources: [ingresses/status]
+    verbs: [update]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: traefik
+  namespace: devsu
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: traefik
+subjects:
+  - kind: ServiceAccount
+    name: traefik
+    namespace: devsu
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: devsu-traefik-ingressclasses
+rules:
+  - apiGroups: [networking.k8s.io]
+    resources: [ingressclasses]
+    verbs: [get, list, watch]
+  - apiGroups: [""]
+    resources: [nodes]
+    verbs: [get, list, watch]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: devsu-traefik-ingressclasses
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: devsu-traefik-ingressclasses
+subjects:
+  - kind: ServiceAccount
+    name: traefik
+    namespace: devsu
+---
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: traefik-devsu
+spec:
+  controller: traefik.io/ingress-controller
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik
+  namespace: devsu
+spec:
+  selector:
+    app: traefik
+  ports:
+    - name: http
+      port: 80
+      targetPort: web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traefik
+  namespace: devsu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traefik
+  template:
+    metadata:
+      labels:
+        app: traefik
+    spec:
+      serviceAccountName: traefik
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65532
+        runAsGroup: 65532
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: traefik
+          image: traefik:v3.7.16@sha256:c8a121e4bb1347e8fd52657fab12f2cb70b68f8a018895e2068f92c9e519b9c2
+          args:
+            - --entrypoints.web.address=:8000
+            - --entrypoints.traefik.address=:9000
+            - --ping=true
+            - --ping.entrypoint=traefik
+            - --providers.kubernetesingress=true
+            - --providers.kubernetesingress.namespaces=devsu
+            - --providers.kubernetesingress.ingressclass=traefik-devsu
+          ports:
+            - name: web
+              containerPort: 8000
+            - name: ping
+              containerPort: 9000
+          resources:
+            requests:
+              cpu: 25m
+              memory: 32Mi
+            limits:
+              cpu: 250m
+              memory: 128Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: ping
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: ping

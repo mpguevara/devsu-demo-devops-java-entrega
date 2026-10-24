@@ -1,0 +1,66 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: devsu-http-load
+  namespace: devsu
+spec:
+  activeDeadlineSeconds: 360
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 600
+  template:
+    metadata:
+      labels:
+        app: devsu-http-load
+    spec:
+      automountServiceAccountToken: false
+      restartPolicy: Never
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10002
+        runAsGroup: 10002
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: http-load
+          image: busybox:1.37.0-musl@sha256:5cec3fc171c87218698e85a52af7087de727372aae264a787b8112901a5b0092
+          command: [sh, -c]
+          args:
+            - |
+              echo "Real HTTP load: 16 concurrent GET workers, 300 seconds"
+              for worker in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16; do
+                (
+                  ok=0
+                  failed=0
+                  until [ -f /tmp/stop ]; do
+                    if wget -q -T 5 -O /dev/null http://devsu-app:8000/api/users; then
+                      ok=$((ok + 1))
+                    else
+                      failed=$((failed + 1))
+                    fi
+                  done
+                  echo "worker=$worker success=$ok failure=$failed"
+                ) &
+              done
+              sleep 300
+              touch /tmp/stop
+              wait
+              echo "HTTP load completed"
+          resources:
+            requests:
+              cpu: 50m
+              memory: 16Mi
+            limits:
+              cpu: 300m
+              memory: 64Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: tmp
+          emptyDir:
+            sizeLimit: 1Mi

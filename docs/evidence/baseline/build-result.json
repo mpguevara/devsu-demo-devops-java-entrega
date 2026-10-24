@@ -1,0 +1,7 @@
+{
+  "command": ".\\mvnw.cmd -B -ntp clean verify -DargLine=-Xmx384m",
+  "mavenOpts": "-Xmx384m -Dfile.encoding=UTF-8",
+  "startedAt": "2026-10-20T23:33:13.5340077-06:00",
+  "finishedAt": "2026-10-20T23:34:27.9894929-06:00",
+  "exitCode": 0
+}

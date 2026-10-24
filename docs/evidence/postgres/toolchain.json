@@ -1,0 +1,9 @@
+{
+  "downloadUrl": "https://get.enterprisedb.com/postgresql/postgresql-15.19-1-windows-x64-binaries.zip",
+  "provider": "EDB",
+  "archiveSHA256": "cc54e2d349f48c7743ad0c509b755ea565ff04bb5c5e71745d114074cab0c453",
+  "verification": "Downloaded over HTTPS from EDB; SHA256 recorded locally, not compared to independent publisher checksum",
+  "version": "PostgreSQL 15.19 Windows x64",
+  "purpose": "Native local verification because Docker Desktop engine is unavailable",
+  "dockerComposeImage": "postgres:15.19-bookworm@sha256:11aa79b4af85f164ab3c2947fe6eb12795050fbea2ded3f6617f0c9eac094982"
+}

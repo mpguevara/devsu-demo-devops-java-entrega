@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-21T00:22:18.5968252-06:00",
+  "result": "Both current runtime directories absent; previous socket entries preserved in renamed directories",
+  "dockerRunBackups": [
+    "run.stale-20261021-002202",
+    "run.stale-20261021-001745"
+  ],
+  "secretsRuntimeAbsent": true,
+  "containersAndVolumesChanged": false,
+  "credentialsReadOrChanged": false
+}

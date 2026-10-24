@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+      context: .
+    image: devsu-demo-java:local
+    environment:
+      NAME_DB: jdbc:postgresql://postgres:5432/devsu
+      USERNAME_DB: devsu
+      PASSWORD_DB: ${PASSWORD_DB:?Define PASSWORD_DB antes de iniciar la aplicacion}
+      PORT: "${PORT:-8000}"
+    ports:
+      - "127.0.0.1:${APP_PORT:-8000}:${PORT:-8000}"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 512m
+    cpus: 1.0
+    stop_grace_period: 25s

@@ -1,0 +1,84 @@
+{
+  "startedAt": "2026-10-20T23:35:25.5037047-06:00",
+  "finishedAt": "2026-10-20T23:35:34.2575973-06:00",
+  "jarSHA256": "c02df7b6ed880c1de9255dfb3a5d529abc5b1bca6ece36e55e46ec261bd2b9e2",
+  "baseUrl": "http://127.0.0.1:8000/api",
+  "passed": true,
+  "database": "H2 in-memory, isolated, discarded on stop",
+  "checks": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/users",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "[{\"id\":1,\"dni\":\"0123456789\",\"name\":\"devsuvian 1\"},{\"id\":2,\"dni\":\"0234567891\",\"name\":\"devsuvian 2\"},{\"id\":3,\"dni\":\"0345678912\",\"name\":\"devsuvian 3\"}]"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/users/1",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "{\"id\":1,\"dni\":\"0123456789\",\"name\":\"devsuvian 1\"}"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/users",
+      "expectedStatus": 201,
+      "actualStatus": 201,
+      "passed": true,
+      "responseBody": "{\"id\":4,\"dni\":\"9999999901\",\"name\":\"Prueba DevOps\"}"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/users/4",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "{\"id\":4,\"dni\":\"9999999901\",\"name\":\"Prueba DevOps\"}"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/users",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "passed": true,
+      "responseBody": "{\"errors\":[\"User already exists\"]}"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/users",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "passed": true,
+      "responseBody": "{\"errors\":[\"name: Name is mandatory\",\"dni: DNI is mandatory\",\"name: size must be between 5 and 30\",\"dni: size must be between 10 and 13\"]}"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/users/999999",
+      "expectedStatus": 404,
+      "actualStatus": 404,
+      "passed": true,
+      "responseBody": "{\"errors\":[\"User not found: 999999\"]}"
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/swagger-ui.html",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": null
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/v3/api-docs",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "passed": true,
+      "responseBody": "{\"openapi\":\"3.0.1\",\"info\":{\"title\":\"OpenAPI definition\",\"version\":\"v0\"},\"servers\":[{\"url\":\"http://127.0.0.1:8000/api\",\"description\":\"Generated server url\"}],\"paths\":{\"/users\":{\"get\":{\"tags\":[\"user-controller\"],\"operationId\":\"list\",\"responses\":{\"200\":{\"description\":\"OK\",\"content\":{\"*/*\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/UserDto\"}}}}}}},\"post\":{\"tags\":[\"user-controller\"],\"operationId\":\"create\",\"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/UserDto\"}}},\"required\":true},\"responses\":{\"201\":{\"description\":\"Created\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/UserDto\"}}}}}}},\"/users/{id}\":{\"get\":{\"tags\":[\"user-controller\"],\"operationId\":\"get\",\"parameters\":[{\"name\":\"id\",\"in\":\"path\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}}],\"responses\":{\"200\":{\"description\":\"OK\",\"content\":{\"*/*\":{\"schema\":{\"$ref\":\"#/components/schemas/UserDto\"}}}}}}}},\"components\":{\"schemas\":{\"UserDto\":{\"required\":[\"dni\",\"name\"],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"readOnly\":true},\"dni\":{\"maxLength\":13,\"minLength\":10,\"type\":\"string\"},\"name\":{\"maxLength\":30,\"minLength\":5,\"type\":\"string\"}}}}}}"
+    }
+  ],
+  "createdUserReadBack": true,
+  "applicationStopped": true
+}

@@ -1,0 +1,69 @@
+{
+  "verifiedAt": "2026-10-21T00:46:37.1082932-06:00",
+  "passed": true,
+  "scope": "Consolidacion de evidencia local ya ejecutada y comprobacion de integridad; no se volvieron a ejecutar las suites",
+  "nativeTests": 11,
+  "nativeTestFailures": 0,
+  "nativeTestErrors": 0,
+  "linuxSuccessfulTestSummaryFound": true,
+  "h2HttpChecks": 9,
+  "h2Passed": true,
+  "dockerChecks": 39,
+  "dockerPassed": true,
+  "healthPhases": [
+    {
+      "phase": "health-up",
+      "passed": true,
+      "checks": 5,
+      "liveness": {
+        "actualStatus": 200,
+        "actualHealthStatus": "UP"
+      },
+      "readiness": {
+        "actualStatus": 200,
+        "actualHealthStatus": "UP"
+      }
+    },
+    {
+      "phase": "health-down",
+      "passed": true,
+      "checks": 5,
+      "liveness": {
+        "actualStatus": 200,
+        "actualHealthStatus": "UP"
+      },
+      "readiness": {
+        "actualStatus": 503,
+        "actualHealthStatus": "DOWN"
+      }
+    },
+    {
+      "phase": "health-recovered",
+      "passed": true,
+      "checks": 5,
+      "liveness": {
+        "actualStatus": 200,
+        "actualHealthStatus": "UP"
+      },
+      "readiness": {
+        "actualStatus": 200,
+        "actualHealthStatus": "UP"
+      }
+    }
+  ],
+  "sourceManifestEntries": 33,
+  "sourceMismatches": [],
+  "powerShellScriptsParsed": 6,
+  "powerShellParseFailures": [],
+  "nativeJarSHA256": "ef6a2fb51d035776e88c7dffd068bb821e52e94a49ac132214121e9155645e59",
+  "linuxJarSHA256": "d98f0fd30931fff7d4215e793df30ef9b3a7d6968f49f4a2689a43a720f37251",
+  "twoCleanLinuxJarsIdentical": true,
+  "localImageId": "sha256:b5b63283ab65e805eb19fc21642877fed260d626dbc9f28d086f5b510442989d",
+  "composeVersion": "Docker Compose version v5.1.4",
+  "ephemeralProject": "devsu-verify-4cb91622",
+  "remainingProjectContainers": [],
+  "remainingProjectVolumes": [],
+  "publishedToRegistry": false,
+  "kubernetesVerified": false,
+  "remotePipelineVerified": false
+}

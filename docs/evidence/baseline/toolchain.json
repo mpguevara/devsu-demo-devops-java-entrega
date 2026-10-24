@@ -1,0 +1,10 @@
+{
+  "jdkVersion": "Temurin 17.0.20.1+1",
+  "jdkArchive": "OpenJDK17U-jdk_x64_windows_hotspot_17.0.20.1_1.zip",
+  "jdkArchiveSHA256": "e53a79c3c3d86865bd7e787903884331068e71321714ffd44f145785affc7cb0",
+  "jdkSource": "https://github.com/adoptium/temurin17-binaries/releases/tag/jdk-17.0.20.1%2B1",
+  "mavenWrapperVersion": "3.1.1",
+  "mavenWrapperSHA256": "ff7f21f2ef81723377e3d42d06661c4e3af60cf4bdfb7579ac8f22051399942d",
+  "mavenWrapperReferenceSource": "https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.1.1/maven-wrapper-3.1.1.jar",
+  "mavenWrapperVerification": "SHA256 matches fresh Maven Central download"
+}

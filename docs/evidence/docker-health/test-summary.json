@@ -1,0 +1,45 @@
+{
+  "source": "maven-clean-verify.log",
+  "totalTests": 11,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "devsu.devops.demo.controller.UserControllerTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.DemoJavaApplicationTests",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.health.HealthEndpointTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.repository.UserRepositoryTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "devsu.devops.demo.service.UserServiceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "jarSHA256": "ef6a2fb51d035776e88c7dffd068bb821e52e94a49ac132214121e9155645e59"
+}

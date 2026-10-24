@@ -1,0 +1,6 @@
+{
+  "command": "docker compose -f compose.yaml config --quiet",
+  "exitCode": 0,
+  "engineExecutionValidated": false,
+  "credentialHandling": "Random temporary process variable; never written to evidence"
+}

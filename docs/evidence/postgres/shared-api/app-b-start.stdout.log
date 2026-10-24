@@ -1,0 +1,43 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.5)
+
+2026-10-20T23:57:31.520-06:00  INFO 22648 --- [           main] devsu.devops.demo.DemoJavaApplication    : Starting DemoJavaApplication v0.0.1 using Java 17.0.20.1 with PID 22648 (C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\target\demo-0.0.1.jar started by mario in C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java)
+2026-10-20T23:57:31.526-06:00  INFO 22648 --- [           main] devsu.devops.demo.DemoJavaApplication    : The following 1 profile is active: "postgres"
+2026-10-20T23:57:32.812-06:00  INFO 22648 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-20T23:57:32.877-06:00  INFO 22648 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2026-10-20T23:57:42.124-06:00  INFO 22648 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8002 (http)
+2026-10-20T23:57:42.280-06:00  INFO 22648 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-20T23:57:42.281-06:00  INFO 22648 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2026-10-20T23:57:42.862-06:00  INFO 22648 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2026-10-20T23:57:42.866-06:00  INFO 22648 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11240 ms
+2026-10-20T23:57:49.230-06:00  INFO 22648 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2026-10-20T23:57:49.231-06:00  INFO 22648 --- [           main] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2026-10-20T23:57:49.233-06:00  INFO 22648 --- [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-10-20T23:57:49.371-06:00  INFO 22648 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-20T23:57:52.359-06:00  INFO 22648 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f093abe
+2026-10-20T23:57:52.364-06:00  INFO 22648 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-20T23:57:52.434-06:00  INFO 22648 --- [           main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://127.0.0.1:55432/devsu (PostgreSQL 15.19)
+2026-10-20T23:57:53.664-06:00  INFO 22648 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:01.013s)
+2026-10-20T23:57:53.906-06:00  INFO 22648 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2026-10-20T23:57:54.041-06:00  INFO 22648 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-10-20T23:57:54.073-06:00  INFO 22648 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "1 - create users"
+2026-10-20T23:57:54.183-06:00  INFO 22648 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:00.152s)
+2026-10-20T23:57:54.520-06:00  INFO 22648 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-20T23:57:54.950-06:00  INFO 22648 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2026-10-20T23:57:57.902-06:00  INFO 22648 --- [           main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-10-20T23:58:03.107-06:00  INFO 22648 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-10-20T23:58:03.204-06:00  INFO 22648 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-20T23:58:20.109-06:00  INFO 22648 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8002 (http) with context path '/api'
+2026-10-20T23:58:20.574-06:00  INFO 22648 --- [           main] devsu.devops.demo.DemoJavaApplication    : Started DemoJavaApplication in 49.185 seconds (process running for 50.635)
+2026-10-20T23:58:24.413-06:00  INFO 22648 --- [0.1-8002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-20T23:58:24.414-06:00  INFO 22648 --- [0.1-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-20T23:58:24.416-06:00  INFO 22648 --- [0.1-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-20T23:58:28.962-06:00 ERROR 22648 --- [0.1-8002-exec-7] d.d.c.RestResponseEntityExceptionHandler : User already exists
+2026-10-20T23:58:29.466-06:00 ERROR 22648 --- [0.1-8002-exec-8] d.d.c.RestResponseEntityExceptionHandler : User not found: 9223372036854775807
+2026-10-20T23:58:29.518-06:00 ERROR 22648 --- [0.1-8002-exec-9] d.d.c.RestResponseEntityExceptionHandler : User already exists

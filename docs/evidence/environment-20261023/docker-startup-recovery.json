@@ -1,0 +1,25 @@
+{
+  "recordedAt": "2026-10-23T18:04:33.1914634-06:00",
+  "observedError": "[2026-10-24T00:03:13.014329700Z][com.docker.backend.exe] backend cancelling with error: starting services: initializing Inference manager: listening on unix://C:/Users/mario/AppData/Local/Docker/run/dockerInference: remove C:/Users/mario/AppData/Local/Docker/run/dockerInference: The file cannot be accessed by the system. (listener: The filename, directory name, or volume label syntax is incorrect.)",
+  "preservedRuntimeDirectories": [
+    {
+      "source": "C:\\Users\\mario\\AppData\\Local\\Docker\\run",
+      "backup": "C:\\Users\\mario\\AppData\\Local\\Docker\\run.stale-20261023-180433",
+      "entries": [
+        "dockerEthernetVfkit",
+        "dockerInference",
+        "userAnalyticsOtlpHttp.sock"
+      ]
+    },
+    {
+      "source": "C:\\Users\\mario\\AppData\\Local\\docker-secrets-engine",
+      "backup": "C:\\Users\\mario\\AppData\\Local\\docker-secrets-engine.stale-20261023-180433",
+      "entries": [
+        "engine.sock"
+      ]
+    }
+  ],
+  "factoryReset": false,
+  "containersOrVolumesDeleted": false,
+  "credentialsReadOrChanged": false
+}

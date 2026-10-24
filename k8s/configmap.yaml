@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devsu-config
+  namespace: devsu
+data:
+  SPRING_PROFILES_ACTIVE: postgres
+  NAME_DB: jdbc:postgresql://postgres:5432/devsu
+  USERNAME_DB: devsu
+  PORT: "8000"

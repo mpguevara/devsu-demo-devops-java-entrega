@@ -1,0 +1,7 @@
+{
+  "command": ".\\mvnw.cmd -B -ntp clean verify -DargLine=-Xmx384m",
+  "startedAt": "2026-10-23T18:04:30.9398504-06:00",
+  "finishedAt": "2026-10-23T18:05:36.7562120-06:00",
+  "exitCode": 0,
+  "coverageGate": "Not configured: measuring improved behavior tests before selecting limits"
+}

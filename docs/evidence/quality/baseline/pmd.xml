@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 https://pmd.github.io/schema/report_2_0_0.xsd" version="7.17.0" timestamp="2026-10-23T18:02:46.546">
+<file name="C:\Users\mario\Downloads\devsu-demo-devops\devsu-demo-devops-java\devsu-demo-devops-java\src\main\java\devsu\devops\demo\service\mapper\UserMapper.java">
+<violation beginline="17" endline="17" begincolumn="11" endcolumn="18" rule="VariableCanBeInlined" ruleset="Code Style" package="devsu.devops.demo.service.mapper" class="UserMapper" method="toDto" variable="userDto" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.17.0/pmd_rules_java_codestyle.html#variablecanbeinlined" priority="3">
+Consider simply using the value vs. storing it in local variable 'userDto'.
+</violation>
+<violation beginline="22" endline="22" begincolumn="8" endcolumn="12" rule="VariableCanBeInlined" ruleset="Code Style" package="devsu.devops.demo.service.mapper" class="UserMapper" method="toEntity" variable="user" externalInfoUrl="https://docs.pmd-code.org/pmd-doc-7.17.0/pmd_rules_java_codestyle.html#variablecanbeinlined" priority="3">
+Consider simply using the value vs. storing it in local variable 'user'.
+</violation>
+</file>
+</pmd>
